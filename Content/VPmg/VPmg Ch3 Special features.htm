@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h2 class="NoPageBreak">Constraining geologic contacts</h2>
+        <p>You can have VPmg set geologic contacts inactive during geometry inversion through a non-zero flag at the contact within the <a href="VPmg Ch4 Parameter file.htm#VP_ModelFile">VP model file</a>. Once those contacts are set constant, you have the option to influence the surrounding prisms during inversion (<var>flag</var>=1).</p>
+        <p>You can set fixed contacts via the VPutility program (<var>mode</var>=3). The flag will be set when using this program to 1 or 2 in order to give you the ability to set whether or not the contact should influence the surrounding prisms during inversion.</p>
+        <p>If you choose to influence the inversion, VPmg will try to minimize the amount the surrounding contacts (in 3D) move in a given radius in metres from the contact location. The default measure is the depth of the fixed contact to the top of the prism. You can set this radius of influence in the control file.</p>
+        <p>You can check the location of the set contacts by exporting the model to Geoscience ANALYST. The locations are the <i>Geologic constraints</i> points objects, which can be coloured by the flag. Below is a close-up image from the inversion examples where the drillholes, contacts, and a pierce point constraint (sphere) is given. Please note that the constraint is shown in the centre of the prism and not where the drillhole pierces the prism.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg constrained contacts.png" />
+            <br /><span class="SmallerCaption">The red spheres are locations of constrained contacts and are snapped laterally to the centres of prisms. That is why the contact is on the node of the top of basement surface rather than at the drillhole location.</span>
+        </p>
+        <h2><a name="Apparent"></a>Apparent susceptibility and density models</h2>
+        <p>Using VPmg, you can invert apparent susceptibility or density models (also referred to as equivalent-source models). VP apparent models typically behave better than those discretized on a rectilinear mesh because of accurate discretization of topography.</p>
+        <p>Apparent susceptibility and density models are made via VP basement prisms and can be easily created with VPutility.</p>
+        <p>To create a VP apparent model use VPutility to create a model (<var>mode</var>=1). Use the topography as the top surface with only one layer. Observe the following when creating a model:</p>
+        <ul>
+            <li>The inversion should be run as a basement inversion, not heterogeneous.</li>
+            <li>The basement prisms will begin at the topography and continue to depth at the base of the VP model (typically -25 km).</li>
+            <li>Regardless of physical property the bounds should be both positive and negative as the goal is to reproduce the data.</li>
+            <li>The apparent susceptibility model of the regional example is shown below. The prisms were set to 1000m x 1000m and it achieved an RMS of 0.13 nT in 14 iterations.</li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg app suscept.png" />
+            <br /><span class="SmallerCaption">Apparent susceptibility model for the regional data example.</span>
+        </p>
+        <h2><a name="RemMag"></a>Strategies for handling remanent magnetization</h2>
+        <p>VPmg offers three methods of handling remanent magnetization: The first method solves for the specific remanent parameters and the latter two offer ways of inverting for data that are only weakly dependent on remanent magnetization parameters.</p>
+        <h3 class="NoPageBreak">Remanent magnetization inversion (RMI)</h3>
+        <p>This will solve for intrinsic magnetization parameters: Koenigsberger ratio (Q) or effective susceptibility, inclination, and declination. Users may give these parameters for forward modelling or as initial parameters for inversion. There is an important distinction between the use of Q values and the remanent effective susceptibility in the model parameter section: </p>
+        <ul>
+            <li>If any "Q" values are negative, they are assumed to denote effective susceptibility of the remanent part. The RMI inversion with these given will then solve and output effective susceptibility (10<sup>-3</sup> SI).</li>
+            <li>If any "Q" values are positive, they are assumed to denote Koenigsberger ratios (Q) and VPmg will output the result in terms of Q. </li>
+            <li>It is not possible to give both Q and effective susceptibility in the input model and an error will be returned. </li>
+            <li>The maximum change in a step (delm) is given in Q or effective susceptibility for RMI. By default, if all units are induced, Q is recovered.</li>
+            <li>When the susceptibility is zero and a non-zero "Q" value is given, it must be effective susceptibility (i.e. <em>no</em> Koenigsberger ratios).</li>
+        </ul>
+        <p>Expanding upon the last point, when the susceptibility is zero for the unit, VPmg handles “purely” remanent magnetization by using effective susceptibility (<var>κ<sub>eff</sub></var>) where the remanent magnetization amplitude (<var>J</var>) is defined as:</p>
+        <p> <var>J</var>=<var>K<sub>eff</sub></var> <var>H<sub>o</sub></var> where <var>H<sub>o</sub></var> is the ambient field.</p>
+        <p>See the <a href="VPmg Ch2 Inversion - Technical background.htm#HomogeneousInv">homogeneous inversion overview</a>.</p>
+        <p>When optimizing the remanent parameters through RMI, use the inversion flag for homogeneous property inversion (1), but the data type flag specifically made for RMI: -6. The active units defined by the bounds will have their remanent parameters optimized regardless of whether the geologic unit is homogeneous or heterogeneous.</p>
+        <div class="tip">RMI is useful if you know the geometry of the body of interest. The geometry could be set by using outside information (i.e., drillholes) or by using the other two methods (magnetic amplitude data, and total magnetic gradient) in this section that are weakly dependent on remanent magnetization.</div>
+        <h3 class="NoPageBreak">Magnetic amplitude data</h3>
+        <p>Magnetic amplitude data (Shearer and Li, 2005) is defined by anomalous induction:</p>
+        <p>
+            <img src="../Resources/Images/VPmg magnetic amp data calc.png" />
+        </p>
+        <p>Where: <br /><var>B<sub>x</sub></var>, <var>B<sub>y</sub></var>, and <var>B<sub>z</sub></var> are the magnetic field components. It is weakly dependent upon remanent magnetization direction. The example below illustrates this point. The top left is the inducing field (with no remanence) at an inclination (I) of 65° and declination (D) of 25°. A remanent magnetization direction of (I=25°, D=-65°) is added and is displayed at the top right. Amplitude data is computed in both situations and displayed in the bottom two panels.</p>
+        <p style="text-align: center;page-break-before: avoid;">
+            <img src="../Resources/Images/VPmg magnetic amp data image.png" />
+            <div class="SmallerCaption">Responses of a block (black outline).</div>
+            <div class="SmallerCaption" style="text-align: left; ">Top left: Induced response (I=65°, D=25°). Top right: Response with remanence (Ir=25°, Dr=-65°). Bottom left: Computed amplitude response of the induced block. Bottom right: Computed amplitude response of the remanent block.</div>
+        </p>
+        <p>Amplitude data is not naturally observed. To compute the magnetic amplitude data then invert it:</p>
+        <ol>
+            <li>Use an apparent susceptibility model to accurately reproduce the data (with negativity).</li>
+            <li>Forward model the apparent susceptibility using the magnetic amplitude data flag: -4. VPmg will compute the magnetic amplitude data and output it in the VP model file as well as write the xyz-based file <span class="filename">[prefix]_amp.[suffix]</span> based on the data file given. For example, if the data file is <span class="filename">tmi.dat</span>, the output would be <span class="filename">tmi_amp.dat</span>.</li>
+            <li>The output data file is used as the observed data for inversion.</li>
+            <li>Use the inversion flag as normal (i.e., -1 for heterogeneous inversion) and the data flag of -4 to recover effective susceptibility. Set the DC component to 0.0 because it was removed during the forward modelling of the apparent susceptibility model.</li>
+        </ol>
+        <div class="tip">The inversion of amplitude data is non-linear, so use VPmg to forward model more often (three iterations per forward model) to re-compute the derivatives. You can do this in the control file.</div>
+        <h3 class="NoPageBreak">Total magnetic gradient</h3>
+        <p>Using VPmg, you can invert total magnetic gradient data (sometimes referred to as 3D analytic signal). Total magnetic gradient (TMG) data is defined by:</p>
+        <p>
+            <img src="../Resources/Images/VPmg TMI calc2.png" />
+        </p>
+        <p>Where:<br /><var>T</var> is the total magnetic anomaly. The TMG is in units of n<i>T/m</i> and is weakly dependent upon the direction of magnetization. The top left and top right panels are the induced and remanent observed TMI data, respectively. The bottom left and bottom right are the corresponding TMG data. The black outline denotes the block extents.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg TMG image.png" />
+            <div class="SmallerCaption">Responses of a block (black outline).</div>
+            <div class="SmallerCaption" style="text-align: left;">Top left: Induced response (I=65°, D=25°). Top right: Response with remanence (Ir=25°, Dr=-65°). Bottom left: Computed TMG response of the induced block. Bottom right: Computed TMG response of the remanent block.</div>
+        </p>
+        <p>You can compute total magnetic gradient data via an apparent susceptibility model as with the case of amplitude data, although it is typically done through filtering in an external program. When using TMG data in VPmg:</p>
+        <ul>
+            <li>A parameter file with a flag of <var>TMG</var> or <var>MTG</var> for the data column is required.</li>
+            <li>Heterogeneous inversion is the only option allowed to run.</li>
+        </ul>
+        <div class="tip">The inversion of TMG data is highly non-linear and complicated due to its small dynamic range, so have VPmg update the forward model at every iteration. You can do this  in the control file.</div>
+        <h3 class="NoPageBreak">Self-demagnetization</h3>
+        <p>VPmg has two methods to counteract the presence of self-demagnetization. Both methods are set in the control file. The first method is a setting in the control file that approximates the susceptibility based on the well-known relationship between intrinsic (given in the VP model) and effective susceptibilities (used for forward modelling and inversion) for a sphere:</p>
+        <p style="text-align: left;">
+            <img src="../Resources/Images/VPmg self demag calc.png" />
+            <br />The susceptibilities are converted back upon output to a file from VPmg.</p>
+        <p>The second method is to fully account for the self-demagnetization effects that arise inside, and interactions between, highly magnetic bodies. The effects are solved with optimization at each forward model only if the VP model has susceptibilities higher than 0.1 SI. You can increase the numerical accuracy of the optimization by sub-celling highly magnetic domains into cuboidal cells within a heterogeneous unit (recommended).</p>
+        <p>The following two examples illustrate the effects of self-demagnetization. Both are computed at I=65° and D=25° with a 50,000 nT ambient field.</p>
+        <ol>
+            <li>This is a sphere (centre = (-25, 300, -120); radius = 75 m; SI = 2) where the approximation should and does hold within 5 nT.</li>
+            <li>This is an elongated prism at 0.5 SI. The data produced by the self-demagnetization approximation is similar to the full calculation, yet still differs by up to 30 nT. Each example has the forward modelling with:<ul><li>No additional effects computed (left)</li><li>The approximation (centre)</li><li>The full calculation (right)</li></ul></li>
+        </ol>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/vpMG 3PANEL IMAGE.png" />
+            <br /><span class="SmallerCaption">Response of a sphere (black outline) of 2 SI on the same colour scale with the self-demagnetization effects (left) discarded, (centre) approximated, and (right) fully computed. The approximate and full calculations agree within 5 nT of one another.</span>
+            <br />
+            <br />
+            <br />
+            <img src="../Resources/Images/vPMG 3PANEL IMAGE2.png" />
+            <br /><span class="SmallerCaption">An elongated block (black outline) of 0.5 SI on the same colour scale with self-demagnetization effects that are (left) not considered, (centre) approximated, and (right) fully computed. Without computed effects, the TMI data has a maximum difference of almost 100 nT. Note the view has been rotated so that north positive points to the right.</span>
+            <br />
+        </p>
+        <h2>Gravity gradiometry coordinate systems</h2>
+        <p>VPmg can handle gravity gradiometry data from three general systems: <b>Falcon</b> (<var>G<sub>uv</sub></var>, <var>G<sub>ne</sub></var>), <b>VK1</b> (<var>G<sub>ga</sub></var>, <var>G<sub>gc</sub></var>), and <b>FTG</b> (<var>G<sub>xx</sub></var>, <var>G<sub>xy</sub></var>, <var>G<sub>xz</sub></var>, <var>G<sub>yy</sub></var>, <var>G<sub>yz</sub></var>, <var>G<sub>zz</sub></var>).</p>
+        <ul>
+            <li>Falcon is line-direction dependent, so the overall line direction bearing (in degrees) should be given in the control file in the same place as magnetic declination.</li>
+            <li>The VK1 system’s orientation will also go in the magnetic declination spot of the control file.</li>
+            <li>The FTG data has been updated in version 9.1 to follow the coordinate system of Bell Geospace. This allows the user to directly forward model and invert data that are handed over from acquisition companies. The coordinates are an END left-handed system so that <var>G<sub>zz</sub></var> is a positive anomaly for positive density (and density contrast). For reference, a sphere with a positive density contrast of 2.0 g/cc has been modelled to show the tensors.</li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg 7 PANEL image.png" style="width: 526px; height: 487px;" />
+            <br /><span class="SmallerCaption">FTG components for a positive sphere (black outline).<br />Note the left-handed coordinate system. (The 'xx' component is upper left. The 'xz' component is upper right.)</span>
+        </p>
+        <h2><a name="Unconstrained"></a>Unconstrained inversion</h2>
+        <p>Although VPmg excels at incorporating geologic information, there are cases when you will not know anything about the subsurface. We refer to these inversions as unconstrained, or blind.</p>
+        <p class="Task">To create an unconstrained inversion:</p>
+        <ol>
+            <li>Create a two-layer model. The first unit will become a heterogeneous unit that extends to the depth of investigation. The second unit will be the VP basement.</li>
+            <li>Make the first layer heterogeneous by choosing a nominal vertical cell size. This could expand by a percentage factor in depth.</li>
+            <li>Run a heterogeneous inversion with an enclosing half space of 0.</li>
+        </ol>
+        <p>Next, we perform an unconstrained inversion on the local data of the example. We first use VPutility (<var>mode</var>=1) to create a two-layer model. The first layer extends from the topography to a flat surface at -5000 m of elevation (similar to the flat surface geometry example). The prisms are 300 m x 300 m. VPutility generates a model with 9657 prisms. Observe the following:</p>
+        <ul>
+            <li>The first layer of the two-layer model is split into a heterogeneous layer via VPutility (<var>mode</var>=6)</li>
+            <li>The layer uses a vertical cell size of 75 m creating 650,632 heterogeneous cells that become the parameters for the blind inversion.</li>
+            <li>The output is the starting model for the inversion with VPmg.</li>
+            <li>The DC component of the data floats and VPmg achieves an RMS misfit of 0.68 nT from its initial misfit of 6.06 nT.</li>
+            <li>The inversion takes eight iterations.</li>
+        </ul>
+        <p style="page-break-after: avoid;">The result is displayed below:</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg unconstrained inv.png" style="width: 431px; height: 308px;" />
+            <br /><span class="SmallerCaption">Unconstrained inversion in the local region of the example. The predicted data are shown for reference.</span>
+        </p>
+        <div class="note">VPmg does not use model smoothing, so make sure your prisms are wide enough so each one has a datum directly over it. If you see a chequerboard pattern in your inversion result, this is most likely the reason why.</div>
+        <h2 class="NoPageBreak">Defining an area of interest with a model</h2>
+        <p>VPmg allows you to spatially micro-manage your inversion result by defining a polygonal regional of interest. An example of this feature is to hold an inverted model inactive where the result makes the most sense to focus on a region that does not quite reproduce the data. Another case may be when the data is collected at an angle to the model coordinate system, creating a large model with no influence on the corners of the model during a heterogeneous inversion. In that case, the polygon could buffer the data and reduce the number of model parameters, thus making the inversion run faster and use less memory.</p>
+        <p>The data outside of that area is ignored and the model outside of the area is set to inactive (except for homogeneous unit inversion). In some cases, you may want to add inactive areas within the polygonal region. This will also be defined in the same file as holes.</p>
+        <p class="Task">To define an area of interest:</p>
+        <ol>
+            <li>Add the optional file defining the polygonal area of interest to the input VP model file (behind the <code>#polyfile#</code> flag).</li>
+            <li>In the file, the polygonal (at least three points) region of interest always comes first.</li>
+            <li>If no region of interest is given in the file, it uses the model bounds as the region (allowing you to only define holes).</li>
+        </ol>
+        <p>The system uses <code>#polygon#</code> and <code>#hole#</code>  to define the region of interest file to tell VPmg when the points begin. The points should be either in a clockwise or counter-clockwise order. An example of a polygonal region of interest:</p>
+        <div class="indent">
+            <p>
+                <img src="../Resources/Images/VPmg area of interest.png" />
+            </p>
+        </div>
+        <p>An example of a polygonal region of interest with a hole, using the entire model region as the active region:</p>
+        <div class="indent">
+            <p>
+                <img src="../Resources/Images/VPmg area of interest2.png" />
+            </p>
+        </div>
+        <p>The file can have comments and will only read the valid (x, y) coordinates in the file. Below is an example of a perfectly acceptable file (with a polygon and a hole):</p>
+        <div class="indent">
+            <p>
+                <img src="../Resources/Images/VPmg area of interest3.png" />
+            </p>
+        </div>
+        <p>Below is an example from the local model of an unconstrained inversion that was only performed in the region of interest. The inversion was carried out in the same way as the <a href="#Unconstrained">unconstrained inversion section</a>, but with the polygon file added to the VP model file. The black line denotes the region boundary.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg region of interst image.png" style="width: 444px; height: 317px;" />
+            <br /><span class="SmallerCaption">An example of an inversion on just the region of interest defined by the polygon (black line). The semi-transparent predicted data is also shown.</span>
+        </p>
+        <div class="note">Defining an area of interest does not affect the incising of local models into a regional model. Incision is performed on the full local model extents, regardless.</div>
+        <h2 class="NoPageBreak">Depth-to-bedrock modelling</h2>
+        <p>The combination of inversion styles makes VPmg a program well suited to performing depth-to-bedrock modelling. When using VPmg to find the depth to bedrock, use a two-layer model. The initial model can be a guess or derive from observations. The key is to keep it simple.</p>
+        <p>When information about the bulk properties is not available, we suggest you do a single iteration of homogenous inversion followed by a single iteration of geometry inversion. Keep the changes small so one style of inversion does not influence your result more than the other.</p>
+        <div class="tip">Use the log appending feature to keep one log file for all inversion iterations. Add the log file name (must be created first) after the control file name when running VPmg.</div>
+        <h2 class="NoPageBreak">Terrain modelling</h2>
+        <p>Complete Bouguer data can be computed by forward modelling a VP model. VPmg handles densities so features like lakes, ice, and bathymetry can be modelled directly by creating a <i>water</i> unit.</p>
+        <p>Likewise, you can forward model gravity gradiometry components for terrain correction modelling. Set the minimum elevation of the VP model to sea level (0 m) and create a basement-only (<a href="#Apparent">using the steps</a> to create an apparent density model) model. This model will have single-unit prisms extend from the topography to sea level. A forward model of your gradiometry components will return the effect of the terrain.</p>
+        <h2 class="NoPageBreak">Modelling magnetic components</h2>
+        <p>VPmg can model and invert the three components of the magnetic field (<var>B<sub>x</sub></var>, <var>B<sub>y</sub></var>, <var>B<sub>z</sub></var>). Observe the following when doing so:</p>
+        <ul>
+            <li>Component data should be given with a parameter file. Use -99999 for dummy data when inverting both TMI and component data in multiple locations (i.e., drillhole data).</li>
+            <li>Set individual uncertainties rather than a floor for each component to offset their dynamic range and recover a model that fits all data.</li>
+        </ul>
+        <p>Below is an example of <var>B<sub>x</sub></var>, <var>B<sub>y</sub></var>, and <var>B<sub>z</sub></var> for a sphere of 0.02 SI at the surface given the inducing field parameters of (I=65°, D=25°):</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg modelling mag comp.png" />
+            <br /><span class="SmallerCaption">Magnetic components for a magnetic sphere: (left) <var>B<sub>x</sub></var>, (centre), <var>B<sub>y</sub></var>, and (right) <var>B<sub>z</sub></var>.</span>
+        </p>
+        <h2 class="NoPageBreak">Rotated VP models</h2>
+        <p>VPmg will allow rotated VP model to be able to recover surfaces and heterogeneous anomalies in real-world coordinates.  VPutility can create the model files from existing data given a rotation angle. Some general features of the rotated model are given in the section with a small example. </p>
+        <p>&#160;</p>
+        <p class="Task">Definition of a rotated model</p>
+        <p>The rotation angle is the same as declination, where 0 degrees points to the north with a positive rotation clockwise. The (<var>x0</var>, <var>y0</var>) coordinates are the origin of rotation and are the southwest corner of the non-rotated model. The geometry block has the cell centres in true easting and northing (assuming the VP model is defined in UTM coordinates). Below is an image showing the definition of the rotation.
+        </p>
+        <p style="text-align: center;page-break-before: avoid;">
+            <img src="../Resources/Images/vp_rotation.tif" style="width: 223px; height: 223px;" />
+        </p>
+        <p>Diagram of rotation definitions. The x- and y-lengths are always positive. The rotation angle, <var>α</var>, is positive clockwise from North (negative angles are allowed). The values <var>xlength</var>, <var>ylength</var>, <var>α</var> (angle), <var>x0</var>, and <var>y0</var> are given in the VP model file. </p>
+        <p>The VP model file is similar to a normal VP model file with two distinct differences. </p>
+        <ol>
+            <li>The header in the rotated model file should contain <code>#VPMG3DROT#</code> or <code>#MOD_3DROT#</code>. </li>
+            <li>The <code><var>xmin</var>, <var>xmax</var>, <var>ymin</var>, <var>ymax</var></code> line is replaced by:<br /><code><var>x0</var>, <var>xlength</var>, <var>y0</var>, <var>ylength</var>, <var>angle</var></code> as defined above</li>
+        </ol>
+        <p>It should be noted that the data fields do not need to be rotated, but the flight direction required of specific components (i.e., gravity gradiometry) should still be given and <i>will be the same regardless of the type of VP model.</i></p>
+        <p class="Task">
+            <br />Example</p>
+        <p>This is the creation of a two-layer model in the Flin&#160;Flon region for gravity gradiometry. The lines were flown at a nominal declination of 340 degrees. Both 340 and -20 are valid angles. The data were located in a file named <span class="filename">agg.csv</span>. VPutility created the model (mode=1) with the following input file:</p>
+        <div class="indent" style="page-break-inside: avoid;page-break-before: avoid;">
+            <table style="width: 380px; border: solid 1px;">
+                <col />
+                <tbody>
+                    <tr>
+                        <td>1 1 0 -20</td>
+                    </tr>
+                    <tr>
+                        <td>singleLayer.den</td>
+                    </tr>
+                    <tr>
+                        <td>#datafile# agg.csv</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>100 50</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>#layerfile# topo.csv 0 -5 5 host</td>
+                    </tr>
+                    <tr>
+                        <td>-1500 0 0 0 basement</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>The resulting model file is shown below. The workflow for interactive interpretation and inversion for a rotated model is the same as a non-rotated model. However, the data do not need to be rotated to a local coordinate system. </p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/vp_rotated_example1.png" style="width: 278px; height: 280px;" />
+            <img src="../Resources/Images/vp_rotated_example2.png" style="width: 275px; height: 280px;" />
+        </p>
+        <p>The model created through VPutility rotated -20 degrees (left: map view, right: 3D view). The <var>G<sub>zz</sub></var> component is shown for reference. The model is a VP model and can be used in any VPmg inversion or forward modelling. </p>
+        <p>The resulting model file is shown below. The workflow for interactive interpretation and inversion for a rotated model is the same as a non-rotated model. However, the data do not need to be rotated to a local coordinate system. </p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/vp_rotated_example1.png" style="width: 278px; height: 280px;" />
+            <img src="../Resources/Images/vp_rotated_example2.png" style="width: 275px; height: 280px;" />
+        </p>
+        <p>The model created through VPutility rotated -20 degrees (left: mapview, right: 3D view). The <var>G<sub>zz</sub></var>component is shown for reference. The model is a VP model and can be used in any VPmg inversion or forward modelling. </p>
+    </body>
+</html>

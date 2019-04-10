@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/Geoscience INTEGRATOR mini guide_Val-obsolete.fltoc"
+  MasterStylesheet="/Content/Resources/Stylesheets/MainStyles.css"
+  PatchHeadingLevels="true"
+  ConditionTagExpression="include[General.PDF or Product.IntegratorOnly]exclude[General.Online or Product.AnalystOnly or Product.MiningSuiteOnly or Product.VPem1DOnly or Product.VPmgOnly]">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <PDF
+    InitialMagnification="100"
+    PageLayout="OneColumn"
+    TitleBar="DocumentTitle" />
+  <DocumentProperties
+    Title="Geoscience INTEGRATOR mini guide" />
+  <Glossaries />
+  <Variables>
+    <Variable
+      Name="General/ProductName">[%=General.ProductNameGI%]</Variable>
+  </Variables>
+</CatapultTarget>

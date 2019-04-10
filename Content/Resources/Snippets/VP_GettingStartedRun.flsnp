@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Product.VPutilityOnly,Product.VPmgOnly,Product.VPem1DOnly">
+    <head>
+    </head>
+    <body>
+        <p><MadCap:variable name="General.ProductName"></MadCap:variable> is run through the command prompt as a stand-alone executable.</p>
+        <p class="Task">To run <MadCap:variable name="General.ProductName"></MadCap:variable>:</p>
+        <ol>
+            <li>In the <kbd><samp>Start</samp></kbd> menu, open the command prompt found under <kbd><samp>Mira Geoscience VP Suite</samp></kbd>.</li>
+            <li>Run <kbd><samp><MadCap:variable name="General.ProductName" /> <MadCap:variable name="General.VersionNumber" /> Command Prompt</samp></kbd>.</li>
+            <li>Change to your working directory and type <kbd><MadCap:variable name="General.ProductExe" /></kbd> followed by the input control file.</li>
+            <li MadCap:conditions="Product.VPmgOnly,Product.VPem1DOnly">To write the logged output to the end of an existing <MadCap:variable name="General.ProductName" /> log file, add the log file name after the control file. For example: <kbd><MadCap:variable name="General.ProductExe" /> input.ctl</kbd> <kbd>append.log</kbd></li>
+        </ol>
+        <p>Alternatively, if you selected <kbd><samp>Path Environment Variables</samp></kbd> during installation, you can:</p>
+        <ol>
+            <li>Go to the working directory.</li>
+            <li>Open a <i>PowerShell</i> window:<ol><li>Use the shortcut: <kbd><kbd>Shift</kbd>+<kbd>F10</kbd></kbd>. </li><li>Select <kbd><samp>Open PowerShell window here</samp></kbd> in the menu.</li></ol></li>
+            <li>Type <kbd><MadCap:variable name="General.ProductExe"></MadCap:variable></kbd> followed by the input file.</li>
+        </ol>
+    </body>
+</html>

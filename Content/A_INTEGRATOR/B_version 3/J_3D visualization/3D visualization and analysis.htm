@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Connecting from <MadCap:variable name="General.ProductNameGA" /></h1>
+        <MadCap:keyword term="3D visualization" />
+        <p>The <MadCap:variable name="General.ProductNameGA" /> application offers a powerful 3D visualization environment with a query interface that allows you to analyze <MadCap:variable name="General.ProductName" /> data and files in a spatial context. </p>
+        <p>Once installed on your computer, <MadCap:variable name="General.ProductNameGA" /> connects to <MadCap:variable name="General.ProductName" /> over a private network or the Internet.</p>
+        <p class="Task">To access your <MadCap:variable name="General.ProductName" /> data from <MadCap:variable name="General.ProductNameGA" />:</p>
+        <ol>
+            <li style="page-break-inside: avoid;">Launch <MadCap:variable name="General.ProductNameGA" />, and:<ol><li>Click the <span class="ui">Geoscience INTEGRATOR&#160;Query</span> tab, then</li><li>Click the <span class="uiClick">Connect now</span> button. Alternatively, you can connect through the file menu by clicking <span class="uiClick">Connect to Geoscience INTEGRATOR</span>. (The latter method allows you to connect to a different project without exiting and re-entering the application.)</li></ol><table style="width: 100%;"><col style="width: 350px;" /><col /><tbody><tr><td><img src="../../../Resources/Images/NewRes_GIQuery.png" style="width: 329px;height: 300px;" /></td><td><img src="../../../Resources/Images/NewRes_GA file menu.png" style="width: 300px;height: 288px;" /></td></tr></tbody></table></li>
+            <li style="page-break-inside: avoid;">In the <span class="ui">Geoscience INTEGRATOR credentials</span> dialogue box:<ol style="list-style-type: lower-alpha;"><li>Enter your email, password, and URL of a valid <MadCap:variable name="General.ProductName" /> server</li><li>Click <span class="uiClick">OK</span></li><li>Select a project from the drop-down list</li><li>Click <span class="uiClick">LOAD</span>.</li></ol><p style="page-break-before: avoid;"><img src="../../../Resources/Images/NewRes_GI credentials box.png" /></p></li>
+        </ol>
+        <div style="page-break-inside: avoid;">
+            <p>Once connected to a <MadCap:variable name="General.ProductName" /> project, you will see the project summary information  displayed in the data table in the workspace tab (below the viewport). This includes the project’s name and description, the x, y, z extents of the data, and a list of  the files uploaded via the  <MadCap:variable name="General.ProductName" /> web browser user interface.</p>
+            <img src="../../../Resources/Images/NewRes GAWorkspace.png" />
+        </div>
+        <div style="page-break-inside: avoid;">
+            <p>At the left of the <MadCap:variable name="General.ProductNameGA" /> user interface, you will see that the objects panel contains the themes for which there are data sets in the project. Expanding these displays the list of data sets in each theme. </p>
+            <img class="indent" src="../../../Resources/Images/object panel_GAGI.png" style="width: 329px;height: 347px;" />
+        </div>
+        <div class="note">Items listed in black in the <span class="ui">Objects</span> panel are data sets and objects that have imported data and can be queried, and are associated with <span class="ui">Data sets (tables)</span> in the <span class="ui">Data set explorer</span>. Greyed out data set names belong to the <span class="ui">Data sets (files)</span> section and they cannot be queried at the record level. </div>
+        <p>Clicking on a data set name in that list will load the <span class="ui">Data set summary</span> information and display it in the data table in a tab next to the <span class="ui">Workspace</span> tab. Although formatted differently, this is the same information  that you  see in the <span class="ui">Data set explorer</span> of <MadCap:variable name="General.ProductName" />’s user interface, including the list of files associated to the data set. </p>
+        <p style="page-break-before: avoid;">
+            <img src="../../../Resources/Images/en/GI-GADataSetTab.png" class="indent" />
+        </p>
+        <p>The <span class="ui">Geoscience INTEGRATOR query</span> panel displays data set-specific filtering tools, while a yellow rectangular polygon displays in the viewport indicating the data extents.</p>
+        <p>As is the case with the <span class="ui">Data set explorer</span>, the filtering tools offered here are theme-specific. You can select the ones you would like to use by toggling on the appropriate boxes.  </p>
+        <h1 MadCap:autonum=" ">Query parameters</h1>
+        <p>The Query parameters appear in the <span class="ui">Geoscience INTEGRATOR Query</span> panel, at the right of the <MadCap:variable name="General.ProductNameGA" />&#160;user interface. These are a series of filters as well as a tool to import certain objects and information. You can toggle on and off each one using the check box next to a parameter's name. Once selected, clicking <span class="uiClick">Run</span> at the bottom of the panel will filter and import your selections. </p>
+        <p>
+            <img src="../../../Resources/Images/viewport and GI query.png" style="width: 701px;height: 353px;" />
+        </p>
+        <h2 class="NoPageBreak">Bounding box</h2>
+        <p> The <span class="uiClick">Bounding Box</span> query will filter the data based on X, Y and Z limits. By default, the <span class="ui">from</span> and <span class="ui">to</span> parameters are set to the extents of the  entire data set. This option is available on all data themes.</p>
+        <p>
+            <img src="../../../Resources/Images/NewRes_GIQueryparams.png" style="width: 373px;height: 172px;" />
+        </p>
+        <p class="Task">To modify the bounding box extents:</p>
+        <ol>
+            <li> Digitize new <span class="ui">from</span> and <span class="ui">to</span> locations by either clicking on the corresponding target icon to the right, entering new values in the text boxes, or using the up and down arrows. </li>
+            <li> Click <span class="uiClick">Reset to max</span> to revert to the entire X, Y, and Z extents. 
+			</li>
+        </ol>
+        <p>To generate a bounding box that covers the area where most data is concentrated, click <span class="uiClick">2 standard deviations</span>. </p>
+        <p> You can visualize the bounding box of this area of concentration  clicking  <span class="ui">Show selection bounding box</span>, the icon to the right. <img src="../../../Resources/Images/bounding box icon.png" style="margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" /> </p>
+        <p>You can drag a line in the viewport to nominate the X, Y, and Z extents. We recommend setting  a view from top of the bounding box to draw the X and Y extents, and from a side view when drawing the Z extents.</p>
+        <h2 class="NoPageBreak">Date</h2>
+        <p>The <span class="uiClick">Date</span> option filters time-based data of the event-type themes.  You can select dates using the calendars or enter them in the text boxes.</p>
+        <p>
+            <img src="../../../Resources/Images/NewRes_DateGIquery.png" />
+        </p>
+        <p>Another version of this filter is available to query the themes about objects with time-related data. Since these themes can hold many instant data for each object location and <MadCap:variable name="General.ProductNameGA" /> can only show one property value at a time per location, you need to provide a datetime value for it to select the instant and interval properties as of a specific datetime. The system will return the values of the closest instant record before that date and the interval data record that includes that date (if there is one).</p>
+        <p>
+            <img src="../../../Resources/Images/NewRes_Date2GiQuery.png" />
+        </p>
+        <h2>Object</h2>
+        <p>The name of object type varies from theme to theme.</p>
+        <p> This option refers to samples and other specific types of objects that you can  use as filters in the Data set explorer.</p>
+        <p style="page-break-before: avoid;">
+            <img src="../../../Resources/Images/NewRes_GIqueryDholes.png" />
+        </p>
+        <h2 class="NoPageBreak">Property Filters</h2>
+        <p> This <span class="uiClick">Property Filters</span> option filters by property values.  Press <span class="uiClick">+</span> to add another property filter. </p>
+        <p>
+            <img src="../../../Resources/Images/NewRes_GIqueryPropfilters.png" />
+        </p>
+        <div class="note">The nature of the data in a theme will determine the query behaviour and options available in the property filter. </div>
+        <ul>
+            <li>Text data: <span class="ui">Is</span> is the only option available. You must enter the entire character string in the text box.</li>
+            <li>Classification and binary: <span class="ui">Is</span> is the only option available. Expand using the down arrow and select one or more classes to import. </li>
+            <li>Float, integer, and date: Select one of the available operations and enter a value in the text box.</li>
+        </ul>
+        <p>For <span class="uiClick">Shifts</span>, <span class="uiClick">Properties</span>, <span class="uiClick">Tags</span>, and <span class="uiClick"><MadCap:keyword term="Groups" />Groups</span>. simply toggle on using the check box and  select among the available items in the project to import them. </p>
+        <p>When you have set all the desired filters, you can click <span class="uiClick">Run</span> at the bottom of the query panel to send the query. <MadCap:variable name="General.ProductNameGA" /> will only load the pertinent records that fit all the query parameters.</p>
+        <h1 MadCap:autonum=" ">Viewing data import results</h1>
+        <p><MadCap:variable name="General.ProductNameGA" /> stores the data import results on special object types, depending on the data type. For example, <span class="ui">Microseismic events</span> are a special points object that stores the data on nodes referred to as <span class="ui">Events</span>. </p>
+        <p>For data sets that have groups (e.g., Earth models / 3D points sets), the query results are split into one object per group name under a timestamped folder.  Similarly, drillholes are objects located within a timestamped folder, within the drillholes data set group. All other queries will be objects named according to a timestamp directly under the data set folder.</p>
+        <p>
+            <img class="indent" src="../../../Resources/Images/en/GI-GAQueryResultObjectsDH.png" />
+        </p>
+        <div style="page-break-inside: avoid;">
+            <p>The viewport displays the imported data in 3D, and the data table displays a summary.</p>
+            <img class="indent" src="../../../Resources/Images/viewport and summary.png" style="width: 605px;height: 748px;" />
+        </div>
+        <h1 MadCap:autonum=" ">Viewing project files, maps, and documents</h1>
+        <p>You can find project files, maps, and documents in the Workspace tab of the data table, where you can use a search bar to locate files of interest. Clicking on a file name will display a selection of options:</p>
+        <p><span class="uiClick">Import</span>: Imports the file under the project or data set name in the objects panel. The data file has to be in a format supported by <MadCap:variable name="General.ProductNameGA" />, for example <span class="ui">GOCAD</span> surface files, DWG and DXF files.</p>
+        <p><span class="uiClick">Open</span>: The system will try to open the file using the program associated to that file type on the computer. For example, a photo file saved with the extension .<span class="fileext">.jpg</span> will open in an image viewer application.</p>
+        <p><span class="uiClick">Save as</span>: Downloads the file to your computer. </p>
+        <p><span class="uiClick">Pull</span>: Downloads the file in the <MadCap:variable name="General.ProductNameGA" /> workspace and becomes available offline.</p>
+        <p><span class="uiClick">Cancel</span>:  Cancels the file selection.</p>
+        <p>
+            <img src="../../../Resources/Images/NewRes_GIQuertDownloadfile.png" />
+        </p>
+        <h1 MadCap:autonum=" ">Visualizing the data in 3D</h1>
+        <p>Once you have imported your data into <MadCap:variable name="General.ProductNameGA" />, you can take advantage of the numerous visualization tools to analyze it. You can view integrated data and models from multiple data sets and files together and analyze, interpret and share with others.</p>
+        <p>Before exiting <MadCap:variable name="General.ProductNameGA" />, you can save the imported data using the <span class="uiClick">File</span> menu option. Doing so will create a <MadCap:variable name="General.ProductNameGA" /> file with a (<span class="fileext">.geoh5</span> extension) on your computer, which will remain available even after terminating the connection to <MadCap:variable name="General.ProductName" />. </p>
+        <div class="note">It is only possible to connect to one <MadCap:variable name="General.ProductNameGI" /> project at a time.</div>
+    </body>
+</html>

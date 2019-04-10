@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MsWordImport
+  PreserveSourceStyles="True"
+  KeepSourceLinks="false"
+  ConvertInlineFormatting="true"
+  AddContinuedLinks="false"
+  AddContinuedFromLinks="false"
+  ContinuedLinkFormat="(continued in {title})"
+  ContinuedFromLinkFormat="(continued from {title})"
+  UseMaxCharLimit="false"
+  UseMinCharLimit="true"
+  MaxCharLimit="10000"
+  MinCharLimit="50"
+  FilenameLength="24"
+  GeneratePageLayouts="false"
+  UseFirstHeadingAsTopicTitle="true"
+  ConvertEquations="true"
+  LastCollectTime="2017-09-18T10:37:36.3743341-04:00"
+  ProjectName="Mira Geoscience User guides"
+  ProjectFolder="C:\Users\jackg\Documents\My Projects\Mira Geoscience User guides\"
+  AutoSync="false"
+  AutoFitTables="false"
+  UseHeaderRows="true"
+  Stylesheet="../../Content/Resources/Stylesheets/MainStyles.css"
+  LastImport="2017-09-18T10:49:28.0619473-04:00">
+  <Files>
+    <Url
+      Source="../../../../Geoscience ANALYST Russian/Copy of Geoscience ANALYST User guide excerpt for Russian translation_August29_2017_rus.docx"
+      AbsoluteSource="file:///C:/Users/jackg/Documents/Geoscience ANALYST Russian/Copy of Geoscience ANALYST User guide excerpt for Russian translation_August29_2017_rus.docx" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles />
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/Copy of Geoscience ANALYST User guide excerpt for Russian translation_August29_2017_rus/Содержание.htm"
+      TimeStamp="9/18/2017 10:37:39 AM" />
+    <Url
+      Source="../../Content/Copy of Geoscience ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm"
+      TimeStamp="9/18/2017 10:37:39 AM" />
+    <Url
+      Source="../TOCs/Copy of Geoscience ANALYST User guide excerpt for Russian translation_August29_2017_rus.fltoc"
+      TimeStamp="9/18/2017 10:37:39 AM" />
+    <Url
+      Source="../../Content/Resources/MasterPages/Copy of Geoscience ANALYST User guide excerpt for Russian translation_August29_2017_rus.flmsp"
+      TimeStamp="9/18/2017 10:37:39 AM" />
+    <Url
+      Source="../../Content/Resources/Stylesheets/MainStyles_1.css"
+      TimeStamp="9/18/2017 10:37:39 AM" />
+  </GeneratedFiles>
+  <ParagraphStyles>
+    <Map
+      From="Heading 1"
+      To="h1.Heading 1" />
+    <Map
+      From="Heading 2"
+      To="h2.Heading 2" />
+    <Map
+      From="Heading 3"
+      To="h3.Heading 3" />
+    <Map
+      From="Heading 4"
+      To="h4.Heading 4" />
+    <Map
+      From="Heading 5"
+      To="h5.Heading 5" />
+    <Map
+      From="Heading 6"
+      To="h6.Heading 6" />
+    <Map
+      From="h1"
+      To="h1.(MS Word Style)" />
+  </ParagraphStyles>
+  <CharacterStyles>
+    <Map
+      From="Hyperlink"
+      To="a.(MS Word Style)" />
+  </CharacterStyles>
+  <NewTopicStyles>
+    <StyleName
+      Name="h1" />
+    <StyleName
+      Name="h1_NoPageBreak" />
+    <StyleName
+      Name="h2" />
+  </NewTopicStyles>
+  <UsedParagraphStyles>
+    <StyleName
+      Name="div_indent" />
+    <StyleName
+      Name="div_note1" />
+    <StyleName
+      Name="h1" />
+    <StyleName
+      Name="h1_NoPageBreak" />
+    <StyleName
+      Name="h2" />
+    <StyleName
+      Name="h2_NoPageBreak" />
+    <StyleName
+      Name="h3" />
+    <StyleName
+      Name="h4" />
+    <StyleName
+      Name="h4_1" />
+    <StyleName
+      Name="h6" />
+    <StyleName
+      Name="li" />
+    <StyleName
+      Name="li_1" />
+    <StyleName
+      Name="p" />
+    <StyleName
+      Name="p_1" />
+    <StyleName
+      Name="p_2" />
+    <StyleName
+      Name="p_indent" />
+    <StyleName
+      Name="p_LinkFirstLevela" />
+    <StyleName
+      Name="p_LinkFirstLevela_1" />
+    <StyleName
+      Name="p_Task" />
+    <StyleName
+      Name="p_Task11_5font" />
+    <StyleName
+      Name="pageBreak" />
+    <StyleName
+      Name="td" />
+    <StyleName
+      Name="td_1" />
+    <StyleName
+      Name="td_figure" />
+    <StyleName
+      Name="td_LightColour" />
+    <StyleName
+      Name="td_LightColour_1" />
+    <StyleName
+      Name="td_TableStyle-PatternedRows-BodyA-Regular-Body1" />
+    <StyleName
+      Name="td_TableStyle-PatternedRows-BodyA-Regular-DarkerRows" />
+    <StyleName
+      Name="td_TableStyle-PatternedRows-BodyA-Regular-LightRows" />
+    <StyleName
+      Name="td_TableStyle-PatternedRows-BodyB-Regular-Body1" />
+    <StyleName
+      Name="td_TableStyle-PatternedRows-BodyB-Regular-DarkerRows" />
+    <StyleName
+      Name="td_TableStyle-PatternedRows-BodyB-Regular-LightRows" />
+    <StyleName
+      Name="td_TableStyle-PatternedRows-BodyD-Regular-Body1" />
+    <StyleName
+      Name="td_TableStyle-PatternedRows-BodyD-Regular-DarkerRows" />
+    <StyleName
+      Name="td_TableStyle-PatternedRows-BodyD-Regular-LightRows" />
+    <StyleName
+      Name="td_TableStyle-PatternedRows-BodyE-Regular-Body1" />
+    <StyleName
+      Name="td_TableStyle-PatternedRows-BodyE-Regular-DarkerRows" />
+    <StyleName
+      Name="td_TableStyle-PatternedRows-BodyE-Regular-DarkerRows_1" />
+    <StyleName
+      Name="td_TableStyle-PatternedRows-BodyE-Regular-LightRows" />
+    <StyleName
+      Name="td_TableStyle-PatternedRows-BodyE-Regular-LightRows_1" />
+    <StyleName
+      Name="td_TableStyle-SimpleWithPadding-BodyA-Column1-Row1" />
+    <StyleName
+      Name="td_TableStyle-SimpleWithPadding-BodyB-Column1-Row1" />
+    <StyleName
+      Name="td_TableStyle-SimpleWithPadding-BodyD-Column1-Row1" />
+    <StyleName
+      Name="td_TableStyle-SimpleWithPadding-BodyE-Column1-Row1" />
+    <StyleName
+      Name="th_TableStyle-PatternedRows-HeadD-Regular-Header1" />
+    <StyleName
+      Name="th_TableStyle-PatternedRows-HeadE-Regular-Header1" />
+    <StyleName
+      Name="TOC 1" />
+    <StyleName
+      Name="TOC 2" />
+    <StyleName
+      Name="TOC 3" />
+    <StyleName
+      Name="TOC 6" />
+  </UsedParagraphStyles>
+  <UsedCharacterStyles>
+    <StyleName
+      Name="Hyperlink" />
+    <StyleName
+      Name="b" />
+    <StyleName
+      Name="b_1" />
+    <StyleName
+      Name="b_2" />
+    <StyleName
+      Name="span" />
+    <StyleName
+      Name="span_1" />
+    <StyleName
+      Name="i" />
+    <StyleName
+      Name="i_1" />
+    <StyleName
+      Name="span_2" />
+    <StyleName
+      Name="i_3" />
+    <StyleName
+      Name="span_3" />
+    <StyleName
+      Name="span_4" />
+    <StyleName
+      Name="span_5" />
+    <StyleName
+      Name="variable_3" />
+  </UsedCharacterStyles>
+</MsWordImport>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultGlossary>
+  <GlossaryEntry
+    glossTerm="Glossary.Term18"
+    Stem=""
+    IgnoreCase="false"
+    TermClass="Popup">
+    <Terms>
+      <Term>Neighbourhoods</Term>
+    </Terms>
+    <Definition
+      Link="">A user-defined region of the site from which you can monitor data....</Definition>
+  </GlossaryEntry>
+</CatapultGlossary>

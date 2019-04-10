@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MadCap HTML5 Target"
+  Type="WebHelp2"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MoveOutputContentToRoot="false"
+  SkinComponents=""
+  EnableResponsiveOutput="true"
+  MasterPage="/Content/Resources/MasterPages/WebOtherTopics.flmsp"
+  ResultsPerPage="10"
+  Skin="/Project/Skins/HTML5 - Top Navigation.flskn"
+  ConditionTagExpression="include[General.Online]exclude[General.PDF]"
+  DefaultUrl="/Content/Online Publish/HTML5 - Top Navigation/Home.htm"
+  ExcludeUnreferencedContent="true"
+  MasterStylesheetOverride="true"
+  MasterStylesheet="/Content/Resources/Stylesheets/MainStyles.css"
+  MasterToc="/Project/TOCs/Online Output-obsolete.fltoc">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true" />
+</CatapultTarget>

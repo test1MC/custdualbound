@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultVariableSet>
+  <Variable
+    Comment=""
+    Name="CompanyName"
+    EvaluatedDefinition="Mira Geoscience Asia Pacific Pty Ltd">Mira Geoscience Asia Pacific Pty Ltd</Variable>
+  <Variable
+    Comment=""
+    Name="PhoneNumber"
+    EvaluatedDefinition="+ 61 8 9429 8838">+ 61 8 9429 8838</Variable>
+  <Variable
+    Name="CityStateZip"
+    Comment=""
+    Definition="Some text"
+    EvaluatedDefinition="Perth, WA">Perth, WA</Variable>
+  <Variable
+    Name="StreetAddress"
+    Comment=""
+    Definition="Some text"
+    OriginalName="StreetAddress"
+    EvaluatedDefinition="45 Ventnor Avenue, West Perth">45 Ventnor Avenue, West Perth</Variable>
+</CatapultVariableSet>

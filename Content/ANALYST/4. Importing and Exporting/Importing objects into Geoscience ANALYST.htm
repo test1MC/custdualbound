@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/Simple.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Importing files into Geoscience ANALYST<MadCap:keyword term="Importing files" /></h1>
+        <p>There are two ways to import the files into Geoscience ANALYST: through the File menu, and by dragging and dropping. </p>
+        <p class="Task">To import files via the File menu:</p>
+        <ol>
+            <li>Go to <i style="font-weight: bold; font-style: normal;">File / Import</i>.</li>
+            <li>Select the file type and object, if applicable. </li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/en/GA filemenu extended.png" style="width: 599px; height: 458px;" />
+        </p>
+        <p class="Task">To import files by dragging and dropping:</p>
+        <ol>
+            <li>Locate your file using the file browser.</li>
+            <li>Drag and drop it onto the <i><MadCap:keyword term="Viewport" />Viewport</i> or <i><MadCap:keyword term="Objects panel" />Objects panel</i> so Geoscience ANALYST can auto-detect the file type extension and launch the appropriate import filter.</li>
+        </ol>
+        <div class="note">Drillhole data cannot be imported by dragging and dropping.</div>
+        <div class="note">If you are using the Viewport in a secondary monitor, you will have to drag and drop to the Objects panel instead of directly onto the Viewport.</div>
+        <p class="Task">To import Geoscience ANALYST&#160;workspaces on disk:<MadCap:keyword term="Importing files:Workspace" /><MadCap:keyword term="Workspace" /><MadCap:keyword term="Importing files:GEOH5 files" /><MadCap:keyword term="GEOH5 files" /></p>
+        <ol>
+            <li>In the Geoscience ANALYST <i style="font-weight: bold; font-style: normal;">File</i> menu, click <b>Import</b>, then in the contextual menu, click <b>Import Workspace as a Group</b>.</li>
+            <li>In the finder window, locate and open the <span class="fileext">.geoh5</span> file you want to view.</li>
+        </ol>
+        <p>The information exchange between projects is facilitated by exporting parts of workspace files or importing existing workspaces as group containers within your ongoing sessions.</p>
+        <p>The table below indicates the data and file types that you can import. You can click the file type for more information:</p>
+        <ul>
+            <li><a href="#AMIRA">AMIRA&#160;TEM</a> drillhole, surface and airborne EM&#160;survey files and loops (<span class="fileext">.tem</span>)</li>
+            <li><a href="#Importin5">ASCII</a> column and drillhole (<span class="fileext">.csv</span>)</li>
+            <li><a href="#Importin">AutoCAD</a> (<span class="fileext">.dxf</span>, <span class="fileext">.dwg</span>)</li>
+            <li><a href="#Importin2">Datamine</a>
+                <MadCap:keyword term="Object types:Points" /> binary points, strings, wire-frames, drillholes and block model (<span class="fileext">.dm</span>)</li>
+            <li><a href="#Importin8">ESRI shape</a> (<span class="fileext">.shp</span>)</li>
+            <li><a href="#Importin7">GeoImage</a> (<span class="fileext">.jpg</span>, <span class="fileext">.jpeg</span>, <span class="fileext">.bmp</span>, <span class="fileext">.gif </span>.png, <span class="fileext">.tif</span>, <span class="fileext">.tiff</span>)</li>
+            <li><a href="#Importin3">Geosoft</a> XYZ files, databases, and grids (<span class="fileext">.xyz</span>, <span class="fileext">.gdb</span>, <span class="fileext">.grd</span>)</li>
+            <li><a href="#GOCAD"><MadCap:variable name="General.Gocad" /> Mining Suite</a>
+                <MadCap:keyword term="Object types:Points" /> PointsSets, <MadCap:keyword term="Object types:Curves" />Curves, <MadCap:keyword term="Object types:Drillholes" />Wells, Surfaces <MadCap:keyword term="Object types:Surfaces" />, Voxets and mixed (<span class="fileext">.vs</span>, <span class="fileext">.pl</span>, <span class="fileext">.wl</span>, <span class="fileext">.ts</span>, <span class="fileext">.vo</span>, <span class="fileext">.gp</span>, <span class="fileext">.mx</span>)</li>
+            <li><a href="#Importin4">ioGAS</a> (<span class="fileext">.gas</span>)</li>
+            <li><a href="#Maxwell">Maxwell plates</a> (<span class="fileext">.pte</span>)</li>
+            <li><a href="#Importin6">UBC-GIF</a> observation, 3D mesh, 3D model, and 3D topography (<span class="fileext">.obs</span>, <span class="fileext">.msh</span>, <span class="fileext">.den</span>, <span class="fileext">.topo</span>)</li>
+            <li><a href="#ImportVP">VP Suite models</a> (<span class="fileext">.geoh5</span>)</li>
+        </ul>
+        <h2>AMIRA TEM files <a name="AMIRA"></a><MadCap:keyword term="Importing files:AMIRA TEM files" /></h2>
+        <p>When importing AMIRA TEM files, curves are created in a folder called TEM import. The importer automatically assigns the line ID property as well as multi-element and orientation data groups for quick profile and orientation visualization. If loop information is available, curves representing the geometry will be created in the same folder.</p>
+        <img src="../../Resources/Images/en/tem.png" style="width: 368px" />
+        <h2 class="NoPageBreak">ASCII files <a name="Importin5"></a><MadCap:keyword term="Importing files:ASCII files" /></h2>
+        <p>Geoscience ANALYST has two types of ASCII CSV import utilities: </p>
+        <ul>
+            <li><a href="#Geosoft">Column-based files</a>: Creates points objects.</li>
+            <li><a href="#ASCII">Drillholes files</a>: Creates drillholes from a series of column-type files, including collar and optional survey and data files.</li>
+        </ul>
+        <h2 class="NoPageBreak">ASCII Column-based files <a name="Geosoft"></a><MadCap:keyword term="Importing files:ASCII Column-based files" /></h2>
+        <p>  When importing either via the file menu or the drag and drop method, the <i>Import points</i> window will appear, allowing you to set the parameters of the data so that Geoscience ANALYST can accurately represent it.</p>
+        <img src="../../Resources/Images/import points.bmp" alt="" title="" />
+        <table style="mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');width: 100%;" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 204px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Option</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><b>Name</b>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Name of the points object created within a new or existing folder called ASCII Importers. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">Required fields</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Allows you to choose the x, y, z coordinates (easting, northing, and elevation columns). The importer will try to auto-detect appropriate fields according to the header name (e.g., x, y, z, easting, northing, elevation). If the utility does not detect any fields from the CSV, it will consider the first three columns as x, y, and z.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">Additional fields </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                        Allows you to select the NDV (no-data value) and theme (referenced or float) for each column in the imported CSV file. 
+                        The utility predicts the theme based on the previewed values of the first 256 entries of the CSV file. For text entries, it suggests referenced data. For numerical entries, it suggests float data. If it does not auto-select the optimal type, you can choose the correct one using the drop down menu.
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">Global NDV setting</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Allows you to enter custom no-data values for individual columns. When entering the values in the global NDV setting, separate them by commas and click <b>Apply</b>. This will add the values to every column at once. You must enter the entire value as shown in the data preview,  e.g., 0.01 must be entered rather than .01.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows" style="font-weight: bold;">Data preview</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">Displays a preview of the first 256 entries in the ASCII file. </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="NoPageBreak">ASCII Drillhole files <a name="ASCII"></a><MadCap:keyword term="Importing files:ASCII Drillhole files" /><MadCap:keyword term="Importing files:Drillholes" /><MadCap:keyword term="Drillholes" /><MadCap:keyword term="Object types:Drillholes" /></h2>
+        <p>When importing ASCII Drillhole files, you must do so via the file import method, as multiple files and data parameter settings are required.</p>
+        <p>Before loading, the <i>Import drillhole files</i> dialogue box presents you with the following options, as indicated in the table below:</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');width: 100%;" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 200px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Option</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">Collar file</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Allows you to browse locally to select the desired drillhole collar file. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">Survey file</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                        Allows you to browse locally to select the desired survey file. 
+                       If left blank, the importer will assume all holes are vertical. If the importer cannot find a drillhole in the survey file but finds one in the collar file, the import importer will create it vertically.
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">Interval log files</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Allows you to select one or more data files related to drillhole intervals. All files must be in the same directory.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows" style="font-weight: bold;">Point log files </td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                        Allows you to select one or more data files related to drillhole points. All files must be in the same directory. 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Task">To import ASCII&#160;drillhole files:</p>
+        <img src="../../Resources/Images/import drillhole files.bmp" alt="" title="" />
+        <ol>
+            <li>In the <i>Import drillhole files</i> window, click <b>Browse</b> to select the collar, survey, and data files on your local drive.</li>
+            <li> Click <b>OK</b>. </li>
+            <li>In the <i>Select required columns</i> window, determine if you need to re-map required fields with different columns than the import auto-detection utility suggests using the drop-down column selectors. </li>
+            <li>Repeat step 3 with each of the file types, as they appear in sequence.</li>
+        </ol>
+        <table style="width: 96%;border-top-left-radius: 0px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;border-left-style: solid;border-left-width: 0px;border-left-color: #696969;border-right-style: solid;border-right-width: 0px;border-right-color: #696969;border-top-style: solid;border-top-width: 0px;border-top-color: #696969;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #696969;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/Simple.css');" class="TableStyle-SimpleWithPadding" cellspacing="0">
+            <col style="width: 204px;" class="TableStyle-SimpleWithPadding-Column-Column1" />
+            <col style="width: 17px;" class="TableStyle-SimpleWithPadding-Column-Column1" />
+            <col class="TableStyle-SimpleWithPadding-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                    <td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">
+                        <img src="../../Resources/Images/Select required columns_collars.bmp" alt="" title="" />
+                    </td>
+                    <td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">&#160;</td>
+                    <td class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1">
+                        <img src="../../Resources/Images/Select required columns_interval log.bmp" />
+                    </td>
+                </tr>
+                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                    <td style="font-weight: bold;" class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1">
+                        <img src="../../Resources/Images/select required columns_survey.bmp" />
+                    </td>
+                    <td class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1">&#160;</td>
+                    <td class="TableStyle-SimpleWithPadding-BodyA-Column1-Row1">
+                        <img src="../../Resources/Images/Select required columns_point logs.bmp" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note">Negative dips create downward trending drillholes, while positive dips create upward trending drillholes, which may occur in underground drilling.</div>
+        <h2 class="NoPageBreak">AutoCAD files <MadCap:keyword term="Importing files:AutoCAD files" /><a name="Importin"></a></h2>
+        <p>
+            <MadCap:keyword term="Object types:Surfaces" />
+            <MadCap:keyword term="Object types:Points" />
+            <MadCap:keyword term="Object types:Curves" />You can create points, curves, and surfaces by importing AutoCAD <span class="fileext">.dwg</span> and <span class="fileext">.dxf</span> files, from a wide variety of AutoCAD-related applications. In the Objects panel, Geoscience ANALYST&#160;stores imported files in a folder called AutoCAD&#160;imports. AutoCAD objects are organized in a sub-folder for each layer.</p>
+        <p>
+            <img src="../../Resources/Images/text icon.png" /> This icon denotes an AutoCAD text file, which the system imports as a text type specific to this file type in the Objects panel.</p>
+        <h2 class="NoPageBreak">Datamine files <a name="Importin2"></a><MadCap:keyword term="Importing files:Datamine files" /></h2>
+        <p> You can import and convert binary Datamine point, string, wire-frame, block model, and drillhole assay type files. Geoscience ANALYST&#160;stores imported files in a folder created upon import called <i>Datamine imports</i> within the Objects panel.</p>
+        <p>The original Datamine colours are preserved on the created points, curves, and surface objects through an integer data value called COLOUR, which automatically maps to a custom built-in Datamine colour table and colour mapping curve, according to the following legend:</p>
+        <p>
+            <img src="../../Resources/Images/datamine colout table.png" />
+        </p>
+        <h3 class="NoPageBreak NoTOC">Additional Datamine properties and themes</h3>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');width: 100%;" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 215px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Property and / or theme</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Conversion type in Geoscience ANALYST</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Non-discrete numerical</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Float or integer.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Discrete alphanumeric </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Reference data.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Block model</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                        <MadCap:keyword term="Object types:BlockModels" />
+                       BlockModels.<br />If the cell distribution is irregular, the importer creates an additional points object at the centroids, preserving all data. <br />The BlockModel derives its dimensions and cell sizes from parameters in the Datamine binary header (e.g., largest XINC, YINC, ZINC). The data held on the points object is transferred to the BlockModel cells.
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Wire-frame</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Surfaces. The data is stored at the node or triangle level.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">Drillhole type </td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">Paths (drillhole traces) and properties (imported as interval and point logs). </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="NoPageBreak">ESRI&#160;shapefiles <a name="Importin8"></a><MadCap:keyword term="Importing files:ESRI shapefile" /></h2>
+        <p>Geoscience ANALYST can import ESRI shapefiles (<span class="fileext">.shp</span>), which is a format for GIS software that describes vector features such as points, curves, and polygons. </p>
+        <div class="note">Make sure the <span class="fileext">.dbf</span> and <span class="fileext">.shx</span> files associated with the <span class="fileext">.shp</span> file are available and located in the same directory as the <span class="fileext">.shp</span> file. You will not be able to import the <span class="fileext">.shp</span> without them.</div>
+        <p>The import utility allows you to either drag and drop the <span class="fileext">.shp</span> into the Viewport, or use the file import method on your local directory. Point files will import as points, and polyline and polygon-type files will import as curves.</p>
+        <p>Data from the ESRI shapefile converts in Geoscience ANALYST as follows:</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');width: 100%;" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 220px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Shapefile theme</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Geoscience ANALYST generic theme</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">FTString</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Reference. (May import as text in some cases. Class colours are randomly generated).</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">FTInteger</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Integer.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows" style="font-weight: bold;">FTDouble</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">Float.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="NoPageBreak">Project files (<span class="fileext">.geoh5</span>) <a name="Importin9"></a><MadCap:keyword term="GEOH5 files" /><MadCap:keyword term="Importing files:GEOH5 files" /><MadCap:keyword term="Importing files:Workspace" /></h2>
+        <p style="page-break-after: avoid;"><span class="fileext">.geoh5</span> file. See the section on <a href="../2. The Geoscience ANALYST user interface/Saving workspaces.htm#GEOH5_format">Saving workspaces</a> to find more about this file format.</p>
+        <div class="note">When importing a <span class="fileext">.geoh5</span> file, the system does not import non-moveable folders such as labels and slicers or any saved views. </div>
+        <h2 class="NoPageBreak">GeoImage files <a name="Importin7"></a><MadCap:keyword term="Importing files:GeoImage files" /></h2>
+        <p>Geoscience ANALYST is compatible with several image file types, each of which create GeoImage objects when imported. They are:</p>
+        <ul>
+            <li><span class="fileext">.jpg/.jpeg</span>
+            </li>
+            <li><span class="fileext">.gif</span>
+            </li>
+            <li><span class="fileext">.bmp</span>
+            </li>
+            <li><span class="fileext">.tif/.tiff</span>
+            </li>
+        </ul>
+        <p>Additionally, Geoscience ANALYST&#160;supports two types of georeferenced ASCII files:</p>
+        <ul>
+            <li>World files: horizontally oriented images (plan maps)</li>
+            <li>Location <span class="fileext">.csv</span> files: horizontally and vertically oriented images (plan maps and sections)</li>
+        </ul>
+        <p class="Task">Geo-referencing with the world file format</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;width: 60%;" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 69px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 354px;" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Line</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Coordinates</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">1</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">X component of the pixel width (x-scale)</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">2</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Y component of the pixel width (y-skew)</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">3</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">X component of the pixel height (x-skew)</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">4</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Y component of the pixel height (y-scale)</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">5</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">X-coordinate of the centre of the upper left pixel</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">6</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">Y-coordinate of the centre of the upper left pixel</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>For example, the world file required to import and georeference an non-rotated plan map with 3.5x3.5m cells originating at 1900E, 55000N would look like:
+        <div class="indent"><code>3.5<br />0.00<br />0.00<br />-3.5<br />1900<br />55000</code></div></p>
+        <p class="Task">Geo-referencing with the location <span class="fileext">.csv</span> file format</p>
+        <p>The location <span class="fileext">.csv</span> file consists of three lines identifying the coordinates of the top left, top right, and bottom left corners of the image, delimited by commas.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;width: 60%;" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 93px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 343px;" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Line</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Coordinates</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">1</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">top left corner x, y, z coordinates</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">2</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">top right corner x, y, z coordinates</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">3</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">bottom left corner x, y, z coordinates</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>For example, the location file required to import and georeference a NE trending vertical section that goes from 3100 m to 2500 m elevation would look like:
+        <div class="indent"><tt>6600,16400,3100<br />        6800,17010,3100<br />        6600,16400,2500</tt></div></p>
+        <p>To automatically georeference the image upon import, an associated world or location file must exist in the image folder and be named the same as the image file. The world file should also have the same extension suffix with a “w” (e.g., <span class="fileext">.jpgw</span>), while the location file must be comma-delimited with a <span class="fileext">.csv</span> extension.</p>
+        <div class="note">If both world and location files are present in the folder, the importer will use the world file by default. If neither a world nor location file is detected, the image will import as a horizontal GeoImage originating at 0, 0, 0 and each pixel will be 1x1 units in size.</div>
+        <h2 class="NoPageBreak">Geosoft files <a name="Importin3"></a><MadCap:keyword term="Importing files:Geosoft files" /></h2>
+        <p>Geoscience ANALYST imports the following Geosoft file types:</p>
+        <ul>
+            <li><a href="#Geosoft_db">Databases</a>
+            </li>
+            <li><a href="#Geosoft_grids">Grids</a>
+            </li>
+            <li><a href="#Geosoft_xyz">XYZ ASCII files</a>
+            </li>
+        </ul>
+        <div class="note">You must have an active Geosoft account to import Geosoft binary files into Geoscience ANALYST.</div>
+        <h2 class="NoPageBreak">Geosoft databases <a name="Geosoft_db"></a><MadCap:keyword term="Importing files:Geosoft files:Geosoft databases files" /></h2>
+        <p>Geoscience ANALYST imports Geosoft <span class="fileext">.gdb</span> files as curves with associated data, representing geophysical survey lines. When importing either via the file menu or the drag and drop method, the <i>Geosoft database file import</i> window presents you with a series of options and information associated with the file, as illustrated in the image below:</p>
+        <div>
+            <img src="../../Resources/Images/geosoft database.bmp" alt="" title="" />
+        </div>
+        <table style="mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');width: 100%;" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 230px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Option</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Import lines as separate objects</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                        Selecting the check box allows you to import each line as a separate curve, each of which is named according to the Line ID. 
+                        Leaving the check box unchecked will import the geophysical survey lines as one curve.
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Use constant Z value</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows"> Assign a constant z value to all curves if the data is 2D.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">x, y, z coordinate channel</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">Allows you to assign different fields to the x, y, and z axes. </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note">The type column lists Geosoft data formatting, and maps it to appropriate themes (e.g., float, integer, date). Unknown types will import as float data, so text entries may not import as expected.</div>
+        <h2 class="NoPageBreak">Geosoft grids <a name="Geosoft_grids"></a><MadCap:keyword term="Importing files:Geosoft files:Geosoft grids" /></h2>
+        <p>Geoscience ANALYST imports Geosoft <span class="fileext">.grd</span> files as 2D grids.</p>
+        <p>The data will import as floats. If the importer detects an associated <span class="fileext">.grd</span> files). Otherwise, it will be horizontal and the <i>Geosoft grid file import</i> dialogue box will pop up, allowing you to enter the elevation.</p>
+        <img src="../../Resources/Images/geosoft grid file import.bmp" alt="" title="" />
+        <p><i>Elevation</i>: Select the z coordinate to assign to the 2D grid origin.</p>
+        <h2 class="NoPageBreak">Geosoft XYZ files <a name="Geosoft_xyz"></a><MadCap:keyword term="Importing files:Geosoft files:Geosoft XYZ files" /></h2>
+        <p>Geosoft <span class="fileext">.xyz</span> files import as curve objects along with their associated data, representing geophysical survey lines.  When importing either via the file menu or the drag and drop method, the <i>Geosoft XYZ file import</i> window allows you to set the elevation, as illustrated in the image below: </p>
+        <img src="../../Resources/Images/geosoft xyz file import (002).bmp" />
+        <div class="note">Geoscience ANALYST will attempt to correctly assign themes. For example, data values with the format 13:12:36.00 that have an accompanying comment date field //Date 2003/11/04 will be tagged as a DateTime property. If the data assignment is unsuccessful, it will be assumed to be text.</div>
+        <h2 class="NoPageBreak"><MadCap:variable name="General.Gocad" /> Mining Suite files <a name="GOCAD"></a><MadCap:keyword term="Importing files:[%=General.Gocad%] ASCII files" /><MadCap:keyword term="[%=General.ProductNameGMS%]" /></h2>
+        <p>You can import supported <MadCap:variable name="General.Gocad" /> files either via the file menu or the drag and drop method. </p>
+        <p>All properties import as float data, with the exception of discrete properties associated with a classification such as geology codes, which will import as reference data. </p>
+        <p>The following table illustrates the <MadCap:variable name="General.Gocad" /> objects and their behaviour once imported into Geoscience ANALYST:</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 122px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 202px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1"><MadCap:variable name="General.Gocad" /> object</th>
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1"><MadCap:variable name="General.Gocad" /> file extension</th>
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Geoscience ANALYST object</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Preserved attributes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">PointsSets</td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><span class="fileext">.vs</span>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Points</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Colour, node, symbol, size and shape, painted status</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Curves</td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows"><span class="fileext">.pl</span>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Curves</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Colour, node size and status, segment thickness and status, painted status</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Surfaces</td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><span class="fileext">.ts</span>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Surfaces</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Colour, mesh and painted status</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Wells</td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows"><span class="fileext">.wl</span>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Drillholes</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">N/A</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Voxets</td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><span class="fileext">.vo</span>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">BlockModels or GeoImage</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Displayed sections and painted status</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Drillhole groups</td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows"><span class="fileext">.gp</span>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Drillholes within a drillholes group</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">N/A</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Miscellaneous groups</td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><span class="fileext">.gp</span>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Miscellaneous objects within a folder named according to the group</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">N/A</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">Mixed</td>
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows"><span class="fileext">.mx</span>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">Miscellaneous objects</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">N/A</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="tip">If the headers of the imported <MadCap:variable name="General.Gocad" /> files do not include the class entries, the numerical key values will be imported rather than the classification names. To update the class names and colours, export the classification from <MadCap:variable name="General.Gocad" /><MadCap:keyword term="Data Colours panel" /> as a CSV file, navigate to the Data Colours panel of the reference data in question, and load it via the <i>Load colours</i> settings button.</div>
+        <h2 class="NoPageBreak">ioGAS files <a name="Importin4"></a><MadCap:keyword term="Importing files:ioGAS files" /></h2>
+        <p>When imported, ioGAS (<span class="fileext">.gas</span>) files will create a unique ioGAS Points object. The new object appears in a folder called ioGAS imports that is created upon import if does not already exist in your workspace. With an ioGAS file imported, you will see the <i>ioGAS&#160;graphics</i> check box in the Points section of the Visual Parameter setting allowing you to view (but not edit) the ioGAS points.  This feature permits the advanced visualization settings from ioGAS to be compatible with Geoscience ANALYST’s 3D environment and viewed alongside other model components.</p>
+        <h2 class="NoPageBreak">Maxwell plate files <a name="Maxwell"></a><MadCap:keyword term="Importing files:Maxwell plates" /><MadCap:keyword term="Maxwell plates" /></h2>
+        <p>When importing a plate file (<span class="fileext">.pte</span>), a plate object is created, with its thickness status and cole-cole parameters. The <a href="../7. Geoscience ANALYST Pro/Geoscience ANALYST Premium add-on module Maxwell Link.htm">Maxwell link module</a> must be activated in order to modify the geometry of imported plates.</p>
+        <h2 class="NoPageBreak">UBC-GIF files <a name="Importin6"></a><MadCap:keyword term="Importing files:UBC-GIF files" /></h2>
+        <p>Geoscience ANALYST can import UBC-GIF files (University of British Columbia Geophysical Inversion Facility) of different types, as illustrated in the following table: </p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');width: 100%;" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 224px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">File type</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">3D mesh and model files</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">3D mesh files create BlockModels upon import and associated model files as data stored on their cells in a folder called <i>UBC imports</i>.                       You can modify the suggested default no-data value field.
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">3D Topography files</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Imports as a surface object.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows" style="font-weight: bold;">Observation files</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">Imports as a points object.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Below the import dialogue for <b>3D mesh and model files</b>:</p>
+        <p>
+            <img src="../../Resources/Images/UBCGIF import.bmp" alt="" title="" />
+        </p>
+        <div class="note">If you import the model file via the drag and drop method, the importer will not launch the interim dialogue, thus using the default no-data values.</div>
+        <h2 class="NoPageBreak">
+            <MadCap:keyword term="Importing files:VP models" />Importing VP Suite models <a name="ImportVP"></a></h2>
+        <p>Geoscience ANALYST allows you to import models from the <MadCap:keyword term="VP Suite" />Mira Geoscience VP&#160;Suite, software for 3D modelling and inversion programs for gravity, gravity gradient, total magnetic field, and magnetic gradient data, and for time-domain electromagnetics (TEM) data.</p>
+        <p class="Task">To open a VP model in Geoscience ANALYST:</p>
+        <ol>
+            <li>Open a command prompt and type <MadCap:keyword term="VPutility" /><b>VPutility inputFile.geoh5</b>.</li>
+            <li>In the Geoscience ANALYST <i style="font-weight: bold; font-style: normal;">File</i> menu, click <b>Import</b>, then in the contextual menu, click <b>Import Workspace as a Group</b>.</li>
+            <li>In the finder window, locate and open <span class="fileext">.geoh5</span> created by VPutility. </li>
+        </ol>
+    </body>
+</html>

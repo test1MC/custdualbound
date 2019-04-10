@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PageStyles xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <Page Name="First Right" Padding="20px" PageType="firstright" PaddingLeft="1.5in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" BleedLeft="0.25in" Orientation="portrait" BleedBottom="0.25in" BleedTop="0.25in" BleedRight="0.25in" PageSize="Letter" BackgroundType="GradientNWSE" BackgroundColor="#007183" BackgroundColorAlt="#c0c0c0" BackgroundImage="../Images/Revised chapter design GI_full logo.png">
+        <Frame Flow="body" Y="100px" Bottom="114px" X="85px" Right="0px" ColumnCount="1" ColumnGap="30px" ColumnDivider="Solid 1px Red" Anchors="Left,Right,Bottom" Width="491px" Height="650px" FlowIndex="1">
+        </Frame>
+        <Frame X="-310px" Y="375px" Width="693px" Height="61px" FlowIndex="0" Flow="body" Rotate="-90" Anchors="Top" Right="193px" Bottom="428px" PaddingLeft="0px" />
+    </Page>
+    <Page Padding="20px" PageType="right" PaddingLeft="1.5in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" BleedLeft="0.25in" Orientation="portrait" BleedBottom="0.25in" BleedTop="0.25in" BleedRight="0.25in" PageSize="Letter" BackgroundType="GradientNWSE" BackgroundColor="#007183" BackgroundColorAlt="#c0c0c0" BackgroundImage="../Images/Revised chapter design GI_full logo.png">
+        <Frame Flow="body" Y="100px" Bottom="114px" X="85px" Right="0px" ColumnCount="1" ColumnGap="30px" ColumnDivider="Solid 1px Red" Anchors="Left,Right,Bottom" Width="491px" Height="650px" FlowIndex="1">
+        </Frame>
+        <Frame X="-310px" Y="375px" Width="715px" Height="61px" FlowIndex="0" Flow="body" Rotate="-90" Anchors="Top" Right="171px" Bottom="428px" PaddingLeft="0px" />
+    </Page>
+    <Page Name="Copy of First Right" Padding="20px" PageType="left" PaddingLeft="1.5in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" BleedLeft="0.25in" Orientation="portrait" BleedBottom="0.25in" BleedTop="0.25in" BleedRight="0.25in" PageSize="Letter" BackgroundType="GradientNWSE" BackgroundColor="#007183" BackgroundColorAlt="#c0c0c0" BackgroundImage="../Images/Revised chapter design GI_full logo.png">
+        <Frame Flow="body" Y="100px" Bottom="114px" X="-42px" Right="0px" ColumnCount="1" ColumnGap="30px" ColumnDivider="Solid 1px Red" Anchors="Left,Right,Bottom" Width="618px" Height="650px" FlowIndex="7">
+        </Frame>
+    </Page>
+</PageStyles>

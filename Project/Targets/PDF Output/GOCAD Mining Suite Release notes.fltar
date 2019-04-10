@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/GOCAD Mining Suite Release notes.fltoc"
+  MasterPageLayout="/Content/Resources/PageLayouts/Product Release notes Chapters.flpgl"
+  ConditionTagExpression="include[General.PDF or Product.MiningSuiteOnly] exclude[General.Online or Product.AnalystOnly or Product.IntegratorOnly or Product.VPem1DOnly or Product.VPmgOnly] ">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="false" />
+  <PDF
+    InitialMagnification="100"
+    DownsampleImages="true"
+    ShowUsedBookmarks="false"
+    CollapsedBookmarks="true"
+    PageMode="UseNone"
+    TitleBar="DocumentTitle" />
+  <DocumentProperties
+    Author="[%=General.CompanyName%]"
+    Title="[%=General.ProductName%] [%=General.VersionNumber%] Release notes" />
+  <Variables>
+    <Variable
+      Name="General/VersionNumber">17.0 update2</Variable>
+    <Variable
+      Name="General/ProductName">[%=General.ProductNameGMS%]</Variable>
+    <Variable
+      Name="General/DocumentTypeName">Release notes</Variable>
+  </Variables>
+</CatapultTarget>

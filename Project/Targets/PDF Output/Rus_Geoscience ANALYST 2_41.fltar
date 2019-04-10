@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  ConditionTagExpression="include[General.PDF or Product.IntegratorOnly or Product.MiningSuiteOnly or Product.VPem1DOnly or Product.VPmgOnly]exclude[General.Online or Product.AnalystOnly]"
+  CentralLinkIds=""
+  TargetLanguage="ru-ru">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true" />
+  <Variables>
+    <Variable
+      Name="General/ProductName">[%=General.ProductNameGA%]</Variable>
+  </Variables>
+  <DocumentProperties
+    Author="[%=General.CompanyName%]"
+    Title="[%=General.ProductName%] 2.41 Документация пользователя" />
+  <PDF
+    DownsampleImages="true"
+    ShowUsedBookmarks="false"
+    TitleBar="DocumentTitle"
+    CollapsedBookmarks="true" />
+</CatapultTarget>

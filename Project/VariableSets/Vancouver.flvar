@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultVariableSet>
+  <Variable
+    Comment=""
+    Name="PhoneNumber"
+    EvaluatedDefinition="+1 778 329-0430">+1 778 329-0430</Variable>
+  <Variable
+    Name="StreetAddress"
+    Comment=""
+    Definition="Some text"
+    OriginalName="StreetAddress"
+    EvaluatedDefinition="#512B - 409 Granville Street">#512B - 409 Granville Street</Variable>
+  <Variable
+    Name="CityStateZip"
+    Comment=""
+    Definition="Some text"
+    EvaluatedDefinition="Vancouver, British Columbia">Vancouver, British Columbia</Variable>
+  <Variable
+    Comment=""
+    Name="CompanyName"
+    EvaluatedDefinition="Mira Geoscience Limited">Mira Geoscience Limited</Variable>
+</CatapultVariableSet>

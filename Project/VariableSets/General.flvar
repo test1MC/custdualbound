@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultVariableSet>
+  <Variable
+    Comment=""
+    Name="CompanyName"
+    EvaluatedDefinition="Mira Geoscience Limited">Mira Geoscience Limited</Variable>
+  <Variable
+    Comment=""
+    Name="PhoneNumber"
+    EvaluatedDefinition="+1 514 489-1890">+1 514 489-1890</Variable>
+  <Variable
+    Name="StreetAddress"
+    Comment=""
+    Definition="Some text"
+    OriginalName="StreetAddress"
+    EvaluatedDefinition="#309 – 310 Victoria Avenue">#309 – 310 Victoria Avenue</Variable>
+  <Variable
+    Name="ProductName"
+    OriginalName="ProductName"
+    EvaluatedDefinition="MyProductName">MyProductName</Variable>
+  <Variable
+    Name="Fax"
+    Comment=""
+    OriginalName="Fax"
+    EvaluatedDefinition="+1 514 489-5536">+1 514 489-5536</Variable>
+  <Variable
+    Name="CityStateZip"
+    Comment=""
+    Definition="Some text"
+    EvaluatedDefinition="Westmount, Quebec">Westmount, Quebec</Variable>
+  <Variable
+    Name="VersionNumber"
+    OriginalName="VersionNumberDot"
+    EvaluatedDefinition="x.y.z">x.y.z</Variable>
+  <Variable
+    Name="Year"
+    Comment=""
+    Type="DateTime"
+    LastUpdated="2015-12-31T09:28:31.1216229-08:00"
+    EvaluatedDefinition="yyyy">yyyy</Variable>
+  <Variable
+    Name="email"
+    Comment=""
+    EvaluatedDefinition="info@mirageoscience.com">info@mirageoscience.com</Variable>
+  <Variable
+    Name="licensingEmail"
+    Comment=""
+    EvaluatedDefinition="licensing@mirageoscience.com">licensing@mirageoscience.com</Variable>
+  <Variable
+    Name="supportEmail"
+    Comment=""
+    EvaluatedDefinition="support@mirageoscience.com">support@mirageoscience.com</Variable>
+  <Variable
+    Name="supportEmail"
+    Comment=""
+    EvaluatedDefinition="integrator@mirageoscience.com">integrator@mirageoscience.com</Variable>
+  <Variable
+    Name="VersionNumber"
+    Comment="GA"
+    EvaluatedDefinition="2.72">2.72</Variable>
+  <Variable
+    Name="VersionNumber"
+    Comment="GI"
+    EvaluatedDefinition="3.0">3.0</Variable>
+  <Variable
+    Name="VersionNumber"
+    Comment="VPmg"
+    EvaluatedDefinition="9.2">9.2</Variable>
+  <Variable
+    Name="VersionNumber"
+    Comment="VPem1D"
+    EvaluatedDefinition="4.2">4.2</Variable>
+  <Variable
+    Name="VersionNumber"
+    Comment="GMS"
+    EvaluatedDefinition="17.0 update2">17.0 update2</Variable>
+  <Variable
+    Name="ProductName"
+    Comment="GA name"
+    EvaluatedDefinition="Geoscience ANALYST">[%=General.ProductNameGA%]</Variable>
+  <Variable
+    Name="ProductName"
+    Comment="GMS name"
+    EvaluatedDefinition="GOCAD® Mining Suite">[%=General.ProductNameGMS%]</Variable>
+  <Variable
+    Name="VersionNumber"
+    Comment="VPutility"
+    EvaluatedDefinition="1.1">1.1</Variable>
+  <Variable
+    Name="ProductName"
+    Comment="VPmg name"
+    EvaluatedDefinition="VPmg">[%=General.ProductNameVPmg%]</Variable>
+  <Variable
+    Name="ProductName"
+    Comment="VPem1D name"
+    EvaluatedDefinition="VPem1D">[%=General.ProductNameVPem1D%]</Variable>
+  <Variable
+    Name="ProductName"
+    Comment="VPutility name"
+    EvaluatedDefinition="VPutility">[%=General.ProductNameVPutility%]</Variable>
+  <Variable
+    Name="Gocad"
+    Comment="GOCAD without the registered symbol"
+    EvaluatedDefinition="GOCAD">GOCAD</Variable>
+  <Variable
+    Name="ProductNameGMS"
+    Comment=""
+    EvaluatedDefinition="GOCAD Mining Suite">[%=General.Gocad%] Mining Suite</Variable>
+  <Variable
+    Name="ProductNameGA"
+    Comment=""
+    EvaluatedDefinition="Geoscience ANALYST">Geoscience ANALYST</Variable>
+  <Variable
+    Name="ProductNameVPmg"
+    Comment=""
+    EvaluatedDefinition="VPmg">VPmg</Variable>
+  <Variable
+    Name="ProductNameVPem1D"
+    Comment=""
+    EvaluatedDefinition="VPem1D">VPem1D</Variable>
+  <Variable
+    Name="ProductNameVPutility"
+    Comment=""
+    EvaluatedDefinition="VPutility">VPutility</Variable>
+  <Variable
+    Name="ProductNameGI"
+    Comment=""
+    EvaluatedDefinition="Geoscience INTEGRATOR">Geoscience INTEGRATOR</Variable>
+  <Variable
+    Name="ProductName"
+    Comment="GI name"
+    EvaluatedDefinition="Geoscience INTEGRATOR">[%=General.ProductNameGI%]</Variable>
+  <Variable
+    Name="UserGuideTitle"
+    Comment=""
+    EvaluatedDefinition="MyProductName x.y.z - User guide">[%=General.ProductName%] [%=General.VersionNumber%] - [%=General.DocumentTypeName%]</Variable>
+  <Variable
+    Name="DocumentTypeName"
+    Comment=""
+    EvaluatedDefinition="User guide">User guide</Variable>
+  <Variable
+    Name="DocumentTypeName"
+    Comment=""
+    EvaluatedDefinition="Release notes">Release notes</Variable>
+  <Variable
+    Name="RootDivClass"
+    Comment="class to be used in root div element"
+    EvaluatedDefinition=""></Variable>
+  <Variable
+    Name="RootDivClass"
+    Comment="to be used in embedded Analyst browse (use releases notes as what's new)"
+    EvaluatedDefinition="AnalystBrowser">AnalystBrowser</Variable>
+  <Variable
+    Name="ProductExe"
+    Comment="the executable name to be used in a command line"
+    EvaluatedDefinition="MyProductExe">MyProductExe</Variable>
+  <Variable
+    Name="ProductExe"
+    Comment="executable for VPmg"
+    EvaluatedDefinition="VPmg">VPmg</Variable>
+  <Variable
+    Name="ProductExe"
+    Comment="executable for VPem1D"
+    EvaluatedDefinition="VPem1D">VPem1D</Variable>
+  <Variable
+    Name="ProductExe"
+    Comment="executable for VPutility"
+    EvaluatedDefinition="VPutility">VPutility</Variable>
+</CatapultVariableSet>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>It will be useful for you to be familiar with the following conventions used throughout this guide: </p>
+        <ul>
+            <li MadCap:conditions="Product.MiningSuiteOnly,Product.IntegratorOnly,Product.AnalystOnly"><span class="uiClick">Bold</span> denotes clickable elements of the software, and is used for mouse and keyboard commands.</li>
+            <li style="font-style: normal;" MadCap:conditions="Product.AnalystOnly,Product.IntegratorOnly,Product.MiningSuiteOnly"><span class="ui">Italic</span> denotes non-clickable elements of the software. When not part of a task, <i>italic</i> can also denote elements of a mathematical formula, or simply an emphasized word.</li>
+            <li style="font-style: normal;" MadCap:conditions="Product.VPutilityOnly,Product.VPmgOnly,Product.VPem1DOnly"><span class="param">Italic</span> denotes parameters and variables.</li>
+            <li><span class="filename">Monospace font</span> denotes file names and folders.</li>
+            <li MadCap:conditions="Product.VPmgOnly,Product.VPutilityOnly,Product.VPem1DOnly"><span class="cmd">Bold and monospace font</span> denotes command line.</li>
+            <li MadCap:conditions="Product.VPem1DOnly,Product.VPmgOnly,Product.VPutilityOnly">Brackets [•] denote optional parameters (do not include brackets when using the parameter).</li>
+        </ul>
+    </body>
+</html>

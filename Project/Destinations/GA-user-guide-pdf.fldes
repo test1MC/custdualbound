@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultDestination
+  Version="1"
+  Comment="This is my publish destination for user guide in PDF"
+  Host=""
+  User="MyAccountId"
+  Password=""
+  Directory="Y:\Shared\dev\resources\Documentation\Geoscience ANALYST\dev\PDF"
+  Port=""
+  ViewUrl="file:///Y:/Shared/dev/resources/Documentation/Geoscience%20ANALYST/dev/PDF"
+  Type="file"
+  conditions="Product.AnalystOnly,General.PDF"></CatapultDestination>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment=""
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/Geoscience INTEGRATOR User guide.fltoc"
+  ConditionTagExpression="include[General.PDF or Product.IntegratorOnly]exclude[General.Online or Product.AnalystOnly or Product.MiningSuiteOnly or Product.VPem1DOnly or Product.VPmgOnly]"
+  PatchHeadingLevels="true"
+  InjectEmptyPages="true"
+  MasterStylesheet="/Content/Resources/Stylesheets/MainStyles.css"
+  EmbedImages="true"
+  OutputFile="[%=General.ProductName%] [%=General.VersionNumber%] User guide">
+  <PrintedOutput
+    CollapseMargins="true"
+    ExpandingTextConversion="expand"
+    PopupConversion="remove-body" />
+  <DocumentProperties
+    Title="[%=General.ProductName%] [%=General.VersionNumber%] User guide"
+    Author="[%=General.CompanyName%]" />
+  <PDF
+    ShowUsedBookmarks="false"
+    InitialMagnification="100"
+    TitleBar="DocumentTitle"
+    CollapsedBookmarks="true"
+    CropAndRegistrationMarks="false"
+    ConvertToCMYK="false"
+    DownsampleImages="true" />
+  <Variables>
+    <Variable
+      Name="General/supportEmail">integrator@mirageoscience.com</Variable>
+    <Variable
+      Name="General/VersionNumber">3.0</Variable>
+    <Variable
+      Name="General/ProductName">[%=General.ProductNameGI%]</Variable>
+  </Variables>
+</CatapultTarget>

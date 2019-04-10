@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="PM User">
+    <TocEntry
+      Title="A_Welcome">
+      <TocEntry
+        Title="A_About Geoscience INTEGRATOR"
+        Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/PM User/A_Welcome/A_About Geoscience INTEGRATOR_PM.htm"
+        MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Scope: Project management"
+        Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/PM User/A_Welcome/B_Scope_PM.htm"
+        MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Launching Geoscience INTEGRATOR"
+        Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/PM User/A_Welcome/C_Launching Geoscience INTEGRATOR_PM.htm"
+        MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Additional resources"
+        Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/PM User/A_Welcome/D_Additional resources_AccessUser_PM.htm"
+        MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="B_GI key components and terms">
+      <TocEntry
+        Title="Geoscience INTEGRATOR key components and terms"
+        Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/PM User/B_GI key components and terms/A_Geoscience INTEGRATOR key compnents and terms_PM.htm"
+        MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Tags"
+        Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/PM User/B_GI key components and terms/B_Tags_PM.htm"
+        MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="C_Project &amp; data management">
+      <TocEntry
+        Title="lProjects and user roles"
+        Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/PM User/C_Project &amp; data management/A_ProjectsUserRoles_PM.htm"
+        MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating a new project"
+        Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/PM User/C_Project &amp; data management/B_Creating a new project_PM.htm"
+        MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing your data"
+        Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/PM User/C_Project &amp; data management/C_Importing your data_PM.htm"
+        MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="D_GI user interface">
+      <TocEntry
+        Title="Dashboards"
+        Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/PM User/D_GI user interface/A_Dashboards_PM.htm"
+        MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Data compilation &amp; samples"
+        Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/PM User/D_GI user interface/B_Data compilation &amp; samples_PM.htm"
+        MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating reports"
+        Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/PM User/D_GI user interface/C_Creating reports_PM.htm"
+        MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="File, map, &amp; document management"
+        Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/PM User/D_GI user interface/D_File &amp; document management_PM.htm"
+        MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="E_System administration">
+      <TocEntry
+        Title="System administration"
+        Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/PM User/E_System administration/System administration_PM.htm"
+        MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="F_Theme-specific information for data import">
+      <TocEntry
+        Title="Theme-specific information for data import"
+        Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/PM User/F_Theme-specific information for data import/Theme-specific information for data import_PM.htm"
+        MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+  </TocEntry>
+</CatapultToc>

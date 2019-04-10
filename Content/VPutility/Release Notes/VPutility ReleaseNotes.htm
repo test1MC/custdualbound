@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Overview</h1>
+        <p>VPutility <MadCap:variable name="General.VersionNumber" /> is an update to the free utility in VP Suite. The feature list in this release has expanded to better help you create and modify VP models.</p>
+        <h2 class="NoPageBreak">New and updated functionality</h2>
+        <ul>
+            <li><b>Removal of constraints from a VP model file</b>. Choose to remove any type of constraint or choose to remove all constraints were placed in an existing VP model file.</li>
+            <li><b>Transfer geometries of a VP model to another physical property</b>. By adding a physical property definition to the geometry of an existing model, you now have a new physical property model that can be forward modelled or inverted with the other programs within VP Suite.</li>
+            <li><b>Ability to handle alphanumeric line data</b>. Lines are no longer considered strictly numeric minimizing the need to preprocess input data files. Outputting the model to Geoscience ANALYST with lines will create a curve object, allowing you to go line-by-line in the profile viewer.</li>
+            <li><b>Input lateral heterogeneities when creating models</b>. Physical properties can now optionally be added to the layer when creating a VP model or adding a layer in an existing VP model.</li>
+            <li><b>Create and output rotated models to Geoscience ANALYST</b>. VPutility helps you creating rotated models for VPmg and output on a rotated mesh to Geoscience ANALYST. It can also rotate existing models for you if the model has had to be rotated in the past.</li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/vp_rotated_example1.png" style="width: 278px; height: 280px;" />
+            <br /><span class="SmallerCaption">Output of a created rotated model at -20 degrees rotation from North.</span>
+        </p>
+        <ul>
+            <li><b>Information mode</b>. This useful mode shows (and prints to a log file) the number of cells, types of units and constraints, and the size of the derivative matrices (in GB) for inversion if data is present or given in the mode. It is done without an input file.</li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/vputility_info2.png" style="width: 389px;height: 431px;" />
+            <br /><span class="SmallerCaption">Screen shot from the new information mode.</span>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/DrillholeImportPDFtemp-obsolete.fltoc"
+  ConditionTagExpression="include[General.PDF or Product.IntegratorOnly]exclude[General.Online or Product.AnalystOnly or Product.MiningSuiteOnly or Product.VPem1DOnly or Product.VPmgOnly]">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <PDF
+    ShowUsedBookmarks="false"
+    PageMode="UseNone"
+    TitleBar="DocumentTitle"
+    InitialMagnification="75" />
+  <Glossaries />
+  <Variables>
+    <Variable
+      Name="General/supportEmail">integrator@mirageoscience.com</Variable>
+  </Variables>
+</CatapultTarget>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="393" MadCap:lastWidth="700">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title></title>
+    </head>
+    <body>
+        <p>&#160;</p>
+        <div class="content">
+            <div id="contentBody">
+                <div class="row collapse">
+                    <div class="sideContent">
+                        <div class="clearfix">
+                            <MadCap:topicToolbarProxy />
+                        </div>
+                        <MadCap:menuProxy style="mc-context-sensitive: True;" data-mc-skin="/Project/Skins/SideMenu.flskn" />
+                    </div>
+                    <MadCap:breadcrumbsProxy />
+                    <MadCap:bodyProxy />
+                    <p>
+                        <script>/*<![CDATA[*/document.write{"a href=\"mailto:info@mirageoscience.com/subject=Help%20Site%20{"+document.title+"}&body="+location.href+"%QA%QA"+"\">Feedback</a>"}/*]]>*/</script>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <table style="width: 100%;border-top-style: solid;border-top-width: 1px;border-top-color: #696969;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="padding-top: 34px;">
+                        <p class="masterpage">© 2016 Mira Geoscience. All Rights Reserved.</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td style="text-align: right;">
+                        <img src="../Images/Mira logo transparent small.png" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

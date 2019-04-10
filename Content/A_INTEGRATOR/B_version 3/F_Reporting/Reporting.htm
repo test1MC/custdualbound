@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">
+            <MadCap:keyword term="Reporting" />Overview</h1>
+        <p><MadCap:variable name="General.ProductName" /> contains a reporting feature that you can configure to generate either on-demand, scheduled, or through data-triggering. It is also a tool you can use to analyze data. </p>
+        <p>You can dispatch custom-designed summary reports  by email to designated recipients, or access them via the web browser interface.</p>
+        <p>System-designed geohazard reports are data-triggered. They automatically generate and send via email. </p>
+        <p>Reports will typically contain charts and tables combined with text elements.</p>
+        <img src="../../../Resources/Images/en/reporting menu.png" class="indent" />
+        <p>The <span class="ui">Reporting</span> sections are described further below.</p>
+        <h1 MadCap:autonum=" ">View data tables and charts</h1>
+        <p>These two features function similarly to the <span class="uiClick">Data set explorer</span>. However, unlike the <span class="uiClick">Data set explorer</span>, they allow you to generate table-only and chart-only report items. (See <MadCap:xref href="../C_GI Data Set explorer/Data set explorer.htm">"Data set explorer" on page&#160;1</MadCap:xref>.)</p>
+        <p>An important distinction  is that in the <span class="uiClick">View data tables</span> and <span class="uiClick">View data charts</span> pages, it is possible to query data from any number of data sets together, instead of just one at a time.</p>
+        <p>
+            <img src="../../../Resources/Images/NewResGI_viewdatatables.png" style="width: 720px;height: auto;" />
+        </p>
+        <div class="note">The system will plot a maximum of 50,000 points on a single chart. <br /></div>
+        <p class="Task"><a name="AssigningTagsFilesToRecords"></a>Assigning tags and files at the record level</p>
+        <p style="page-break-after: avoid;">From the <span class="uiClick">View data tables</span> module, you can associate or dissociate tags, files, and maps to specific records by clicking the number in the associated column, and selecting or deselecting the items from the list. Finish by clicking <span class="uiClick">Save</span>. You also have the option to tag or associate files / maps to all the results by clicking <span class="uiClick">Tag ALL&#160;results</span> or <span class="uiClick">Files / maps in ALL results</span>, which is not limited to the 300 rows displayed, but not more than 1000 at a time.</p>
+        <p style="page-break-before: avoid;">
+            <img src="../../../Resources/Images/reporting files maps.png" style="margin: 0px; width: 550px;height: auto;" />
+        </p>
+        <h1 MadCap:autonum=" ">Reports</h1>
+        <p>The <span class="uiClick">Reports</span> component of the <span class="uiClick">Reporting</span> tool applies to the custom-designed reports, not to the system-designed geohazard reports. It  displays a table for custom-designed reports from which you can perform the following tasks:</p>
+        <ul>
+            <li>View the report on current data, either in the browser (by clicking <span class="uiClick">Preview</span>) or in a downloaded <span class="uiClick">PDF</span>.</li>
+            <li>View individual items in the reports by clicking the number in the <span class="ui">Items</span> column.</li>
+            <li>View schedules, status, and recipients of each report. </li>
+            <li><span class="uiClick">Edit</span> report settings, <span class="uiClick">delete</span> a report, and <span class="uiClick">send</span> reports to recipients. </li>
+            <li><span class="uiClick">Add new reports</span>. </li>
+        </ul>
+        <p>
+            <img src="../../../Resources/Images/en/GI reports.PNG" style="width: 735px;height: auto;" />
+        </p>
+        <div class="note">When generating a report, the system updates the data in the report with the data as it is at that moment. What is actually being saved as a report item is the query parameters, not the query results.</div>
+        <div class="tip">To keep the query results in their present state, click <span class="uiClick">PDF</span> to generate and download it to your computer. You can also upload it to the File manager to keep it  inside the application.</div>
+        <p class="Task">To view a report: </p>
+        <ol>
+            <li>Locate the report you wish to view in the <span class="ui">Name</span> column.</li>
+            <li>Click <span class="uiClick">Preview</span> to open the report in a separate browser window, or click <span class="uiClick">PDF</span> to generate and download the report.</li>
+        </ol>
+        <h2 class="NoPageBreak">Creating a report</h2>
+        <ol>
+            <li>Click <span class="uiClick">Add new report</span>.<br /><img src="../../../Resources/Images/EN/GI add a new report.png" style="width: 330px;height: auto;" /><br /></li>
+            <li>Give a name (mandatory), and description (optional) to the report within the system.</li>
+            <li>Determine if the report will be scheduled. If yes, see the scheduling parameters. If no, the parameters are hidden.</li>
+            <li>For a scheduled report, set the schedule status:<ol MadCap:continue="true"><li><span class="ui">Active</span>: The report is generated and sent via email at the defined frequency between the defined starting and ending datetimes. (You can also generate it on demand.)</li><li><span class="ui"> Inactive</span>: You can prepare the report scheduling parameters but they will not be executed on the defined schedule until the status is changed to <span class="ui">Active</span>.  (You can also generate it on demand.)
+</li></ol></li>
+            <li>Define the frequency of the distribution. </li>
+            <li>Give the PDF file to be generated a name. The system will automatically add a datetime suffix.</li>
+            <li>Create a distribution list of email recipients (comma separated). If no email address is provided, the system saves first the creator's email address. </li>
+            <li>Click <span class="uiClick">Save</span>.</li>
+        </ol>
+        <p>Once you complete these steps, the report will appear in the <span class="ui">Reports</span> table. </p>
+        <p>When you create charts and tables in the Data set explorer and reporting modules, you can add them to reports directly from those sections of the user interface. Since the system generates the chart and table separately when using this section, you can add just a table item or just a chart item to reports from here, as opposed to the <span class="uiClick">Data set explorer</span>, which always generates both together.</p>
+        <p class="Task">To add chart and table items to reports:</p>
+        <ol>
+            <li>Once you have built a chart and / or table from the <span class="uiClick">Data set explorer</span> or the <span class="uiClick">Reporting</span> page and  clicked <span class="uiClick">Apply changes</span><img src="../../../Resources/Images/press play.png" style="width: 16px;height: 15px;" />, click <span class="uiClick"><MadCap:keyword term="Add report item" />Add report item</span><b style="color: #4169e1; font-size: 18pt;">+</b>.<br /></li>
+            <li>In the <span class="ui">Add a new report item</span> dialogue box, select the report name from the drop-down list to add your chart and / or table to, and give a name to the report item  you have just created.</li>
+            <li>click <span class="uiClick">Add</span>, then click <span class="uiClick">Close</span>.</li>
+        </ol>
+        <p>
+            <div class="note">There is no limitation on how many items you can add to a report, however, only the first 100  lines of each table will appear in the report.</div>
+            <br />
+        </p>
+        <h2 class="NoPageBreak">Formatting a report</h2>
+        <p>On the <span class="uiClick">Reports</span> page, locate the report you want to edit, then click the number in the <span class="ui">Items</span> column to see the list of report items, or to add text items.</p>
+        <p>
+            <img src="../../../Resources/Images/en/GI reports items.png" style="width: 733px;height: 209px;" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images/en/GI report items2.png" style="width: 395px;height: 240px;" />
+        </p>
+        <p>In the report's dialogue box, by default, the items will be listed in the order they were added. From there you can do the following:</p>
+        <ul>
+            <li><span class="uiClick">Add text to the report</span> (titles, sub-titles, paragraphs).</li>
+            <li><span class="uiClick">Delete</span> items.</li>
+            <li>Click and drag items in the list to reorder. Finish by clicking <span class="uiClick">Save order</span>.</li>
+        </ul>
+        <h1 MadCap:autonum=" ">
+            <MadCap:keyword term="Report history" />Report history</h1>
+        <p>The <span class="uiClick">Report history</span> page lists the standard custom-designed and the geohazard system-designed reports that were sent via email, and sorted by sent date with the most recent at the top. It displays the <span class="ui">Report title</span>, <span class="ui">Recipients</span>, <span class="ui">Type</span>, <span class="ui">Date sent</span>, and <span class="ui">Available until</span> date.</p>
+        <p>PDF files from reports remain available for download by clicking on the report title for a period of one month from the time it was sent. The <span class="ui">Available until</span> column provides the date of that one-month mark after which the file will become unavailable for download and  deleted from the system. If a report fails to send, you can still find it and download it from here. <img src="../../../Resources/Images/en/GI report history.png" style="width: 680px;height: auto;" /></p>
+    </body>
+</html>

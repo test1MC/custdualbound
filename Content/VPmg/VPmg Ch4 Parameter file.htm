@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Parameter file</h1>
+        <p>A parameter file (<span class="fileext">.par</span>) file defines the name and format of the data file, and specifies the data channels selected for inversion. For multi-channel potential fields inversion, you must specify a PAR file  in the control file. For single channel inversion, specify either a PAR file or a data file.</p>
+        <div class="indent">
+            <table style="width: 302px;border-left-style: solid;border-left-width: 1px;border-right-style: solid;border-right-width: 1px;border-top-style: solid;border-top-width: 1px;border-bottom-style: solid;border-bottom-width: 1px;">
+                <col />
+                <col />
+                <tbody>
+                    <tr>
+                        <td style="font-size: 9pt;">#VPMG#</td>
+                        <td style="font-size: 9pt;">&#160;</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 9pt;">data file name</td>
+                        <td style="font-size: 9pt;">&#160;</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 9pt;">nvar</td>
+                        <td style="font-size: 9pt;">&#160;</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 9pt;">nch</td>
+                        <td style="font-size: 9pt;">&#160;</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 9pt;">column<sub>1</sub></td>
+                        <td style="font-size: 9pt;">chid<sub>1</sub></td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 9pt;">column<sub>2</sub></td>
+                        <td style="font-size: 9pt;">chid<sub>2</sub></td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 9pt;">...</td>
+                        <td style="font-size: 9pt;">&#160;</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 9pt;">column<sub>nch</sub></td>
+                        <td style="font-size: 9pt;">chid<sub>nch</sub></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <table style="width: 100%;">
+            <col style="width: 105px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"><code>#VPMG#</code>
+                    </td>
+                    <td>Required header.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>nvar</var>
+                    </td>
+                    <td>Number of fields (columns) in the data file. The minimum value is 4: east, north, elevation, and reading. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>nch</var>
+                    </td>
+                    <td>Number of data channels (or components) for modelling and inversion.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>column<sub>n</sub></var>
+                    </td>
+                    <td>Column number for the n<sup>th</sup> data channel.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>chid<sub>n</sub></var>
+                    </td>
+                    <td>
+                        <p>3(or 4)-character ID for the n<sup>th</sup> data channel. The legal channel identifiers are:
+</p>
+                        <ul>
+                            <li>FTG gradiometry: <var>GXX</var>, <var>GXY</var>, <var>GYX</var>, <var>GXZ</var>, <var>GZX</var>, <var>GYY</var>, <var>GYZ</var>, <var>GZY</var>, <var>GZZ</var></li>
+                            <li>VK1 gradiometry: <var>GGA</var> &amp; <var>GGC</var> for along-line and cross-line
+</li>
+                            <li>Falcon gradiometry: <var>GUV</var> &amp; <var>GNE</var></li>
+                            <li>Total magnetic intensity: <var>TMI</var> or <var>RMI</var></li>
+                            <li>Magnetic gradients: <var>MXX</var>, <var>MXY</var>, <var>MXZ</var>, <var>MYY</var>, <var>MYZ</var>, <var>MZZ</var>, <var>MTG</var> or <var>TMG</var> (Total Magnetic Gradient)</li>
+                            <li> 
+Magnetic components: <var>BX</var> or <var>BX_</var>, <var>BY</var> or <var>BY_</var>, and <var>BZ</var> or <var>BZ_</var></li>
+                            <li>Magnetic amplitude data: <var>AMP</var> or <var>MAP</var></li>
+                            <li>Gravity data: <var>GZ</var> or <var>GZ_</var> identifier</li>
+                            <li>Per datum uncertainties: add an 'E' to the end of any component list (i.e. <var>TMIE</var> or 
+               <var>GXYE</var>). Overrides the control file unless not specified (multi-component).
+</li>
+                            <li>Data-based rotations: <var>DEC</var> (per datum rotation to override the control file)
+</li>
+                            <li>Specification of surface / drillhole data: <var>IDH</var> Overrides control file to check for prisms 
+               above topographic surface
+</li>
+                            <li>Line values (can be numeric or alphanumeric): <var>LINE</var></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The values from the control file that can be given within the par file are the rotations (DEC identifier) and specification of surface or drillhole data (<var>IDH</var>). The values of these two identifiers follow the same rules as the control file.</p>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">Data file</h1>
+        <p>This file contains the observed data. The data file may be a Geosoft XYZ&#160;file (.xyz) with "Line" or "Tie" alphanumeric line information. The first three columns must be easting, northing, and elevation. Dummy values for data are denoted as -99999.</p>
+        <table style="width: 527px;border-left-style: solid;border-left-width: 1px;border-right-style: solid;border-right-width: 1px;border-top-style: solid;border-top-width: 1px;border-bottom-style: solid;border-bottom-width: 1px;">
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>east<sub>1</sub></td>
+                    <td>north<sub>1</sub></td>
+                    <td>elev<sub>1</sub></td>
+                    <td>obs<sub>11</sub></td>
+                    <td>obs<sub>12</sub></td>
+                    <td>...</td>
+                    <td>obs<sub>1m</sub></td>
+                </tr>
+                <tr>
+                    <td>east<sub>2</sub></td>
+                    <td>north<sub>2</sub></td>
+                    <td>elev<sub>2</sub></td>
+                    <td>obs<sub>21</sub></td>
+                    <td>obs<sub>22</sub></td>
+                    <td>...</td>
+                    <td>obs<sub>2m</sub></td>
+                </tr>
+                <tr>
+                    <td>...</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>east<sub>n</sub></td>
+                    <td>north<sub>n</sub></td>
+                    <td>elev<sub>n</sub></td>
+                    <td>obs<sub>n1</sub></td>
+                    <td>obs<sub>n2</sub></td>
+                    <td>...</td>
+                    <td>obs<sub>nm</sub></td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 100%;">
+            <col style="width: 80px;" />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"><var>east<sub>n</sub></var>
+                    </td>
+                    <td>Easting (m) of measurement point at location n.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>north<sub>n</sub></var>
+                    </td>
+                    <td>Northing (m) of measurement point at location n.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>elev<sub>n</sub></var>
+                    </td>
+                    <td>Elevation of measurement point at location n (m).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>obs<sub>nm</sub></var>
+                    </td>
+                    <td>
+                        <p>m<sup>th</sup> component for the n<sup>th</sup> location. Data units are as follows:</p>
+                        <ul>
+                            <li>Free-air gravity: mgal</li>
+                            <li>Gravity gradient: Eotvos</li>
+                            <li>TMI: nT</li>
+                            <li>Magnetic component: nT/m</li>
+                            <li>Magnetic amplitude data: nT<br /></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=" "><a name="VP_ModelFile"></a>VP model file</h1>
+        <MadCap:snippetBlock src="../Resources/Snippets/VP_ModelFileFormat.flsnp" />
+    </body>
+</html>

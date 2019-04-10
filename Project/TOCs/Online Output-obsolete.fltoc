@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="Geoscience INTEGRATOR"
+    Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/A_Geoscience INTEGRATOR-obsolete.htm">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/A_Geoscience INTEGRATOR-obsolete.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+    <TocEntry
+      Title="Scope &amp; purpose"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/Scope &amp; purpose-obsolete.htm"></TocEntry>
+    <TocEntry
+      Title="Projects &amp; user roles"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/ProjectsUserRoles-obsolete.htm" />
+    <TocEntry
+      Title="Launching Geoscience INTEGRATOR"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/Launching Geoscience INTEGRATOR-obsolete.htm" />
+    <TocEntry
+      Title="Creating a new project"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/B_New project-obsolete.htm" />
+    <TocEntry
+      Title="Defining your data"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/C_Defining your data-obsolete.htm" />
+    <TocEntry
+      Title="Importing your data"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/D_Importing your data-obsolete.htm" />
+    <TocEntry
+      Title="Data set explorers"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/Dashboards-obsolete.htm"></TocEntry>
+    <TocEntry
+      Title="Tags"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/F_Tags-obsolete.htm"></TocEntry>
+    <TocEntry
+      Title="Theme Definitions"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/Theme Definitions-obsolete.htm" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/Data commpilation &amp; samples-obsolete.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  </TocEntry>
+  <TocEntry
+    Title="Geoscience ANALYST"
+    Link="/Content/ANALYST/1. Welcome/Welcome.htm">
+    <TocEntry
+      Title="Welcome"
+      Link="/Content/ANALYST/1. Welcome/Welcome.htm" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST Legacy or obsolete/Downloading and installing Geoscience ANALYST-obsolete.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/1. Welcome/Activating your license .htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/3. The Geoscience ANALYST user interface/The Geoscience ANALYST user interface.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/4. Object types/Object types.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/4. Object types/Special Objects.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/5. Importing and Exporting/Importing objects into Geoscience ANALYST.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/5. Importing and Exporting/Exporting objects from Geoscience ANALYST.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  </TocEntry>
+  <TocEntry
+    Title="PDF Guides"
+    Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/PDF Guides-obsolete.htm" />
+  <TocEntry
+    Title="Video Tutorials"
+    Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/Video Tutorials-obsolete.htm" />
+  <TocEntry
+    Title="[%=System.LinkedTitle%]" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+</CatapultToc>

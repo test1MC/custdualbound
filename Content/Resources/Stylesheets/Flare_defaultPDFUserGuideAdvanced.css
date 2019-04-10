@@ -1,0 +1,581 @@
+/*<meta />*/
+
+body
+{
+	color: #404040;
+	font-family: Arial, Avenir, Myriad;
+	font-size: 8pt;
+	line-height: 13px;
+	margin: 8px;
+}
+
+a:link
+{
+	color: #2D8DCC;
+	font-weight: bold;
+}
+
+a:visited
+{
+	color: #2D8DCC;
+}
+
+div.example
+{
+	background-color: #f0ff86;
+	background-repeat: no-repeat;
+	border: solid 1px #a4ac67;
+	border-radius: 6px;
+	margin-bottom: 15px;
+	padding: 20px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+}
+
+div.GlossaryPageDefinition
+{
+	font-size: 9pt;
+}
+
+div.GlossaryPageHeading
+{
+	border-bottom-color: #bed230;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	color: #bed230;
+	font-size: 11pt;
+}
+
+div.GlossaryPageTerm
+{
+	color: #bed230;
+	font-size: 10pt;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+div.ImagesFloatLeft
+{
+	clear: both;
+	float: left;
+	margin-right: 10px;
+	padding: 5px;
+}
+
+div.ImagesFloatRight
+{
+	clear: both;
+	float: right;
+	margin-left: 10px;
+	padding: 5px;
+}
+
+div.note
+{
+	background-color: #47484a;
+	background-image: url('../Images/NoteIcon.png');
+	background-repeat: no-repeat;
+	border: solid 1px #404040;
+	border-radius: 6px;
+	color: #b3b3b3;
+	padding-bottom: 10px;
+	padding-left: 40px;
+	padding-right: 10px;
+	padding-top: 10px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	margin-top: 10px;
+}
+
+.noteInDiv
+{
+	mc-auto-number-format: '{b}{color #bed230}Note: {/color}{/b}';
+}
+
+div.quotation
+{
+	background-color: #e1e1e1;
+	background-image: url('../Images/QuotationMark.png');
+	background-repeat: no-repeat;
+	background-position: top left;
+	border-color: #b3b3b3;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 6px;
+	font-family: 'Century Gothic';
+	font-size: 0.9em;
+	font-style: italic;
+	font-weight: normal;
+	line-height: 18px;
+	padding: 20px;
+	padding-left: 40px;
+}
+
+h1
+{
+	color: #bed230;
+	font-family: 'Century Gothic';
+	font-size: 22pt;
+	font-weight: normal;
+	line-height: 24pt;
+	margin-bottom: 20px;
+	margin-left: 0;
+	mc-heading-level: 2;
+	padding-left: 0;
+	padding-top: 0;
+	page-break-before: avoid;
+}
+
+h1.AppendixTitle
+{
+	mc-heading-level: 0;
+	page-break-before: avoid;
+}
+
+h1.BackmatterHeadings
+{
+	color: #47484a;
+	font-family: 'Century Gothic';
+	font-size: 90pt;
+	font-weight: normal;
+	letter-spacing: -1px;
+	line-height: 92pt;
+	margin: 0;
+	mc-heading-level: 4;
+	text-align: center;
+}
+
+h1.UserGuideBHeading
+{
+	page-break-before: avoid;
+}
+
+h2
+{
+	font-size: 12pt;
+	font-weight: normal;
+	line-height: 14pt;
+	mc-heading-level: 3;
+	page-break-before: always;
+}
+
+h3
+{
+	font-size: 10pt;
+	font-weight: normal;
+	line-height: 12pt;
+	mc-heading-level: 0;
+}
+
+h4
+{
+	font-size: 9pt;
+	font-weight: normal;
+	line-height: 11pt;
+	mc-heading-level: 0;
+}
+
+img.AbsolutePosition
+{
+	padding: 5px;
+}
+
+img.FiftyPercent
+{
+	max-width: 50%;
+	padding-bottom: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+}
+
+img.OneHundredPercent
+{
+	max-width: 100%;
+	padding-bottom: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+}
+
+img.ReduceButtonSize
+{
+	max-height: 25px;
+}
+
+img.SeventyFivePercent
+{
+	max-width: 75%;
+	padding-bottom: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+}
+
+li
+{
+	margin-bottom: 6px;
+	margin-top: 6px;
+	orphans: 2;
+	widows: 2;
+}
+
+MadCap|glossaryProxy
+{
+	border-top: none;
+	color: #e1e1e1;
+}
+
+MadCap|indexProxy
+{
+	border-top: none;
+	color: #e1e1e1;
+}
+
+MadCap|miniTocProxy
+{
+	border-top: none;
+	margin-left: 0.25in;
+	margin-right: 0.25in;
+	padding-left: 0px;
+}
+
+MadCap|tocProxy
+{
+	border-top: none;
+	margin-right: 0.25in;
+}
+
+MadCap|xref
+{
+	color: #404040;
+	font-weight: normal;
+	mc-format: '{quote}{para}{quote} {pageref}';
+	text-decoration: none;
+}
+
+MadCap|xref.IndexPageNumber
+{
+	color: #BED230;
+}
+
+ol
+{
+	list-style-image: none;
+}
+
+ol ol
+{
+	list-style-type: lower-alpha;
+	margin-left: 30px;
+}
+
+ol ol ol
+{
+	list-style-type: lower-roman;
+	margin-left: 30px;
+}
+
+p
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+p.ChapterNumber
+{
+	color: #47484a;
+	font-size: 90pt;
+	font-weight: normal;
+	letter-spacing: -1px;
+	line-height: 92pt;
+	margin: 0;
+	mc-auto-number-position: inside-head;
+	mc-auto-number-format: 'CHAPTER {chapnum}';
+	mc-heading-level: 1;
+	text-align: center;
+}
+
+p.Copyright
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+p.CopyrightAddress
+{
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+p.CopyrightHeading
+{
+	margin-top: 1in;
+	page-break-before: always;
+}
+
+p.CreatedUsingFlare
+{
+	font-weight: bold;
+	margin-top: 18px;
+}
+
+p.EmptyPageText
+{
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+p.ExampleHeadText
+{
+	font-weight: bold;
+	page-break-after: avoid;
+	letter-spacing: 5px;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+p.Figure
+{
+	color: #404040;
+	font-style: italic;
+	mc-auto-number-class: FigureNum;
+	mc-auto-number-format: 'CF:Figure {chapnum}-{n+} ';
+	margin-left: 10px;
+	padding-bottom: 10px;
+}
+
+p.FirstPageOfChapter
+{
+	color: #e1e1e1;
+}
+
+p.FrameFooterText
+{
+	font-family: 'Century Gothic';
+	font-size: 24pt;
+}
+
+p.FrameFooterText2
+{
+	color: #404040;
+	font-family: 'Century Gothic';
+	font-size: 11pt;
+}
+
+p.IndexHeading
+{
+	font-size: 11pt;
+	padding-top: 16px;
+	text-align: left;
+}
+
+p.ManualTitle1
+{
+	font-family: 'Century Gothic';
+	font-size: 9pt;
+	margin-bottom: 0;
+	margin-left: 1in;
+	margin-top: 2.00in;
+}
+
+p.ManualTitle2
+{
+	color: #bed230;
+	font-family: 'Century Gothic';
+	font-size: 22pt;
+	line-height: 0;
+	margin-bottom: 0;
+	margin-left: 1in;
+	margin-top: 0;
+}
+
+p.ManualVersionNumber
+{
+	color: #b3b3b3;
+	font-family: 'Century Gothic';
+	font-size: 12pt;
+	margin-left: 1in;
+	margin-top: 12pt;
+}
+
+p.MiniTOC1
+{
+	color: #e1e1e1;
+	font-size: 9pt;
+	font-weight: normal;
+}
+
+p.quotationname
+{
+	text-align: right;
+}
+
+p.TableCaption
+{
+	color: #404040;
+	font-style: italic;
+	mc-auto-number-class: TableNum;
+	mc-auto-number-format: 'CT:Table {chapnum}-{n+} ';
+	padding-bottom: 0;
+	padding-top: 12px;
+}
+
+p.TableTextCenterDark
+{
+	color: #000000;
+	margin-bottom: 2px;
+	margin-top: 8px;
+	text-align: center;
+}
+
+p.TableTextDark
+{
+	color: #000000;
+	margin-bottom: 2px;
+	margin-top: 8px;
+}
+
+p.TableTextDarkEmphasis
+{
+	color: #000000;
+	font-weight: bold;
+	margin-bottom: 2px;
+	margin-top: 8px;
+}
+
+p.TableTextHeadDark
+{
+	color: #000000;
+	font-weight: bold;
+	margin-bottom: 2px;
+	margin-top: 8px;
+}
+
+p.TableTextLightEmphasis
+{
+	color: #ffffff;
+	font-weight: bold;
+	margin-bottom: 2px;
+	margin-top: 8px;
+}
+
+p.TOC1
+{
+	color: #bed230;
+	font-size: 12pt;
+	font-weight: normal;
+	margin-bottom: 6px;
+	margin-top: 12px;
+	mc-leader-format: 'none';
+	mc-pagenum-display: none;
+	page-break-after: avoid;
+}
+
+p.TOC2
+{
+	color: #e1e1e1;
+	font-size: 10pt;
+	font-weight: normal;
+	margin-bottom: 2px;
+	margin-left: 0.25in;
+	margin-top: 2px;
+	page-break-after: avoid;
+}
+
+p.TOC3
+{
+	color: #e1e1e1;
+	font-size: 8pt;
+	font-weight: normal;
+	margin-bottom: 2px;
+	margin-left: 0.35in;
+	margin-top: 2px;
+}
+
+p.TOC4
+{
+	color: #bed230;
+	font-size: 12pt;
+	font-weight: normal;
+	margin-bottom: 6px;
+	margin-left: 0;
+	margin-top: 12px;
+}
+
+p.TOCHeading
+{
+	color: #47484a;
+	font-size: 90pt;
+	font-weight: normal;
+	letter-spacing: -1px;
+	line-height: 92pt;
+	margin: 0;
+	mc-heading-level: 0;
+	text-align: center;
+}
+
+span.Emphasis
+{
+	font-weight: bold;
+}
+
+span.FigureNum
+{
+	color: #bed230;
+	font-style: normal;
+}
+
+span.SetOffFirstLevel
+{
+	color: #5e6914;
+	font-weight: bold;
+}
+
+span.SetOffSecondLevel
+{
+	color: #445879;
+	font-weight: bold;
+}
+
+span.TableNum
+{
+	color: #bed230;
+	font-style: normal;
+}
+
+td
+{
+	margin: 8px;
+	vertical-align: top;
+}
+
+th
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+tr
+{
+	page-break-inside: avoid;
+}
+
+ul
+{
+	list-style-image: url('../Images/Bullet1Print.eps');
+}
+
+ul.FirstLevelLessIndentation
+{
+	list-style-image: url('../Images/Bullet1Print.eps');
+	margin-left: 30px;
+}
+
+ul ul
+{
+	list-style-image: url('../Images/Bullet2Print.eps');
+	margin-left: 30px;
+}
+

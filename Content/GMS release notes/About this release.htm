@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Overview</h1>
+        <p>The release of GOCAD Mining Suite 17 update2 focuses on usability and stability with the introduction of Mining Categories and Classifications to the <i>Assign Data to Geologic Features</i> window. Additionally, we have ensured compatibility with new functionality in upcoming releases of other Mira Geoscience products, namely VPmg and Geoscience ANALYST.</p>
+        <p>There are new tools and fixes in the following modules:</p>
+        <ul>
+            <li>Mining Utilities</li>
+            <li>Targeting Workflow</li>
+            <li>Potential Fields</li>
+        </ul>
+        <p>&#160;</p>
+        <h1 MadCap:autonum=" "><span style="font-size: 16pt;">New and updated functionality</span>
+        </h1>
+        <h2 class="NoPageBreak">Mining Utilities</h2>
+        <ul>
+            <li>To facilitate more efficient organization in the Object Display Lists, we have added the mining data categories  to the GOCAD <i>Assign Data to Geologic Features</i> window <img src="../Resources/Images/GMS features window.png" />. <br />Categories included are: <ul><li>Fault, Horizon, Cultural, Geochemical Data, Airborne Geophysical Data, Ground Geophysical Data, Geotechnical Data, Mining Infrastructure, Physical Rock Property Data, Structural Data, and Fractures. </li></ul><p>Full details of the functionality of this dialogue are available from the SKUA-GOCAD help, however, basic details including panel functionality are extracted below:</p></li>
+        </ul>
+        <p>
+            <img src="../Resources/Images/GMS panels2.png" style="width: 714px;height: 502px;" />
+        </p>
+        <ol>
+            <li>Examine modelling objects that are not associated with features. All objects in the project that can be classified as Faults, Horizons, Intrusive Boundaries, Fluid Contacts, Cultural data or Formations appear in this list. (Wells and voxets are not shown.)<br />In this panel you can filter each column, view plots and statistics for objects, export objects, and add objects to your object lists.</li>
+            <li>Show or hide the list of features of the type you want to assign data to, where each icon represents a feature category.</li>
+            <li>Work with features (of the type selected at the top of the window), assigned objects, and find information about features and objects.</li>
+            <li>Create, edit, and delete features, assign or remove objects from features, and, for horizon features, access the Stratigraphic Column Editor.</li>
+            <li>Expand the filtering area and use tools to filter the list of features and objects. For example, you can filter the features shown by those that contain objects assigned to a given modelling role.</li>
+            <li>Assign or change the modelling role and feature classification for selected objects.<br /><br /></li>
+        </ol>
+        <ul>
+            <li>Register Image from Points (Voxet \ Edit) now copies all properties in the 2D Voxet rather than requiring you to select only one property.<br /><br /><img src="../Resources/Images/GMS image registration.png" /></li>
+        </ul>
+        <h2 class="NoPageBreak">Targeting Workflow</h2>
+        <ul>
+            <li>When using the Weights of Evidence technique, you can now select a user-defined region when selecting the Prediction Model Volumes at the start of the workflow. This allows you to take advantage of the method's ability to deal with missing information and generate targets even where data may not be present in the entire volume.<br /><br /><img src="../Resources/Images/GMS preditction model vol.png" /></li>
+        </ul>
+        <ul>
+            <p>&#160;</p>
+        </ul>
+        <h2 class="NoPageBreak">Potential Fields</h2>
+        <ul>
+            <li>When importing data from VPmg model files, GOCAD&#160;Mining Suite  now performes a check between the data range of the data being imported and any other previously imported VPmg model data of the same type, e.g., GZ, GUV, TMI, among others. If the difference in the data ranges is greater than a total of 20%, a new property display template is created with an incremented name. If a property display template already exists within this limit, the system uses that property display template. <br />This new behaviour helps VPmg users who are inverting different data sets with different background values in the same project (e.g., local and regional data sets).</li>
+            <li>All VPmg data imports now create property names directly from the data section header of the model file.</li>
+            <li>VPmg 9.2 will support models that are rotated from a N-S orientation. These can now be exported directly from rotated Voxet models within GOCAD Mining Suite; all other model export options currently display an error message when using a rotated Voxet to define model extents.</li>
+            <li>When creating control files to run VPmg inversions, you can incize local rotated models into regional models only if the rotation angle of the two models is the same. An error message will display if the rotation angles are different.</li>
+            <li>With the introduction of the support of rotated models in VPmg 9.2, GOCAD Mining Suite now supports the import of these models to both Grid objects and Surfaces.</li>
+        </ul>
+        <h1 MadCap:autonum=" ">Fixed issues</h1>
+        <h2 class="NoPageBreak">Mining Utilities</h2>
+        <p>We have fixed a SKUA-GOCAD issue within GOCAD Mining Suite that occurs after saving a selection of objects into a new project and then opening that project. In this instance, a 3D Viewer was not immediately available to the user. This issue initially created problems with the ioGAS Link plugin.</p>
+        <h2 class="NoPageBreak">SKUA-GOCAD™</h2>
+        <p>SKUA-GOCAD 17 support packs 1, 2, 3, 4, and 5 have been included in our installer as they resolve issues reported by our clients, such as:</p>
+        <ul>
+            <li>Viewing Voxet and 2D Survey objects with Viewer-only licences.</li>
+            <li>Creating cross sections from Voxet sections by right-clicking them in the 3D Viewer.</li>
+            <li>Preventing a complete rebuild of faults when updating the fault network after exiting and reopening the project in the Structure and Stratigraphy (SKUA) workflow.</li>
+            <li>Using a property script on well logs in a macro.</li>
+            <li>A model not being properly sealed when creating a Model3d from a SKUA Model (Surface commands \ Model3d \ From SKUA Model) with erosion and faults.</li>
+            <li>Editing the scale for a log in a cross section or well section view by accessing the Style editor for the log from the Well Track Templates browser.</li>
+        </ul>
+        <p>&#160;</p>
+        <h1 MadCap:autonum=" ">Previous v17 Release notes</h1>
+        <p>You can view the release notes from our previous GOCAD Mining Suite 17 releases by clicking the following links:</p>
+        <p><a href="https://mirageoscience.egnyte.com/dl/0TU5is5TYX">GOCAD Mining Suite 17 Release notes.pdf</a>
+        </p>
+        <p><a href="https://mirageoscience.egnyte.com/dl/YEsEeaj3z2">GOCAD Mining Suite 17 update1 Release notes.pdf</a>
+        </p>
+        <p>&#160;</p>
+        <h1 MadCap:autonum=" ">Supported third-party programs and APIs</h1>
+        <p>GOCAD Mining Suite 17 update1 supports the following software versions of our partners:</p>
+        <ul>
+            <li>AcQuire API 4.5.6.3</li>
+            <li>Geosoft API 8.4*</li>
+            <li>PFD3D API 2.13.8</li>
+            <li>ioGAS 7.0 and earlier</li>
+            <li>UBC 5.0.1 and earlier</li>
+            <li>VPmg 9.2 and earlier</li>
+            <li>VPem1D 4.1 and earlier</li>
+        </ul>
+        <p>*To use any of our commands that rely on the Geosoft API, Geosoft requires that you have a Geosoft ID. A Geosoft ID can be obtained directly from the Geosoft website: <a href="https://my.geosoft.com/createnew">https://my.geosoft.com/createnew</a>. If you have any Geosoft products, you likely already have a Geosoft ID.</p>
+        <h1 MadCap:autonum=" ">Supported Operating Systems</h1>
+        <p>GOCAD Mining Suite 17 update1 is supported on Microsoft Windows x64 Systems: Windows 7, Windows 8.1, and Windows 10.</p>
+        <p><b>IMPORTANT</b>
+        </p>
+        <p>A valid licence is required to run this new version. If you are licensing the software in a server-client configuration, you must update both the server and the client machines to this new version.</p>
+        <p>For more information about system requirements and complete installation information, please refer to the instructions that were provided to you with the updated licence file or contact <a href="mailto:licensing@mirageoscience.com">licensing@mirageoscience.com</a>.</p>
+        <p>&#160;</p>
+    </body>
+</html>

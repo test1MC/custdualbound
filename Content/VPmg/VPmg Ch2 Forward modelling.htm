@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Forward modelling</h1>
+        <p>Once you have a VP model and a set of data locations, you can begin to forward model data responses. An optimal DC shift of the predicted data versus the observed data can be calculated during the forward modelling computation. A root-mean-squared (RMS) misfit of the given observed data compared to the predicted data is also an output. Both values aid in hypothesis testing on real data by giving you quantitative information on how well the computed data reproduce the observed data. You can model and invert the following data types:</p>
+        <ul>
+            <li>Total magnetic intensity (TMI)</li>
+            <li>Magnetic components (<var>B<sub>x</sub></var>, <var>B<sub>y</sub></var>, <var>B<sub>z</sub></var>)</li>
+            <li>Magnetic amplitude data</li>
+            <li>Total magnetic gradient (analytic signal)</li>
+            <li>Magnetic tensors (all six components)</li>
+            <li>Magnetic tensor amplitude</li>
+            <li>Vertical gravity</li>
+            <li>FTG gradiometry (All six components)</li>
+            <li>Falcon gradiometry (<var>G<sub>UV</sub></var>, <var>G<sub>NE</sub></var>)</li>
+            <li>VK1 gradiometry (<var>G<sub>GA</sub></var>, <var>G<sub>GC</sub></var>)</li>
+        </ul>
+        <p>The format of the control file for VPmg does not change from forward modelling to inversion. To forward model data, set up the control file and set the number of iterations to 0 (regardless of style of inversion).</p>
+        <p>VPmg writes the output file in the style of the VP model and places the computed data at the end of the file. This is useful to use as an initial model for a subsequent inversion. In this section you will find the observed, predicted, and background data described. Details of how the background data are computed are found in the <a href="VPmg Ch2 Inversion - Technical background.htm#RegionalModels">Regional and local models section</a>.</p>
+        <p>When computing magnetic amplitude data for a single forward model, the application creates an extra data file with <samp>x, y, z, data</samp> and names the prefix of the given locations file <br /><span class="filename">_amp</span>, placed before the file extension. For example, VPmg will create<br /> <span class="filename">myData_amp.dat</span> if <span class="filename">myData.dat</span> was the data file.</p>
+        <p style="page-break-after: avoid;">VPmg computes the individual components of the anomalous magnetic induction to calculate the true TMI:</p>
+        <div class="indent" style="page-break-inside: avoid;page-break-before: avoid;">
+            <p>
+                <img src="../Resources/Images/VPmg TMI calc.png">
+                </img>
+            </p>
+            <p>Where:</p>
+            <ul>
+                <li><var>(<var>B<sub>x</sub></var>, <var>B<sub>y</sub></var>, <var>B<sub>z</sub></var>)</var> denotes the anomalous induction.</li>
+                <li><var>(<var>F<sub>x</sub></var>, <var>F<sub>y</sub></var>, <var>F<sub>z</sub></var>)</var> is the ambient geomagnetic induction.</li>
+            </ul>
+            <p>Often the TMI anomaly can be approximated as the scalar component of <var>B</var> in the direction of <var>F</var>; however, this is not true near intense magnetic sources.</p>
+        </div>
+    </body>
+</html>

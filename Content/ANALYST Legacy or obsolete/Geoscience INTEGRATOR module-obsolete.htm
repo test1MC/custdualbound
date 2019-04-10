@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="812" MadCap:lastWidth="725">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Geoscience INTEGRATOR module</h1>
+        <p>Geoscience ANALYST is the 3D front end to connect to, query, and visualize data from Geoscience INTEGRATOR, the software solution by Mira Geoscience for 4D multi-disciplinary exploration and geotechnical data management system.<br /></p>
+        <h4>Geoscience INTEGRATOR&#160;query</h4>
+        <p class="Task">To connect to the <MadCap:variable name="General.ProductName"></MadCap:variable> server:</p>
+        <ol>
+            <li>In the Geoscience INTEGRATOR query window, click the <b>Connect now</b> button.<br /><img src="../Resources/Images/GA connect now GA.png" style="width: 272px;height: 296px;" /></li>
+            <li>In the credentials dialogue, enter your email, password, and the URL address of a valid Geoscience INTEGRATOR server. <br /></li>
+            <li>Click <b>OK</b>.<br /><img src="../Resources/Images/GA GI credentials.png" style="width: 289px;height: 208px;" /></li>
+            <li>In the drop-down menu of the Projects section of the credentials dialogue, locate the desired Geoscience INTEGRATOR&#160;project and click <b>LOAD</b>.<br /><img src="../Resources/Images/GA GI load now.png" style="width: 291px;height: 209px;margin-left: 0px;margin-right: 0px;margin-top: 20px;margin-bottom: 0px;" /><br /></li>
+        </ol>
+        <p>Once connected to a Geoscience INTEGRATOR project, you will see the project summary information  displayed in the data table in the workspace tab (below the viewport). This includes the project’s name and description, the XYZ extents of the data, and a list of the  the files uploaded via the  Geoscience INTEGRATOR web browser user interface.</p>
+        <p>
+            <img src="../Resources/Images/controls panel_resize.png" style="width: 486px;height: 257px;" />
+        </p>
+        <p>
+            <br />
+            <br />
+        </p>
+        <h2>Viewing data sets/projects in the Object tree</h2>
+        <p>After connecting to Geoscience INTEGRATOR and loading a project, all of its data will appear in the Geoscience ANALYST bjects panel. The projects are organized at the theme/sub-theme/object level. </p>
+        <p>
+            <img src="../Resources/Images/GA GI connected object tree_edit2.png" style="width: 359px;height: 484px;margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" />
+        </p>
+        <p>&#160;</p>
+        <div class="note1"><b style="font-style: italic;">Note:</b> Greyed out data set names are <MadCap:annotation MadCap:createDate="2018-02-28T16:15:03.4297394-05:00" MadCap:creator="jackg" MadCap:initials="JA" MadCap:comment="what's the new terminology?" MadCap:editor="jackg" MadCap:editDate="2018-02-28T16:15:09.3700972-05:00">data set placeholders.</MadCap:annotation></div>
+        <p><![CDATA[  ]]></p>
+        <p>&#160;</p>
+        <h4>Geoscience INTEGRATOR&#160;query parameters</h4>
+        <p>The Query parameters appear in the Geoscience INTEGRATOR Query panel, at the right of the Geoscience&#160;ANALYST&#160;user interface. These are a series of filters as well as a tool to import certain objects and information. You can toggle on and off each one using the check box next to a parameter's name. Once selected, clicking <b>Run</b> at the bottom of the panel will filter and import your selections. </p>
+        <p>
+            <img src="../Resources/Images/viewport and GI query.png" style="width: 701px;height: 353px;margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 20px;" />
+        </p>
+        <p><b>Bounding box</b>
+        </p>
+        <p> The bounding box query will filter the data based on X, Y and Z limits. By default, the <i>from</i> and <i>to</i> parameters are set to the extents of the  entire data set. This option is available on all data themes.</p>
+        <p>
+            <img src="../Resources/Images/gi query bounding box.png" style="margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;width: 354px;height: 161px;" />
+        </p>
+        <p class="Task">To modify the bounding box extents:</p>
+        <ol>
+            <li> Digitize new <i>from</i> and <i>to</i> locations by either clicking on the corresponding target icon to the right, entering new values in the text boxes, or using the up and down arrows. </li>
+            <li> Click <b>Reset to max</b> to revert to the entire X, Y, and Z extents. 
+			</li>
+        </ol>
+        <p>To generate a bounding box that covers the area where most data is concentrated, click <b>2 standard deviations</b>. </p>
+        <p> You can visualize the bounding box of this area of concentration  clicking  <i>Show selection bounding box</i> the icon to the right. <img src="../Resources/Images/bounding box icon.png" style="margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" /></p>
+        <p>You can drag a line in the viewport to nominate the X, Y, and Z extents. We recommend setting  a view from top of the bounding box to draw the X and Y extents, and from a side view when drawing the Z extents.</p>
+        <p><b>Date</b>
+        </p>
+        <p>This option filters  time-based data of the event-type themes.  You can select dates using the calendars or enter them in the text boxes.</p>
+        <p>
+            <img src="../Resources/Images/date query params.png" />
+        </p>
+        <p>Another version of this filter is available to query the themes containing objects with time-related data. Since these themes can hold many instant data for each object location and Geoscience ANALYST can only show one property value at a time per location, you need to provide a datetime value for it to select the instant  properties as of a specific datetime. The system will return the values that correspond exactly to the specified datetime, or the most recent one before.</p>
+        <p>
+            <img src="../Resources/Images/single date query params.png" />
+        </p>
+        <div class="note1"><b style="font-style: italic;">Note</b>: If you are a Geoscience INTEGRATOR user, note that using this query in the Underground theme functions like the Compiled table query, as opposed to the data set explorer query.</div>
+        <p><b>Object</b> (name of object type varies from theme to theme)</p>
+        <p> This option refers to samples and other specific types of objects that you can  use as filters in the data set explorer.</p>
+        <p>
+            <img src="../Resources/Images/drillhole query params.png" />
+        </p>
+        <p><b>Property Filters</b>
+        </p>
+        <p> This option filters by property values.  Press <b>+</b> to add another property filter. </p>
+        <p>
+            <img src="../Resources/Images/prop filters query params.png" />
+        </p>
+        <div class="note1"><b style="font-style: italic;">Note:</b> The nature of the data in a theme will determine the query behaviour and options available in the property filter. </div>
+        <ul>
+            <li>Text data: <i>Is</i> is the only option available. You must enter the entire character string in the text box.</li>
+            <li>Classification and binary: <i>Is</i> is the only option available. Expand using the down arrow and select one or more classes to import. </li>
+            <li>Float, integer, and date: Select one of the available operations and enter a value in the text box.</li>
+        </ul>
+        <p>For <b>Shifts</b>, <b>Properties</b>, <b>Tags</b>, and <b>Groups</b>. simply toggle on using the checkbox and  select among the available items in the project to import them. These options only appear if they are present in the working data set. </p>
+        <p>The Properties section lists all available properties  in a data set, but note that time interval data is not supported and will appear greyed out in the <i>Geoscience INTEGRATOR&#160;Query\Properties</i> panel. </p>
+        <p>
+            <img src="../Resources/Images/greyed out properties.png" />
+        </p>
+        <p>When you have set all the desired filters, you can click <b>Run</b> at the bottom of the Query panel to send the query. Geoscience ANALYST will only load the pertinent records, as per query results.</p>
+        <h4>
+            <br />Viewing data import results</h4>
+        <p>Geoscience ANALYST stores the data import results on special object types, depending on the data type. For example, <i>microseismic events</i> are a special points object that stores the data on nodes referred to as <i>events</i>.</p>
+        <p>For data sets that have groups (e.g. Earth models/ &gt; 3D point sets), <MadCap:annotation MadCap:createDate="2018-01-12T14:21:21.0927189-05:00" MadCap:creator="jackg" MadCap:initials="JA" MadCap:comment="unclear" MadCap:editor="jackg" MadCap:editDate="2018-01-12T14:21:23.9590193-05:00">the system stores the data imported  on objects named according to the group, located in a timestamped folder within the data set group. </MadCap:annotation> Similarly, drillholes are objects located within a timestamped folder (highlighted in image below), within the drillholes data set group. All other queries will be objects named according to a timestamp directly under the data set folder.</p>
+        <p>
+            <img src="../Resources/Images/import data.png" />
+        </p>
+        <MadCap:pageBreak />
+        <p>The viewport displays the imported data in 3D, and the data table displays a summary. </p>
+        <p>
+            <img src="../Resources/Images/viewport and summary.png" />
+        </p>
+        <p>&#160;</p>
+        <h4>Viewing project files, maps, and documents</h4>
+        <p>You can find project files, maps, and documents in the Workspace tab of the data table, where you can use a search bar to locate files of interest. Clicking on a file name will display a selection of options:</p>
+        <p><b>Import</b>: Imports the file under the project or data set name in the objects panel. The data file has to be in a format supported by Geoscience ANALYST, for example GOCAD surface files, DWG and DXF files.</p>
+        <p><b>Open</b>: The system will try to open the file using the program associated to that file type on the computer. For example, a photo file saved with the extension .JPG will open in an image viewer  application.</p>
+        <p><b>Save as</b>: Downloads the file to your computer. </p>
+        <p><b>Pull</b>: Downloads the file in the Geoscience ANALYST workspace and becomes available offline.</p>
+        <p><b>Cancel</b>:  Cancels the file selection.</p>
+        <p>
+            <img src="../Resources/Images/workspace tab1.png" style="width: 433px;height: 397px;" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <h4>Visualizing the data in 3D</h4>
+        <p>Once you have imported your data into Geoscience ANALYST, you can take advantage of the numerous visualization tools to analyze it. You can view integrated data and models from multiple data sets and files together and analyze, interpret and share with others.</p>
+        <p>Before exiting Geoscience ANALYST, you can save the imported data using the File menu option. Doing so will create a Geoscience ANALYST file on your computer, which will remain available even after terminating the connection to Geoscience INTEGRATOR. </p>
+        <div class="note1"><b style="font-style: italic;">Note:</b> It is only possible to connect to one Geoscience INTEGRATOR project at a time.</div>
+        <p style="font-weight: bold;">- query in object tree</p>
+        <p style="font-weight: bold;">- metadata exposed for each dataset</p>
+    </body>
+</html>

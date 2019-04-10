@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Inversion: Technical background</h1>
+        <p>The aim of inversion is to perturb a geological model to achieve an acceptable degree of reproducing the observed data, subject to geological and petrophysical constraints on the model. Inversion proceeds iteratively by successive approximation, seeking at each stage parameter changes, <var><MadCap:equation>$\triangle$</MadCap:equation>m</var> (either property or elevation change), which can reduce the data misfits, <var><MadCap:equation>$\triangle$</MadCap:equation>d</var>. The misfit quantifies how well the predicted data reproduce the observed data. The objective at each iteration is to find the smallest parameter perturbation needed to halve the data misfit. A maximum perturbation size is defined in terms of absolute property change, for property inversion, or in terms of fractional change in depth, for geometry inversion. This value is defined in the control file.</p>
+        <p>The solution to the perturbation methods utilizes the Method of Steepest Descent so that no matrix inversions are performed. This makes the inversion process fast because only two matrix-vector multiplications are required at each step. The inversion will continue until the maximum iterations are performed or the data misfit is achieved. Ultimately, since the misfit depends upon the uncertainty given by the user, the model realizing the misfit is data- and user-dependent. The degree of fit is judged per the magnitude of the chi-squared data norm, <var>L2</var>, defined by:</p>
+        <p>
+            <img src="../Resources/Images/VPmg L2 calc.png" />
+        </p>
+        <p>Where:</p>
+        <ul>
+            <li>
+                <var>N</var> is the number of data.</li>
+            <li>
+                <var>O<sub>i</sub></var> denotes a measured datum.</li>
+            <li>
+                <var>P<sub>i</sub></var> denotes the calculated model response.</li>
+            <li>
+                <var>
+                    <MadCap:equation>$\varepsilon$</MadCap:equation>
+                    <sub>i</sub>
+                </var> is the assigned uncertainty (standard deviation) for that datum.</li>
+        </ul>
+        <MadCap:pageBreak />
+        <p>Further, you can specify an optional value (<var>c</var>), that represents the point at which the residual is far enough away (<var>c</var> * <var><MadCap:equation>$\varepsilon$</MadCap:equation></var>) that the program will down-weight the contribution using an <i>L1</i> norm rather than an <i>L2</i>. This hybrid data misfit is defined by:</p>
+        <p>
+            <img src="../Resources/Images/VPmg L1norm calc.png" />
+        </p>
+        <p>Where:</p>
+        <ul>
+            <li>
+                <var>
+                    <MadCap:equation>${ r }_{ i }$</MadCap:equation>
+                </var> is the i<sup>th</sup> datum residual normalized by its uncertainty (summation in <var>L2</var> equation).</li>
+            <li>
+                <var>c</var> is the Huber constant, given in the control file.</li>
+        </ul>
+        <p>If the predicted data reproduce the observed within the given uncertainty controlled by a normal random distribution with zero mean, the data misfit will equal its expected value of 1. The measure of fit is dimensionless due to the normalization with respect to the uncertainty.</p>
+        <p>The dimensional RMS misfit is also computed and recorded, where:</p>
+        <p>
+            <img src="../Resources/Images/VPmg RMS calc.png" />
+        </p>
+        <p>RMS is quoted in the data units. For an acceptable model, i.e., when VPmg has converged, the RMS misfit should be approximately equal to <var><MadCap:equation>$\varepsilon$</MadCap:equation></var>. It should be noted that this is another measure for your benefit and does not affect the results of the inversion.</p>
+        <p>The inversion will terminate when the acceptable level of misfit is achieved (convergence), the maximum number of iterations is completed, or the misfit does not decrease on successive iterations (stalled inversion). A stalled inversion is a common condition; it occurs when the imposed constraints preclude convergence.</p>
+        <h1 MadCap:autonum=" ">Inversion styles</h1>
+        <p>There are four inversion styles that VPmg performs, based on the components of the prism that are being optimized:</p>
+        <ul>
+            <li>
+                <a href="#HomogeneousInv">Homogeneous (i.e., bulk) property</a>
+            </li>
+            <li>
+                <a href="#GeometryInv">Geometry</a>
+            </li>
+            <li>
+                <a href="#VPBasementInv">VP basement property</a>
+            </li>
+            <li>
+                <a href="#HeterogeneousInv">Heterogeneous property</a>
+            </li>
+        </ul>
+        <p>The difference in input between the inversions is the <var>ILD</var> flag that denotes which kind of inversion is taking place.</p>
+        <p>For all property-based inversions, VPmg permits geologic units to be active (their properties will be perturbed by the inversion) or inactive. Units are recognized as active if their lower and upper bounds differ. The inactive units (lower equals upper bounds) do <i>not</i> have to be within their bounds. However, if an active unit is out of its bounds, the program will stop and an error message will appear.</p>
+        <p>Below is an illustration of a model to help you understand inversion styles. The model has two layers (Units A and B) above the VP basement (Unit C).</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg inversion 1.png" />
+        </p>
+        <h2 class="NoPageBreak">
+            <a name="HomogeneousInv">
+            </a>Homogeneous property </h2>
+        <p>The inversion of homogeneous unit properties is the fastest method because the maximum number of “active” parameters is the number of geological units in the model, even if the model is large and complex. You can invert for density (g/cc), magnetic susceptibility (milliSI), or for remanent magnetization direction. For density and susceptibility, units that are not heterogeneous and are active are candidates for homogeneous inversion. A variable VP basement is not used in this style of inversion. In short:</p>
+        <ul>
+            <li>Homogeneous unit properties may vary among units, but are constant within each unit.</li>
+            <li>Remanent magnetization parameters are fixed (in the case of susceptibility inversion).</li>
+            <li>Contact elevations and variable basement properties are fixed.</li>
+            <li>The maximum change of property given in the control file is implemented.</li>
+            <li>Inversion flag (<var>ILD</var>) = 1.</li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg homogeneous inversion.png" />
+            <br />
+            <span class="SmallerCaption">All three units are active for the homogeneous inversion.</span>
+        </p>
+        <p>&#160;</p>
+        <h3 class="NoPageBreak">Remanent magnetization inversion</h3>
+        <p>A special case of homogeneous property inversion is remanent magnetization inversion (RMI). In this special case, the Koenigsberger Ratio, inclination, and declination are the properties being optimized given a susceptibility model. In this specific case the susceptibility is fixed. Therefore, a heterogeneous unit may be active. Like general homogenous property inversion, the units are active if the lower and upper bounds differ. RMI will solve for the bulk remanent magnetization parameters.</p>
+        <p>VPmg handles the “purely remanent” magnetization situation when the Koenigsberger Ratio is undefined (infinite). The remanent magnetization amplitude is computed, <i style="font-weight: bold;">J</i>, in terms of an effective susceptibility, <var>K<sub>eff</sub></var>:</p>
+        <p>
+            <var>J</var>=<var>K<sub>eff</sub></var> <var>H<sub>o</sub></var> where <var>H<sub>o</sub></var> is the ambient field.</p>
+        <h2 class="NoPageBreak">
+            <a name="GeometryInv">
+            </a>Geometry </h2>
+        <p>Geometry inversion moves the contacts between homogenous units. VPmg contacts are all bounded by the ground surface at the top. Geologic contacts may be:</p>
+        <ul>
+            <li>Free to move during inversion</li>
+            <li>Fixed where pierced by a drillhole or artificially specified</li>
+            <li>Bounded by any fixed surface above or below</li>
+        </ul>
+        <p>Topography (i.e., the top of the prism) is considered fixed. A brief description of geometry inversion:</p>
+        <ul>
+            <li>Only contacts between homogeneous units are active.</li>
+            <li>All physical properties are fixed in the model.</li>
+            <li>Inversion flag (<var>ILD</var>) = 2.</li>
+        </ul>
+        <p>For this inversion, a maximum percentage (i.e., 0.05 for 5%) with respect to depth from top of the model is given in the control file.In some cases, small thicknesses at shallow depths will not allow a change due to the nature of taking a percentage of an already small number. An integer value can be added to the fractional percentage to add the shift of the weighting in these cases. For example, using 20.05 would add 20m to weights where 5% of depth were less than 20m. This option gives the layer a chance to move rather than be weighted to practically zero. </p>
+        <p>Pierce-point constraints from drillholes can be added in the form of a flag within the geometry section of the VP model file. The constraints consist of non-movable contacts and a radius of influence suppressing movement around their location.</p>
+        <p>Deeper units may push other units up to the topography. The units between the top and the once-deeper unit are zero-thickness units. This allows outcropping to happen if necessary.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg Geometry inversion.png" />
+            <br />
+            <span class="SmallerCaption">In geometry inversion, the contacts between A and B, and B and C move freely (thick, white lines for emphasis). The physical properties of A, B, and C remain constant.</span>
+        </p>
+        <div class="tip">In cases where physical properties are not well known, you can use VPmg multiple times to balance perturbations between the physical property and geometry of the system. Allow small values of change for both the physical properties and contact geometries. Go back and forth performing property and geometry inversions with only a few iterations each in succession.</div>
+        <h2 class="NoPageBreak">
+            <a name="VPBasementInv">
+            </a>VP basement property</h2>
+        <p>In some cases, it is of interest to allow the VP model basement to vary laterally. In that case use the basement property inversion. This is considered a special inversion type because the VP basement cannot have internal contacts (i.e., become heterogeneous).</p>
+        <p>With this inversion chosen:</p>
+        <ul>
+            <li>All other units than VP basement are constant</li>
+            <li>Basement heterogeneities must be within its unit’s bounds</li>
+            <li>The basement becomes variable and is no longer a candidate for homogeneous inversion</li>
+            <li>Inversion flag (<var>ILD</var>) = 0</li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg basement inv.png" />
+            <br />
+            <span class="SmallerCaption">Basement property inversion. The units A and B are kept constant and the VP basement is laterally variable. The basement unit continues in depth to the base of the VP model (usually -25km).</span>
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="tip">A special case of basement inversion is an apparent density or susceptibility inversion (also called an equivalent source). Use a VP model made entirely of  basement-only prisms and invert using the basement property style. Ensure bounds are wide enough to be able to reproduce the observed data.</div>
+        <h2>
+            <a name="HeterogeneousInv">
+            </a>Heterogeneous property </h2>
+        <p>When homogeneous units are sub-celled, they are then considered heterogeneous units. The property values of all the cells within the heterogeneous unit adheres to the unit’s bounds found in the model file. The only inverted units are the active heterogeneous units.</p>
+        <ul>
+            <li>Active heterogeneous units are variable</li>
+            <li>Geometric contacts and homogeneous units are fixed</li>
+            <li>VP basement is fixed</li>
+            <li>Inversion flag (<var>ILD</var>) = -1</li>
+        </ul>
+        <p>You may use VPmg or VPutility to sub-cell homogenous units. The sub-cells are usually assigned a single thickness for each unit, although it can be advantageous to expand the cell size in depth. When performing the sub-celling a weighting is automatically defined. Weighting is important to help off-set differences in the sensitivities for each cell and give each cell an equal chance of changing its physical property. Two types of weighting are offered: depth and distance. Depth uses the decay of the field vertically. Distance weighting is more robust as it considers all data geometry to the individual cell. For this reason, it also is longer to compute than depth. Both styles are available via VPutility.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg homo prop inv.png" />
+        </p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg homo prop inv2.png" />
+            <br />
+            <span class="SmallerCaption">Top: Unit B (randomized to show sub-celling) is heterogeneous in the illustration. Units A and C will not be affected by the heterogeneous inversion. Bottom: Depth weighting values assigned to unit B</span>
+        </p>
+        <p>You can set known 3D heterogeneous property distributions during inversion using a flag with the weighting terms within the VP model (<a href="VPmg Ch4 Parameter file.htm#VP_ModelFile">see VP file format</a>). It is also possible to set a radius of influence to have the known cells affect the model during inversion.</p>
+        <p>This style of inversion will output a CSV file so you can view the data misfit and RMS with respect to the iteration number.</p>
+        <div class="tip">A way to easily determine if the maximum change in the model after an inversion run is too large is if there is a large jump in misfit after forward modelling. Ideally, you would want to see a linear trend as the data misfit is reduced.</div>
+        <div class="tip">Heterogeneous inversion will be the most computationally intensive of all the VPmg inversion styles. Use the last line of the control file to set the maximum amount of RAM you would like VPmg to use (in gigabytes) as well as the number of OpenMP threads. A rule of thumb is to subtract two from your computing resources for each. For example, if you have 8 GB of RAM, set the maximum to 6 GB. For duo-quad cores (8 threads), use 6 OpenMP threads to be able to continue working while VPmg runs in the background.</div>
+        <h1 MadCap:autonum=" ">
+            <a name="RegionalModels">
+            </a>Regional and local models</h1>
+        <p>VP models are embedded within the earth. Every model has a half-space calculation performed to simulate the earth with a hole containing the VP model. In fact, the half-space physical property can be optimized during inversion. Even so, there will inevitably be a regional field that interferes with a local area of interest.</p>
+        <p>VPmg will take two VP models to alleviate this problem: a regional model and a local model. Both models are VP models, but when two models are given, the local model is incised into the regional model. The regional model is used for the sole purpose of modelling the regional or “background” contribution: the response due to an earth with a rectangular hole cut into it. The hole cut into a regional model to accommodate a local model extends to the base of the local model (typically -25 km) as shown below. Note that once two VP models are given, VPmg will no longer optimize the half-space. The VP basement of each model does not need to be at the same elevation or surfaces.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg local and regional model.png" />
+            <br />
+            <span class="SmallerCaption">A local model within a regional model.</span>
+        </p>
+        <p>There are three ways to incise the local model into the regional model based on the flag <var>ilocal</var> in the control file. Each will perform the incision differently, but in some cases will reproduce the same result. The methods only affect how the regional model under the local basement behaves. Note the following:</p>
+        <ul>
+            <li>The regional model must extend laterally beyond the local model. Vertically their model bases may be at the same elevation or the local model can be shallower.</li>
+            <li>The local and regional models do not need to align. They can have different prism centres and widths.</li>
+            <li>Any part of the regional model that is below the absolute bottom of the local model is used in the background data calculation.</li>
+        </ul>
+        <div class="tip">The DC level for a combined regional/local inversion should, in most cases, be fixed at the value recorded at the end of the regional model file. When the DC level floats, the influence of the regional model is diminished. Subsequently, there may be a discontinuity in susceptibility around the boundary of the local model.</div>
+        <p>&#160;</p>
+        <h3 class="NoPageBreak">Incising option 1: Averaging into the local VP basement</h3>
+        <p>The first option (<a href="VPmg Ch4 File formats.htm#ilocal"><var>ilocal</var> = 1 in the control file</a>) sets the properties of the basement prisms of the local model to the volume averaged physical properties of the regional model prisms at the same location. This happens for each local model basement prism independently so that if the local prism contains more than one regional prism or cells, it will properly reflect average properties of the regional model at that location. The local model basement becomes a variable basement (not eligible for homogeneous inversion) and is written out to the basement section of the VP model file. This method is best used when the regional model is laterally varying or has more than one unit within the local basement volume.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg incision vp basement.png" />
+            <br />
+            <span class="SmallerCaption">Incision where the regional model (black cage) is averaged into the local model (red cage) VP basement.</span>
+        </p>
+        <MadCap:pageBreak />
+        <h3 class="NoPageBreak">Incising option 2: The scooping method</h3>
+        <p>The second option (<a href="VPmg Ch4 File formats.htm#ilocal"><var>ilocal</var> = 2 in the control file</a>) is called the scooping method. You can think of this method as scooping a hole out of the regional model and directly inserting the local model. The local model VP basement is not touched and the regional model (above the local model base) is ignored. You can use this method when you need to compute regional fields for a local model.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg scooping method.png" />
+            <br />
+            <span class="SmallerCaption">Incision using the scooping method. The local model (red) is inserted into the regional model (blue).</span>
+        </p>
+        <p>&#160;</p>
+        <h3 class="NoPageBreak">Incising option 3: Removing the local VP basement</h3>
+        <p>The third option (<a href="VPmg Ch4 File formats.htm#ilocal"><var>ilocal</var> = 3 in the control file</a>) removes the local VP basement from consideration altogether. The regional model response in the local VP basement is added to the background computation. The local VP basement is set to zero and will remain inactive for any inversion. Best uses for this option are for investigating a complicated (multi-unit) regional model and trying to extract specific local information. Options 1 and 2 will typically suffice.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg incision regional.png" style="width: 243px;height: 166px;" />
+            <br />
+            <span class="SmallerCaption">Incision by using the regional model (blue) in the local model (red) VP basement. The local model VP basement then ignored during inversion. The model region in red is active during inversion.</span>
+        </p>
+        <div class="caution">The system will output the VP basement with the local model file, and will display a warning to the log and screen. If you run a forward model, the predicted data will not be what was predicted during the previous run when the background data were used. The data could be used in subsequent inversions if the background flag (<var>iback</var>) in the VP model file is non-zero (<a href="VPmg Ch4 Parameter file.htm#VP_ModelFile">see VP model file format</a> for details).</div>
+    </body>
+</html>

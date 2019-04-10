@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <div class="[%=General.RootDivClass%]">
+            <p MadCap:conditions="General.Online" style="font-size: 22pt;"><a href="#Version2_70">Version 2.70</a> and patches</p>
+            <h1 class="NoPageBreak" MadCap:autonum=" "><a name="Patch2_72"></a>Patch 2.72</h1>
+            <p>This patch version provides a bug fix related to the import of AutoCAD files (<span class="fileext">.dxf</span>, <span class="fileext">.dwg</span>).</p>
+            <h2 class="NoPageBreak">Fixed issue</h2>
+            <h3 class="NoPageBreak">Geoscience ANALYST free viewer</h3>
+            <p>Block Reference entities from AutoCAD files (<span class="fileext">.dxf</span>, <span class="fileext">.dwg</span>) are now always loaded with the necessary coordinate transformation and are shown at the expected location in space.</p>
+            <h1 class="NoPageBreak" MadCap:autonum=" "><a name="Patch2_71"></a>Patch 2.71</h1>
+            <p>This patch version provides bug fixes and minor enhancements to the previous <a href="#Version2_70">2.70 release</a>.</p>
+            <h2 class="NoPageBreak">Enhancements</h2>
+            <h3 class="NoPageBreak">Geoscience ANALYST free viewer</h3>
+            <ul>
+                <li>Support for Block Reference entities when importing AutoCAD files (<span class="fileext">.dxf</span>, <span class="fileext">.dwg</span>).</li>
+                <li>Importing an attached <span class="fileext">.geoh5</span> file imports as a container folder, instead of loading as a new workspace.</li>
+                <li>When a CSV file  fails to load, the error  message reports the number of the invalid line in the file.</li>
+                <li>Upon notification of a new software update, clicking on "Remind me later" will silence the notification for a week.</li>
+            </ul>
+            <h3 class="NoPageBreak">Connectivity to Geoscience INTEGRATOR</h3>
+            <ul>
+                <li>When selecting a data set of Geoscience INTEGRATOR, its bounding box and its name are displayed in the viewport.</li>
+                <li>Loading a file from Geoscience INTEGRATOR automatically downloads and uses the available companion files (e.g. <span class="fileext">.jpg</span> image and <span class="fileext">.jgw</span> world file).</li>
+                <li>Sensors objects from a Microseismic data set stay hidden, although automatically loaded. They can still be made visible in the viewport from the Object Panel as any other objects.</li>
+                <li>Files under <i>Documents, Files, and Maps/plans/sections</i> are listed in alphabetical order.</li>
+                <li>Exposes the list of properties for <i>Data sets (files)</i> from Geoscience INTEGRATOR version 3.0.</li>
+            </ul>
+            <h2 class="NoPageBreak">Fixed issues</h2>
+            <h3 class="NoPageBreak">Geoscience ANALYST free viewer</h3>
+            <ul>
+                <li>Flat profile lines in viewport are easier to grab and rescale with mouse.</li>
+                <li>Loading an AutoCAD file (<span class="fileext">.dxf</span>, <span class="fileext">.dwg</span>) properly ignores entities from the layout spaces.</li>
+                <li>Drillhole logs are now correctly displayed along highly detailed paths.</li>
+                <li>Drillhole logs are rendered in viewport even if some other drillholes in the same group have empty data.</li>
+                <li>Upon opening of the workspace, displayed interval logs are painted with the right colours.</li>
+                <li>Interval logs with a single interval are displayed correctly.</li>
+                <li>Definition of discrete properties  from GOCAD ASCII files ( <span class="fileext">.vs</span>, <span class="fileext">.vx</span>, <span class="fileext">.wl</span>, <span class="fileext">.mx</span>) are correctly interpreted upon import.</li>
+                <li>Properties read from GOCAD ASCII files are correctly assigned the <i>reference</i> or <i>float</i> type.</li>
+                <li>Import of large CSV files with many empty rows does not hang anymore.</li>
+            </ul>
+            <h3 class="NoPageBreak">Connectivity to Geoscience INTEGRATOR</h3>
+            <ul>
+                <li>Passwords for Geoscience INTEGRATOR with non-ASCII characters are recognized.</li>
+                <li>Files from Geoscience INTEGRATOR that have the same name, but different extensions, are all listed.</li>
+            </ul>
+            <h1 MadCap:autonum=" "><a name="Version2_70"></a>Version 2.70</h1>
+            <p>This latest version of Geoscience ANALYST introduces 2D views, allowing you to see your models in a 2D viewer, to better display mine level plans, topographic and geological maps, or other required map-based visualizations of models and data. With multiple viewers, 3D models can be visualized side by side in 3D and projected in 2D.</p>
+            <p MadCap:conditions="General.NoPicture">
+                <div class="indent" style="margin:0px; ">
+                    <table style="margin: 0px;width: 700px;">
+                        <col />
+                        <tbody>
+                            <tr>
+                                <td style="text-align: center;">
+                                    <img src="../../Resources/Images/en/GA_Map_FlinFlon_2018.png" style="width: 385px;height: 537px;" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;"><b style="color: #404040; font-size: 10pt; ">3D model projected in map view. Ore body displayed on top.</b>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </p>
+            <p>This version also features a new query panel that connects to Geoscience INTEGRATOR (version 3.0) to allow you to find and display data sets intersecting a user-defined volume of interest or matching selected metadata values.</p>
+            <p>Low and high clipping value within the Data Colours panel can now be flipped to show data outside the defined range.</p>
+            <p>Other updates include improved support of AutoCAD files (<span class="fileext">.dxf</span>, <span class="fileext">.dwg</span>), with access to text entities, as well as new geometry types from ESRI shapefile (<span class="fileext">.shp</span>).</p>
+            <h2 class="NoPageBreak">New and updated functionality</h2>
+            <h3 class="NoPageBreak">Geoscience ANALYST free viewer</h3>
+            <ul>
+                <li>Automatically moves to the front the panel selected from the 'Panels' menu.</li>
+                <li>Inside / outside toggle button for quick data range filtering on all objects.</li>
+                <li>Searching in Objects panel now highlights the found objects with their bounding box in the Viewport.</li>
+                <li>Improved support of data types from ESRI shapefile (<span class="fileext">.shp</span>). Now supporting: POINT, ARC, POLYGON, MULTIPOINT, ARCZ, POLYGONZ. Polygons are loaded as closed Curves.</li>
+                <li>Extended support for object types from AutoCAD files (<span class="fileext">.dxf</span>, <span class="fileext">.dwg</span>), including texts and labels.</li>
+            </ul>
+            <p style="page-break-before: avoid; margin: 0px; " MadCap:conditions="General.NoPicture">
+                <div class="indent" style="margin: 0px; ">
+                    <table style="margin: 0px;width: 700px;">
+                        <col style="text-align:center;" />
+                        <tbody>
+                            <tr>
+                                <td style="text-align: center; ">
+                                    <img src="../../Resources/Images/en/GA_colours_filter_outside_range.png" style="width: 640px;height: 412px;" />
+                                    <br /><b style="color: #404040; font-size: 10pt;">Data Colours: hide data inside range</b>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </p>
+            <h3 class="NoPageBreak">Connectivity to Geoscience INTEGRATOR</h3>
+            <ul>
+                <li>Exposes the description of data sets in the data table.</li>
+                <li>New query panel to find and display data sets intersecting a user-defined volume of interest, or matching some metadata values.</li>
+                <li>Supports new data themes: Ventilation, Gas monitoring,   Geophysics and Remote sensing.</li>
+                <li>Maps / plans / section files now appear as container groups in the objects panel. In the case of an AutoCAD file (<span class="fileext">.dxf</span>, <span class="fileext">.dwg</span>), the corresponding group has one child group per layer. Each file can then be imported with its data from a contextual menu on the corresponding group.</li>
+            </ul>
+            <p style="page-break-before: avoid; margin: 0px; " MadCap:conditions="General.NoPicture">
+                <table style="margin: 0px;width: 711px; ">
+                    <col style="width: 440px;" />
+                    <col style="width: 263px;" />
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center;">
+                                <img src="../../Resources/Images/en/datasetsearchresults_viewport.png" style="width: 436px; height: 279px;" />
+                            </td>
+                            <td style="text-align: center;">
+                                <img src="../../Resources/Images/en/datasetsearch panel.png" style="width: 263px;height: 233px;" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: center;"><b style="color: #404040; font-size: 10pt;">Geoscience INTEGRATOR Data set search</b>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br />
+            </p>
+            <h2 class="NoPageBreak">Fixed issues</h2>
+            <p>Several issues have been addressed. Listed below are prominent fixes:</p>
+            <h3 class="NoPageBreak">Geoscience ANALYST free viewer</h3>
+            <ul>
+                <li>On 2D Profile Viewer, colour settings now apply when showing a single channel.</li>
+                <li>Now imports ESRI shapefile (<span class="fileext">.shp</span>) with no Z value, by forcing the Z coordinate to 0.</li>
+                <li>Improves support for some problematic large AutoCAD files (<span class="fileext">.dxf</span>, <span class="fileext">.dxf</span>).</li>
+                <li>The slicer can now be moved with + and - keys, even with no numeric keypad.</li>
+                <li>Highlight of points in the Viewport automatically refreshes when selecting another point symbol.</li>
+                <li>When importing GeoImages, cells with no data values are now transparent.</li>
+                <li>Interprets correctly white space characters in names when importing GOCAD ASCII files.</li>
+                <li>Ensures that files written to older InSight format (<span class="fileext">.iws</span>) can be re-opened.</li>
+                <li>Improves graphics for a correct geometry on drillholes, that have logs with overlapping intervals.</li>
+                <li>Ensures workspace files do not use extra space on disk due to references to deleted and inaccessible data.</li>
+                <li>Avoids crash when importing some workspace files  as a group container.</li>
+                <li>Avoids possible crash when moving objects within the Object panel.</li>
+                <li>Ensures correct rendering as Block Model of some problematic VP models from workspace files (<span class="fileext">.geoh5</span>) created by VPutility.</li>
+                <li>Makes sure Drillhole groups can be painted even if some Drillholes have empty logs.</li>
+                <li>Rotated block meshes have their orientation symbols  at the proper location.</li>
+                <li>Easier to centre view on the right location when pressing C key and left mouse button on a Drillhole trace.</li>
+                <li>Selection now highlights orientation symbols on surface and curve objects.</li>
+                <li>Now centres view automatically on data when importing workspace files (<span class="fileext">.geoh5</span>) created from GOCAD Mining Suite.</li>
+                <li>Ability to load text data for drillholes as a point log.</li>
+                <li>Avoids erroneous detection of tempered licence files that prevented the application from opening on some system configurations.</li>
+                <li>Filters out degenerated triangles when importing AutoCAD files (<span class="fileext">.dxf</span>, <span class="fileext">.dwg</span>).</li>
+                <li>In the 3D Viewport, clicking an orientation symbol on a curve object selects the corresponding node.</li>
+                <li>Easier manipulation when selecting a profile line on drillhole or curve objects, in the 3D Viewport, in order to scale the profile lines.</li>
+                <li>Refreshes the Data Colours panel when the current painted property changes.</li>
+                <li>Avoids possible crash when deleting a node after having re-opened a workspace file.</li>
+                <li>Faster processing of large numbers of closed curves when opening a workspace file.</li>
+            </ul>
+            <h3 class="NoPageBreak">Connectivity to Geoscience INTEGRATOR</h3>
+            <ul>
+                <li>Tags present at the data set level are now listed in the data set summary.</li>
+                <li>Makes sure not to create logs with overlapping intervals when loading interval logs.</li>
+                <li>Display more specific error messages, according to the network error, when a query fails.</li>
+                <li>Avoids timeout when loading drillhole paths with many points, resulting in the proper path geometries.</li>
+                <li>Cursor is now visible in the password field of the connection dialogue to Geoscience INTEGRATOR.</li>
+            </ul>
+            <p style="page-break-before: avoid; margin-top: 2em; " MadCap:conditions="General.NoPicture">
+                <div class="indent" style="margin: 0px; ">
+                    <table style="margin: 0px;width: 700px;">
+                        <col />
+                        <tbody>
+                            <tr>
+                                <td style="text-align: center;">
+                                    <img src="../../Resources/Images/en/GA_map_view_dxf_text.png" style="width: 645px;height: 417px;" />
+                                    <br /><span style="color: #404040; font-size: 10pt; "><b>Import of an AutoCAD file with text entities</b><br />Source:<i> Geological Survey of Canada, Seismic and Magnetotelluric Data</i></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </p>
+        </div>
+    </body>
+</html>

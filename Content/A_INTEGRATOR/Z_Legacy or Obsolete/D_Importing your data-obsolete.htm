@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="531" MadCap:lastWidth="725">
+    <head>&#160;</head>
+    <body>
+        <h1 MadCap:autonum=" ">Importing your data</h1>
+        <p>Geoscience INTEGRATOR requires that you import your data to a <b>template</b> so it can organize the data in the most efficient and useful way possible. To do so, you must define the <b>properties</b> of a data set within a template of a theme.</p>
+        <p>Within each theme the templates differ slightly to accommodate varying properties associated with the theme. You must select and create your template(s) based on the characteristics of your data.</p>
+        <p>Templates consist of:</p>
+        <ul style="list-style-type: square;">
+            <li><b>Mandatory properties</b>: At minimum, this includes date, time, and the XYZ co-ordinates.</li>
+            <li><b>User created properties</b>: Includes anything contained within the theme associated with your data set.</li>
+        </ul>
+        <div class="note1"><b><i>Note</i>:</b> The properties you create in the Geoscience INTEGRATOR template must correspond with the properties that define your data set.</div>
+        <MadCap:pageBreak />
+        <p class="Task">To create a data import template:</p>
+        <ol>
+            <li>In the Geoscience INTEGRATOR menu, click <b>Import</b>(i), then click <b>Data import</b>(ii).<br /><img src="../../Resources/Images/import menu.bmp" style="width: 220px;height: 456px;" /></li>
+            <li>Select the type of file you wish to import (CSV, ASCII, or Manual entry)</li>
+        </ol>
+        <div class="note1"><b><i>Note</i>:</b> Only certain themes allow ASCII import. For this tutorial, we will use CSV.</div>
+        <ol MadCap:continue="true">
+            <li>When the template box(es) appear, choose the template in which your data belongs.</li>
+        </ol>
+        <div class="note1"><b><i>Note</i>:</b> Certain themes have a sub-category or several sub-categories. Choose the one that best fits your data.</div>
+        <ol MadCap:continue="true">
+            <li>In the appropriate template box, click <b>Create new</b>.<br /><img src="../../Resources/Images/create new template.bmp" style="width: 414px;height: 273px;" /></li>
+            <li>When the <i>Create new (theme)</i> template table appears, name your template and click <b>Create</b>.<br /><img src="../../Resources/Images/create new template box.bmp" style="width: 628px;height: 137px;" /></li>
+        </ol>
+        <p>&#160;</p>
+        <p>Now that you have a template to work with, you must define the properties of your data.</p>
+        <p class="Task">To define mandatory properties:</p>
+        <ol>
+            <li>In the <i>Properties</i> table, under <i>Mandatory properties</i>, determine if the naming convention of the selected template corresponds exactly with the naming convention of the same properties in your data set. If so, move to the next step. If not:<ol style="list-style-type: lower-roman;"><li>Click the property in the <i>Name</i> column that you wish to edit.</li><li>In the <i>Property:</i> dialog, type the property name so it matches the naming convention of your data set in the <i>Mapped</i> to text field.<br /></li></ol></li>
+        </ol>
+        <div class="note1"><b><i>Note</i>:</b> Depending on the theme, some of the options fields in the Property: dialog will differ between themes.</div>
+        <ol MadCap:continue="true">
+            <li>Click <b>Update</b>.<br /><img src="../../Resources/Images/defining properties.bmp" style="width: 597px;height: 354px;" /></li>
+        </ol>
+        <p>&#160;</p>
+        <p class="Task">To define user created properties:</p>
+        <ol>
+            <li>In the <i>Properties</i> table, click the <b>Add new property</b> button.</li>
+            <li>In the <i>Add new property</i> dialog box, add the name of the property in your data set you wish to add to the template.</li>
+            <li>Define the property types (see appendix for Project settings of the property types).</li>
+            <li>Determine if the property is required for……</li>
+            <li>Define the unit in the drop-down menu (see the Units section if you have not yet set the units for the project).</li>
+            <li>Determine if the property should have a no data value. If so, enter the value into Property no data value text box. If not, leave it blank.</li>
+            <li>Click <b>Save</b> and repeat with any remaining properties.<br /><img src="../../Resources/Images/new properties box.bmp" style="width: 682px;height: 581px;" /></li>
+        </ol>
+        <div class="note1"><b><i>Note</i>:</b> Alternatively, you can click the Read Headers button, which opens the windows explorer and allows you to select a CSV file. Once you select a file, Geoscience INTEGRATOR will scan the file and populate the User created properties table based on the headings in your data set CSV file.</div>
+        <p>&#160;</p>
+        <p>Now that you have all the properties of your data set defined in your template, you can import the CSV file that contains the data set into Geoscience INTEGRATOR.</p>
+        <p class="Task">To import your CSV file/data set into a template in Geoscience INTEGRATOR:</p>
+        <ol>
+            <li>In the Geoscience INTEGRATOR menu, click <b>Import</b> &gt; <b>Data import</b> &gt; <b>CSV file</b>.</li>
+            <li>Within the <i>Import…data</i> screen, navigate to and click the template you created containing the properties you defined from your data set.</li>
+            <li>Click <b>Upload data</b>.</li>
+            <li>Click <b>data set</b> and give your data set a name and description, then click <b>Add data set</b>. (You may wish to add a tag in the section just below this section by following the procedure.)</li>
+            <li> Click <b>Upload data file</b>.</li>
+            <li>Select the CSV file from your Windows browser and click <b>Open</b>.</li>
+        </ol>
+        <p>Now that your data set is importing or has imported, you can check its status by clicking on <b>Import</b> &gt; <b>Data import</b> &gt; <b>Batches</b>. This page displays information associated with data imports.</p>
+        <div class="note1"><b><i>Note</i>:</b> If you get an error message before the import has finished, it relates to a discrepancy between the naming convention of the data set properties between what you defined in the template versus how it’s written in your CSV file. However, if you get an error in the data, it will display in the Errors column in the Batches page. Here, you can click on the number in the cell, and see a description of the error.</div>
+    </body>
+</html>

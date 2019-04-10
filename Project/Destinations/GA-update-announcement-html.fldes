@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultDestination
+  Version="1"
+  Comment="This is my publish destination for release notes in HTML"
+  Host=""
+  User="MyAccountId"
+  Password=""
+  Directory="Y:\Shared\dev\resources\Documentation\Geoscience ANALYST\dev\HTML\announcement"
+  Port=""
+  ViewUrl="file:///Y:/Shared/dev/resources/Documentation/Geoscience%20ANALYST/dev/HTML/announcement/ANALYST/Release%20Notes/GA%20release%20notes.htm"
+  Type="file"
+  conditions="General.Online,Product.AnalystOnly">&gt;</CatapultDestination>

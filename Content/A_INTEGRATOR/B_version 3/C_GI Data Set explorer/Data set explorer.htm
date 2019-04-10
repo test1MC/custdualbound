@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum=" "><a name="top"></a>Data set explorer</h1>
+        <p> The Data set explorer is the starting point to view the data sets available in a theme, allowing you to access description of them and access their data. It provides the list of data set names, along with their descriptions and theme-specific summary information to help you select those of interest to you. It also  gives you access to numerous resources and tools designed to help you analyze the data and create report items such as charts and tables.</p>
+        <p>You can access it by clicking <span class="uiClick">Data set explorer</span> in the menu at left. It lists all the data sets available in the selected theme, split between two sections: <span class="ui">Data sets (tables)</span>, and <span class="ui">Data sets (files)</span>, depending on whether data has been imported in tables or only as linked files.</p>
+        <p>
+            <img src="../../../Resources/Images/New dsx image aug18.bmp" alt="" title="" style="width: 720px;height: 327px;" />
+        </p>
+        <p>The main difference between storing data in tables or as files is that you can query the data sets listed under <span class="ui">Data sets (tables)</span> to generate charts and tables for analysis and reporting. Data sets listed under <span class="ui">Data sets (files)</span> provides links to, and descriptions of, data sets stored as files, in order to organize the pertinent files in the theme structure. You cannot query their data directly in <MadCap:variable name="General.ProductName" />, but you can download the files to use with other applications, such as <MadCap:variable name="General.ProductNameGA" /> or other specialized software.</p>
+        <div class="tip"> In a situation where you might be expecting data in the future, you can create the data set ahead of time and it would stay under <span class="ui">Data sets (files)</span> as a placeholder prior to importing the data. After the first import, the data set will automatically be moved to the <span class="ui">Data sets (tables)</span> section.</div>
+        <p>For each data set, after its name and description, you will find a summary of general and theme-specific information. <span class="ui">Neighbourhoods</span>, <span class="ui">Tags</span>, <span class="ui">Files / maps / documents</span>, <span class="ui">Properties</span>, <span class="ui">Data set range</span>, and <span class="ui">Metadata</span> are always present in data set summaries. Depending on the active theme, the data set summaries may contain other columns such as <span class="ui">Samples</span> or <span class="ui">Stations</span>. This is simply a way to provide you with more information about the data set and is contextual to the type of data.</p>
+        <div class="note">There are tooltips on all items so you can have a detailed preview of the content.</div>
+        <p>You can click anywhere on a data set box to expand it and view the detailed content summary. </p>
+        <p>
+            <img src="../../../Resources/Images/GI DSX expanded.png" style="width: 706px;height: 337px;" />
+        </p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/PatternedRows.css');margin-left: auto;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 79px;">
+            </col>
+            <col class="TableStyle-PatternedRows-Column-Regular">
+            </col>
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1" style="text-align: center;">Icon</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Functionality</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows" style="height: 57px;">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="text-align: center;">
+                        <img src="../../../Resources/Images/GI collapse.png" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Once expanded, you can click this icon or the data set name to collapse the data set box. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="text-align: center;">
+                        <img src="../../../Resources/Images/GI edit icon.png" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                        <p>Provided that you have the proper permission level, you will see this icon  to allow you to  add <span class="ui">Metadata</span> fields from the list defined in the <span class="uiClick"><MadCap:keyword term="Data set metadata" />Data set metadata</span> page under <span class="uiClick"><MadCap:keyword term="Project settings" />Project settings</span>. (See <MadCap:xref href="../K_Project settings/Project settings.htm#Datasetmetadata">"Data set metadata" on page&#160;1.</MadCap:xref>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows" style="text-align: center;">
+                        <img src="../../../Resources/Images/GI mag glass.png" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows"> You can click the magnifying glass to select that data set for querying. It will dock at the top and bring up the querying panel to the right. (See <MadCap:xref href="Filtering and querying data.htm"><MadCap:keyword term="Filtering and querying data" /><MadCap:keyword term="Filtering and querying data" />"Filtering and querying data" on page&#160;1</MadCap:xref>.)</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="NoPageBreak">Neighbourhoods</h2>
+        <p>For data sets under <span class="ui">Data sets (tables)</span>, neighbourhoods listed indicate that at least one record resides within them. For data sets under <span class="ui">Data sets (files)</span>, it indicates that the volume specified by their x, y, z range overlaps the listed neighbourhoods.</p>
+        <p>When there are no neighbourhoods listed, it does not imply that no data records exist; it means that none of the data records from the data set reside in the project’s defined neighbourhoods, or that no defined neighbourhoods overlap the provided x, y, z ranges.</p>
+        <p>Establishing which neighbourhoods intersect a data set is done automatically by the database. Updating on import of new data or definition of new neighbourhoods is automatic.</p>
+        <p>Neighbourhoods are defined from the <span class="uiClick">Project settings</span> menu. To read more about them, see <MadCap:xref href="../K_Project settings/Project settings.htm#Neighbou">"Neighbourhoods" on page&#160;1</MadCap:xref>.</p>
+        <h2 class="NoPageBreak">Tags</h2>
+        <p>The list of tags for a data set indicates all the tags associated to the data set or to at least one record of the data set. Tags are text-string identifiers you can assign to data in <MadCap:variable name="General.ProductName" />. </p>
+        <p>
+            <img src="../../../Resources/Images/GI mag glass.png" style="width: 20px;height: 17px;" /> The magnifying glass next to a tag from that list will bring you to the <span class="uiClick">Tags</span> page to see all the data also assigned to that tag.</p>
+        <p>To read more about tags, see <MadCap:xref href="../H_Tags/Ch 8 GI Divider Tags.htm">"Tags" on page&#160;1</MadCap:xref>.</p>
+        <h2 class="NoPageBreak">Files / maps / documents</h2>
+        <p>The list of <span class="ui">Files / maps / documents</span> on a data set indicates all the files, maps / plans / sections and documents associated with the data set, or to at least one record of the data set. The strength of this feature lies in the fact that not only does <MadCap:variable name="General.ProductName" /> import and store data values, but it can link any number of files to the data set or to individual data records.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/PatternedRows.css');margin-left: auto;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 99px;">
+            </col>
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 603px;">
+            </col>
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1" style="text-align: center;">Icon</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Functionality</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows" style="height: 18px;">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="text-align: center;">
+                        <img src="../../../Resources/Images/GI dl button.png" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Downloads the file.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="text-align: center;">
+                        <img src="../../../Resources/Images/Gi file mngr button.png" style="width: 16px;height: 16px;" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows"> Indicates the file is from the <span class="uiClick">File manager</span>.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="text-align: center;">
+                        <p>
+                            <img src="../../../Resources/Images/GI star.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                        <p>Indicates the file is from the <span class="uiClick">File manager</span> and has been identified there as being a "data file". (See <MadCap:xref href="../G_File and document management/File manager.htm">"File manager" on page&#160;1</MadCap:xref> to learn about the "data file" flag.) </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="text-align: center;">
+                        <p>
+                            <img src="../../../Resources/Images/GI mps button.png" style="width: 18px;height: 20px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Indicates the file is from the <span class="uiClick">Maps / plans / sections</span>.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows" style="text-align: center;">
+                        <p>
+                            <img src="../../../Resources/Images/Gi doc lib button.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">Indicates the file is from the <span class="uiClick">Document library</span>.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="NoPageBreak">Properties</h2>
+        <p>The list of properties displays all the properties, and their units, for which data is available in the data set. In the <span class="ui">Data sets (tables)</span> section, the list is automatically updated as data is imported. </p>
+        <p>In the <span class="ui">Data sets (files)</span> section, the list can be manually entered by any user with proper permission level. This can be useful to document the properties that are available in an attached data file, to inform users without them needing to download the data file blindly and open it to see what it contains. </p>
+        <p>With proper permission level, you will see icons to manually populate that list.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/PatternedRows.css');margin-left: auto;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 87px;">
+            </col>
+            <col class="TableStyle-PatternedRows-Column-Regular">
+            </col>
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1" style="text-align: center;">Icon</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Functionality</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows" style="height: 18px;">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="text-align: center;">
+                        <img src="../../../Resources/Images/GI pencil icon.png" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Click this icon to add or edit items in the list.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="text-align: center;">
+                        <img src="../../../Resources/Images/GI save.png" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Click this icon to save your edits.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="text-align: center;">
+                        <img src="../../../Resources/Images/GI X.png" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Click this icon to cancel your edits.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows" style="text-align: center;">
+                        <img src="../../../Resources/Images/GI eraser icon.png" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">Click this icon to clear the list.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="NoPageBreak">Data set range</h2>
+        <p>This box provides the minimum and maximum values for each 3D axis for the data in the data set. For time-related themes, it also provides the minimum and maximum values of the mandatory datetime field. In the <span class="ui">Data sets (tables)</span> section, the values are automatically updated as data is imported. </p>
+        <p>In the <span class="ui">Data sets (files)</span> section, just as for <span class="ui">Properties</span> (see previous paragraph), and for the same reason, the values can be manually entered by any user with proper permission level, using the same icons.</p>
+        <div class="note">Manually providing the 3D axis ranges for a data set under the <span class="ui">Data sets (files)</span> section will allow the system to identify corresponding neighbourhoods in the <span class="ui">Neighbourhoods</span> box.</div>
+        <h2>Metadata</h2>
+        <p>The <span class="ui">Metadata</span> count indicates how many metadata fields have been associated to the data set, regardless of if they are populated or not. When the data set is expanded, each metadata field has its own box displaying their values.</p>
+        <p>With the required permission level, you can add or remove metadata fields associated with data sets as well as populate them.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/PatternedRows.css');margin-left: auto;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 80px;">
+            </col>
+            <col class="TableStyle-PatternedRows-Column-Regular">
+            </col>
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1" style="text-align: center;">Icon</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Functionality</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows" style="height: 18px;">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="text-align: center;">
+                        <img src="../../../Resources/Images/GI edit icon.png" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                        <p>This icon at the top right of a data set allows you to add <span class="ui">Metadata</span> fields to it.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="text-align: center;">
+                        <img src="../../../Resources/Images/GI add grey.png" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Click this icon in the dotted box at the bottom of the data set summary to add a new field, and select one from the drop down list. You can add one of each and can populate them right away.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="text-align: center;">
+                        <img src="../../../Resources/Images/GI save.png" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Click this icon at the top right to save your new metadata fields.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="text-align: center;">
+                        <img src="../../../Resources/Images/GI X.png" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Click this icon at the top right to cancel your new metadata fields (i.e. exit without saving).</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="text-align: center;">
+                        <img src="../../../Resources/Images/GI pencil icon.png" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">On existing metadata boxes, this icon allows you to edit their values.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows" style="text-align: center;">
+                        <img src="../../../Resources/Images/GI trash.png" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">On existing metadata boxes, this icon allows you to remove that metadata altogether from this data set.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The list of <span class="ui">Metadata</span> fields is defined through the <span class="uiClick">Data set metadata</span> page under the <span class="uiClick">Project settings</span> menu.  (See <MadCap:xref href="../K_Project settings/Project settings.htm#Datasetmetadata">"Data set metadata" on page&#160;1.</MadCap:xref>)</p>
+    </body>
+</html>

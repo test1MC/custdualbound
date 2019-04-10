@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PageStyles>
+    <Page Name="Normal" Width="800" Height="800" Padding="20px" PageSize="Letter" PaddingLeft="1in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in">
+        <Frame Flow="footer" Height="0.5in" Anchors="Left,Right,Bottom" Bottom="-0.75in" Y="9.25in" BorderTopStyle="solid" BorderTopWidth="3pt" BorderTopColor="#000000" TextAlign="center" VerticalAlign="middle" X="0px" Width="624px" Right="0px">
+            <Content>
+                <xhtml:html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:body>
+                        <xhtml:p>- <MadCap:variable xhtml:name="System.PageNumber" /> -</xhtml:p>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+        <Frame Flow="body" ColumnCount="1" Anchors="Left,Right,Top,Bottom" X="-91px" Y="-88px" Width="804px" Height="952px" Right="-89px" Bottom="0px">
+        </Frame>
+    </Page>
+</PageStyles>

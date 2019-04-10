@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1"
+  conditions="">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Print Only Topics/TitlePageGA.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  <TocEntry
+    Title="Copyright"
+    Link="/Content/Print Only Topics/Copyright and contact GA-VP.htm"
+    StartPageLayout="true"
+    StartSection="false"
+    BreakType="pageLayout"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/Copyright8_5X11.flpgl"></TocEntry>
+  <TocEntry
+    Title="PrintTOC"
+    Link="/Content/Print Only Topics/TOC.htm"
+    StartSection="false"
+    PageNumber="1"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/TOC8_5X11.flpgl"
+    PageType="firstright"
+    PageNumberFormat="decimal"
+    StartPageLayout="false"
+    AutoEndOnLeftPage="enabled"
+    BreakType="pageLayout"></TocEntry>
+  <TocEntry
+    Title="Ch1 Introduction"
+    Link="/Content/ANALYST/Ch1 GA Introduction.htm"
+    BreakType="chapter"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GI ChapterDividers 8_5X11-obsolete.flpgl"
+    ChapterNumberReset="reset"
+    ChapterNumber="1"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same">
+    <TocEntry
+      Title="Overview"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/A_Geoscience INTEGRATOR-obsolete.htm"
+      BreakType="none"
+      StartSection="false"
+      PageNumberReset="continue"></TocEntry>
+    <TocEntry
+      Title="Scope &amp; purpose"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/Scope &amp; purpose-obsolete.htm"></TocEntry>
+    <TocEntry
+      Title="Projects and user roles"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/ProjectsUserRoles-obsolete.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Getting Started"
+    BreakType="chapter"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GI ChapterDividers 8_5X11-obsolete.flpgl"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same"
+    ChapterNumberReset="continue">
+    <TocEntry
+      Title="Launching Geoscience INTEGRATOR"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/Launching Geoscience INTEGRATOR-obsolete.htm" />
+    <TocEntry
+      Title="Creating a new project"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/B_New project-obsolete.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Data Input"
+    Link="/Content/ANALYST Legacy or obsolete/Ch2 Data Input-obsolete.htm"
+    BreakType="chapter"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GI ChapterDividers 8_5X11-obsolete.flpgl">
+    <TocEntry
+      Title="Defining your data"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/C_Defining your data-obsolete.htm" />
+    <TocEntry
+      Title="Importing your data"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/D_Importing your data-obsolete.htm" />
+    <TocEntry
+      Title="Data set explorers"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/Dashboards-obsolete.htm"></TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Tags"
+    BreakType="chapter"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GI ChapterDividers 8_5X11-obsolete.flpgl">
+    <TocEntry
+      Title="Tags"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/F_Tags-obsolete.htm"></TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Theme Definitions"
+    Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/Theme Definitions-obsolete.htm" />
+  <TocEntry
+    Title="Release Notes"
+    Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/PDF Guides-obsolete.htm" />
+  <TocEntry
+    Title="Additional Information"
+    Link="/Content/A_INTEGRATOR/Z_Additional Information.htm" />
+  <TocEntry
+    Title="Index"
+    Link="/Content/Print Only Topics/Index.htm"
+    BreakType="pageLayout"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GI Index8_5X11.flpgl"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="continue"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same"
+    ChapterNumberReset="continue" />
+</CatapultToc>

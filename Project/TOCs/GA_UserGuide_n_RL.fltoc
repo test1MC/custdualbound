@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="Geoscience ANALYST User Guide"
+    Link="/Project/TOCs/Geoscience ANALYST User Guide.fltoc"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/TestCoverLayout2.flpgl"
+    PageType="title"
+    ReplaceMergeNode="false" />
+  <TocEntry
+    Title="Geoscience ANALYST Release notes"
+    Link="/Project/TOCs/Geoscience ANALYST Release notes.fltoc"
+    BreakType="chapter"
+    PageType="title"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/TestCoverLayout2.flpgl" />
+</CatapultToc>

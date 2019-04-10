@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CatapultConditionTagSet
+  Comment="My set of condition tags">
+  <ConditionTag
+    Comment=""
+    Name="VPmgOnly"
+    BackgroundColor="Blue" />
+  <ConditionTag
+    Comment=""
+    Name="AnalystOnly"
+    BackgroundColor="Red" />
+  <ConditionTag
+    BackgroundColor="#008000"
+    Name="VPem1DOnly"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#ffa500"
+    Name="MiningSuiteOnly"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#8b008b"
+    Name="IntegratorOnly"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#00bfff"
+    Name="VPutilityOnly"
+    Comment="" />
+</CatapultConditionTagSet>

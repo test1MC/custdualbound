@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="368" MadCap:lastWidth="1170">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title></title>
+        <link href="../Stylesheets/StylesForHomePage.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body style="text-align: left;">
+        <div id="contentBody" class="off-canvas-main">
+            <MadCap:bodyProxy />
+        </div>
+        <div class="HomeMasterPageFooter">
+            <div>
+                <p>&#160;</p>
+            </div>
+            <div>
+                <p class="FrontPageWhite1">About <MadCap:variable name="General.CompanyName" />'s new support portal</p>
+                <p class="FrontPageWhite2">Mira Geoscience support is the place to come to find technical documentation including web help, PDF user guides, and video tutorials for the Mira Geoscience product suite.</p>
+            </div>
+            <div>
+                <p class="FrontPageWhite1">Documentation</p>
+                <p class="FrontPageWhite2"><a href="../../A_INTEGRATOR/Z_Legacy or Obsolete/A_Geoscience INTEGRATOR-obsolete.htm">Geoscience INTEGRATOR</a>
+                </p>
+                <p class="FrontPageWhite2"><a href="../../ANALYST/1. Welcome/Welcome.htm">Geoscience ANALYST</a>
+                </p>
+                <p class="FrontPageWhite2">Release Notes</p>
+                <p class="FrontPageWhite2"><a href="../../A_INTEGRATOR/Z_Legacy or Obsolete/PDF Guides-obsolete.htm">PDF&#160;Guides</a>
+                </p>
+                <p class="FrontPageWhite2"><a href="../../A_INTEGRATOR/Z_Legacy or Obsolete/Video Tutorials-obsolete.htm">Video Tutorials</a>
+                </p>
+                <p class="FrontPageWhite2"><a href="http://www.mirageoscience.com/contact-us">Contact</a>
+                </p>
+            </div>
+            <div style="width: 80px;height: 299px;">
+                <p class="FrontPageWhite1">Follow</p>
+                <table style="width: 100%;">
+                    <col />
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td><a href="https://www.linkedin.com/company/mira-geoscience-ltd."><img src="../Resources/Images/linkedin icon resize.png" style="padding-top: 0px;width: 28px;height: 26px;margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" /></a>
+                            </td>
+                            <td><a href="https://twitter.com/MiraGeoscience"><img src="../Resources/Images/twitter icon resize.png" style="padding-top: 0px;width: 35px;height: 28px;margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" /></a>
+                            </td>
+                            <td>&#160;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="copyright">Copyright © <MadCap:variable name="General.Year" /> Mira Geoscience</div>
+    </body>
+</html>

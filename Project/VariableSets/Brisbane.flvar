@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultVariableSet>
+  <Variable
+    Comment=""
+    Name="CompanyName"
+    EvaluatedDefinition="Mira Geoscience Asia Pacific Pty Ltd">Mira Geoscience Asia Pacific Pty Ltd</Variable>
+  <Variable
+    Comment=""
+    Name="PhoneNumber"
+    EvaluatedDefinition="+ 61 7 3720 8321">+ 61 7 3720 8321</Variable>
+  <Variable
+    Name="CityStateZip"
+    Comment=""
+    Definition="Some text"
+    EvaluatedDefinition="Brisbane, QLD">Brisbane, QLD</Variable>
+  <Variable
+    Name="StreetAddress"
+    Comment=""
+    Definition="Some text"
+    OriginalName="StreetAddress"
+    EvaluatedDefinition="Level 1, 39 Sherwood Rd, Toowong">Level 1, 39 Sherwood Rd, Toowong</Variable>
+</CatapultVariableSet>

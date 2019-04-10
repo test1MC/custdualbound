@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PageStyles xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <Page Name="All" Width="7in" Height="9in" Padding="20px" PageSize="Letter" PageType="normal" PaddingLeft="1in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" Orientation="portrait" BackgroundRepeat="no-repeat" BackgroundImage="none" BackgroundPositionX="10px" BackgroundPositionY="-100px" BleedLeft="0.25in" BleedRight="0.25in" BleedTop="0.25in" BleedBottom="0.25in" BackgroundType="Solid" BackgroundColor="transparent">
+        <Frame Flow="body" Y="0px" Bottom="48px" X="0px" Right="0px" ColumnCount="1" ColumnGap="30px" ColumnDivider="Solid 1px Red" Anchors="Left,Right,Top,Bottom" Width="624px" Height="816px">
+        </Frame>
+        <Frame X="0px" Y="817px" Width="624px" Height="47px" Flow="footer" Right="0px" Bottom="0px" TextAlign="right" VerticalAlign="top" Anchors="Left,Right,Bottom">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:body>
+                        <xhtml:p xhtml:class="FrameFooterText2" xhtml:style="text-align: right;">
+                            <xhtml:img xhtml:src="../../Images/Mira logo transparent small.png" />
+                        </xhtml:p>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+    </Page>
+</PageStyles>

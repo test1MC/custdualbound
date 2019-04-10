@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Product.VPmgOnly,Product.VPem1DOnly,Product.VPutilityOnly">
+    <head>
+    </head>
+    <body>
+        <p>Running <MadCap:variable name="General.ProductName"></MadCap:variable> requires the following components with every run:</p>
+        <ul>
+            <li MadCap:conditions="Product.VPem1DOnly">Data file: ASCII file that has the TEM data and their locations</li>
+            <li MadCap:conditions="Product.VPmgOnly">Data file: ASCII file that has the data and their locations.</li>
+            <li>Control file: ASCII file that controls the parameters for a <MadCap:variable name="General.ProductName"></MadCap:variable> run.</li>
+            <li MadCap:conditions="Product.VPem1DOnly">Parameter file: ASCII file that defines the data and transmitter specifications.</li>
+            <li>VP model file.</li>
+        </ul>
+        <p>&#160;</p>
+        <p><MadCap:variable name="General.ProductName"></MadCap:variable> generates the following output files after every run:</p>
+        <ul>
+            <li>A log file: ASCII file reproducing the control file documenting the run.</li>
+            <li>VP model file: The output model that was created (even in forward modelling).</li>
+            <li>Inversion diagnostics, if applicable.</li>
+        </ul>
+    </body>
+</html>

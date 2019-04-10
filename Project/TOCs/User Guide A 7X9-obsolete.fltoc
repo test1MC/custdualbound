@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1"
+  conditions="">
+  <TocEntry
+    Title="Title"
+    Link="/Content/Print Only Topics/Title-example.htm"
+    StartSection="false"
+    PageNumber="1"
+    PageType="normal"
+    PageNumberReset="reset"
+    StartPageLayout="false"
+    BreakType="pageLayout"></TocEntry>
+  <TocEntry
+    Title="Copyright"
+    Link="/Content/Print Only Topics/Copyright and contact GA-VP.htm"
+    StartPageLayout="true"
+    StartSection="false"
+    BreakType="pageLayout"></TocEntry>
+  <TocEntry
+    Title="PrintTOC"
+    Link="/Content/Print Only Topics/TOC.htm"
+    StartSection="false"
+    PageNumber="1"
+    PageNumberReset="continue"
+    StartChapter="true"
+    PageType="firstright"
+    PageNumberFormat="lower-roman"
+    StartPageLayout="false"
+    AutoEndOnLeftPage="enabled" />
+  <TocEntry
+    Title="CH 1 Welcome"
+    Link="/Content/Print Only Topics/Welcome-example.htm"
+    PageNumber=""
+    PageNumberReset="continue"
+    PageNumberFormat="decimal"
+    ChapterNumberReset="reset"
+    ChapterNumber="1"
+    VolumeNumberReset="same"
+    SectionNumberReset="continue"
+    StartPageLayout="false"
+    StartSection="false"
+    AutoEndOnLeftPage="enabled"
+    BreakType="chapter"
+    PageType="firstright">
+    <TocEntry
+      Title="Getting Started"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/C_Defining your data-obsolete.htm" />
+    <TocEntry
+      Title="Basic Steps"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/B_New project-obsolete.htm" />
+    <TocEntry
+      Title="What's New"
+      Link="/Content/A_INTEGRATOR/Z_Legacy or Obsolete/Dashboards-obsolete.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="CH 2 Links and Lists"
+    PageNumber=""
+    PageNumberReset="continue"
+    StartPageLayout="false"
+    StartSection="false"
+    AutoEndOnLeftPage="enabled"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same"
+    ChapterNumberReset="continue"
+    BreakType="chapter"
+    PageType="firstright">
+    <TocEntry
+      Title="Links" />
+    <TocEntry
+      Title="Lists"></TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="CH 3 Conditions, Notes, and Tables"
+    PageNumber=""
+    PageNumberReset="continue"
+    StartSection="false"
+    StartPageLayout="false"
+    AutoEndOnLeftPage="enabled"
+    BreakType="chapter"
+    PageType="firstright"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same"
+    ChapterNumberReset="continue">
+    <TocEntry
+      Title="Conditions" />
+    <TocEntry
+      Title="Notes, Examples, and Quotations" />
+    <TocEntry
+      Title="Tables"></TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="CH 4 Images"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageType="firstright">
+    <TocEntry
+      Title="Positioned Left" />
+    <TocEntry
+      Title="Positioned Right" />
+    <TocEntry
+      Title="Absolute Position" />
+    <TocEntry
+      Title="Image Within a List" />
+  </TocEntry>
+  <TocEntry
+    Title="Appendix"
+    Link="/Content/Print Only Topics/Appendix-example.htm"
+    StartPageLayout="false"
+    StartSection="false"
+    BreakPageType="normal"
+    PageNumber="1"
+    PageNumberReset="continue"
+    PageType="firstright"
+    AutoEndOnLeftPage="enabled"
+    BreakType="pageLayout"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same"
+    ChapterNumberReset="continue" />
+  <TocEntry
+    Title="Glossary"
+    Link="/Content/Print Only Topics/Glossary-example.htm"
+    BreakType="pageLayout"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="continue"
+    ChapterNumberReset="continue"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same" />
+  <TocEntry
+    Title="Index"
+    Link="/Content/Print Only Topics/Index.htm"
+    BreakType="pageLayout"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="continue"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same"
+    ChapterNumberReset="continue" />
+</CatapultToc>

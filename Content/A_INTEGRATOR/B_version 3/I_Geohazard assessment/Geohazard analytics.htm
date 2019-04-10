@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">
+            <MadCap:keyword term="Geohazard assessment" />Overview</h1>
+        <p>Geohazard assessment as a module supports the automated computation of both knowledge-driven and data-driven hazard assessments. This module uses rules based on multiple user-defined criteria, and updates hazard assessments on a defined schedule, or when triggered by a user. The server performs spatial computations (such as proximity to structures) and other 4D hazard-related computations (such as microseismic event density)  without requiring any user intervention.</p>
+        <p>Geohazard assessment occurs in two stages:</p>
+        <ul>
+            <li>
+                <MadCap:keyword term="Data fusion" />Data fusion process on the mine model points to obtain up-to-date property values.</li>
+            <li>Evaluation of the geohazard  rules to obtain the geohazard index for the mine model points, as well as the calculation of a confidence index.</li>
+        </ul>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">
+            <MadCap:keyword term="Mine model compilation" />Data fusion:&#160;Mine model compilation</h1>
+        <p>To evaluate the geohazard risks on the mine infrastructure, the Geohazard assessment module uses the points of the mine model data sets as its basis for spatial collocation. Through the <span class="uiClick">Mine model compilation</span>, the data fusion process brings together all necessary data for the computation of different geohazard indices.</p>
+        <p>
+            <img src="../../../Resources/Images/Mine model compilation1.jpg" style="margin-left: 0px;margin-right: 0px;margin-top: 20px;margin-bottom: 20px;" />
+        </p>
+        <p>In the Mine model compilation’s <span class="uiClick">Overview</span> tab, you will see a box for each Mine model data set of the project with a summary of the quantity of points, imported properties, and system-computed properties.</p>
+        <ul>
+            <li><span class="uiClick">Imported properties</span>: User-imported properties  that are not updated by the system. These are typically fixed properties  not expected to vary in time, such as date of excavation. These properties do not generally need updating prior to evaluating the geohazard rules.</li>
+            <li><span class="uiClick">System-computed properties</span>: These are the result of various system computations using other data and / or files from the project. For time-varying properties, it is important to ensure the availability of up-to-date values  prior to evaluating the geohazard rules. <div class="note">You can use the <span class="uiClick">Calculate now</span> button to manually trigger system-computed properties, or a calculation schedule can be customized.</div></li>
+        </ul>
+        <p>The results of the system-computed properties updates are imported as instant properties in the Mine model data set with the datetime of computation as the time stamp. Once the properties are up-to-date, evaluation of the geohazard rules can take place. You can hover over <span class="ui">Last calculation</span> date (in orange) to display the timestamp of the completed import for that calculation.</p>
+        <img src="../../../Resources/Images/Mine model comp2.png" class="indent" />
+        <h1 MadCap:autonum=" ">
+            <MadCap:keyword term="Geohazard control room" />Geohazard control room</h1>
+        <p>The <span class="uiClick">Geohazard control room</span> manages the calculation of geohazard indices on-demand or on an established schedule.</p>
+        <p>This section of the <MadCap:variable name="General.ProductName" /> user interface displays a summary information box for each geohazard of a project. The boxes indicate the most recent and next calculation dates (if scheduled), as well as the names of the associated Mine model data sets. Also indicated is the status, which can be one of the following: ready, calculating, failed, and threshold exceeded.</p>
+        <p>
+            <img src="../../../Resources/Images/NewRes_Geohazctrlroom.png" style="width: 300px; height: auto;" class="indent" />
+        </p>
+        <p>You can expand a geohazard summary information box by clicking anywhere within it. This will display additional information such as the schedule for updating the geohazard indices, the threshold and prior probability values, and the complete list of rules for calculating the geohazard and the confidence indices. You can hover over <span class="ui">Last calculation</span> date (in orange) to display the timestamp of the completed import for that calculation.</p>
+        <p>
+            <img src="../../../Resources/Images/calc box.bmp" style="width: 516px; height: 250px;" class="indent" />
+        </p>
+        <p>Each geohazard rule has a number and a name to identify it. Below the name, you will see each rule’s conditions and its positive and negative weights, when applicable. The conditions refer to the mine model data set properties, which can be static, time interval, or time instant.</p>
+        <p style="page-break-after: avoid;">The following buttons provide information and help you control geohazard calculations:</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;width: 590px;" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 195px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Button</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Functionality</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                        <img src="../../../Resources/Images/History of calcs.png" style="margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" /> History of calculations</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                        <li>Obtain results of past calculations of the same geohazard.</li>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                        <img src="../../../Resources/Images/report recipients.png" style="margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" /> Report recipients</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                        <li>Edit the list of email addresses where the routine and alert reports should be sent. (Availability depends on permissions.)</li>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                        <img src="../../../Resources/Images/status button.png" style="margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" /> Status</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Status related to the geohazard calculations are:<br /><span class="ui">ready</span>, <span class="ui">calculating</span>, <span class="ui">failed</span>, and <span class="ui">threshold exceeded</span>.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                        <img src="../../../Resources/Images/calculate now.png" style="margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" /> Calculate now</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Manually triggers the geohazard calculations</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                        <img src="../../../Resources/Images/minimize x.png" style="margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" /> Minimize</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">Minimizes the geohazard box.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Task">To add users to the <span class="uiClick">Routine report</span> and <span class="uiClick">Threshold alert report</span>:</p>
+        <ol>
+            <li>Click the email button in a geohazard box. </li>
+            <li>In the newly opened dialogue box, type the email address of the recipient you want to add to the reports. </li>
+            <li>By default, both reports are selected, as indicated by the blue icons <span style="color: #007688;">(i) (ii)</span>. If you want to exclude one of the reports, click the icon associated with the report. (Grey when excluded.)</li>
+            <li>Repeat above steps to add other users.<br /><img src="../../../Resources/Images/NewRes_collapsehazardemail.png" alt="" title="" style="width: 671px;height: 194px;" /><br /></li>
+        </ol>
+        <div class="note">The list of recipients can be different for Routine and Threshold alert reports. Receiving the Threshold alert report confirms that the calculation happened, in which case the system does not send the Routine report.</div>
+        <h1 MadCap:autonum=" ">Geohazard calculations</h1>
+        <p>
+            <MadCap:keyword term="Geohazard calculations" />The geohazard calculations can take different forms. In each case, the system evaluates a list of rules representing conditions on the mine model points of the selected data set.</p>
+        <p>The rules are based on user-defined relationships (knowledge-driven) or on the analysis of prior correlations (data-driven methods). Each rule involves one or more properties of the mine model points, and represents a condition.  Rules have a positive weight (W+), and can also have a negative weight (W-).</p>
+        <p>When a rule only has a positive weight, the system applies the weight if the condition is met. For example:</p>
+        <p><var>Distance_to_ore_contact &lt; 15m         W+ = 10</var>
+        </p>
+        <p>For each point of the mine model data set, if the property named <var>Distance_to_ore_contact</var> is smaller than 15, a weight of 10 is applied.</p>
+        <p>When a rule has a positive and a negative weight, the system applies a positive weight if the condition is met, and a negative weight if the condition is not met. For example:</p>
+        <p><var>Distance_to_ore_contact &lt; 15m         W+ = 10    W- = -2</var>
+        </p>
+        <p>For each point of the mine model data set, if the property named <var>Distance_to_ore_contact</var> is smaller than 15, the system applies a weight of 10, and, if the value is greater or equal to 15, a weight of -2.</p>
+        <p>When a rule cannot be evaluated, the system applies no weights.  In the above example, if no <var>Distance_to_ore_contact</var> value is available at a point of the mine model data set, no weight is applied for this rule on that point.</p>
+        <p>When all rules have been evaluated for each point of the mine model data set, a hazard index is calculated. It can be as simple as the sum of the weights, or can be more complex, for example when using expert system data-driven rules.</p>
+        <h2 class="NoPageBreak">Weights-of-Evidence
+        </h2>
+        <p>Weights-of-Evidence is a quantitative probabilistic method for combining data in support of a certain hypothesis. This data-driven method can be used for assessment of potential future hazard based on analysis of prior correlations.</p>
+        <p>When rules are established with this method, the system uses the following calculations to obtain the hazard index:</p>
+        <p style="page-break-before: avoid;">
+            <img class="indent" src="../../../Resources/Images/daum_equation_1521814653363.png" style="width: 284px;height: auto;" />
+        </p>
+        <h2 class="NoPageBreak">Geohazard index value
+        </h2>
+        <p>A high hazard index value indicates that most or all of the criteria evaluated via the rules were met, and that all or most of the conditions are present that are believed to be leading to the occurrence of the hazard.</p>
+        <p>To help bring your attention to the potentially dangerous zones, the user interface will clearly identify the points where the hazard index is greater than the threshold value. Detailed information is available in the user interface via the geohazard information box and the <span class="ui">History of calculation</span> page, and  in the auto-generated geohazard alert report sent via email.</p>
+        <p style="page-break-before: avoid;">
+            <img class="indent" src="../../../Resources/Images/NewRes_collapsehazardpink.png" style="width: 582px;height: 318px;" />
+        </p>
+        <h2 class="NoPageBreak">Confidence index
+        </h2>
+        <p>The system calculates a confidence index for each point. The confidence index gives you an idea of the reliability of the computed hazard index for each point of the mine model.  </p>
+        <p>
+            <img class="indent" src="../../../Resources/Images/daum_equation_conf_Index2.png" />
+        </p>
+        <p>The system stores geohazard indices with the datetime of computation as the timestamp on the mine model points as instant data properties.</p>
+        <p>When the geohazard indices calculations are complete, the system sends one or more reports  via email to a user-defined list of recipients. There are two types of geohazard reports: a <span class="ui">routine report</span> and an <span class="ui">threshold alert report</span>.</p>
+        <p>The routine report  confirms to the geotechnical engineers that the system performed the calculations, and that the geohazard index threshold has not been reached for any points of the selected mine model data set.</p>
+        <p>The system sends a threshold alert report only if the hazard index is greater than the set threshold value for at least one point of the mine model.</p>
+        <p>The geohazard threshold alert report contains:</p>
+        <ul>
+            <li>Name of the geohazard along with datetime of the hazard index calculations.</li>
+            <li>Level plans of the level(s) that have points where hazard index is greater than the threshold value with the mine model points coloured by geohazard index value.</li>
+            <li>The x, y, z coordinates of the point with the highest index value along with the  list of rules, conditions, and property values that led to the high hazard index.</li>
+        </ul>
+        <p>The geohazard reports, along the other standard reports, remain available in the system for download for a period of one month, via the <span class="uiClick"><MadCap:keyword term="Reporting" />Reporting</span>/ <span class="uiClick"><MadCap:keyword term="Report history" />Report history</span> page.</p>
+        <h2 class="NoPageBreak">Disclaimer</h2>
+        <div class="disclaimer">Geohazard assessments provided by the Geoscience INTEGRATOR system are subject to the disclaimers and liability limitations of your relevant contract and associated licensing and service agreements. The geohazard assessments provide a basis for general assessment of potential future hazard based on user-defined relationships or analysis of prior correlations only, and are subject to uncertainty. Results are not a prediction of the occurrence or non-occurrence of specific geohazard events. All output should be independently validated.</div>
+    </body>
+</html>

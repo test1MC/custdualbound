@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/VPmg User guide.fltoc"
+  PatchHeadingLevels="true"
+  ConditionTagExpression="include[General.PDF or Product.VPmgOnly] exclude[General.Online or Product.AnalystOnly or Product.IntegratorOnly or Product.MiningSuiteOnly or Product.VPem1DOnly or Product.VPutilityOnly] "
+  OutputFile="[%=General.UserGuideTitle%]">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <PDF
+    InitialMagnification="100"
+    CollapsedBookmarks="true"
+    DownsampleImages="true"
+    ShowUsedBookmarks="false"
+    TitleBar="DocumentTitle" />
+  <Variables>
+    <Variable
+      Name="General/VersionNumber">9.2</Variable>
+    <Variable
+      Name="General/ProductName">[%=General.ProductNameVPmg%]</Variable>
+    <Variable
+      Name="General/ProductExe">VPmg</Variable>
+  </Variables>
+  <DocumentProperties
+    Title="[%=General.UserGuideTitle%]"
+    Author="[%=General.CompanyName%]" />
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/VPSuite-pdf.fldes"
+      Publish="true" />
+  </Destinations>
+</CatapultTarget>

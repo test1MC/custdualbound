@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PageStyles xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <Page Name="First Right" Padding="20px" PageType="firstright" PaddingLeft="1.5in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" BleedLeft="0.25in" Orientation="portrait" BleedBottom="0.25in" BleedTop="0.25in" BleedRight="0.25in" PageSize="Letter" BackgroundType="Solid" BackgroundColor="#007183" BackgroundColorAlt="#c0c0c0" BackgroundImage="none">
+        <Frame Flow="body" Y="100px" Bottom="114px" X="85px" Right="0px" ColumnCount="1" ColumnGap="30px" ColumnDivider="Solid 1px Red" Anchors="Left,Right,Bottom" Width="491px" Height="650px" FlowIndex="1">
+        </Frame>
+        <Frame X="-316px" Y="363px" Width="700px" Height="95px" FlowIndex="0" Flow="body" Rotate="-90" Anchors="" Right="192px" Bottom="406px" PaddingLeft="0px" />
+    </Page>
+</PageStyles>

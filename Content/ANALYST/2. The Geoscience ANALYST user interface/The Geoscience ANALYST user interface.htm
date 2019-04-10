@@ -1,0 +1,827 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/Simple.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Overview <MadCap:keyword term="User interface, Geoscience ANALYST" /></h1>
+        <p>An arrangement of panels makes up the Geoscience ANALYST user interface, each playing a specific role helping to both manipulate and interpret data related to the project. You can rearrange these panels side by side, stack them, or place them on top of each other by clicking and dragging them to your desired locations. You can close them by clicking the <b>X</b> at the top right, and then open them back into view through the <i style="font-weight: bold; font-style: normal;">Panels</i> menu. </p>
+        <p>
+            <img src="../../Resources/Images/en/GA UI update3.png" />
+        </p>
+        <h1 MadCap:autonum=" ">
+            <img src="../../Resources/Images/bubble1.png" /> Menu bar<MadCap:keyword term="Menu bar" /><MadCap:keyword term="User interface, Geoscience ANALYST:Menu bar" /></h1>
+        <p>Contains the top level drop-down menus. </p>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">
+            <img src="../../Resources/Images/bubble2.png" /> Coordinate display area<MadCap:keyword term="Coordinate display area" /><MadCap:keyword term="User interface, Geoscience ANALYST:Coordinate display area" /></h1>
+        <p>This panel provides real-time feedback on the x, y, z coordinates corresponding to the mouse movements and the Viewport’s camera dip and dip direction parameters, as well as drillhole name and wireline depth. Saves and reports coordinates of the last <i>Pick</i> at the beginning of the display area.</p>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">
+            <img src="../../Resources/Images/bubble3.png" /> Data Table<MadCap:keyword term="Data Table" /><MadCap:keyword term="User interface, Geoscience ANALYST:Data Table" /></h1>
+        <p>This panel displays various levels of information related to the selected object’s internal and folder structure. Selecting an object either in the Objects panel or directly in the Viewport performs one or all of the following functions:<br /></p>
+        <p>
+            <ul>
+                <li>Highlights the data that corresponds to the object in the <i>Data Table</i></li>
+                <li>Displays the tab level and the object's immediate parent folder containing metadata (summary information)</li>
+                <li>Displays user comments and attached files</li>
+            </ul>
+        </p>
+        <p>The <i>Data Table</i> contains tabs that correspond to the sub-levels of an object, such as nodes, triangles, cells, and logs. </p>
+        <p>Data level tabs consist of columns containing numeric (float, integer), time, text, and reference type data.  By clicking the paint can tool at the top of the column, the object in the Viewport will be coloured by the data according to the Data Colours panel settings, as seen in the image below at right. </p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/Simple.css');" class="TableStyle-SimpleWithPadding" cellspacing="0">
+            <col style="width: 378px;" class="TableStyle-SimpleWithPadding-Column-Column1" />
+            <col class="TableStyle-SimpleWithPadding-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                    <td class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1">
+                        <img src="../../Resources/Images/GA object not painted.png" />
+                    </td>
+                    <td class="TableStyle-SimpleWithPadding-BodyA-Column1-Row1">
+                        <img src="../../Resources/Images/GA object painted.png" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The active <i>Data Table</i> tab controls the highlight display on objects. For example, a surface with the object tab active will highlight every triangle, whereas the node tab will highlight the selected nodes as yellow cubes.</p>
+        <p class="Task">Selecting rows in the <i>Data Table</i><a name="Selecting_rows_in_the_Data_Table"></a></p>
+        <p>Clicking on a row will:</p>
+        <ul>
+            <li> Highlight it </li>
+            <li>Highlight the corresponding data point on the object in the Viewport</li>
+        </ul>
+        <p>Holding <b>Ctrl</b> and clicking on multiple rows will:</p>
+        <ul>
+            <li>Multi-select subsequently clicked rows and highlight them </li>
+            <li>
+                <MadCap:keyword term="Object types:Points" />Multi-select the corresponding data points on the object in the Viewport</li>
+        </ul>
+        <p>Holding <b>Shift</b> and clicking on a row followed by another row will:</p>
+        <ul>
+            <li>Multi-select the two rows and any rows between them, and highlight them </li>
+            <li>Multi-select the corresponding data points on the object in the Viewport</li>
+        </ul>
+        <p class="Task">Sorting data in the <i>Data Table</i></p>
+        <p>To sort the data between ascending and descending order, click in the header row of a column to toggle on and off the upward and downward facing triangles.</p>
+        <p class="Task"><i>Data Table</i> tabs</p>
+        <p>The information presented in the <i>Data Table</i> depends on the active object type and tab level (workspace, folder, object, or data). You can add, view, and delete comments and files associated with the workspace, folders, and objects (depending on the active tab).</p>
+        <p>
+            <img src="../../Resources/Images/en/workspace tab2.png" style="width: 247px;height: 212px;" />
+            <img src="../../Resources/Images/en/GA_data_table_object_tab1.png" style="width: 722px;height: 196px;" />
+        </p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 185px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Tab</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Components</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><b>Workspace</b> </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Metadata associated with workspace such as name, contributors, relevant dates, units, and axis ranges.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows"><b>Folder</b> </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Metadata related to the parent folder associated with the selected object.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows"><b>Object</b>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                        Metadata associated with the selected object, such as its type, number of nodes and triangles, and axis ranges.
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Task">Exporting <i>Data Table</i> values</p>
+        <p>You can save data from the <i>Data Table</i> in CSV format in two ways.</p>
+        <p>
+            <img src="../../Resources/Images/en/copy paste.png" />
+        </p>
+        <p>To export a subset of data from the <i>Data Table</i> to the clipboard,</p>
+        <ol>
+            <li>Select the desired rows</li>
+            <li>Press <b>Ctrl+C</b> to copy</li>
+            <li>Open a program such as Excel, Notepad, etc</li>
+            <li>Press <b>Ctrl+V</b> to paste. </li>
+        </ol>
+        <p>To export an entire table from a tab in the <i>Data Table</i> to a CSV file,</p>
+        <ol>
+            <li>click the <b>Export table to .csv</b> button <img src="../../Resources/Images/GA_file_save_as_icon.png" class="button" /> to the left of the displayed tabled</li>
+            <li>save it to your desired location. </li>
+        </ol>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">
+            <img src="../../Resources/Images/bubble4.png" /> Visual Parameters panel<MadCap:keyword term="Visual parameters panel" /><MadCap:keyword term="User interface, Geoscience ANALYST:Visual parameters panel" /></h1>
+        <p>In this panel you can modify and adjust the appearance of selected objects in the Viewport. The list of parameters is specific to the object type, but some are available across multiple objects such as the colour and the level of transparency. <br /><img src="../../Resources/Images/en/visual parameters panela.png" /> </p>
+        <p>See <a href="../3. Object types/Object types.htm"><MadCap:keyword term="Object types" />Object types</a> for more information regarding object types and their parameters.</p>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">
+            <img src="../../Resources/Images/bubble5.png" /> ioGAS panel<MadCap:keyword term="ioGAS panel" /><MadCap:keyword term="User interface, Geoscience ANALYST:ioGAS panel" /><a name="ioGAS"></a></h1>
+        <p>The ioGAS panel presents various graphical settings available on ioGAS points objects. Press <b>Connect</b> to establish a live link with ioGAS (requires the ioGAS link module and Geoscience ANALYST&#160;Pro) or press <b>Import file</b> to import an ioGAS <span class="fileext">.gas</span> file. </p>
+        <p>
+            <img src="../../Resources/Images/en/iogas connect.png" />
+        </p>
+        <div class="tip">You can import <span class="fileext">.gas</span> files through the <i style="font-weight: bold; font-style: normal;">File / Import</i> menu as well as simply dragging and dropping the file into the Viewport or Object panel.</div>
+        <p>Selecting an ioGAS Points object will trigger the panel to update and will display the available colour, shape, size, and filter settings (similar to ioGAS Attribute Manager). When you activate the ioGAS graphics Visual Parameters settings, the nodes will be displayed using these symbols, otherwise they will be displayed using Geoscience ANALYST’s normal attribute settings.</p>
+        <img src="../../Resources/Images/iogas symbols2.png" />
+        <p>To display only the nodes that have specific attributes, click the desired colour, shape, size or filter rows (hold <b>Ctrl</b> or left-click and drag to multi-select), then press the <b>Show selected</b> button <img src="../../Resources/Images/GA_viewonly_icon.png" class="button" /> . <br /></p>
+        <p>Only the nodes that have the selected attributes will be displayed, indicated by the eye in the <i>Visible</i> column. </p>
+        <p>The nodes that are not included in a visible row will be invisible. Click the <b>View all</b> button <img src="../../Resources/Images/GA_viewall_icon.png" class="button" /> to turn on all of the nodes that have an attribute applied to them. The <i>Count</i> column indicates how many nodes are included under that attribute setting.<br /></p>
+        <p>See the <a href="../7. Geoscience ANALYST Pro/Geoscience ANALYST Premium add-on module ioGAS.htm">ioGAS&#160;Link</a> section in the Geoscience ANALYST&#160;Pro chapter for detailed information about ioGas Link. </p>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">
+            <img src="../../Resources/Images/bubble6.png" /> Objects panel<MadCap:keyword term="Objects panel" /><MadCap:keyword term="User interface, Geoscience ANALYST:Objects panel" /></h1>
+        <p>This panel lists all the objects, tools, and data available in your workspace. </p>
+        <p>
+            <img src="../../Resources/Images/en/object panel callout 2.png" />
+        </p>
+        <div class="note">Highlighting an item in the <i>Name</i> column of the Objects panel will select the corresponding object in the Viewport, and vice versa (both will be highlighted in yellow).</div>
+        <p>You can customize and organize your workspace by creating generic container folders within the existing folders that contain data related to your project. To do this, right-click a parent folder and select <b>Add group</b>. You can then name the new folder and drag and drop it to the appropriate location within the object tree.</p>
+        <p>
+            <img src="../../Resources/Images/en/Screenshot (82).png" />
+        </p>
+        <p>The Object panel's hierarchy is:&#160;Folder / object / data. The image above demonstrates this structure and includes some of the icons associated with each level.</p>
+        <p>Click the arrow in the <i>Name</i> and <i>Type</i> columns to alphabetically sort the entire list of items. </p>
+        <p class="Task">Searching in the object tree</p>
+        <p>The search box at the top of the object panel allows you to quickly find group, objects or data from their name. For quick access, press<b>Ctrl+F</b> and directly type the name you want to search for. Results of the search query are highlight in blue.</p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/Simple.css');" class="TableStyle-SimpleWithPadding" cellspacing="0">
+            <col style="width: 50%;" class="TableStyle-SimpleWithPadding-Column-Column1" />
+            <col style="width: 50%;" class="TableStyle-SimpleWithPadding-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                    <td style="text-align: center;" class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1">
+                        <img src="../../Resources/Images/en/GA_object_tree_search_filtered.png" style="width: 315px;" />
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-SimpleWithPadding-BodyA-Column1-Row1">
+                        <img src="../../Resources/Images/en/GA_object_tree_search.png" style="width: 315px;" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Task">Objects search buttons<a name="Objects_search_buttons"></a></p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 65px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 203px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1" style="font-size: 12pt;text-align: center;">Button</th>
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1" style="font-size: 12pt;">Tooltip</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1" style="font-size: 12pt;">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="text-align: center;">
+                        <img src="../../Resources/Images/QT_cleartext-16.png" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">&#160;</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                        <p>Cancels the search, effectively removing all blue highlights.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="text-align: center;">
+                        <img src="../../Resources/Images/GA_eye_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Show search results ONLY</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Show in the current active Viewport only the objects returned by the search query, and hide all the other ones.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="text-align: center;">
+                        <img src="../../Resources/Images/GA_bbox_outline_blue.png" class="button" style="width: 25px; height: 25px;" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Show bounding boxes of results</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Shows / Hides in the Viewports blue bounding box(es) for objects returned by the search query. The bounding box(es) will show on all Viewports, even if the objects themselves are not displayed in the Viewport.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows" style="text-align: center;">
+                        <img src="../../Resources/Images/GA_filter_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">Filter search</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">  filter out from the tree the objects that are not matching the search query. Toggle it off to see again all the objects in the tree.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">
+            <img src="../../Resources/Images/bubble7.png" />Viewport<MadCap:keyword term="Viewport" /><MadCap:keyword term="User interface, Geoscience ANALYST:Viewport" /></h1>
+        <p>The Viewport panel is the 3D space where you view, select, and manipulate objects and models. The vertical toolbar located at the right of the panel provides numerous options and tools to control how you view objects in your workspace.</p>
+        <p>
+            <img src="../../Resources/Images/en/updated viewport image.png" /> </p>
+        <p class="Task">Selecting objects</p>
+        <p>Left-clicking an object in the Viewport performs two functions:</p>
+        <ul>
+            <li>Selection of the object</li>
+            <li>Updates selections on corresponding panels</li>
+        </ul>
+        <p>Left-clicking while holding down <b>Ctrl</b> allows you to multi-select objects in the Viewport.</p>
+        <p>  Left-clicking the Viewport background will select the <b>Workspace tab</b> in the <i>Data Table</i> panel and the workspace folder in the Objects panel.</p>
+        <p class="Task">Viewing objects
+        </p>
+        <p> There are several ways to manipulate the Viewport camera to visualize objects:</p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/Simple.css');" class="TableStyle-SimpleWithPadding" cellspacing="0">
+            <col style="width: 43px;" class="TableStyle-SimpleWithPadding-Column-Column1" />
+            <col class="TableStyle-SimpleWithPadding-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                    <td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">
+                        <img src="../../Resources/Images/mouse left.png" style="width: 25px; height: 25px;" />
+                    </td>
+                    <td class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1">Rotate on x, y, z axes (left mouse button)</td>
+                </tr>
+                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                    <td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">
+                        <img src="../../Resources/Images/mouse middle.png" style="width: 25px; height: 25px;" />
+                    </td>
+                    <td class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1">Pan (middle mouse button), Zoom (mouse wheel)</td>
+                </tr>
+                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                    <td class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1">
+                        <img src="../../Resources/Images/mouse right.png" style="width: 25px; height: 25px;" />
+                    </td>
+                    <td class="TableStyle-SimpleWithPadding-BodyA-Column1-Row1">Zoom (right mouse button)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Task">Viewport toolbar buttons</p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 65px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 203px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1" style="font-size: 12pt;">Button</th>
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1" style="font-size: 12pt;">Tooltip</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1" style="font-size: 12pt;">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                        <img src="../../Resources/Images/GA_global_view_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Global view</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Adjusts limits to display all visible objects.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                        <img src="../../Resources/Images/GA_look_west_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Look west</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Displays the view from the east.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                        <img src="../../Resources/Images/GA_look_north_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Look north</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Displays the view from the south.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                        <img src="../../Resources/Images/GA_view_from_top_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">View from top</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Displays the view from the top.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                        <img src="../../Resources/Images/GA_look_east_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Look east</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Displays the view from the west.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                        <img src="../../Resources/Images/GA_look_south_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Look south</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Displays the view from the north.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                        <img src="../../Resources/Images/GA_look_orthogonal_to_slicer.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Look orthogonal to slicer</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Adjusts the view to look straight at the active or most recently created slicer.
+
+</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                        <img src="../../Resources/Images/GA_perspective_view_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Perspective view</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Widens the perspective of the Viewport's lens so that objects further from the centre appear smaller. Parallel lines will converge at a distance. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                        <img src="../../Resources/Images/GA_parallel_view_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Parallel view</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Objects display isometrically with no size distortions regardless of distance from the lens. Parallel lines will always appear parallel without converging.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                        <img src="../../Resources/Images/GA_scalebar_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Scale bar</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Available when in parallel view; activate to add a scale bar in the lower left area of the Viewport.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                        <img src="../../Resources/Images/GA_grid_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Show grid lines</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Displays dynamically coloured, annotated grid lines. Available when in preset views (looking down, north, south, east or west) and in parallel mode. y coordinates are green, x are red, and z are blue to match the x, y, z axis arrows. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                        <img src="../../Resources/Images/GA_axis_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">x, y, z axis</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Toggles on and off the x, y, z coordinate axis icon.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                        <img src="../../Resources/Images/GA_bg_color_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Background colour</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Allows you to customize the background colour.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                        <img src="../../Resources/Images/GA_colorbar_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Colour bar</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Toggles on and off the colour map that displays the active or most recently-selected painted data.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                        <img src="../../Resources/Images/Vertical exaggeration.png" style="width: 42px;height: 40px;" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Vertical exaggeration</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Visually stretches the z dimension of objects. Useful for enhancing flat or regional features. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                        <img src="../../Resources/Images/GA_snapshot_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Snapshot</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Takes a snapshot of the Viewport contents and creates an image file. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                        <img src="../../Resources/Images/GA_bbox_outline_purple_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Show selection bounding box</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Displays a magenta outline surrounding selections.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                        <img src="../../Resources/Images/GA_snap_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">Snap to nearest node or interval top / bottom</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">Functions requiring digitizing in the Viewport (including tape measure and labels) will snap to the nearest object node or closest interval top or bottom when digitizing on painted drillholes.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Multiple Viewports</h2>
+        <p>Geoscience ANALYST allows you to open additional Viewports within a single workspace, and organize them as you would any other panels: either side by side, or stacked. You can also drag them to a second monitor outside of the main Geoscience ANALYST&#160;software window. </p>
+        <p>Showing and hiding objects or data from the Objects panel updates the view on the current active Viewport. Having multiple Viewports allows you to view side by side different sets of objects, or the same objects with different painted data. To do so, go to <b>Panels / Add viewport (max 8)</b>. <br /><img src="../../Resources/Images/en/GA_menu_create_viewport.png" alt="" title="" style="width: 220px; height: 268px;" /></p>
+        <p>This will create a new 3D Viewport. Choose <b>Add map view viewport (max 8)</b> instead to create a Viewport for a <a href="#map_view_viewports">2D map view</a>.</p>
+        <p>You will see the new Viewport(s) as tabs at the bottom of the Viewport panel. You can drag and drop them to view two or more concurrently. The header bar of the selected Viewport will appear a dark teal colour to indicate it is active. </p>
+        <p>When you select a Viewport, all surrounding panels will instantly update to reflect the data of the selected Viewport. </p>
+        <p>
+            <img src="../../Resources/Images/en/GA second viewport.png" />
+        </p>
+        <p>Viewports are not deleted when closed; they are hidden. You can restore them from the Panels menu by clicking the instance of Viewport you want to display. Click <b>Delete Viewport</b> to permanently delete a Viewport. You can display and hide Viewports by toggling on and off the check mark next to the respective Viewport in the contextual menu.</p>
+        <p>
+            <img src="../../Resources/Images/en/GA manage viewports.png" style="width: 353px;height: 400px;" />
+        </p>
+        <p>You can hide Viewports by clicking the button at the top right. <br /><img src="../../Resources/Images/en/GA eye icon.png" /></p>
+        <h2>Map view Viewports<MadCap:keyword term="map view" /><MadCap:keyword term="2D Viewport" /><a name="map_view_viewports"></a></h2>
+        <p>
+Map views are useful for displaying 2D map data (for which X and Y but not Z are defined), such as data originating from mine level plans or topographic maps. 3D objects may also be displayed in the Geoscience ANALYST 2D map <i>Viewport</i>, in which they appear projected onto the map view.</p>
+        <p>
+            <div class="note">Any geometric operation on a 3D&#160;object displayed in map view will use the true Z value. When moving the mouse over, the cursor information shows the actual Z coordinate.</div>
+        </p>
+        <p>In a map view, objects are displayed in a specific order, according to a priority  based on their type: block meshes and surfaces have the lowest priority, then drillholes and lines, and finally points have the highest priority.</p>
+        <p>Objects of the same type are displayed in the order they were toggled on, from the object tree: the object toggled on last is displayed on top other objects of the same display priority. </p>
+        <p>
+            <div class="tip">To bring a surface on top of others, simply hide it and show it again.</div>
+        </p>
+        <p style="page-break-after: avoid;">In a map view, rotations are locked. You can use either the left or the middle mouse button to pan the view. The rotation angle around the vertical axis is fixed and defined through a settings dialogue, accessible from the <i>Viewport</i> toolbar.</p>
+        <img src="../../Resources/Images/en/GA_map_view_settings.png" style="width: 515px;height: 396px;" />
+        <h1 class="NoPageBreak" MadCap:autonum=" ">
+            <img src="../../Resources/Images/bubble8.png" /> Controls panel <MadCap:keyword term="Controls panel" /><MadCap:keyword term="User interface, Geoscience ANALYST:Controls panel" /></h1>
+        <p>Located at the lower left of the interface, the Controls panel is a master list containing the following:</p>
+        <ul>
+            <li> Navigation key commands and mouse buttons with corresponding actions</li>
+            <li>The commands to create and manage labels, slicers, views, and tape measures</li>
+            <p>
+                <img src="../../Resources/Images/en/GA new controls panel.png" />
+            </p>
+        </ul>
+        <p>Actions performed in the Viewport will highlight the command in yellow simultaneously in the Controls panel. </p>
+        <p>
+            <MadCap:keyword term="Geoscience ANALYST Pro" />With a Geoscience ANALYST Pro licence activated, all of the available object creation and editing functions will display here for reference. </p>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">
+            <img src="../../Resources/Images/bubble9.png" /> Console panel<MadCap:keyword term="Console panel" /><MadCap:keyword term="User interface, Geoscience ANALYST:Console panel" /></h1>
+        <p>This panel contains the following:</p>
+        <ul>
+            <li>General program and command related-information during a Geoscience ANALYST session. </li>
+            <li>Warning messages in yellow, error messages in red. Messages will automatically open the Console panel if it is hidden.</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/en/console panel.png" />
+        </p>
+        <div class="tip">Consult the console for information if commands and imports do not execute as expected.</div>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">
+            <img src="../../Resources/Images/bubble10.png" /> Geoscience INTEGRATOR Query panel<MadCap:keyword term="Geoscience INTEGRATOR&#160;query" /><MadCap:keyword term="User interface, Geoscience ANALYST:Geoscience INTEGRATOR query" /></h1>
+        <p>This panel allows you to connect to your Geoscience INTEGRATOR server. Geoscience ANALYST is the 3D front end to query and visualize data from Geoscience INTEGRATOR, the software solution by Mira Geoscience for 4D multi-disciplinary exploration and geotechnical data management. See the <a href="../5. Connecting to Geoscience INTEGRATOR/CH5 Divider Connecting to Geoscience INTEGRATOR.htm">dedicated section</a> for detailed documentation on how to connect and to query data.</p>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">
+            <img src="../../Resources/Images/bubble11.png" /> Data Colours panel<MadCap:keyword term="Data Colours panel" /><MadCap:keyword term="User interface, Geoscience ANALYST:Data colours panel" /><a name="Data_colours_panel"></a></h1>
+        <p>This panel provides options to associate an object's data with specific colour settings,  defined via a mapping function or set manually.</p>
+        <p>The display and available options in the Data Colours panel correspond to the selected and painted data in the Viewport and <i>Data Table</i>. </p>
+        <p>The Data Colours table consists of two interfaces. The histogram view and graph view display when the painted data is float or integer data. The reference data view displays when the painted data is reference data. </p>
+        <h2 class="NoPageBreak">Histogram view:&#160;Float and integer data</h2>
+        <p>To display the histogram view in the Data Colours panel, select one or both of the following:</p>
+        <ul>
+            <li>An object in the Viewport (or its corresponding list entry in the Objects panel)</li>
+            <li>A column of float and integer data in the <i>Data Table</i> (click the paint can tool)</li>
+        </ul>
+        <p>The basic features and functionality of the histogram view are detailed in the images below:</p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/Simple.css');" class="TableStyle-SimpleWithPadding" cellspacing="0">
+            <col class="TableStyle-SimpleWithPadding-Column-Column1" />
+            <col class="TableStyle-SimpleWithPadding-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                    <td style="font-weight: bold;text-align: center;" class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1">
+                        <p>Histogram and graph view</p>
+                        <img src="../../Resources/Images/en/histogram view2.png" />
+                    </td>
+                    <td style="font-weight: bold;text-align: center;" class="TableStyle-SimpleWithPadding-BodyA-Column1-Row1">
+                        <p>Reference data view</p>
+                        <img src="../../Resources/Images/en/data colours3a.png" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="LinkFirstLevela">
+            <img src="../../Resources/Images/en/histogram dynamic numbers2.png" />
+        </p>
+        <p class="LinkFirstLevela">i. Toggle folder menu </p>
+        <p>This drop-down menu changes the folder level of the selected data. This feature is particularly useful for examining statistics on an individual drillhole versus an entire drillhole group. You can analyze all the drillholes that are in the parent group of the selected drillhole or all the drillholes in the workspace.</p>
+        <p>
+            <img src="../../Resources/Images/en/data colours drop-down.png" />
+        </p>
+        <p class="LinkFirstLevela">ii. <MadCap:keyword term="Statistics" />Statistics</p>
+        <p>This section displays the statistics of the selected data. The number of samples displays to the right of the theme name along the bottom of the x-axis.</p>
+        <p class="LinkFirstLevela">iii. <MadCap:keyword term="Histogram" />Histogram and graph</p>
+        <p> This section displays the histogram data on the x and y axes. The x-axis represents the data range. There are two y-axes: </p>
+        <ul>
+            <li>The left side represents the user-defined colour bar. </li>
+            <li>The right side represents the count.</li>
+        </ul>
+        <p>The yellow right angle line indicates the point of intersection of the selected data value and the corresponding colour.</p>
+        <p>The red line represents the colour mapping function.</p>
+        <p>By default, the histogram contains 50 bins. </p>
+        <p class="LinkFirstLevela">
+            <br />iv. <MadCap:keyword term="Data filter" />Data filter slider</p>
+        <p> This slider controls the low and high clipping values of the data displayed. When objects are painted by data, the values within the limits of the slider will be coloured. On the values below (left) and above (right) the slider bars will appear either grey or transparent, depending on the <b>Hide nodata/filtered</b> values setting. </p>
+        <p>You can set the exact clipping values by entering them in the value boxes at the left and right sides of the data filter bar.</p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/Simple.css');" class="TableStyle-SimpleWithPadding" cellspacing="0">
+            <col style="width: 38px;" class="TableStyle-SimpleWithPadding-Column-Column1" />
+            <col class="TableStyle-SimpleWithPadding-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                    <td class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1">
+                        <img src="../../Resources/Images/GA_reset_clip_values_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-SimpleWithPadding-BodyA-Column1-Row1"><b>Reset clip values</b>:  Click this button to remove the filtering and reset the data filter bar.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="LinkFirstLevela">v. <MadCap:keyword term="Colour table" />Colour table menu</p>
+        <p>This drop-down menu contains a selection of preset colour tables that allow you to paint objects. </p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/Simple.css');" class="TableStyle-SimpleWithPadding" cellspacing="0">
+            <col class="TableStyle-SimpleWithPadding-Column-Column1" />
+            <col class="TableStyle-SimpleWithPadding-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                    <td style="text-align: center;" class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">
+                        <img src="../../Resources/Images/GA_invert_colour_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1"><b>Invert colour table</b>: Switches to the complementary colours of the selected colour table. </td>
+                </tr>
+                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                    <td style="text-align: center;" class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">
+                        <img src="../../Resources/Images/GA_flip_colour_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1"><b>Flip colour table</b>: Reverses the colour table, switching the low and high colours.</td>
+                </tr>
+                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                    <td style="text-align: center;" class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1">
+                        <img src="../../Resources/Images/GA_inside_range_icon.png" class="button" />
+                        <br />
+                        <img src="../../Resources/Images/GA_outside_range_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-SimpleWithPadding-BodyA-Column1-Row1"><b>Inside / Outside range</b>: Displays data outside the defined range. When toggled on, the range is inverted, from displaying results inside the cursors, to outside the cursors. <br /><p style="text-align: center;"><img src="../../Resources/Images/iGA inverted slider.png" /></p></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="tip">You can design custom colour tables<MadCap:keyword term="Importing files:Colour table" /> by creating ASCII files with three columns, a fixed header, and the RGB values normalized to 256. Save the file in the directory where you have installed Geoscience ANALYST (by default, <span class="filename">C:\Program Files\Mira Geoscience\Geoscience ANALYST\tbl</span>). </div>
+        <p class="LinkFirstLevela">vi. Bin selection</p>
+        <p>This value box allows you to specify the number of bins (up to a maximum of 500) displayed in the histogram. </p>
+        <p class="LinkFirstLevela">vii. <MadCap:keyword term="Colour mapping" />Colour mapping transformations</p>
+        <p>This section contains:</p>
+        <ul>
+            <li> Four colour mapping transformation functions that determine how colours map to data values</li>
+            <li>Two options to load and save custom colour settings</li>
+            <li>Hide no-data / filtered values option</li>
+            <li>Revert colour settings option</li>
+            <li>Toggle scale option</li>
+        </ul>
+        <p>These features allow optimization of data visualization in the Viewport by customizing the colour stretching.</p>
+        <div class="tip">To view the colour range in the Viewport, click the colour bar button <img src="../../Resources/Images/GA_colorbar_icon.png" class="button" /> on the Viewport toolbar menu.</div>
+        <p>See the table below for a description of each. </p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 246px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Button</th>
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Tooltip</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Function</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                        <img src="../../Resources/Images/GA_linear_colour_transform_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Linear transform</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Divides the range of data values linearly into even increments.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                        <img src="../../Resources/Images/GA_log_colour_transform_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Logarithmic transform</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Divides the range of data values according to a ln(x) scale (logarithmic normal), and assigns values linearly, and uses the inverse of the log of those values on the colour mapping curve.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                        <img src="../../Resources/Images/GA_equal_colour_transform_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Equal area transform</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Statistically determines the colour mapping curve so that each colour is evenly distributed across the nodes, cells, triangles, intervals or segments on the painted object. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                        <img src="../../Resources/Images/GA_cdf_colour_transform_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Cumulative distribution function transform (CDF)</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Assumes that the selected data are normally distributed and calculates the colour zoning based on a user-defined normal distribution.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                        <img src="../../Resources/Images/GA_load_colour_settings_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Load colour settings</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Click to load a custom colour settings (<span class="fileext">.clr</span>) or zone (.zon) file, which maps specific data ranges to a defined colour. The format is: start / end value; R, G, B values normalized to 1. If the values range from 0 to 255, add the string <i>int</i> to the header line. The values in the table below will create the <i>Cu-percent</i> colour setting.<br /><table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/Simple.css');" class="TableStyle-SimpleWithPadding" cellspacing="0"><col class="TableStyle-SimpleWithPadding-Column-Column1" /><col class="TableStyle-SimpleWithPadding-Column-Column1" /><col class="TableStyle-SimpleWithPadding-Column-Column1" /><col class="TableStyle-SimpleWithPadding-Column-Column1" /><tbody><tr class="TableStyle-SimpleWithPadding-Body-Row1"><td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">Start</td><td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">Red</td><td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">Green</td><td class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1">Blue</td></tr><tr class="TableStyle-SimpleWithPadding-Body-Row1"><td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">0</td><td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">0</td><td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">0</td><td class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1">1</td></tr><tr class="TableStyle-SimpleWithPadding-Body-Row1"><td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">1</td><td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">0</td><td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">1</td><td class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1">0</td></tr><tr class="TableStyle-SimpleWithPadding-Body-Row1"><td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">2</td><td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">1</td><td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">.5</td><td class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1">0</td></tr><tr class="TableStyle-SimpleWithPadding-Body-Row1"><td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">5</td><td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">1</td><td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">0</td><td class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1">0</td></tr><tr class="TableStyle-SimpleWithPadding-Body-Row1"><td class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1">20</td><td class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1">1</td><td class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1">0</td><td class="TableStyle-SimpleWithPadding-BodyA-Column1-Row1">0</td></tr></tbody></table><br /><p style="text-align: center;"><img src="../../Resources/Images/colour bar.png" /></p><p>Geoscience ANALYST supports {red green blue} or {blk cyn mag yel} columns. The file needs a <span class="fileext">.tbl</span> extension.</p></td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                        <img src="../../Resources/Images/GA_save_colour_settings_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Save colour settings</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Saves a <span class="fileext">.clr</span> file (colour settings file) to your system. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                        <img src="../../Resources/Images/GA_nodata_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Hide nodata/filtered values</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Renders no data and filtered data transparent.<br />Toggled on, the background is blue. Toggled off, the background is grey. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                        <img src="../../Resources/Images/GA_revert_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Revert colour settings</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Restores the original colour mapping scheme. Functions like an undo. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                        <img src="../../Resources/Images/GA_linlog_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">Toggle scale type</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">Switches the histogram x-axis (data) scale (and binning) from linear to logarithmic. </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>When you click a colour mapping transformation button, the appropriate dialogue box will appear, such as the <i>Linear transformation</i> box. By default, the Min / Max entries for linear, logarithmic, and equal area transformation options will display the low and high values of the data filter slider. </p>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">
+                        <img src="../../Resources/Images/en/GA_linear_transformation_dialog.png" style="width: 255px;" />
+                    </td>
+                    <td style="text-align: center;">
+                        <img src="../../Resources/Images/en/GA_linear_transformation_trimming_hist_dialog.png" style="width: 255px;" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <div class="tip">Toggle the <b>Inside / Outside range</b> button <img src="../../Resources/Images/GA_inside_range_icon.png" class="button" style="height: 1em;margin: 0px; " /> to compute the transformation  from values outside of the selected range.</div>
+        </p>
+        <h2 class="NoPageBreak">
+            <MadCap:keyword term="Reference data" />Reference data view </h2>
+        <p>Selecting reference data through the Objects panel, Viewport, or <i>Data Table</i> will open the reference data view in the Data Colours panel.  The <img src="../../Resources/Images/reference data icon.bmp" style="margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" /> icon represents reference data in the Objects panel. </p>
+        <img src="../../Resources/Images/en/Data colours with buttons.png" />
+        <p class="LinkFirstLevela">i. Toggle folder menu </p>
+        <p>This drop-down menu changes the folder level of the selected data. This feature is particularly useful for examining statistics on an individual drillhole versus an entire drillhole group. You can analyze all the drillholes that are in the parent group of the selected drillhole or all the drillholes in the workspace.</p>
+        <p class="LinkFirstLevela">ii. <MadCap:keyword term="Colour table" />Colour table entries</p>
+        <p>This table displays the following:		
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0"><col class="TableStyle-PatternedRows-Column-Regular" style="width: 155px;" /><col class="TableStyle-PatternedRows-Column-Regular" /><tbody><tr class="TableStyle-PatternedRows-Body-LightRows"><td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">Column 1</td><td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Integer key values mapped internally to each colour classification.</td></tr><tr class="TableStyle-PatternedRows-Body-DarkerRows"><td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">Column 2: Colour</td><td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Colour class (user-defined). Edit by clicking a colour and navigating the <i>Select colour</i> window.</td></tr><tr class="TableStyle-PatternedRows-Body-LightRows"><td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">Column 3: Class</td><td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Class names. Edit by renaming directly in the table.</td></tr><tr class="TableStyle-PatternedRows-Body-DarkerRows"><td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">Column 4: Count</td><td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">The number of samples or occurrences of each class within the selected data population.</td></tr><tr class="TableStyle-PatternedRows-Body-LightRows"><td class="TableStyle-PatternedRows-BodyB-Regular-LightRows" style="font-weight: bold;">Column 5</td><td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">Toggle on and off the eye to view the class on the object in the Viewport. </td></tr></tbody></table></p>
+        <p>Reference data selected on an object, either directly in the Viewport or via the <i>Data Table</i>, will be highlighted in yellow on the colour table entries.</p>
+        <p class="LinkFirstLevela">iii. <MadCap:keyword term="Colour settings" />Colour settings and view options</p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 69px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 210px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Button</th>
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Tooltip</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                        <img src="../../Resources/Images/GA_load_colour_settings_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Load colour settings</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                        <p>Loads a classification CSV file. This will update the colours and class names and will rename and re-colour the matching key values according to the entries found in the file. The format is: key values; “class name”; R, G, B values normalized to 1. A sample file that will produce the above reference data scheme is:</p>
+                        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/Simple.css');" class="TableStyle-SimpleWithPadding" cellspacing="0">
+                            <col style="width: 45px;" class="TableStyle-SimpleWithPadding-Column-Column1" />
+                            <col style="width: 178px;" class="TableStyle-SimpleWithPadding-Column-Column1" />
+                            <col class="TableStyle-SimpleWithPadding-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                                    <td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">1</td>
+                                    <td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">"1_Air"</td>
+                                    <td class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1">,0,1,1</td>
+                                </tr>
+                                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                                    <td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">2</td>
+                                    <td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">"2_Missi_Group_Fluvial_sediments"</td>
+                                    <td class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1">,0.462745,0.772549,0.945098</td>
+                                </tr>
+                                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                                    <td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">3</td>
+                                    <td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">"3_Louis_formation"</td>
+                                    <td class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1">,0,0.533333,0.666667</td>
+                                </tr>
+                                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                                    <td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">4</td>
+                                    <td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">"4_Hidden_formation"</td>
+                                    <td class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1">,0,0.392157,0</td>
+                                </tr>
+                                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                                    <td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">5</td>
+                                    <td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">"5_Orebody"</td>
+                                    <td class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1">,1,0,0</td>
+                                </tr>
+                                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                                    <td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">6</td>
+                                    <td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">"6_Millrock_member"</td>
+                                    <td class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1">,1,1,0</td>
+                                </tr>
+                                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                                    <td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">7</td>
+                                    <td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">"7_Blue_Lagoon_member"</td>
+                                    <td class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1">,0.2,0.4,0.733333</td>
+                                </tr>
+                                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                                    <td class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1">8</td>
+                                    <td class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1">"8_Club_member"</td>
+                                    <td class="TableStyle-SimpleWithPadding-BodyA-Column1-Row1">,0.8,0.8,0.8</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            <div class="note">This setting can only load and save classification type CSV files. </div>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                        <img src="../../Resources/Images/GA_save_colour_settings_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Save colour settings</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Saves a <span class="fileext">.clr</span> file (colour settings file) to your system. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                        <img src="../../Resources/Images/GA_viewonly_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Show selected</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                        Displays a class or classes in the Viewport. To multi-select classes, hold <b>Ctrl</b> while clicking on the rows, or click and drag, then click <b>show selected</b>.
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                        <img src="../../Resources/Images/GA_viewall_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">View all</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Displays all classes.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                        <img src="../../Resources/Images/GA_nodata_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Hide nodata/filtered values</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Renders no data and filtered data transparent. When activated, the button background displays in blue. Otherwise, no data and hidden classes for reference data display in grey.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                        <img src="../../Resources/Images/GA_revert_icon.png" class="button" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">Revert colour settings</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">Restores the original colour mapping scheme.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">
+            <img src="../../Resources/Images/bubble12.png" /> 2D Profile Viewer<MadCap:keyword term="2D Profile viewer" /><MadCap:keyword term="User interface, Geoscience ANALYST:2D Profile viewer" /></h1>
+        <p>The 2D Profile Viewer allows easy visualization of multiple graphs of single or multi-channel (groups) numerical data (integer and floats) stored on curve objects.</p>
+        <img src="../../Resources/Images/en/GA 2d profile viewer main2.png" />
+        <p>This panel allows you to:
+        <ul><li>Display 2D sections from a BlockModel along the profile lines, which is ideal for comparison of geophysical inversions with line data.</li><li>View selections made in the viewer simultaneously in the Viewport and vice versa with dynamic linking.</li><li>Implement various scaling and graph settings options to create custom views. </li></ul></p>
+        <p>To maximize the profile viewing area, you can hide the settings section (left side of viewer) by sliding the vertical separator all the way to the left.</p>
+        <p>To view the lines between the first and last line (curve part index), move the horizontal slider located at the top of the graph area left and right using the following methods:
+			<ul><li>Clicking and dragging the handlebar.<br /><img src="../../Resources/Images/GA 2d profile slider.png" /></li><li>Using the keyboard arrows.</li><li>Manually changing the value on the <i>Curve part index</i> selector by typing in a new value or pressing the up and down arrows.<br /><img src="../../Resources/Images/en/GA 2d profile drop down.png" /></li></ul></p>
+        <p>Clicking the green and red squares button will show and hide the start and end of line indicators in the Viewport.</p>
+        <p>The profile viewing area displays the vertically stacked graphs, and if activated, a painted section view of data stored on a selected BlockModel will display underneath the graphs.  </p>
+        <p>The x-axis represents the distance along the selected curve line. The option of plotting eastings and northings is available through the graph settings area explained below.</p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 185px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Function</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">Curve</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Use the drop-down menu or the selection arrow to select the curve object that contains data to show as profiles. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">Section view</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">With a curve object selected, toggle on to activate BlockModel and data selectors. A vertical projection of the section of data associated with the location of the line will display under the graphs view. (The Data Colours panel controls the colour distribution.)</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">Graph settings:<br />Show easting / northing<br />grid lines</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Toggle on and off easting lines in red and northing lines in green on the selected graph. The value entered in the number box next to each of the buttons determines the spacing between grid lines.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">Legend</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                       Toggle on and off to display a graph's legend. Right-click on legends in the graph area to access various placement options.
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">y-axis settings:
+<br />Fixed range</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Toggle on to manually specify the minimum and maximum values for the y-axis scale. This locks the range for all of the lines. Toggle off to recalculate the range on a line to line basis. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">Log scale</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows"> Toggle between displaying the y-axis values on a linear and logarithmic scale.  </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">y-axis name</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">The name of the data selected first becomes the name of the y-axis. Click in the <i>&lt;enter Y axis name&gt;</i> box to overwrite the default with a custom name. Pressing the <b>x</b> button will reset the y-axis name to the default.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows" style="font-weight: bold;">Add data </td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">Creates a new data selection row. Select single or <a href="../6. Tools and tips/Group data.htm#GroupData">multi-element data</a> to display them as profiles on the current graph. The drop-down menu lists grouped data first under the <i>Multi</i> heading,  then float and integer data lists alphabetically.<br /><img src="../../Resources/Images/en/GA add data button.png" /><br />Choose the symbol to plot at sample locations on the graph; use the numerical spin boxes to modify the size of the symbol and the colour boxes to modify the profile colour.<br /><br /><table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/Simple.css');" class="TableStyle-SimpleWithPadding" cellspacing="0"><col class="TableStyle-SimpleWithPadding-Column-Column1" /><col class="TableStyle-SimpleWithPadding-Column-Column1" /><tbody><tr class="TableStyle-SimpleWithPadding-Body-Row1"><td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1"><img src="../../Resources/Images/GA add graph icon.png" /></td><td class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1">Adds a graph.</td></tr><tr class="TableStyle-SimpleWithPadding-Body-Row1"><td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1"><img src="../../Resources/Images/delete graph2.png" /></td><td class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1">Deletes a graph. </td></tr><tr class="TableStyle-SimpleWithPadding-Body-Row1"><td class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1"><img src="../../Resources/Images/remove graph2.png" /></td><td class="TableStyle-SimpleWithPadding-BodyA-Column1-Row1">Removes the selected data from displaying as profiles on a graph.</td></tr></tbody></table><br />Drag and drop graph tabs to reorder graphs.<br /><br />With grouped data, the colours in between will be interpolated based on your defined first and last colours. You can define a subset of grouped data to display by modifying the slider and / or numerical spin boxes. This will redistribute the first and last Data Colours across the data subset. </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="tip">You can copy the profile panel contents to the clipboard by pressing <b>Ctrl+left-click</b>.</div>
+    </body>
+</html>

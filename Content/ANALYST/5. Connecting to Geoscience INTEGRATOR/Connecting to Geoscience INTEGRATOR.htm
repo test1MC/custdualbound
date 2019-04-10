@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 class="NoTOC" MadCap:autonum=" ">Integration with Geoscience&#160;INTEGRATOR</h1>
+        <p>Geoscience ANALYST serves as the 3D viewer for the Geoscience INTEGRATOR data management system, the software solution by Mira Geoscience for 4D multi-disciplinary exploration and geotechnical data management. It allows you to query and visualize data in a Geoscience INTEGRATOR server.<br /></p>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">The Geoscience INTEGRATOR&#160;Query panel</h1>
+        <p>
+            <MadCap:keyword term="Geoscience&#160;INTEGRATOR:Projects" />
+            <MadCap:keyword term="Projects" />This panel allows you to interact with your Geoscience INTEGRATOR projects. First connect to a project, then optionally define data filters from high level parameters (<i>Data set search</i><MadCap:keyword term="Viewport" />), and ultimately download the data as objects in your Geoscience ANALYST workspace. Data can be visualized along with other data in 2D or 3D <i>Viewports</i>.</p>
+        <p class="Task">To connect to the Geoscience INTEGRATOR server</p>
+        <ol>
+            <li>Either from the file menu, click <b>Connect to Geoscience INTEGRATOR</b>,<br />or in the <i>Geoscience INTEGRATOR Query</i> panel, click the <b>Connect now</b> button.<br /><table style="width: 100%;"><col /><col /><tbody><tr><td><p style="text-align: center;"><img src="../../Resources/Images/en/GA_file_menu_connect_GI.png" style="vertical-align: baseline;" /><br /><span class="SmallerCaption">File menu</span></p></td><td><p style="text-align: center;"><img src="../../Resources/Images/en/GA_GI_query_connect.png" /><br /><span class="SmallerCaption">Geoscience INTEGRATOR Query Panel</span></p></td></tr></tbody></table></li>
+            <li>In the <i>Geoscience INTEGRATOR Credentials</i> dialogue, enter your email, password, and the URL of a Geoscience INTEGRATOR server. Click <b>OK</b>.<br /><img src="../../Resources/Images/en/GA GI credentials.png" /></li>
+            <li>In the drop-down menu of the <i>Projects</i> section of the credentials dialogue box, select the desired Geoscience INTEGRATOR&#160;project and click <b>LOAD</b>.<br /><img src="../../Resources/Images/en/GA GI load now.png" /><br /></li>
+        </ol>
+        <h1 MadCap:autonum=" ">Overview of the project content</h1>
+        <p>Once you have loaded a Geoscience INTEGRATOR project, you will see the project summary information displayed in the <b>Workspace</b> tab of the <i><MadCap:keyword term="Data Table" />Data Table</i> <MadCap:keyword term="Geoscience&#160;INTEGRATOR:Maps/plans/sections" /><MadCap:keyword term="Maps/plans/sections" /> (below the <i>Viewport</i>). This includes the project’s name and description, the x, y, z extents of the project data, and a list of the documents,  files and maps/plans/sections stored in the Geoscience INTEGRATOR project.</p>
+        <p>
+            <img src="../../Resources/Images/en/Workspacetab.png" style="width: 523px;" />
+        </p>
+        <p style="page-break-after: avoid;"> In the Geoscience ANALYST <i><MadCap:keyword term="Objects panel" /><MadCap:keyword term="Geoscience&#160;INTEGRATOR:Objects panel" />Objects panel</i><MadCap:keyword term="Geoscience&#160;INTEGRATOR:Data sets" />, you can see all the data sets available organized under folders.</p>
+        <p>
+            <img src="../../Resources/Images/en/GIobjecttree.png" style="width: 443px;" />
+        </p>
+        <div class="note">At this point, you have not loaded records from <MadCap:variable name="General.ProductNameGI" /> yet. <MadCap:variable name="General.ProductNameGA" /> only loaded the list of data sets with a quick summary of what they contain as well as the list of files of all types to inform you on what is available for import.</div>
+        <h3 class="NoPageBreak NoTOC">Data sets and themes</h3>
+        <p>In the <MadCap:variable name="General.ProductNameGI" />&#160;data management system, data sets are grouped under themes designed to organize the data based on their nature or subject. Having data grouped in themes helps you to locate your data intuitively. </p>
+        <p>
+            <MadCap:keyword term="Groups" /><MadCap:variable name="General.ProductNameGI" /> groups some themes together under a more general folder name. For example, you would find extensometer data in the <i>Ground deformation</i> theme, which is grouped under the <i>Geotechnical monitoring</i> folder with the <i>Microseismic</i> and <i>Stress</i> themes.</p>
+        <p>Data sets appear in grey if they have no queryable records. Such data sets generally link to data stored as binary files rather than database tables.</p>
+        <p>From <MadCap:variable name="General.ProductNameGA" />, you can download the data files, and open them in a dedicated application, or import them directly into the current workspace if their file type is supported by <MadCap:variable name="General.ProductNameGA" />'s import filters. See section about <a href="../4. Importing and Exporting/Importing objects into Geoscience ANALYST.htm">Importing objects</a> for a list and description of supported file formats.</p>
+        <h1 MadCap:autonum=" ">Data set search tool<MadCap:keyword term="Geoscience INTEGRATOR:Data set search" /></h1>
+        <p>This feature allows you to find data sets based on parameters defined at the data set level, including its 3D bounding box. It does not return the actual data within data sets; it just identifies data sets that match the search parameters and displays their bounding boxes in the <i>Viewport</i>.</p>
+        <p>The <i>Data set search</i> tool will appear in the <i>Geoscience INTEGRATOR&#160;Query</i> panel when you select the <i>Project group</i> folder or any folder of the <i>Theme group</i> type from the <i>Objects panel</i>. </p>
+        <div class="note"><i>Data set search</i> is available only when connected to Geoscience INTEGRATOR, and only performs searches on data sets in the project you are connected to. </div>
+        <p>
+            <img src="../../Resources/Images/en/datasetsearch panel.png" style="width: 407px;" />
+        </p>
+        <p style="page-break-after: avoid;">There are four parameters available to search for data sets:</p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Parameter</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><i>Name</i> </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Will return data sets containing the queried string of characters in their names.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows"><i>Description</i> </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                        <p>Will return data sets containing the queried string of characters in their descriptions.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><i>Bounding box</i>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                        <p>
+                        Will return data sets whose bounding boxes intersect your volume of interest.</p>
+                        <p>By default, the <i>From</i> and <i>To</i> parameters are set to the extents of the entire data set. To modify the bounding box extents:</p>
+                        <ol>
+                            <li> You can define new <i>From</i> and <i>To</i> locations by either clicking on the corresponding target button to the right, entering new values in the text boxes, or using the up and down arrows. </li>
+                            <li>You can drag a line in the <i>Viewport</i> to nominate the x, y, and z extents. We recommend setting a view from top to draw the x and y extents, and from a side view when drawing the z extent.</li>
+                            <li> Click <b>Reset to max</b> to revert to the entire x, y, z extents.</li>
+                        </ol>
+                        <p>Note that the search bounding box you are defining is shown directly as a red box in the <i>Viewport</i>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows"><i>Metadata</i>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                        <p>
+                        Will return data sets depending on their metadata.</p>
+                        <p> You can choose a metadata field from the drop-down menu and add an operator such as <b>Is</b>, <b>Is not</b>, <b>Contains</b>, or <b>Does not contain</b>.<br />Because metadata presence is customized per data set in <MadCap:variable name="General.ProductNameGI" />, <b>Is present</b> and <b>Is absent</b> confirm metadata presence or absence on the data set, while <b>Is</b> and <b>Is not</b> search the actual values of the field.</p>
+                        <p>You can click the <b>+</b> button to add metadata search fields and combine with previously created ones.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="page-break-after: avoid;"> After clicking <b>Find</b>, the <i>Objects panel</i> collapses the folders that have no result, expands the ones that do, and displays only the resulting data sets highlighted in blue.</p>
+        <img src="../../Resources/Images/en/datasetsearchresultsobjects.png" />
+        <p>See the general chapter on <a href="../2. The Geoscience ANALYST user interface/The Geoscience ANALYST user interface.htm#Objects_search_buttons">the User Interface</a> for detailed explanations of buttons at the top of the <i>Objects</i> panel.</p>
+        <div class="tip">After cancelling the search, the parameters remain as is in the <i>Data set search</i> tool, ready to <b>Find</b> again.</div>
+        <p style="page-break-after: avoid;">In the <i>Viewport</i>, you can see a blue bounding box for each data set that matches the search criteria. It is helpful to locate data sets in 2D or 3D <i>Viewports</i>, relatively to each other, and to other objects in the workspace.</p>
+        <img src="../../Resources/Images/en/datasetsearchresults_viewport.png" style="width: 563px;" />
+        <div class="note">At this point, you have not downloaded records from Geoscience INTEGRATOR yet. You have just identified pertinent data sets. </div>
+        <h1 MadCap:autonum=" ">Data set summary tab<MadCap:keyword term="Geoscience INTEGRATOR:Data set summary" /></h1>
+        <p> At any time, you can select a data set in the <i>Objects panel</i> to consult all its summary information in a data set tab (bearing the name of the data set) in the <i>Data Table</i> under the <i>Viewport</i>, next to the <i>Workspace</i> tab.</p>
+        <p>
+            <img src="../../Resources/Images/en/GA data set summary.png" style="width: 620px;" />
+        </p>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">Concepts from Geoscience INTEGRATOR</h1>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Attribute</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td style="font-style: italic;" class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Bounding max/min</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">The X, Y, Z extents of the data set.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td style="font-style: italic;" class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Count</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">The number of elements in the data set.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td style="font-style: italic;" class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Date max/min</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">The earliest and latest dates in the data set (only for time-related themes).</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td style="font-style: italic;" class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                        <MadCap:keyword term="Geoscience&#160;INTEGRATOR:Neighbourhoods" />Neighbourhoods</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Volumes of space that you want
+to refer to by name rather, than by coordinates. They correspond to actual volumes that can be defined in <MadCap:variable name="General.ProductNameGI" />.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td style="font-style: italic;" class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Tags</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Text identifiers that can be assigned to data in
+<MadCap:variable name="General.ProductNameGI" />.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td style="font-style: italic;" class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                        <MadCap:keyword term="Geoscience&#160;INTEGRATOR:Shifts" />Shifts</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Intervals of time within a 24-hour period. They are configured from <MadCap:variable name="General.ProductNameGI" />.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td style="font-style: italic;" class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Documents</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Files available at the system level.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td style="font-style: italic;" class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Files</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Files of various types available within a project.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td style="font-style: italic;" class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Maps/plans/sections</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Drawing files available within a project. It has the advantage of previewing the list of layer names to help you choose the right one based on its content. Typically from AutoCAD files (<span class="fileext">.dxf</span>, <span class="fileext">.dwg</span>).</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td style="font-style: italic;" class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Properties</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">List of data properties available for the data set.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td style="font-style: italic;" class="TableStyle-PatternedRows-BodyB-Regular-LightRows">Metadata</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows"><MadCap:variable name="General.ProductNameGI" /> allows the users to create custom metadata fields to further document high level parameters of data sets.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=" ">Retrieving data from <MadCap:variable name="General.ProductNameGI" /> </h1>
+        <h2 class="NoPageBreak">Query Parameters tool</h2>
+        <p>When you select a data set from the <i>Objects panel</i>, besides the data set summary tab, you also have access to the <i>Query Parameters</i> tool in the <i>Geoscience INTEGRATOR Query</i> panel. It exposes filters for selecting data from the selected data set, and importing them into <MadCap:variable name="General.ProductNameGA" />. </p>
+        <p>By default, all filters are set to include all the records from the data set. Restrict the filters to retrieve only a pertinent subset of data. You can enable and disable each filter independently by toggling on and off the check box in front of it. </p>
+        <p>
+            <img src="../../Resources/Images/en/Query Parameters.png" style="width: 713px;" />
+        </p>
+        <p>When you have set the desired combination of filters, you can click <b>Run</b> at the bottom of the <i>Geoscience INTEGRATOR Query</i> panel to send the query to the Geoscience INTEGRATOR server.</p>
+        <p>Geoscience ANALYST will only load the records that match all the filters into the Objects panel under a folder named "Query" followed by the date and time the query was run. The folder can be renamed more appropriately by the user.</p>
+        <div class="note">Connecting to another Geoscience INTEGRATOR&#160;project will remove from the workspace any data imported from data sets, unless the <i>Save queries</i> box is checked when switching to the other project.</div>
+        <h3 class="NoPageBreak">Bounding box</h3>
+        <p> The bounding box filter will restrict the data based on x, y, and z limits. By default, the <i>From</i> and <i>To</i> parameters are set to the extents of the entire data set. This option is available on all data themes that have x, y, z coordinates.</p>
+        <p>
+            <img src="../../Resources/Images/en/gi query bounding box.png" style="margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;width: 402px;" />
+        </p>
+        <p class="Task">To modify the bounding box extents:</p>
+        <ol>
+            <li>You can digitize new <i>From</i> and <i>To</i> locations by either clicking on the corresponding target button <img src="../../Resources/Images/GA_target_icon.png" class="button" /> to the right, or entering new values in the text boxes, or using the up and down arrow buttons. </li>
+            <li>You can drag a line in the <i>Viewport</i> to nominate the x, y, and z extents. We recommend setting a view from top to draw the x and y extents, and from a side view when drawing the z extents.</li>
+            <li>Click <b>Reset to max</b> to revert to the entire x, y, and z extents. </li>
+        </ol>
+        <div class="note">The search volume you are defining is displayed directly as a red box in the <i>Viewport</i>.
+			</div>
+        <p>To generate a bounding box that covers the area where most data is concentrated, click <b>2 standard deviations</b>. This will give a bounding box encompassing approximately 95% of the data, centred on the data set centroid. It is a convenient way to see the bounds, ignoring possible outliers.</p>
+        <div class="tip">On top of the red box reflecting the search volume, you can turn on the magenta box to see the complete extent of the selected data set by clicking the <b>Show selection bounding box</b> button <img src="../../Resources/Images/GA_bbox_outline_purple_icon.png" style="width: 22px;" class="button" /> in the toolbar of the <i>Viewport</i>.</div>
+        <h3 class="NoPageBreak">Date</h3>
+        <p>This option filters time-based data. You can select a date from the calendar in the drop-down, or type it in the text box.</p>
+        <p>
+            <img src="../../Resources/Images/en/date query params.png" />
+        </p>
+        <p>Another version of this filter is available to query the themes containing objects with time-related data. Because these themes can hold many data for each object, and Geoscience ANALYST can only show one property value at a time per object, you need to provide a time-stamp value and retrieve data for a specific time-stamp. The system will return the values of the closest instant record, on or before that time-stamp.</p>
+        <p>
+            <img src="../../Resources/Images/en/GA date query no checkbox.png" style="width: 429px; " />
+        </p>
+        <div class="note">If you are familiar with the Geoscience INTEGRATOR web interface, this filter on the <i>Underground</i> theme returns the compiled values, like the <i><MadCap:keyword term="Geoscience&#160;INTEGRATOR:Mine model compilation" />Mine model compilation</i> does in <MadCap:variable name="General.ProductNameGI" />: the closest record in time is evaluated per property, then, for each property, the corresponding time-stamp is used to retrieve values on all the points. The time-stamp actually used may thus differ from one property to another. You can think of it as a snapshot of the data that shows the most recent state for any property at the given date.</div>
+        <h3>Object-specific options</h3>
+        <p style="page-break-after: avoid;"> This option refers to objects that may differ from theme to theme. For example, on the <MadCap:keyword term="Geoscience&#160;INTEGRATOR:Drillholes" /><MadCap:keyword term="Object types:Drillholes" /><i>Drillholes</i> theme, it refers to <i>Drillholes</i>. In <i>Ground deformation</i> theme, it refers to <i>Stations</i>, etc.</p>
+        <p>
+            <img src="../../Resources/Images/en/drillhole query params.png" style="width: 320px;" />
+        </p>
+        <h3 class="NoPageBreak">Property Filters</h3>
+        <p style="page-break-after: avoid;"> This option filters by property values. Press the <b>+</b> button to add another property filter. You can add as many as you wish.</p>
+        <p>
+            <img src="../../Resources/Images/en/prop filters query params.png" />
+        </p>
+        <p>The nature of the data in a theme will determine the query behaviour and options available in the property filter. </p>
+        <ul>
+            <li>Text: <i>Is</i> is the only option available. You must enter the entire character string in the text box.</li>
+            <li>Classification and binary: <i>Is</i> is the only option available. Expand using the down arrow and select one or more classes to import. </li>
+            <li>Float, integer, and date: select one of the available operations and enter a value in the text box.</li>
+        </ul>
+        <h3 class="NoPageBreak">Neighbourhoods, Shifts, Properties, Tags, and Groups</h3>
+        <p>For <i>Neighbourhoods</i>, <i>Shifts</i>, <i>Properties</i>, <i>Tags</i>, and <i>Groups</i>, simply toggle on, using the check box, and select among the available items in the project to import them. These options only appear if values are defined for the selected data set. </p>
+        <p style="page-break-after: avoid;">The <i>Properties</i> section lists all available properties in a data set. Select the ones you wish to load.</p>
+        <p>
+            <img src="../../Resources/Images/en/greyed out properties.png" style="width: 425px;" />
+        </p>
+        <div class="note">Interval data is not supported and will appear greyed out in the <i>Geoscience INTEGRATOR&#160;Query Properties</i> panel. </div>
+        <h2 class="NoPageBreak">Viewing query results</h2>
+        <p>After you run the query from the <i>Query Parameters</i> tool, you have actual records from Geoscience INTEGRATOR loaded into Geoscience ANALYST.</p>
+        <p>Geoscience ANALYST stores the query result data on special object types, depending on the theme in the <i>Objects panel</i>. For example, <i>microseismic events</i> are a special points object that stores the data on nodes referred to as <i>Events</i>.</p>
+        <p>For data sets in themes that have mandatory groups (e.g., observation points), the system stores the data imported on objects, named according to the group, and located in a timestamped folder within the data set group.  </p>
+        <p style="page-break-after: avoid;">Similarly, drillholes are individual objects located within a timestamped folder (highlighted in image below), within the drillholes data set group. </p>
+        <img src="../../Resources/Images/en/import data.png" style="width: 296px;" />
+        <p>All other queries will be objects that are named according to a time-stamp directly under the data set folder.</p>
+        <p>The <i>Viewport</i> displays the retrieved data in 3D. The <i>Data Table</i> now has a Query tab containing a summary of the query results and the objects tab containing the detailed records.</p>
+        <img src="../../Resources/Images/en/GA data table.png" style="width: 389px" />
+        <p>You can interact with the rows of the objects tab (paint, sort, etc.) as described in the <a href="../2. The Geoscience ANALYST user interface/The Geoscience ANALYST user interface.htm#Selecting_rows_in_the_Data_Table"><i>Data Table</i> section</a>.</p>
+        <div class="note">Any change you make to the rows and values in the objects tab with <MadCap:variable name="General.ProductNameGA" /> Pro will not be saved back to <MadCap:variable name="General.ProductNameGI" />, because data can only be pulled from it, not written to it. Changes, however, will be preserved  when saving the workspace as a <span class="fileext">.geoh5</span> file, or when <a href="../4. Importing and Exporting/Exporting objects from Geoscience ANALYST.htm">exporting to other formats</a>.</div>
+        <h2>Project files, maps, and documents</h2>
+        <p>
+            <MadCap:keyword term="Geoscience&#160;INTEGRATOR:File manager" />The Geoscience INTEGRATOR web interface has three different file repositories, depending on the nature of the file. The Document library (system level), the File manager and the Maps/plans/sections (project level). This is why files are split into the <i>Documents, Files </i>and<i> Maps/plans/sections</i> lists.</p>
+        <p>You can find the project files, maps, and documents listed in the <b>Workspace</b> tab and the <b>data set</b> tab of the <i>Data Table</i>. The <b>Workspace</b> tab has a search bar to help you locate files of interest. The suffix <i>(Data file)</i> that follows a file is a flag set from the Geoscience INTEGRATOR web interface, to indicate that it should contain data usable from some software (not necessarily supported by Geoscience ANALYST). </p>
+        <p>Clicking on a file link will display a selection of options:</p>
+        <p>
+            <img src="../../Resources/Images/en/data file GA.png" />
+        </p>
+        <ul>
+            <li><b>Import</b>: Imports the file under the project or data set name in the Objects panel. The data file has to be in a format supported by <MadCap:variable name="General.ProductNameGA" />, for example <MadCap:variable name="General.Gocad" /> surface files (<span class="fileext">.ts</span><MadCap:keyword term="Importing files:AutoCAD files" />), AutoCAD files (<span class="fileext">.dwg</span>) or simply <span class="fileext">.csv</span> files. If not, the button will not be available. See section about <a href="../4. Importing and Exporting/Importing objects into Geoscience ANALYST.htm">Importing objects</a> for a list of supported file formats.</li>
+            <li><b>Open</b>: The system will pull the file and try to open it using the program associated to that file type on your computer. For example, a photo file saved with the extension <span class="fileext">.jpg</span> will open in an image viewer application.</li>
+            <li><b>Save as</b>: Downloads the file to your computer. </li>
+            <li><b>Pull</b>: Downloads the file and store it within in the Geoscience ANALYST workspace. The file is now available to work offline.</li>
+            <li><b>Cancel</b>: Cancels the file selection.</li>
+        </ul>
+        <p class="Task">Preview of layer names for <i>Maps/plans/sections</i> items</p>
+        <p>
+            <img src="../../Resources/Images/GA map icon.png" style="width: 37px; " /> This icon indicates elements in the <i>Object panel</i> that correspond to files uploaded in <MadCap:variable name="General.ProductNameGI" /> in the <i>Maps/plans/sections</i> page. In the likely case of AutoCAD files (<span class="fileext">.dxf</span> or <span class="fileext">.dwg</span>), there will be a sub-folder per layer under each file, as a preview to help you choose the best drawing before importing it. These folders will be empty until the file is imported to Geoscience ANALYST. To import the file, right-click the map item and select <b>Import</b> from the contextual menu. Or import from the file list in the <i>Data Table</i> as explained above.</p>
+        <p>
+            <img src="../../Resources/Images/en/GA maps.png" />
+        </p>
+        <div class="note">Similarly to data imported from data sets, connecting to another Geoscience INTEGRATOR&#160;project will removed any loaded maps / plans / sections from the workspace, unless the <i>Save queries</i> box is checked when switching to the other project. </div>
+    </body>
+</html>

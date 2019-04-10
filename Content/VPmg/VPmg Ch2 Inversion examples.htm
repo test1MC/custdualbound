@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Inversion examples</h1>
+        <p>The examples in this section all relate to synthetic aeromagnetic data based on the Otway Basin, South Australia. Every data set has a declination and inclination of 9.59 and -69.1 degrees with an inducing field strength of 60600 nT. When the data is loaded, it will be displayed at the  bottom of the outlines of a regional and local model. The installer includes the data file, which will be addressed in each section below. Models and their log files found in this guide are in <br /><span class="filename">output.zip</span> within each inversion example folder. This allows you to run the control files to reproduce the results, and to experiment with other parameters to get a feel for each style of inversion. As a reminder, the control file used to run  VPmg  is reproduced in its log file.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg regional2.png" />
+            <br /><span class="SmallerCaption">Data (nT) and model extents for the regional (black) and local (red) models.</span>
+        </p>
+        <h2 class="NoPageBreak">Homogenous property</h2>
+        <p>The folder containing the files of this example is <span class="filename">homog_inv</span>. The starting regional model is comprised of two layers: a sedimentary package (1) overlying a crystalline basement (2). It is assumed that the contact between those two layers is known.</p>
+        <h3 class="NoPageBreak">Creating the model</h3>
+        <p>You can use VPutility to create the initial model. The main requirements are:</p>
+        <ol>
+            <li>Topography data</li>
+            <li>Locations of the surface</li>
+            <li>A classification header,  used to set up the magnetic physical properties and description of the sediments and basement</li>
+        </ol>
+        <p>This header is used directly in the VP model file and contains (in order):</p>
+        <ul>
+            <li>The susceptibility (milliSI)</li>
+            <li>Upper and lower bounds</li>
+            <li>Koenigsberger ratio (Q)</li>
+            <li>Declination and inclination of remanence</li>
+            <li>The unit name:<br /><img src="../Resources/Images/VPmg sediments basement.png" /></li>
+        </ul>
+        <p>In this case the remanent magnetization parameters are unknown and are set to zero to assume purely induced magnetization. The sediments will not be active in this inversion because the lower and upper bounds are equal. The sedimentary cover is treated geologically as magnetically inert.</p>
+        <p>The control file to run VPutility is <span class="filename">create_model.ctl</span>. The utility is run, and it creates the model <span class="filename">Otway_reg_sm.sus</span> with 1km by 1km prisms in the region of the data. Below is the output starting model (in layers) for VPmg:</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg two layer model.png" />
+            <br /><span class="SmallCaption">Initial two-layer model created from VPutility. The transparent green is the top of the model surface (topography). The coloured surface is the contact between Sediments and Basement units.</span>
+        </p>
+        <p>&#160;</p>
+        <h3 class="NoPageBreak">Inversion</h3>
+        <p>In this instance, we want to know the bulk basement susceptibility. The enclosing half-space of the VP model is optimized during inversion. VPmg is run with the control file <span class="filename">homog_inv.ctl</span>. Details of the inversion run are:</p>
+        <ul>
+            <li>Half-space is set free to have its susceptibility changed within the VP model file.</li>
+            <li>Half-space is initially given the same susceptibility as the basement (5 milliSI).</li>
+            <li>DC shift is set to float to best fit the observed data.</li>
+            <li>Maximum susceptibility change per iteration is set to 0.20 milliSI.</li>
+            <li>Uncertainty is set to 1 nT.</li>
+        </ul>
+        <p>In this case, the top of the half-space is set to the average of the top of the basement <br />(-3470.15 m in elevation). If it was suspected that the sediment layer has a magnetic signature, then the top of the half-space would typically set to the average topography elevation.</p>
+        <p>The inversion runs in nine iterations and then stalls. It reduces the RMS misfit to 2.37 nT from an initial value of 12.40 nT. If you are not satisfied with the final misfit, you can use VPmg in the other styles to further reduce the misfit. For example, you could invert the basement for lateral heterogeneities through basement property inversion. The recovered enclosing half-space value is 10.39 milliSI, and close to the recovered value of the basement, which is 9.63 milliSI. It makes sense in this case that the half-space and basement values are similar. The output VP model file, <span class="filename">Otway_reg_homog.sus</span> contains the updated classification header reflecting the inverted properties. The predicted and observed data are found at the end of the file.</p>
+        <p>&#160;</p>
+        <h2 class="NoPageBreak">Geometry </h2>
+        <p>For geometry inversion, we assume that the physical properties are known or at least reasonable. It is the contact geometry between units that is of interest. The folder containing the files for this section is called <span class="filename">/geometry_inv</span>.</p>
+        <p>In this section, we will explore two situations:</p>
+        <ol>
+            <li>Beginning with a flat surface (<span class="filename">/flat</span> folder).</li>
+            <li>Using the surface (<span class="filename">/surf</span> folder) provided in the homogenous inversion and constraining it with drillhole data.</li>
+        </ol>
+        <p>&#160;</p>
+        <h3 class="NoPageBreak"><a name="FlatSurface"></a>Example: Flat surface</h3>
+        <p>Use VPutility with the control file <span class="filename">create_flat_2layer.ctl</span> to create a simple VP model. A two-layer model is created using the topography (<span class="filename">topo.csv</span>) along with the basement layer at -3470 m of elevation. Prisms are set to be 1 km by 1 km horizontally. The header used directly in the VP model is:</p>
+        <p>
+            <img src="../Resources/Images/VPmg sediments basement2.png" />
+        </p>
+        <p>The values for this example come from the homogeneous inversion. More details of this inversion are:</p>
+        <ul>
+            <li>The half-space will be fixed at 10.39 milliSI.</li>
+            <li>The maximum change of the model will be set to 20% of its depth from the top of the prism.</li>
+            <li>The DC shift is set to float to best fit the observed data.</li>
+            <li>The uncertainty is set to 1 nT.</li>
+        </ul>
+        <p>&#160;</p>
+        <div class="example">
+            <p><b><MadCap:annotation MadCap:createDate="2018-05-08T17:23:39.5240690-04:00" MadCap:creator="jackg" MadCap:initials="JA" MadCap:comment="Are there examples of this before this that i haven't applied result?" MadCap:editor="jackg" MadCap:editDate="2018-05-08T17:23:55.8385717-04:00">Result</MadCap:annotation></b>: </p>
+            <ul>
+                <li>The inversion reaches the maximum number of iterations and achieves an RMS misfit of 1.70 nT. </li>
+                <li>The result produces a basement floor that is shallower than the initial guess of -3470 m. </li>
+                <li>The recovered contact is displayed below with the starting elevation value represented by yellow on the scale. </li>
+                <li>The basement contact in the middle of the model has deepened. </li>
+                <li>The observed data is reproduced but is not quite fit. </li>
+                <li>A heterogeneous or basement inversion would solve for the localized changes required in the model.</li>
+            </ul>
+        </div>
+        <div class="note">The results are saved in the geometry inversion example folder as<br /><span class="filename">/flat_output.zip</span>.</div>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg recovered model.png" />
+            <br /><span class="SmallCaption">Recovered model from geometry inversion starting with a flat surface at -3470 m of elevation (yellow contour). The topography displays as transparent.</span>
+        </p>
+        <p>&#160;</p>
+        <h3 class="NoPageBreak">Example: Drillhole-constrained</h3>
+        <p>In the flat surface example <a href="#FlatSurface">above</a>, we assumed that we only had an idea of bulk physical properties. In this example, there are drillholes that can be used to constrain the geometry of the contact. There are two holes that intersect the basement: Kalangadoo and Sawpit. The remaining wells are used to add constraints to the contact inversion to ensure that the basement does not intersect them. The illustration below displays the drillholes and basement surface.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg basement surface.png" style="width: 379px;height: 230px;" />
+            <br /><span class="SmallerCaption">The initial basement surface (purple) along with the drillholes. The two labelled drillholes, Kalangadoo and Sawpit, intersect the basement and are used to constrain the inversion.</span>
+        </p>
+        <MadCap:pageBreak />
+        <p>&#160;</p>
+        <p>VPutility is used to create the model. If starting from scratch, this is a three-step process:</p>
+        <ol>
+            <li>Create the two-layer model.</li>
+            <li>Add pierce-point constraints.</li>
+            <li>Add fixed-point constraints.</li>
+        </ol>
+        <p>To create the two-layer model, run VPutility with <span class="filename">create_surf_2layer.ctl</span>. This control file uses the topography (<span class="filename">topo.csv</span>) and the surface (<span class="filename">basement_top.csv</span>) to create the layered-model in <span class="filename">surf_sm.sus</span>. The Sediment unit is set to have no susceptibility. The Basement unit is set to have 9.63 milliSI. The enclosing half-space is set fixed to 10.39 milliSI.</p>
+        <div class="note">The locations of the top of the basement in the two drillholes have been exported to a file (<span class="filename">basement_contacts.csv</span>). VPutility is run with <br /><span class="filename">pierce_points.ctl</span> to add pierce-point constraints and fix the contacts from the drillholes. Set the flag=1 to add weight around the locations within the inversion.  A new VP model <span class="filename">surf_pp_sm.sus</span> is created.</div>
+        <p>Finally, the bottoms of the remaining drillholes are exported to fix the prisms <br />(<span class="filename">dh_bottom.csv</span>). This will ensure that the basement does not go shallower in those prisms. The layers will be fixed, but not add any weight to the inversion itself using a <br /><i>flag=</i>-1 (not 0 or 1). Use VPutility again (<span class="filename">fixed_dh_bottom.ctl</span>) to fix the locations and add them within the previously created model. The output model with the drillhole constraints <span class="filename">surf_cnst_sm.sus</span> is now the initial model ready for inversion. Observe the following details of the inversion:</p>
+        <ul>
+            <li>Half-space is fixed at 10.93 milliSI.</li>
+            <li>Maximum change of the model will be set to 20% of its depth from the top of the prism.</li>
+            <li>DC shift is set to float to best fit the observed data.</li>
+            <li>Uncertainty is set to 1 nT.</li>
+            <li>Maximum number of iterations is 20.</li>
+            <li>Starting model is constrained by observed drillholes.</li>
+        </ul>
+        <div class="example">
+            <p><b>Result</b>: </p>
+            <ul>
+                <li>The inversion runs for all twenty iterations and stops. </li>
+                <li>The achieved RMS misfit is 1.14 nT. </li>
+                <li>The two drillholes that intersected the basement were fixed. </li>
+                <li>This in turn changed the model, particularly in the corner near the Kalangadoo drillhole. </li>
+                <li>The inversion result is displayed below with the drillhole locations, transparent topography, and coloured elevation of the basement contact.</li>
+            </ul>
+        </div>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg Geometry inversion2.png" />
+            <br /><span class="SmallerCaption">Geometry inversion of the basement contact using drillhole constraints.</span>
+        </p>
+        <p>&#160;</p>
+        <h2 class="NoPageBreak">VP basement property</h2>
+        <p>In some cases, we assume that the undulations in the observed data may be coming from spatial variations of the VP basement unit. In that case, a basement property inversion is run to solve for lateral heterogeneities. Once the inversion is run, the basement is considered variable rather than homogeneous. No special set-up within the VP basement is required for this inversion.</p>
+        <p>If we are confident in the basement geometry, the starting model will consist of the two-layer model with topography and basement contact.</p>
+        <ul>
+            <li>Example files are found in the <span class="filename">/basement_inv</span> folder.</li>
+            <li>The starting model is initialized from the two-layer problem with topography and the basement contact surface.</li>
+            <li><span class="filename">create_model.ctl</span>  is the VPutility control file to create the initial model <br />(<span class="filename">basement_sm.sus</span>).</li>
+            <li>The top unit (Sediments) is assumed to be magnetically inert.</li>
+            <li>The bottom unit (Basement) is set to an initial susceptibility of 9.63 milliSI.</li>
+            <li>The enclosing half-space is set to 10.39 milliSI with the top elevation of -3470 m with a fixed value.</li>
+        </ul>
+        <p>The inversion is run with the following parameters:</p>
+        <ul>
+            <li>Maximum of 0.25 milliSI change per iteration</li>
+            <li>Maximum of 20 iterations</li>
+            <li>Uncertainty set to 1 nT</li>
+        </ul>
+        <div class="example">
+            <p><b>Result</b>:</p>
+            <ul>
+                <li>The inversion runs for 20 iterations and stops after reaching the maximum number of iterations. </li>
+                <li>The RMS misfit reaches 1.37 nT down from 2.37 nT initially. </li>
+                <li>The result is shown below as a 3D volume-rendered image. </li>
+                <li>Note that the visual base of the model in the image is at -15km and each prism extends another 5km in depth.</li>
+            </ul>
+        </div>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg result of basement inv.png" style="width: 371px;height: 234px;" />
+            <br /><span class="SmallerCaption">Result of basement inversion. The recovered susceptibilities range from 0.008 to 0.01 SI.</span>
+        </p>
+        <h2 class="NoPageBreak">Heterogeneous property</h2>
+        <p>This section describes the creation of a more detailed model by incorporating heterogeneities within the model. A local area of interest is given in a predefined VP model (<span class="filename">local_homog.sus</span>) with four homogenous units. The example’s folder is <br /><span class="filename">/heterog_inv</span>.</p>
+        <p>The starting local model has higher resolution (250 m x 250 m) than the regional model (1 km x 1 km). You will invert the uppermost layer of the model looking for shallow magnetic sources, and create heterogeneous units and weights within the local model and then incise the model into the regional during inversion.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg Starting local model.png" />
+            <br /><span class="SmallerCaption">The starting local model (red cage and surfaces) within the regional model extents (black cage).</span>
+        </p>
+        <p>&#160;</p>
+        <h3 class="NoPageBreak">Creating heterogeneous cells and weights</h3>
+        <p>The shallowest unit is considered the unit of interest (Unit 1). Prior to heterogeneous inversion, you must transform this unit from a homogeneous one to a heterogeneous one. if not done, you will receive a No active units error. Observe the following details:</p>
+        <ul>
+            <li>Vertical sub-celling at a nominal cell thickness with an optional expansion factor.</li>
+            <li>You can do the sub-celling either through VPmg or VPutility.</li>
+            <li><span class="filename">create_het_cells.ctl</span>  is the VPutility used with the control file.</li>
+            <li>A height of 50 m is chosen for the sub-celling.</li>
+            <li>Depth-based weighting is chosen.</li>
+            <li>When a sub-celling a homogeneous unit, the cells initially take its physical property. Note that multiple units can be sub-celled at various cell thicknesses at the same time.</li>
+        </ul>
+        <p>&#160;</p>
+        <p>See the result (<span class="filename">local_het_sm.sus</span>) displayed below:</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg depth based weights.png" />
+            <br /><span class="SmallerCaption">Depth-based weights generated by VPutility after sub-celling the top unit only. This is the starting model for the heterogeneous inversion.</span>
+        </p>
+        <div class="tip">VPutility allows for two main methods of weighting for derivatives: depth and distance. Choose depth for areas with low variances of topographic and data elevations. Distance weighting performs better in mountainous areas where the distance from the data and each cell are widely varied.</div>
+        <h3 class="NoPageBreak">Inversion</h3>
+        <p>The inversion is performed on the local model and uses the regional field produced by the regional model. Observe the following details of this inversion:</p>
+        <ul>
+            <li>The bounds for the unit have been set to -3 to 3 milliSI.</li>
+            <li>The negative lower bound was selected as a device to accommodate remanent magnetization, as discussed in later in the <a href="VPmg Ch3 Special features.htm#RemMag">Special Features section</a>.</li>
+            <li>The inversion control file is <span class="filename">het_inv.ctl</span>.</li>
+            <li>The DC shift is set fixed at -60582.77 from the regional model.</li>
+            <li>The uncertainty is set to 1 nT.</li>
+            <li>The local model is incised into the regional by averaging the regional into the local VP basement.</li>
+            <li>The maximum change per iteration in each cell is set to 0.10 milliSI.</li>
+            <li>Maximum number of iterations is 25.</li>
+        </ul>
+        <div class="example">
+            <p><b>Result</b>: </p>
+            <ul>
+                <li>The inversion takes three iterations to reduce the RMS misfit to 0.87 nT from 1.73 nT. </li>
+                <li>The outputs given from VPmg are the output model file (<span class="filename">local_inv.sus</span>), log file (<span class="filename">local_inv.log</span>), and inversion statistics file (<span class="filename">local_inv_stats.csv</span>). </li>
+                <li>The statistics inversion file is to show how quickly the data misfit is reducing per iteration.</li>
+            </ul>
+        </div>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg hetero inv.png" />
+            <br /><span class="SmallerCaption">Result from heterogeneous inversion of the top unit. Only values above 0 milliSI are displayed. The purple surface is the top of unit 2. The heterogeneous cells do not go below the surface.</span>
+        </p>
+        <div class="tip">Use the statistics file as information if the inversion is stalling. For example, if the misfit reduces quickly, but larger misfits occur after the forward modelling (especially with susceptibility), reduce the maximum change of the model per iteration.</div>
+    </body>
+</html>

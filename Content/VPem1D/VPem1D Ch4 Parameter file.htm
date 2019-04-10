@@ -1,0 +1,658 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">VP model file</h1>
+        <p>The VP model file is the ASCII representation of the VP model. There is no limit to the number of prisms (other than computing resources). There is also no limit on the number of heterogeneous cells per prism. There is no upper limit on the number of geologic units. The data units follow the data file assumptions. The locations are in an ENU Cartesian coordinate system: Easting, Northing, Elevation in metres.</p>
+        <p>VPem1D models are only slightly different from VPmg model files in that there are a few options within the VP model that are ignored (for consistency). Here, the keyword <code>ignore</code> means there must be a number present, but VPem1D will ignore it.</p>
+        <div class="tip">Physical property (conductivity) units are in milliS/m (i.e., 10<sup>-3</sup> S/m). <i>There should not be zero (0) conductivity in the model file.</i> However, if an entire zero conductivity model is found, it will trigger the best-fitting half-space prior to inversion.</div>
+        <p>The model file is broken up into 5 sections:</p>
+        <table style="width: 30%;">
+            <col />
+            <tbody>
+                <tr>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;">Parameter</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #304671;color: #ffffff;">Geometry</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;">Basement</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #304671;color: #ffffff;">Heterogeneous unit block(s)</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;">Response</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The heterogeneous unit section has its own blocks corresponding to each heterogeneous unit. If a VP model only has VP basement prisms (e.g., apparent density or terrain model) specifically, the VP model will be presented by this general format:</p>
+        <table style="width: 100%;">
+            <col style="width: 82px;" />
+            <col style="width: 834px;" />
+            <tbody>
+                <tr>
+                    <td style="background-color: #f5f5f5;font-weight: bold;">Parameter</td>
+                    <td style="background-color: #ffffff;">
+                        <table style="width: 370px;">
+                            <col style="width: 91px;" />
+                            <col style="width: 116px;" />
+                            <col style="width: 107px;" />
+                            <col style="width: 104px;" />
+                            <tbody>
+                                <tr>
+                                    <td colspan="2" style="font-size: 9pt;">modelHeader</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="font-size: 9pt;">modelTitle</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 9pt;">xmin</td>
+                                    <td style="font-size: 9pt;">xmax</td>
+                                    <td style="font-size: 9pt;">ymin</td>
+                                    <td style="font-size: 9pt;">ymax</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 9pt;">xcell</td>
+                                    <td style="font-size: 9pt;">ycell</td>
+                                    <td>&#160;</td>
+                                    <td>&#160;</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 9pt;">nlay</td>
+                                    <td colspan="3" style="font-size: 9pt;">[het {uindex(j),dzsc(j),j=1,nhet}]</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 9pt;">dlay<sub>1</sub></td>
+                                    <td style="font-size: 9pt;">dmin<sub>1</sub></td>
+                                    <td style="font-size: 9pt;">dmax<sub>1</sub></td>
+                                    <td style="font-size: 9pt;">label<sub>1</sub></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 9pt;">dlay<sub>1</sub></td>
+                                    <td style="font-size: 9pt;">dmin<sub>1</sub></td>
+                                    <td style="font-size: 9pt;">dmax<sub>1</sub></td>
+                                    <td style="font-size: 9pt;">label<sub>1</sub></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 9pt;">...</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 9pt;">dlay<sub>nlay</sub></td>
+                                    <td style="font-size: 9pt;">dmin<sub>nlay</sub></td>
+                                    <td style="font-size: 9pt;">dmax<sub>lay</sub></td>
+                                    <td style="font-size: 9pt;">label<sub>lay</sub></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 9pt;color: #696969;">ignore</td>
+                                    <td style="font-size: 9pt;color: #696969;">ignore</td>
+                                    <td style="font-size: 9pt;">ehs_flag</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 9pt;color: #696969;">ignore</td>
+                                    <td style="font-size: 9pt;color: #696969;">ignore</td>
+                                    <td style="font-size: 9pt;color: #696969;">ignore</td>
+                                    <td style="font-size: 9pt;color: #696969;">ignore</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #304671;color: #ffffff;font-weight: bold;"><a name="Geometry"></a>Geometry</td>
+                    <td style="color: #ffffff;background-color: #ffffff;">
+                        <table style="width: 570px;">
+                            <col />
+                            <col />
+                            <col />
+                            <col style="width: 34px;" />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <td style="color: #000000;font-size: 9pt;">east<sub>1</sub></td>
+                                    <td style="color: #000000;font-size: 9pt;">north<sub>1</sub></td>
+                                    <td style="color: #000000;font-size: 9pt;">elev<sub>1</sub></td>
+                                    <td style="color: #000000;font-size: 9pt;">nlay<sub>1</sub></td>
+                                    <td style="color: #000000;font-size: 9pt;" colspan="2">elev(1)<sub>1</sub> flag(1)<sub>1</sub></td>
+                                    <td style="color: #000000;font-size: 9pt;">....elev(nlay<sub>1</sub>-1)<sub>1</sub></td>
+                                    <td style="color: #000000;font-size: 9pt;">flag(nlay<sub>1</sub>-1)<sub>1</sub></td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #000000;font-size: 9pt;">east<sub>2</sub></td>
+                                    <td style="color: #000000;font-size: 9pt;">north<sub>2</sub></td>
+                                    <td style="color: #000000;font-size: 9pt;">elev<sub>2</sub></td>
+                                    <td style="color: #000000;font-size: 9pt;">nlay<sub>2</sub></td>
+                                    <td style="color: #000000;font-size: 9pt;" colspan="2">elev(1)<sub>2</sub> flag(1)<sub>2</sub></td>
+                                    <td style="color: #000000;font-size: 9pt;">....elev(nlay<sub>2</sub>-1)<sub>2</sub></td>
+                                    <td style="color: #000000;font-size: 9pt;">flag(nlay<sub>1</sub>-1)<sub>1</sub></td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #000000;font-size: 9pt;">...</td>
+                                    <td style="color: #000000;font-size: 9pt;">&#160;</td>
+                                    <td style="color: #000000;font-size: 9pt;">&#160;</td>
+                                    <td style="color: #000000;font-size: 9pt;">&#160;</td>
+                                    <td style="color: #000000;font-size: 9pt;" colspan="2">&#160;</td>
+                                    <td style="color: #000000;font-size: 9pt;">&#160;</td>
+                                    <td style="color: #000000;font-size: 9pt;">&#160;</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #000000;font-size: 9pt;">east<sub>n</sub></td>
+                                    <td style="color: #000000;font-size: 9pt;">north<sub>n</sub></td>
+                                    <td style="color: #000000;font-size: 9pt;">elev<sub>n</sub></td>
+                                    <td style="color: #000000;font-size: 9pt;">nlay<sub>n</sub></td>
+                                    <td style="color: #000000;font-size: 9pt;" colspan="2">elev(1)<sub>n</sub> flag(1)<sub>n</sub></td>
+                                    <td style="color: #000000;font-size: 9pt;">....elev(nlay<sub>n</sub>-1)<sub>n</sub></td>
+                                    <td style="color: #000000;font-size: 9pt;">flag(nlay<sub>n</sub>-1)<sub>n</sub></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;font-weight: bold;">Basement</td>
+                    <td style="background-color: #ffffff;">
+                        <table style="width: 369px;">
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <td style="font-size: 9pt;">Basement title</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 9pt;">east<sub>1</sub></td>
+                                    <td style="font-size: 9pt;">north<sub>1</sub></td>
+                                    <td style="font-size: 9pt;">elev<sub>1</sub></td>
+                                    <td style="font-size: 9pt;">propertyb<sub>1</sub></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 9pt;">east<sub>2</sub></td>
+                                    <td style="font-size: 9pt;">north<sub>2</sub></td>
+                                    <td style="font-size: 9pt;">elev<sub>2</sub></td>
+                                    <td style="font-size: 9pt;">propertyb<sub>2</sub></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 9pt;">...</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 9pt;">east<sub>n</sub></td>
+                                    <td style="font-size: 9pt;">north<sub>n</sub></td>
+                                    <td style="font-size: 9pt;">elev<sub>n</sub></td>
+                                    <td style="font-size: 9pt;">propertyb<sub>n</sub></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;background-color: #304671;color: #ffffff;">Heterogeneous unit block(s)</td>
+                    <td style="color: #ffffff;background-color: #ffffff;">
+                        <table style="width: 579px;">
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <td style="color: #000000;padding: 0px;font-size: 8pt;">
+                                        <table style="width: 592px;">
+                                            <col />
+                                            <col />
+                                            <col />
+                                            <col />
+                                            <tbody>
+                                                <tr>
+                                                    <td style="font-size: 9pt;"><span style="font-size: 8pt;">Heterogn</span>
+                                                    </td>
+                                                    <td style="font-size: 8pt;"> nhetu </td>
+                                                    <td style="font-size: 8pt;">nhetc</td>
+                                                    <td style="font-size: 9pt;padding: 0px;">
+                                                        <table style="width: 100%;">
+                                                            <col />
+                                                            <col style="width: 215px;" />
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="font-size: 8pt;"> ihu<sub>1</sub></td>
+                                                                    <td>&#160;</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #000000;font-size: 8pt;">east<sub>1</sub> north<sub>1</sub> ni<sub>1</sub> {ihu(j)<sub>1</sub> zt(j)<sub>1</sub> zb(j)<sub>1</sub> nsc(j)<sub>1</sub> j=1,nheti<sub>1</sub>}{[phet(k)<sub>1</sub> pflag(k)<sub>1</sub> k=1,nsc(j)<sub>1</sub>],j=1,ni<sub>1</sub>}</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #000000;font-size: 8pt;">east<sub>2</sub> north<sub>2</sub> ni<sub>2</sub> {ihu(j)<sub>2</sub> zt(j)<sub>2</sub> zb(j)<sub>2</sub> nsc(j)<sub>2</sub> j=1,nheti<sub>2</sub>}{[phet(k)<sub>2</sub> pflag(k)<sub>2</sub> k=1,nsc(j)<sub>2</sub>],j=1,ni<sub>2</sub>}</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #000000;font-size: 8pt;">...</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #000000;font-size: 8pt;">east<sub>n</sub> north<sub>n</sub> ni<sub>n</sub> {ihu(j)<sub>n</sub> zt(j)<sub>n</sub> zb(j)<sub>n</sub> nsc(j)<sub>n</sub> j=1,nheti<sub>n</sub>}{[phet(k)<sub>n</sub> pflag(k)<sub>n</sub> k=1,nsc(j)<sub>n</sub>],j=1,ni<sub>n</sub>}</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #000000;font-size: 8pt;">
+                                        <table style="width: 592px;">
+                                            <col />
+                                            <col />
+                                            <col />
+                                            <col />
+                                            <tbody>
+                                                <tr>
+                                                    <td style="font-size: 8pt;">Heterogn</td>
+                                                    <td style="font-size: 8pt;"> nhetu </td>
+                                                    <td style="font-size: 8pt;">nhetc</td>
+                                                    <td style="font-size: 9pt;padding: 0px;">
+                                                        <table style="width: 100%;">
+                                                            <col />
+                                                            <col style="width: 215px;" />
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="font-size: 8pt;"> ihu<sub>nhet</sub></td>
+                                                                    <td>&#160;</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #000000;font-size: 8pt;">east<sub>1</sub> north<sub>1</sub> ni<sub>1</sub> {ihu(j)<sub>1</sub> zt(j)<sub>1</sub> zb(j)<sub>1</sub> nsc(j)<sub>1</sub> j=1,nheti<sub>1</sub>}{[phet(k)<sub>1</sub> pflag(k)<sub>1</sub> k=1,nsc(j)<sub>1</sub>],j=1,ni<sub>1</sub>}</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #000000;font-size: 8pt;">east<sub>2</sub> north<sub>2</sub> ni<sub>2</sub> {ihu(j)<sub>2</sub> zt(j)<sub>2</sub> zb(j)<sub>2</sub> nsc(j)<sub>2</sub> j=1,nheti<sub>2</sub>}{[phet(k)<sub>2</sub> pflag(k)<sub>2</sub> k=1,nsc(j)<sub>2</sub>],j=1,ni<sub>2</sub>}</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #000000;font-size: 8pt;">...</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #000000;font-size: 8pt;">east<sub>n</sub> north<sub>n</sub> ni<sub>n</sub> {ihu(j)<sub>n</sub> zt(j)<sub>n</sub> zb(j)<sub>n</sub> nsc(j)<sub>n</sub> j=1,nheti<sub>n</sub>}{[phet(k)<sub>n</sub> pflag(k)<sub>n</sub> k=1,nsc(j)<sub>n</sub>],j=1,ni<sub>n</sub>}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;background-color: #f5f5f5;"><a name="Response"></a>Response</td>
+                    <td style="background-color: #ffffff;">
+                        <table style="width: 531px;">
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <td style="font-size: 9pt;">ResponseTitle</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td>&#160;</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 9pt;">eastd<sub>1</sub></td>
+                                    <td style="font-size: 9pt;">northd<sub>1</sub></td>
+                                    <td style="font-size: 9pt;">elevd<sub>1</sub></td>
+                                    <td style="font-size: 9pt;">obs<sub>1</sub><sup>1-nch</sup></td>
+                                    <td style="font-size: 9pt;">pre<sub>1</sub><sup>1-nch</sup></td>
+                                    <td style="font-size: 9pt;">back<sub>1</sub><sup>1-nch</sup></td>
+                                    <td style="font-size: 9pt;">line<sub>1</sub></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 9pt;">eastd<sub>2</sub></td>
+                                    <td style="font-size: 9pt;">northd<sub>2</sub></td>
+                                    <td style="font-size: 9pt;">elevd<sub>2</sub></td>
+                                    <td style="font-size: 9pt;">obs<sub>2</sub><sup>1-nch</sup></td>
+                                    <td style="font-size: 9pt;">pre<sub>2</sub><sup>1-nch</sup></td>
+                                    <td style="font-size: 9pt;">back<sub>2</sub><sup>1-nch</sup></td>
+                                    <td style="font-size: 9pt;">line2</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 9pt;">.......</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 9pt;">eastd<sub>n</sub></td>
+                                    <td style="font-size: 9pt;">northd<sub>n</sub></td>
+                                    <td style="font-size: 9pt;">elevd<sub>n</sub></td>
+                                    <td style="font-size: 9pt;">obs<sub>n</sub><sup>1-nch</sup></td>
+                                    <td style="font-size: 9pt;">pre<sub>n</sub><sup>1-nch</sup></td>
+                                    <td style="font-size: 9pt;">back<sub>n</sub><sup>1-nch</sup></td>
+                                    <td style="font-size: 9pt;">line<sub>n</sub></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 9pt;" colspan="2">[DC_SHIFT <span style="color: #696969;">ignore</span>]</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                    <td style="font-size: 9pt;">&#160;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=" ">Description of model sections</h1>
+        <h2 class="NoPageBreak NoTOC">Parameter</h2>
+        <table style="width: 100%;">
+            <col style="width: 99px;" />
+            <col style="width: 613px;" />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"><var>modelHeader</var>
+                    </td>
+                    <td>Identifier of VP model. For VPem1D use <code>#VPEM1D#</code> or <code>#MOD_3D#</code>.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>modelTitle</var>
+                    </td>
+                    <td>Title of file contents.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>xmin</var>
+                    </td>
+                    <td>Minimum easting of rectangular model area. It is the coordinate of the external wall of the most “westerly” boundary prism. It is xcell/2 less than the most “westerly” prism centre. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>xmax</var>
+                    </td>
+                    <td>Maximum easting of rectangular model area. It is the coordinate of the external wall of the most “easterly” boundary prism. It is xcell/2 greater than the most “easterly” prism centre. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>ymin</var>
+                    </td>
+                    <td>Minimum northing of rectangular model area. It is the coordinate of the external wall of the most “southerly” boundary prism. It is ycell/2 less than the most “southerly” prism centre.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>ymax</var>
+                    </td>
+                    <td>Maximum northing of rectangular model area.It is the coordinate of the external wall of the most “northerly” boundary prism. It is ycell/2 greater than the most “northerly” prism centre.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>xcell</var>
+                    </td>
+                    <td>Dimensions of model cells in E-W direction (m).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>ycell</var>
+                    </td>
+                    <td>Dimensions of model cells in N-S direction (m).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>nlay</var>
+                    </td>
+                    <td>Total number of geological units, including VP basement, in model. nlay=1 for basement-only models, e.g., terrain models (next section would be the basement section). If nlay &lt; 0, some of the geological units are heterogeneous.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>nhet</var>
+                    </td>
+                    <td>Number of heterogeneous units; required only when nlay &lt; 0.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>uindex(j)</var>
+                    </td>
+                    <td>Unit index for the j<sup>th</sup> heterogeneous unit; required only when nlay &lt; 0.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>dzsc(j)</var>
+                    </td>
+                    <td>Notional sub-cell dimension (m) for the j<sup>th</sup> heterogeneous unit.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>dlay<sub>n</sub></var>
+                    </td>
+                    <td>Physical property of n<sup>th</sup> unit. The property must be within the given bounds unless it is considered fixed for inversion.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>dmin<sub>n</sub></var>
+                    </td>
+                    <td>Lower limit of physical property in inversion n<sup>th</sup> unit. If dminn=dmaxn, the property of the n<sup>th</sup> layer is fixed: it plays no part in inversion.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>dmax<sub>n</sub></var>
+                    </td>
+                    <td>Upper limit of physical property in inversion for n<sup>th</sup> unit. If dminn=dmaxn, the property of the n<sup>th</sup> layer is fixed: it plays no part in inversion.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>label<sub>n</sub></var>
+                    </td>
+                    <td>Description of geological n<sup>th</sup> unit. Must be in quotes if more than one word.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>ehs_flag</var>
+                    </td>
+                    <td>
+                        <p>
+                            <label>= 1: Runs the inversion as normal.<br /></label>= 0: Sets the half-space optimization prior to the inversion. <br /></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="NoTOC">Geometry</h2>
+        <table style="width: 100%;">
+            <col style="width: 99px;" />
+            <col style="width: 613px;" />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"><var>east<sub>n</sub></var>
+                    </td>
+                    <td>Easting coordinate of centre of n<sup>th</sup> prism. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>north<sub>n</sub></var>
+                    </td>
+                    <td>Northing coordinate of centre of n<sup>th</sup> prism.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>elev<sub>n</sub></var>
+                    </td>
+                    <td>Surface elevation of top of n<sup>th</sup> prism.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>nlay<sub>n</sub></var>
+                    </td>
+                    <td>Number of cells or interfaces in n<sup>th</sup> prism. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>elev(j)<sub>n</sub></var>
+                    </td>
+                    <td>Elevation of interface at base of cell j within vertical prism n.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>flag(j)<sub>n</sub></var>
+                    </td>
+                    <td>Flag controlling whether the interface at <i>elev(j)<sub>n</sub></i> is fixed or free during inversion and defines the geological unit immediately above. Interfacial flags are floating point numbers (not integers) for the model. The flag takes the form:<br /><img src="../Resources/Images/VPmg flag(j) calc.png" /><br />Where:<br /> <var>IFLAG(j,n)</var> denotes the integer interfacial flag, and where <var>INDD(j-1,n)</var> is the index for the geological unit assigned to the cell immediately above the interface. (Note that interface j is at the base of the (j-1)th cell.) Only one fixed interface flag affects inversion parameter weighting. In practice, VPem1D only checks if flag = 0, 1, or other. The remaining flags are for the user’s benefit.<br /><br /><var>iflag(j)n  = 0</var>: free interface<br /><var>iflag(j)n  = 1</var>: fixed interface that affects parameter weighting during geometry inversion <br /><var>iflag(j)n  = 2</var>: fixed interface given by user<br /><var>iflag(j)n  = -1</var>: fixed “artificial” interface. Imposed owing to a near-miss by drillhole(s)<br /><var>iflag(j)n  = -2</var>: fixed “artificial” interface. Imposed by user<br /><var>iflag(j)n  = -3</var>: fixed “artificial” interface between sub-cells in a heterogeneous unit<br /></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="NoPageBreak NoTOC">Basement</h2>
+        <table style="width: 100%;">
+            <col style="width: 99px;" />
+            <col style="width: 613px;" />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"><var>Basement title</var>
+                    </td>
+                    <td> Must begin with the word <code>Basement</code>, starting in first column. If the remaining part of the section is not present, a uniform basement is set based on the parameter section (typically set to “Basement property uniform”).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>east<sub>n</sub></var>
+                    </td>
+                    <td>Easting coordinate of centre of n<sup>th</sup> prism. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>north<sub>n</sub></var>
+                    </td>
+                    <td>Northing coordinate of centre of n<sup>th</sup> prism. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>elev<sub>n</sub></var>
+                    </td>
+                    <td>Elevation of top of basement of n<sup>th</sup> prism.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>propertyb<sub>n</sub></var>
+                    </td>
+                    <td>Physical property of n<sup>th</sup> prism’s basement.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="NoPageBreak NoTOC">Heterogeneous unit block(s)</h2>
+        <table style="width: 100%;">
+            <col style="width: 99px;" />
+            <col style="width: 613px;" />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"><var>Heterogn</var>
+                    </td>
+                    <td>Title for Heterogeneous Unit block. Must begin with the word <code>Heterogn</code>, starting in first column.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>nhetu</var>
+                    </td>
+                    <td>Number of heterogeneous units defined in this block; always set to 1: <var>nhetu=1.</var></td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>nhetc</var>
+                    </td>
+                    <td>Number of sub-cells in the heterogeneous unit block #ihu.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>ihu</var>
+                    </td>
+                    <td>Geologic unit number (positive) for the heterogeneous unit defined in this block. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>east<sub>n</sub></var>
+                    </td>
+                    <td>Easting coordinate of centre of n<sup>th</sup> prism. Only prisms which contain cells belonging to one or more heterogeneous units are listed in this section of the model file. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>north<sub>n</sub></var>
+                    </td>
+                    <td>Northing coordinate of centre of n<sup>th</sup> prism. Only prisms which contain cells belonging to one or more heterogeneous units are listed in this section of the model file.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>nheti<sub>n</sub></var>
+                    </td>
+                    <td>Number of intervals of heterogeneous units within n<sup>th</sup> prism. Note: There can be more than one interval of a particular heterogeneous unit.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>ihu(j)<sub>n</sub></var>
+                    </td>
+                    <td>Unit index identifying the j<sup>th</sup> interval of a heterogeneous unit within n<sup>th</sup> prism; j increases downwards.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>zt(j)<sub>n</sub></var>
+                    </td>
+                    <td>Elevation of top of the j<sup>th</sup> interval of a heterogeneous unit in the n<sup>th</sup> prism. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>zb(j)<sub>n</sub></var>
+                    </td>
+                    <td>Elevation of bottom of the j<sup>th</sup> interval of a heterogeneous unit in the n<sup>th</sup> prism. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>nsc(j)<sub>n</sub></var>
+                    </td>
+                    <td>Number of cells which comprise the j<sup>th</sup> interval of a heterogeneous unit in the n<sup>th</sup> prism. Each cell has vertical dimension <var>[zt(j)<sub>n</sub> - zb(j)<sub>n</sub>] / n</var>.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>phet(k)<sub>j</sub></var>
+                    </td>
+                    <td>Physical property of the k<sup>th</sup> cell within the j<sup>th</sup> interval of a heterogeneous unit in the n<sup>th</sup> prism. Index k ranges from 1 to <var>nsc(j)<sub>n</sub></var>.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>pflag(k)<sub>j</sub></var>
+                    </td>
+                    <td>Inversion flag of the k<sup>th</sup> cell within the j<sup>th</sup> interval of a heterogeneous unit [index <var>ihu(j)</var>] in n<sup>th</sup> prism. <var>pflag</var> is of the form <var>ipf</var>.nnnn, where <var>ipf</var> is an integer flag and where nnnn is a weight, defined to 4 decimal places. The decimals are ignored in VPem1D and are there for backwards compatibility. <br /><br /><var>ipf</var> = 0: the cell property is free to change during heterogeneous property inversion (when <var>ILD</var>=-1)<br /><br /><var>ipf</var> = non-zero: the cell property is fixed.<br /></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="NoPageBreak NoTOC">Response</h2>
+        <table style="width: 100%;">
+            <col style="width: 99px;" />
+            <col style="width: 613px;" />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"><var>responseTitle</var>
+                    </td>
+                    <td>Title for Responses block. Must begin with the word <code>EAST</code>.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>eastd<sub>n</sub></var>
+                    </td>
+                    <td>Easting of n<sup>th</sup> measurement location. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>northd<sub>n</sub></var>
+                    </td>
+                    <td>Northing of n<sup>th</sup> measurement location.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>elevd</var><sub>n</sub>
+                    </td>
+                    <td>Elevation of n<sup>th</sup> measurement location.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>obs<sub>n</sub><sup>1-nch</sup></var>
+                    </td>
+                    <td>Observed data (1 to number of channels) at n<sup>th</sup> measurement location.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>calc<sub>n</sub><sup>1-nch</sup></var>
+                    </td>
+                    <td>Calculated data  (1 to number of channels) at n<sup>th</sup> measurement location. Ultimately, it is the combination of model response, background contribution, and DC shift. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>back<sub>n</sub><sup>1-nch</sup></var>
+                    </td>
+                    <td>Zeros are set as a placeholder for the background response for the n<sup>th</sup> measurement location. This is for backwards compatibility reasons.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>line<sub>n</sub><sup>1-nch</sup></var>
+                    </td>
+                    <td>Line descriptor for n<sup>th</sup> measurement location.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

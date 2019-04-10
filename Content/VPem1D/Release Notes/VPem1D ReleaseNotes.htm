@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Overview</h1>
+        <p>The release of VPem1D <MadCap:variable name="General.VersionNumber" /> introduces a new feature: a best-fitting half-space calculation. Some minor bug fixes were addressed, and other features were updated to enhance usability. Additionally, the newly updated VPutility 1.1 has also been added to the installer.</p>
+        <h2 class="NoPageBreak">New and updated functionality</h2>
+        <p>We have performed bug fixes (including two notable ones) and introduced a new feature in VPem1D <MadCap:variable name="General.VersionNumber" />. Below is a list of upgrades to VPem1D:</p>
+        <ul>
+            <li><b>Half-space optimization</b>. A best-fitting half-space calculation can be performed prior to an inversion or set as the inversion style itself. Checks for all-zero models will also perform this optimization.</li>
+            <li><b>Alphanumeric line names</b>. Line names in the Geosoft XYZ (<span class="fileext">.xyz</span>) and CSV files may now contain letters as well as numbers.</li>
+            <li><b>Control of simplifying the waveform</b>. You now have more control on the quantity of waveform simplification in the parameter file. This optional feature is added prior to the waveform file name.</li>
+            <li><b>Fixed conversion bug with GeoTEM dimensional dB/dt data</b>. We found an internal conversion bug when dealing with data in units of pV/m<sup>2</sup> and have fixed it. The conversion chart remains the same as in previous versions. This bug did not affect data in ppm.</li>
+            <li><b>Removed limit of number of geologic units</b>. You are now allowed to have more than 99 geologic units.</li>
+            <li><b>Fixed bug in z-column of output statistics files (<span class="fileext">.csv</span>)</b>. The easting and northing of the prisms were correct and now the elevation is too.</li>
+            <li><b>Check for zero conductivity</b>. VPem1D now checks for zero conductivity and will give an error if units are found with conductivity less than 1e-7 mS/m.</li>
+        </ul>
+    </body>
+</html>

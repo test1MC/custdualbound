@@ -1,0 +1,875 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p><a name="ModesIntro">This section</a> describes the eleven modes available in VPutility.  Each mode requires a control file, except for mode 2: exporting a model to Geoscience ANALYST format (<span class="fileext">.geoh5</span>), mode 8: rotating an existing model, and the "info" mode. The control file format is mode dependent, however, the first line is the same for all modes (mode and data type flags). Refer to the <a href="VPutility Ch3 Data layer and Parameter file.htm#VPModelFile">VP model file</a> format section when dealing with modes that create and require VP model files.</p>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">Common control file parameters</h1>
+        <p>The majority of the control-file based uses of VPutility will require two parameters. For brevity, we define those inputs here. These two common control-file parameters are:</p>
+        <ul>
+            <li>dataType flag</li>
+            <li>Model header </li>
+        </ul>
+        <h2 class="NoPageBreak">dataType flag</h2>
+        <p>Every mode's control file contains the <var>dataType</var> flag describing the type of data that are given. You may use the data type that will be used in the VP Suite forward modelling and inversion products. However, the output of VPutility is a VP model file for a specific property and therefore changing the data type flag that is associated with the same physical property will not change the output of the model. The table below lists the available <var>dataType</var> flags:</p>
+        <div class="indent">
+            <p>
+                <img src="../Resources/Images/vpu datatype flag table.png" />
+            </p>
+        </div>
+        <p>This table summarizes the output model type from VPutility given the input data type. Therefore, changing data types that share a common output model type will not change the output.</p>
+        <h2 class="NoPageBreak">Model header</h2>
+        <p>When creating models, a VP model header is sometimes required that will be transferred to the new VP model ASCII file. Therefore, this header is the same format found in the Parameter Block of the VP model file. It is described here for clarity due to its use in VPutility control files. The model header for the n<sup>th</sup> layer is defined as:</p>
+        <p>
+            <img src="../Resources/Images/vpu model header.png" />
+        </p>
+        <table style="width: 100%;">
+            <col style="width: 184px;" />
+            <col style="width: 481px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"><var>dlay<sub>n</sub></var>
+                    </td>
+                    <td style="font-weight: normal;" colspan="2">The physical property of the n<sup>th</sup> unit.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>dmin<sub>n</sub></var>
+                    </td>
+                    <td style="font-weight: normal;" colspan="2">Lower limit of physical property of the n<sup>th</sup> unit.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>dmax<sub>n</sub></var>
+                    </td>
+                    <td style="font-weight: normal;">Upper limit of physical property of the n<sup>th</sup> unit.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>[Q<sub>n</sub>, dec<sub>n</sub>, inc<sub>n</sub>]</var>
+                    </td>
+                    <td style="font-weight: normal;">Koenigsberger ratio (positive) or remanent portion in susceptibility (negative), remanent declination, and remanent inclination for the n<sup>th</sup> susceptibility unit. Only present when <var>dataType = -6, -3, -4, -2, 0, 2</var>. Purely induced susceptibility layers will have <var>Q=0</var>, <var>dec=0</var>, and <var>inc=0</var>.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>label<sub>n</sub></var>
+                    </td>
+                    <td style="font-weight: normal;">Label describing n<sup>th</sup> unit. Use quotes for multiple words (e.g. “My favourite rock”).</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=" ">Mode 1: Create a layered model</h1>
+        <p>Mode 1 will create a layered model. A few points about the layers:</p>
+        <ul>
+            <li>The top of each layer can be defined in a data file or in elevation (m), in the case of a flat layer.</li>
+            <li>Layers are interpreted in the order they are presented in the control file. Deeper layers will have precedence allowing you to create intrusions.</li>
+            <li>There is no maximum number of layers that can be used to create a model.</li>
+        </ul>
+        <h2 class="NoPageBreak NoTOC">Control file format</h2>
+        <p>Below is the control file for creating a layered model. If a data file is given, <code>#dataflag#</code> must precede it. The line column (<code>#line#</code> <var>col</var>) is only valid when the data file is given. This option will use the lines to determine prism widths. Each layer will only be added to a prism once. The layer file and elevation options can be interchangeable from layer to layer. Layer files denoted by <code>#layerfileprop#</code> must have properties in the fourth column and will create latereral heterogeneities throughout the model. Each cell will be the thickness of the unit and contain the interpolated property from the file (not specifically sub-celled in depth). Give the angle (degrees positive clockwise from North) to create a rotated model.</p>
+        <table style="border-left-style: solid;border-left-width: 1px;border-right-style: solid;border-right-width: 1px;border-top-style: solid;border-top-width: 1px;border-bottom-style: solid;border-bottom-width: 1px;width: 759px;">
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td colspan="3">1 dataType [zero_thick] [angle]</td>
+                </tr>
+                <tr>
+                    <td colspan="2">outputFile</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td colspan="3">#datafile# inputFile <b>OR</b> emin, emax, nmin, nmax</td>
+                </tr>
+                <tr>
+                    <td colspan="3">#line# col_num <b>OR</b> de, dn</td>
+                </tr>
+                <tr>
+                    <td colspan="3">nlayer</td>
+                </tr>
+                <tr>
+                    <td colspan="3">#layerfile# fileName <b>OR</b> #layerfileprop# fileName <b>OR</b> elev <b>AND</b> model_header</td>
+                </tr>
+                <tr>
+                    <td>[ehsfix [elevback densback]]</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 100%;">
+            <col style="width: 156px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"><var>dataType </var>
+                    </td>
+                    <td>Defines the data type that determines the output physical property (see <a href="#ModesIntro">Mode section introduction</a>).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>zero_thick</var>
+                    </td>
+                    <td>Optional flag to keep any zero-thickness layers or discard them:
+		<br /><br /><var>zero_thick</var> = 0: Removes any zero thickness layers from the model.<br /><var>zero_thick</var> = 1: Keeps all zero-thickness layers.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>angle</var>
+                    </td>
+                    <td>Optional angle in degrees clockwise from North. The angle must be preceded by the <var>zero_thick</var> flag. The VP model will be rotated when created at the angle using this option. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>outputFile</var>
+                    </td>
+                    <td>File name of the VP model that the program will create.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>inputFile</var>
+                    </td>
+                    <td>Data file that must be preceded by <code>#datafile#</code>. VPutility will find the aerial extremes in this file and use it to create the model boundaries. If a density or susceptibility model is being created, it will add a buffer of 4 prisms. See the <a href="VPutility Ch3 Data layer and Parameter file.htm">Data and Layer</a> section  for details.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>emin</var>
+                    </td>
+                    <td>Minimum easting of rectangular model area. It is the coordinate of the external wall of the most “westerly” boundary prism. It is xcell/2 less than the most “westerly” prism centre.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>emax</var>
+                    </td>
+                    <td>Maximum easting of rectangular model area. It is the coordinate of the external wall of the most “easterly” boundary prism. It is xcell/2 greater than the most “easterly” prism centre. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>nmin</var>
+                    </td>
+                    <td>Minimum northing of rectangular model area. It is the coordinate of the external wall of the most “southerly” boundary prism. It is ycell/2 less than the most “southerly” prism centre.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>nmax</var>
+                    </td>
+                    <td>Maximum northing of rectangular model area.It is the coordinate of the external wall of the most “northerly” boundary prism. It is ycell/2 greater than the most “northerly” prism centre.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>de</var>
+                    </td>
+                    <td>East-West width of model prisms (m). May be given with a data file. Must be given with the model region values.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>dn</var>
+                    </td>
+                    <td>North-South width of model prisms (m). May be given with a data file. Must be given with the model region values.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>col_num</var>
+                    </td>
+                    <td>The column number specifying the lines in the data file <var>inputFile</var>. The lines may be numeric or contain letters although they should not contain spaces. The lines are used to compute the prism widths in the easting and northing directions attempting to put data at the centres of prisms. This option cannot used when <i>emin, emax, nmin, </i>and<i> nmax</i> are given. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>nlayer</var>
+                    </td>
+                    <td>Number of layers in the model. Must be an integer from 1 to 99. The last layer (<var>nlayer</var>) is the VP basement (with its base defined at -25km); <var>nlayer</var> = 1 is equivalent to creating a terrain model or an apparent susceptibility or density model.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>fileName</var>
+                    </td>
+                    <td>Data file containing layer top coordinates preceded by <code>#layerfile#</code> or <code>#layerfileprop#</code>. The latter will read the fourth column of the file and create lateral variations in the unit. The file is the data file format and is not required to be on a grid. The coordinates should be consistent with the model file region. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>Elev</var>
+                    </td>
+                    <td>Elevation (m) top of the flat contact. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>model_header</var>
+                    </td>
+                    <td>Defines the physical property, its bounds (and remanent parameters), and label (see introduction of <a href="#ModesIntro">Modes</a> section)</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>ehsfix</var>
+                    </td>
+                    <td>Optional flag for the enclosing half-space property for inversion (when applicable). Must be present when defining the enclosing half-space top and property.
+	<br /><var>ehsfix</var> = 1: enclosing half-space property fixed during inversion.
+<br /><var>ehsfix</var> = 0: enclosing half-space property variable (optimized) during inversion.
+</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>elevback</var>
+                    </td>
+                    <td>Optional background elevation (m) for top of uniform half-space enclosing model. VPutility will use the average of the top of the VP model if not specified. Must be following <var>ehsfix</var> and preceding <var>densback</var>.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>densback</var>
+                    </td>
+                    <td>Optional Background physical property for uniform half-space enclosing model. VPutility will use the average of the physical properties within the VP model if not specified. Must follow the <var>ehsfix</var> and <var>densback</var> parameters.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="NoPageBreak NoTOC">Example files</h2>
+        <p>The first example is specifically for VPem1D. It takes in a data set in a file along with the line column number (4) and creates a simple three- layered model file with the layer top defined at the topography. VPutility computes the VP model region and the widths of the prisms. The enclosing half-space value is unnecessary for VPem1D, so it is omitted.</p>
+        <p>
+            <img src="../Resources/Images/vpu em1d example.png" />
+        </p>
+        <p>The second example file is a susceptibility model file (with TMI data). The enclosing half-space is fixed, but VPutility will compute its property and top. A data file is given to determine the model region, but the prism widths are set to 50 m x 50 m. The model will have two layers, both purely induced. The first layer could be broken up into heterogeneous cells by calling VPutility again and on the output file model (<span class="filename">two_layer.sus</span>) and using mode 6.</p>
+        <p>
+            <img src="../Resources/Images/vpu two layer.png" />
+        </p>
+        <h1 MadCap:autonum=" ">Mode 2: Export a model to Geoscience ANALYST</h1>
+        <p>The second mode will output a Geoscience ANALYST project file (<span class="fileext">.geoh5</span>) from a VP model ASCII file. This can be done in two ways: via the command line or with a control file format.</p>
+        <p>The first way is to type on the command line: <kbd>VPutility inputFile [outputFile]</kbd>, where <var>inputFile</var> is the name of the VP model file. The <var>outputFile</var> is optional and may or may not have the <span class="fileext">.geoh5</span> extension given. The extension will be added regardless. If <var>outputFile</var> is omitted, the file <span class="filename">InputFile.geoh5</span> is created and any extension of the VP model is removed and replaced.</p>
+        <h2 class="NoPageBreak NoTOC">Control file format</h2>
+        <p>The second method is through a control file. Below is its format:</p>
+        <p>
+            <img src="../Resources/Images/vpu 2 data type.png" />
+        </p>
+        <table style="width: 100%;">
+            <col style="width: 123px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"><var>dataType</var>
+                    </td>
+                    <td>Defines the data type that determines the output physical property (see <a href="#ModesIntro">Modes</a> section introduction).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>inputModel</var>
+                    </td>
+                    <td>The VP model to convert to a Geoscience ANALYST project file.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>outputFile</var>
+                    </td>
+                    <td>Optional name of the output file. It may or may not have the <span class="fileext">.geoh5</span> extension given. The extension will be added regardless.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="NoPageBreak NoTOC">Project file contents</h2>
+        <p>VPutility will create the following items in the project file. They will be found under a Geoscience ANALYST container with the input file name followed by <i>VP model</i>:</p>
+        <ul>
+            <li><b>blockMesh</b>: The VP model is created as a block mesh to view in the 3D Viewport. All nodes are created to be able to view a true representation of the model. If the model consists of more than 15 million cells, then VPutility groups vertical nodes within one metre and tries again. If the model still consists of more than 15 million cells, it will not write out a block mesh. The properties  written out are:<ul><li>Geologic unit: classification data labelled based on the model header</li><li>Conductivity / Susceptibility / Density: VP model physical property values</li><li>Lower bound: lower limit(s) of the physical properties</li><li>Upper bound: upper limit(s) of the physical properties</li><li>[Heterogeneous weights]: Weights used for heterogeneous inversion (if existing)</li></ul></li>
+            <li><b>Surfaces</b>: Surfaces are always exported regardless of the size of model. The nodes that define the surfaces are the centres of the prisms. The surfaces that are exported are:<ul><li>[Label] top: The highest top of each unit in each prism labelled with its name from the model header followed by <code>top</code>. The top of the VP basement is the label appended with <i>VP basement.</i></li><li>Topography: The top of the VP model</li><li>Base of Model: The complete base of the VP model (<var>elmin</var>, usually -25km)</li></ul></li>
+            <li><b>Data</b>: Output if the data block is present in the VP model file. If the data block includes a LINE column at the end, the data will be output as a <i>curve</i>. Otherwise, the data is output as <i>points</i>.<ul><li>Each channel is output as a property of the data.</li><li>EM data are set to multi-component data based on the time channels and transmitters.</li><li>The line column can be alphanumeric.</li></ul></li>
+            <li><b>Geologic constraints</b>: Any geologic constraints in the VP model are written as <i>points</i>. The flag that controls the inversion based on those constraints is output as a property. </li>
+            <div class="note">These points are located at the centre of the prisms that they affect, so when comparing them to drillhole data they will not necessarily line up horizontally.</div>
+        </ul>
+        <h2 class="NoPageBreak NoTOC">Example files</h2>
+        <p>Below are two example control files of exporting <span class="filename">starting_model.sus</span> to the Geoscience ANALYST project <span class="filename">start.geoh5</span>. Both files will create the same output file.</p>
+        <p>
+            <img src="../Resources/Images/vpu two boxes.png" />
+        </p>
+        <div class="tip">You can achieve the same output file  though the command prompt by typing <br /><kbd>VPutility starting_model.sus start</kbd>, which does not require a control file.</div>
+        <h1 MadCap:autonum=" ">Mode 3: Add geometry constraints</h1>
+        <p>Mode 3 adds pierce-point constraints to an already created model. The locations of these constraints are given in the data file format. A few important notes:</p>
+        <ul>
+            <li>Constraints  flagged as observed contacts (<var>iFlag</var> = 1) are snapped to the VP model. VPutility finds the closest layer to the given location.</li>
+            <li>User-specified constraints (<var>iFlag</var> = 2) will be snapped to the closest layer if one is given within one metre of the location. VPutility will insert a layer (of the same unit) if the location is further away than one metre to the closest layer.</li>
+        </ul>
+        <p>The latter point is important as it allows you to add flags within layers that constrain them from moving higher (or lower) than that layer. Effectively, it allows you to set bounds for geometry inversion. Exercise caution with complex models to ensure constraint flags are not added in the wrong unit. (You can view these in Geoscience ANALYST.)</p>
+        <div class="tip">You will need to create your own locations file if you are using drillhole data with classifications. Use the pierce-point locations of the top of the modelled units.</div>
+        <h2 class="NoPageBreak NoTOC">Control file format</h2>
+        <p>Below is the control file format to add geometric constraints to your VP model:</p>
+        <p>
+            <img src="../Resources/Images/vpu mode 3 ctrl file.png" />
+        </p>
+        <table style="width: 100%;">
+            <col style="width: 139px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"><var>dataType</var>
+                    </td>
+                    <td>Defines the data type that determines the output physical property (see <a href="#ModesIntro">Modes</a> section introduction).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>inputModel</var>
+                    </td>
+                    <td>VP model to add the constraints to.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>inputConstraints</var>
+                    </td>
+                    <td>3D locations to constrain the geometry given in the data file format. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>outputModel</var>
+                    </td>
+                    <td>VP model that has the constraints added to <var>inputModel</var>.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>iFlag</var>
+                    </td>
+                    <td>Flag for the inversion interaction:
+<br /><br /><var>iFlag</var> = 1: VP Suite products will set the layer fixed and radially influence the surrounding 
+                  contacts.
+<br /><var>iFlag</var> = 2: VP Suite products will set the layer fixed without influencing surrounding 
+                  contacts.
+</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="NoPageBreak NoTOC">Example file</h2>
+        <p>Below is an example of adding pierce-point constraints based on drillhole data to a gravity gradiometry problem (density VP model). The constraints will influence the inversion results. Their locations are in <span class="filename">constraints.csv</span>.</p>
+        <p>
+            <img src="../Resources/Images/vpu constraints csv.png" />
+        </p>
+        <h1 MadCap:autonum=" ">Mode 4: Constrain geometry of an entire layer</h1>
+        <p>This option is useful when you want to fix an entire layer during inversion. The output file will add a <var>flag</var> = 2 everywhere the layer is present (so it does not influence the inversion). The mode offers the layer to be constrained either throughout the model or in a specified rectangular area.</p>
+        <h2 class="NoPageBreak NoTOC">Control file format</h2>
+        <p>Below is the control file format to add user constraint flags (<var>iflag</var>=2) to a layer:</p>
+        <p>
+            <img src="../Resources/Images/vpu mode 4.png" />
+        </p>
+        <table style="width: 100%;">
+            <col style="width: 135px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"><var>dataType</var>
+                    </td>
+                    <td>Defines the data type that determines the output physical property (see <a href="#ModesIntro">Modes</a> section introduction).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>inputModel</var>
+                    </td>
+                    <td>VP model to add the constraints to.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>outputModel</var>
+                    </td>
+                    <td>VP model that will be written.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>unitIdentifier</var>
+                    </td>
+                    <td>Either
+an integer representing the unit number (i.e., 2 for the second unit, top down), or
+the name (label) of the unit (i.e., Unit_2)
+</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;">[<var>regionBounds</var>]</td>
+                    <td>Optional rectangular region of interest (model coordinates) consisting of four numbers in order:
+<br /><var>emin</var>: minimum easting (west)
+<br /><var>emax</var>: maximum easting (east)
+<br /><var>nmin</var>: minimum northing (south)
+<br /><var>nmax</var>: maximum northing (north) 
+</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="NoPageBreak NoTOC">Example files</h2>
+        <p>Below are two example files. The left constrains the third layer of the input model everywhere. The right example constrains a layer named <i>Shale</i> in a rectangular region of interest (model coordinates).</p>
+        <p>
+            <img src="../Resources/Images/vpu mode 4 2.png" />
+        </p>
+        <h1 MadCap:autonum=" "><a name="Mode5"></a>Mode 5: Add a layer</h1>
+        <p>Mode 5 allows you to add a geologic unit to your model. There are a few caveats when adding a layer:</p>
+        <ul>
+            <li>It will be associated with an existing layer.</li>
+            <li>It can be added at the top or in the middle of the existing layer. An overburden mode is also available.</li>
+            <li>The layer will only be added once per prism at the first instance of the existing layer.</li>
+            <li>A desired thickness (m) is given in the control file.</li>
+            <li>The layer can be added throughout the model or in a specified rectangular area.</li>
+            <li>It will be homogeneous (the heterogeneous mode can be subsequently used).</li>
+        </ul>
+        <p>The thickness of the layer is affected by whether or not you want to add the layer to the bottom or in the middle. A third mode is available to add overburden. The bottom and overburden cases will keep the thickness the minimum of what was specified or the reference unit thickness. The middle layer case will set the thickness to the desired thickness or a third of the thickness of the reference unit - whichever is smaller. This allows you to take care of wedges.</p>
+        <h2 class="NoPageBreak NoTOC">Control file format</h2>
+        <p>
+            <img src="../Resources/Images/vpu mode 5.png" />
+        </p>
+        <table style="width: 100%;">
+            <col style="width: 126px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"><var>dataType</var>
+                    </td>
+                    <td>Defines the data type that determines the output physical property (see <a href="#ModesIntro">Modes</a> section introduction).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>inputModel</var>
+                    </td>
+                    <td>VP model  to add the constraints to.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>outputModel</var>
+                    </td>
+                    <td>VP model that will be written.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>unitIdentifier</var>
+                    </td>
+                    <td>Identifier of the reference layer. Either
+an integer representing the unit number (i.e., 2 for the second unit, top down), or
+the name (label) of the unit (i.e., Unit_2).
+</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>model_header</var>
+                    </td>
+                    <td>Defines the physical property, its bounds (and remanent parameters), and label of the inserted layer (see <a href="#ModesIntro">Modes</a> section introduction).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>thickness</var>
+                    </td>
+                    <td>The thickness (m) of the inserted layer.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>mode</var>
+                    </td>
+                    <td>Integer of how VPutility will insert the layer:
+<br /><var>mode</var>=1: layer is inserted at the top of the reference layer, pushing reference layer 
+down by the thickness.
+<br /><var>mode</var>=2: layer is inserted in the middle of the reference unit. The reference unit will be split in two layers, but the model header will be the same. 
+<br /><var>mode</var>=3: An overburden layer is added. The reference unit identifier must still be present (and valid), but it will be ignored. We suggest using <i>1</i> for the identifier.
+</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;">[<var>regionBounds</var>]</td>
+                    <td>Optional rectangular region of interest (model coordinates) consisting of four numbers in order:
+<br /><var>emin</var>: minimum easting (west)
+<br /><var>emax</var>: maximum easting (east)
+<br /><var>nmin</var>: minimum northing (south)
+<br /><var>nmax</var>: maximum northing (north) </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="NoPageBreak NoTOC">Example files</h2>
+        <p>Below are three example files: one for each mode. With each, we include <br />2D cross-sections of the starting and ending model along with the example control file. The starting model is the same for all examples.</p>
+        <p>The first example is for the first mode using a density model. The new unit is added on top of the third unit. The control file will look like this:</p>
+        <p>
+            <img src="../Resources/Images/vpu ctrl file 5.png" />
+        </p>
+        <p>Below is the result of this control file. At left is the starting model; at right the resulting model, both coloured by unit number. The new layer is added prior to the VP basement unit (which is always the last unit in a VP model file), so in this case the new unit layer becomes 6 and the basement becomes unit 7.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/vpu example img.png" />
+            <br /><span style="font-size: 10pt;">The starting model consists of dipping layers (left).<br />The inserted dipping layer (red) at the top of unit 3 (green) using the first mode (right).</span>
+        </p>
+        <p>The second example will insert a layer into the middle of the deepest non-basement layer (orange): unit 5. The thickness will be changed to 45 m. The mode is set to 2.</p>
+        <p>
+            <img src="../Resources/Images/vpu data type 5.png" />
+        </p>
+        <p>Below is the result of this control file. The layer is 45 m thick until it is more than one third the thickness of unit 5 (orange) near the end of the wedge with the VP basement. The layer thickness is set to one-third the unit thickness until it disappears at the junction of the VP basement and unit 5.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/vpu data type 5 2.png" />
+            <br /><span style="font-size: 10pt;">The starting model consists of dipping layers (left).<br />The inserted dipping layer (red) in the middle of unit 5 (orange) using the second mode (right).</span>
+        </p>
+        <p>The third example adds a single layer of 100 m thick overburden to the model. Although the reference layer is set to unit 1, VPutility inserts the overburden at the top of the VP model. This is mode 3. The control file is displayed below. It is important to note that the overburden is from the top of the model, so it will mimic the topography of the model. In this example, the topography is flat and therefore it is also a flat layer.</p>
+        <p>
+            <img src="../Resources/Images/vpu ctrl 6.png" />
+        </p>
+        <p>The resulting model (below, right) shows the overburden layer added to the model.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/vpu img 4.png" />
+            <br /><span style="font-size: 10pt;">The starting model consists of dipping layers (left).<br />The inserted overburden layer (red) on the top of the VP model using the third mode (right).</span>
+        </p>
+        <h1 MadCap:autonum=" ">Mode 6: Create heterogeneous cells</h1>
+        <p>Layers  created with VPutility are homogeneous. However, with <var>mode</var>=6, you can convert those layers  to heterogeneous units through sub-celling. Modes 6 and 7 are closely tied together. It is important to know that you do not have to call mode 7 if you create heterogeneous cells with mode 6 (it is built in the control file for you). When you create heterogeneous cells, the following is considered:</p>
+        <ul>
+            <li>The cells can either be of constant height or expand in depth (VPutility optimizes the latter so “slivers” of small cells are not created at the end of the unit).</li>
+            <li>More than one unit can be designated to be sub-celled including its expansion or height.</li>
+            <li>Every instance of the unit(s) will be sub-celled.</li>
+            <li>For units that have a thickness of less than 1.5x the desired height, the entire thickness will be converted to a single cell.</li>
+            <li>Weighting is automatically assigned to the cells after creation. The same weighting style will be assigned to all units being sub-celled.</li>
+            <li>A data file is always necessary and used in distance weighting but ignored for depth weighting.</li>
+        </ul>
+        <h2 class="NoPageBreak NoTOC">Control file format</h2>
+        <p>The control file format for creating heterogeneous cells is displayed below. See <a href="#Mode7">Mode 7: Compute weights for heterogeneous cells</a> for details on how the weights are computed.</p>
+        <p>
+            <img src="../Resources/Images/vpu another fucking image.png" />
+        </p>
+        <table style="width: 100%;">
+            <col style="width: 104px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"><var>dataType</var>
+                    </td>
+                    <td>Defines the data type that determines the output physical property (see <a href="#ModesIntro">Modes</a> section introduction).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>inputModel</var>
+                    </td>
+                    <td>VP model  to add the constraints to.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>outputModel</var>
+                    </td>
+                    <td>VP model that will be written.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>dataFile</var>
+                    </td>
+                    <td>A data file (in data file format) that contains the locations of the data to compute full 
+and approximate distance weighting. This line is ignored (but must be present) when using depth weighting.
+</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>nUnit</var>
+                    </td>
+                    <td>Number of homogeneous units to be sub-celled into heterogeneous units.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>mode</var>
+                    </td>
+                    <td>Integer flag to describe the type of weighting computed for the cells.
+<br /><var>mode</var>=1: Depth weighting from top of prism.
+<br /><var>mode</var>=2: Approximate distance weighting.
+<br /><var>mode</var>=3: Full distance weighting.
+</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>unitIdentifier</var>
+                    </td>
+                    <td>Identifier of the  homogeneous layer to sub-cell. Either
+an integer representing the unit number (i.e., 2 for the second unit, top down), or
+the name (label) of the unit <br />(i.e., <i>Unit_2</i>).
+</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>dz</var>
+                    </td>
+                    <td>Nominal height of the i<sup>th</sup> unit’s cells.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>exp_percent</var>
+                    </td>
+                    <td>Optional expansion percentage of i<sup>th</sup> unit’s cells. This value can be given or omitted for any unit. This value is given as a fractional percentage, e.g., 5% expansion = 0.05. </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="NoPageBreak NoTOC">Example file</h2>
+        <p>We use the dipping layer starting model from <a href="#Mode5">Mode 5: Add a layer</a> as the starting model. Unit 2 <MadCap:annotation MadCap:createDate="2018-05-16T21:59:19.1962075-04:00" MadCap:creator="jackg" MadCap:initials="JA" MadCap:comment="?" MadCap:editor="jackg" MadCap:editDate="2018-05-16T21:59:20.6755351-04:00">(cyan)</MadCap:annotation> will be sub-celled into approximate 5 m heights (it's possible to set the expansion to 0.0). Unit 5 (orange) will be sub-celled into 10 m heights and expand at a rate of 3% (at least attempt to be based on the unit thickness). Depth weighting is computed and set in the output VP model file. The data file will be ignored in this case yet must be there. We have denoted this by writing “ignored” on the line. The control file will look like this:</p>
+        <p>
+            <img src="../Resources/Images/vpu something.png" />
+        </p>
+        <p>Below are the results of the sub-celling. The initial model is on the right. The final model is on the left with the sub-cells randomly coloured to make the heterogeneous cells visible. The weighting functions are displayed in the next section.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/vpu another image.png" />
+            <br /><span style="font-size: 10pt;">Model coloured by geologic unit (left).<br />Outline of heterogeneous cell created for the green and red units (right). </span>
+        </p>
+        <h1 MadCap:autonum=" "><a name="Mode7"></a>Mode 7: Compute weights for heterogeneous cells</h1>
+        <p>Weights are important in heterogeneous inversion  because they help offset the geometry of the problem (they are ignored in VPem1D). They attempt to give equal probability to the perturbation of the physical property in any prism or cell, regardless of its distance from data. If you use VPutility to create the heterogeneous cells, the weights are computed along with the cell creation; it is not necessary to call VPutility more than once. </p>
+        <p>VPutility offers three different types of weights to compute for heterogeneous cells: <b>depth</b>, <b>approximate distance</b>, and <b>full distance</b>. Weights range from 0.9999 (practically giving the derivatives no affect) to 0.0001 (giving the derivative the most affect). Each weighting computation uses the data type to specify the power law governing the field decay<br />(e.g., <var>gravity</var> = 2, <var>magnetics</var> = 3).</p>
+        <p><b>Depth weighting</b> computes the weight based on the thickness of the cell compared to the thickness of the prism and its distance from the top of the prism. It is the simplest and fastest computation and does not require a data locations file. Depth weighting is sufficient in situations with little topographic relief and similar vertical cell thicknesses.</p>
+        <p><b>Approximate distance weighting</b> computes the distance of the closest data location to the centre of the cell. The weighting is computed using the data type power and normalized with all other cells. A data locations file is necessary to find the closest data location.</p>
+        <p><b>Full distance weighting</b> computes an approximate sensitivity of the cell to all data locations. The result is normalized with the other heterogeneous cells to obtain a weight from 0.0001 to 0.90. Due to the calculation of the sensitivity for all cells and all data locations, this method requires the most time. However, it may perform best in large topographic relief or scattered data locations. A data locations file is necessary for this method.</p>
+        <h2 class="NoPageBreak NoTOC">Control file format</h2>
+        <p>
+            <img src="../Resources/Images/vpu 7.png" />
+        </p>
+        <p style="text-align: center;">
+            <br />
+        </p>
+        <p style="text-align: center;">&#160;</p>
+        <table style="width: 100%;">
+            <col style="width: 104px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"><var>dataType</var>
+                    </td>
+                    <td>Defines the data type that determines the output physical property (see <a href="#ModesIntro">Modes</a> section introduction).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>inputModel</var>
+                    </td>
+                    <td>VP model to which to compute and add the heterogeneous weights.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>outputModel</var>
+                    </td>
+                    <td>VP model that will be written.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>dataFile</var>
+                    </td>
+                    <td>A data file (in data file format) that contains the locations of the data to compute full 
+and approximate distance weighting. This line is ignored (but must be present) when using depth weighting.
+</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>nUnit</var>
+                    </td>
+                    <td>Number of heterogeneous units to have weights computed and added.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>mode</var>
+                    </td>
+                    <td>Integer flag to describe the type of weighting computed for the cells.
+<br /><var>mode</var>=1: Depth weighting from top of prism.
+<br /><var>mode</var>=2: Approximate distance weighting.
+<br /><var>mode</var>=3: Full distance weighting.
+</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>unitIdentifier</var>
+                    </td>
+                    <td>Identifier of the  heterogeneous unit to compute weights. Either
+an integer representing the unit number (i.e., 2 for the second unit, top down), or
+the name (label) of the unit (i.e., Unit_2).
+</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>dz</var>
+                    </td>
+                    <td>Nominal height of the i<sup>th</sup> unit’s cells.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="NoPageBreak NoTOC">Example files</h2>
+        <p>The example file comes from the previous example of heterogeneous cell creation. In this case, the file is used multiple times, except with a changing of the mode. The main example file for depth weighting is:</p>
+        <p>
+            <img src="../Resources/Images/vpu boxy box.png" />
+        </p>
+        <p>The images below show the output of all the weights given a line of data, represented by black dots. It is important to remember that the top layer and bottom layer may differ due to each unit’s nominal thickness.</p>
+        <p style="text-align: center;">
+            <br />
+        </p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/vpu 4 imgs.png" />
+            <br /><span style="font-size: 10pt;">The locations of the heterogeneous cells for reference (top left). Data locations are shown as black dots.<br />Depth weighting values (top right). Approximate distance weighting (bottom left).  Full distance weighting (bottom right).</span>
+        </p>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">Mode 8: Rotate an existing model</h1>
+        <p>This mode does not use a control file and is done via command line. The inputs are the model file, the declination in degrees clockwise from North, and an optional output file name. The file is rotated with respect to (emin, nmin) of the model (remember, VP uses an ENU coordinate system). Use this feature on the command line by typing:</p>
+        <p><kbd>VPutility --rotate inputModel dec [outputModel]</kbd>
+        </p>
+        <table style="width: 100%;">
+            <col style="width: 135px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"><var>inputModel</var>
+                    </td>
+                    <td>Input VP model to rotate</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>dec</var>
+                    </td>
+                    <td>Rotation declination in degrees from north, positive clockwise.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>outputModel</var>
+                    </td>
+                    <td>Optional name of VP model that will be written. If not given, VPutility will name the output the input model name with <span class="filename">_rotated</span> prior to its suffix. </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="NoPageBreak NoTOC">Example</h2>
+        <p>Here, we show the result of rotating an existing VP model 65 degrees. To create the model, VPutility is called:</p>
+        <p><kbd>VPutility --rotate gravityModel.den 65</kbd>
+        </p>
+        <p>The utility creates the file <span class="filename">gravityModel_rotated.den</span>.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/vputility_mode8.png" style="width: 395px; height: 236px;" />
+            <br /><span style="font-size: 10pt;">Plan-view of the input model (green) and the rotated output model (blue). The model was rotated by 65°.</span>
+        </p>
+        <h1 MadCap:autonum=" ">Mode 9: Transfer geometry</h1>
+        <p>This mode allows you to transfer the existing geometries of a model and define a new physical property type. Any heterogeneous cells will <i>not</i> be kept, however geometric constraints may be included in the new model. The enclosing half-space may be given as input, or the property will be computed as an average of the given new properties. This mode can be helpful in the cooperative inversion of multiple data types by solving for physical properties and geometries of one and then switching to another. </p>
+        <h2 class="NoPageBreak NoTOC">Control file format</h2>
+        <p>
+            <table style="border-left-style: solid;border-left-width: 1px;border-right-style: solid;border-right-width: 1px;border-top-style: solid;border-top-width: 1px;border-bottom-style: solid;border-bottom-width: 1px;width: 362px;">
+                <col />
+                <col />
+                <tbody>
+                    <tr>
+                        <td>9 new_dataType</td>
+                        <td>[keep_constraints]</td>
+                    </tr>
+                    <tr>
+                        <td>inputModel</td>
+                        <td>&#160;</td>
+                    </tr>
+                    <tr>
+                        <td>outputModel</td>
+                        <td>&#160;</td>
+                    </tr>
+                    <tr>
+                        <td>model_header<sub>1</sub></td>
+                        <td>&#160;</td>
+                    </tr>
+                    <tr>
+                        <td>...</td>
+                        <td>&#160;</td>
+                    </tr>
+                    <tr>
+                        <td>model_header<sub>nprop</sub></td>
+                        <td>&#160;</td>
+                    </tr>
+                    <tr>
+                        <td>[denback [elevback]]</td>
+                        <td>&#160;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <p>
+            <table style="width: 100%;">
+                <col style="width: 156px;" />
+                <col />
+                <tbody>
+                    <tr>
+                        <td style="font-weight: bold;"><var>new_dataType</var>
+                        </td>
+                        <td>Defines the data type that determines the output physical property (see <a href="#ModesIntro">Mode section introduction</a>).</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;"><var>keep_constraints</var>
+                        </td>
+                        <td>Optional flag to keep any geometric-constraints or to discard (default) them when writing to the new model file:<br /><br /><var>keep_constraints</var> = 0: Removes all constraints found in inputModel<br /><var>keep_constraints</var> = 1: Keeps all constraints found in inputModel </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;"><var>inputModel</var>
+                        </td>
+                        <td>The VP model to convert to a new VP model with a new data type.</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;"><var>outputFile</var>
+                        </td>
+                        <td>Name of the new output VP model file.</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;"><var>model_header<sub>i</sub></var>
+                        </td>
+                        <td>Defines the physical property header for the i<sup>th</sup> property in the inputModel parameter section. Its bounds (and remanent parameters, if applicable) and label (see introduction of <a href="#ModesIntro">Modes</a> section) should be included. The given model headers must also be the same order as in the inputModel file.</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;"><var>densback</var>
+                        </td>
+                        <td>Optional background physical property for uniform half-space enclosing model. VPutility will use the average of the physical properties within the VP model if not specified.</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;"><var>elevback</var>
+                        </td>
+                        <td>Optional background elevation (in metres) for top of uniform half-space enclosing model. VPutility will use the elevation from the input model if not specified. Must be following <var>densback</var>.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <h2 class="NoPageBreak NoTOC">Example file</h2>
+        <p>The example file will come from the output of the Mode 1 layered model created original for VPem1D. A susceptibility model will be created with susceptible material in the middle layer. The background susceptibility for the enclosing half-space will be set to zero and the top of the half-space will be the same as the input model. Although the labels could change, they are kept consistent. The control file will look like this:</p>
+        <table style="border-left-style: solid;border-left-width: 1px;border-right-style: solid;border-right-width: 1px;border-top-style: solid;border-top-width: 1px;border-bottom-style: solid;border-bottom-width: 1px;width: 362px;">
+            <col />
+            <tbody>
+                <tr>
+                    <td>9 0 0</td>
+                </tr>
+                <tr>
+                    <td>vpem1d_sm.con</td>
+                </tr>
+                <tr>
+                    <td>vpmg_sm.sus</td>
+                </tr>
+                <tr>
+                    <td>0 0 5 0 0 0 "top layer"</td>
+                </tr>
+                <tr>
+                    <td>5 0 1000 0 0 0 middle_layer</td>
+                </tr>
+                <tr>
+                    <td>0 0 1000 0 0 0 basement</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The model <span class="filename">vpmg_sm.sus</span> is then output. The parameter block of the new model contains the same geometry as the conductivity model, but now has a middle layer with 5 milliSI susceptibility. All other parts of the model are set to zero susceptibility.</p>
+        <h1 MadCap:autonum=" ">Mode 10: Remove constraints</h1>
+        <p>This mode can remove constraints from the input file writes the output to a new file. The types of constraints that are removed is dependent upon a flag given in the input control file. </p>
+        <h2 class="NoPageBreak NoTOC">Control file format</h2>
+        <p>
+            <table style="width: 207px;border-left-style: solid;border-left-width: 1px;border-right-style: solid;border-right-width: 1px;border-top-style: solid;border-top-width: 1px;border-bottom-style: solid;border-bottom-width: 1px;">
+                <col />
+                <tbody>
+                    <tr>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>inputModel</td>
+                    </tr>
+                    <tr>
+                        <td>outputModel</td>
+                    </tr>
+                    <tr>
+                        <td>FLAG</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <p>
+            <table style="width: 100%;">
+                <col style="width: 156px;" />
+                <col />
+                <tbody>
+                    <tr>
+                        <td style="font-weight: bold;"><var>inputModel</var>
+                        </td>
+                        <td>The input VP model file</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;"><var>outputFile</var>
+                        </td>
+                        <td>Name of the new output VP model file</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;"><var>FLAG</var>
+                        </td>
+                        <td>
+                            <p>A 3 character flag describing the type of constraints to remove:</p>
+                            <ul>
+                                <li><code>GEO</code>: Pierce-point (geometric)</li>
+                                <li><code>HET</code>: Heterogeneous</li>
+                                <li><code>USR</code>: User-denoted</li>
+                                <li><code>ALL</code>: All constraints</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <h2 class="NoPageBreak NoTOC">Example file</h2>
+        <p>Below is an example that removes all pierce-point constraints from a VP model. These constraints affect geometry inversion and are also affected by the radius of influence. The output is written to the new file <span class="filename">model_no_constraints.den</span>.</p>
+        <table style="border-left-style: solid;border-left-width: 1px;border-right-style: solid;border-right-width: 1px;border-top-style: solid;border-top-width: 1px;border-bottom-style: solid;border-bottom-width: 1px;width: 265px;">
+            <col />
+            <tbody>
+                <tr>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>model.den</td>
+                </tr>
+                <tr>
+                    <td>model_no_constraints.den</td>
+                </tr>
+                <tr>
+                    <td>GEO</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=" ">Information mode</h1>
+        <p>The information or "info" mode does not use a control file and is performed through the command line. It outputs to screen and to the a log file with the input file name and the suffix <span class="fileext">.info</span>. An optional data file can be added to the line, which triggers the computation of derivative matrix sizes for inversion. The matrix sizes will also be computed if there are data at the end of the file. Note that the matrix size is "per component" so when figuring out multi-component data (i.e. gravity gradiometry), multiply the final number by the number of components to invert. Memory requirements of less than 0.005 GB will show up as 0.00 GB.  If inversions cannot be performed (i.e. there are no heterogeneous cells), the size of the matrix output is set to <samp>N/A</samp>. Any data file will take precedence over the data in the VP model file. Use this feature on the command line by typing:<br /></p>
+        <p><kbd>VPutility --info inputModel [dataFile]</kbd>
+        </p>
+        <table style="width: 100%;">
+            <col style="width: 135px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"><var>inputModel</var>
+                    </td>
+                    <td>Input VP model to retrieve informations</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>dataFile</var>
+                    </td>
+                    <td>Optional data file to input (only uses the x, y, z locations). The mode will compute derivative sizes for a single component given the locations in the data file. </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="NoPageBreak NoTOC">Example</h2>
+        <p>The example will use the example from Mode 6 that creates heterogeneous cells. VPutility is run on <span class="filename">hetDippingLayers.den</span> first without a data file (there is no data in the newly created model). If the data file is given, it would have the number of locations found in the file, and the approximate required memory for basement, geometry (not available with the specific model), and heterogeneous inversions. To get the information of the model, type in the command prompt:</p>
+        <p><kbd>VPutility --info hetDippingLayers.den</kbd>
+        </p>
+        <p>The log file <span class="filename">hetDippingLayers.info</span> is created. The screen output mimicking the log file is shown below. </p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/vputility_info1.png" style="width: 396px; height: 383px;" />
+            <br /><span style="font-size: 10pt;">Information for a VP model written to screen using the information mode.<br />The same information is also written to a log file. No data was given in this example.</span>
+        </p>
+    </body>
+</html>

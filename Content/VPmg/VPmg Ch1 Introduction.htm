@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Overview</h1>
+        <p>VPmg is 3D modelling and inversion software for gravity, gravity gradient, total magnetic intensity (TMI), and magnetic gradient and amplitude data that utilizes the VP (vertical prisms) model. The program excels as a platform for creating geologically-constrained potential field inversions, while explicitly honouring drillhole information.</p>
+        <p>VPmg is part of VP Suite—a collection of geophysical modelling and inversion products. The discretization of the earth (required for all programs in the genre) sets the VP Suite apart from other available programs.  The VP model directly links the rock properties and geologic units to the geophysics. The earth is laterally divided equally into vertical prisms (VP), which are then sub-divided in-depth to conform with undulating topographic and geologic layers.</p>
+        <p>Each VP model classifies geology units based on its average physical property, which we call homogeneous units. These units can be further divided into smaller cells to create heterogeneities within the unit. Heterogeneous cells may vary yet stay within the user-specified bounds of its geological unit.</p>
+        <p>This unique structure allows you to explore the geologic possibilities that reproduce the geophysical data, by performing actions such as:</p>
+        <ul>
+            <li>Adjusting homogeneous units</li>
+            <li>Moving geologic horizons (geometry inversion)</li>
+            <li>Solving for heterogeneities (heterogeneous inversion) within a unit or units</li>
+            <li>Finding a variable basement under the units of interest</li>
+        </ul>
+        <MadCap:pageBreak />
+        <p>The illustration below depicts a simple schematic of VP model prisms as an example with two homogeneous geologic units:</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg homogeneous units.png" />
+        </p>
+        <p>Every VP model has a VP basement. It is important to note that this may be the interpreted  geologic "basement". This bottom unit is important because it will continue to the absolute bottom of the model (usually -25 km in elevation). The VP basement stems from the idea that the VP Suite modelling space is implicitly within the earth (see illustration below). This methodology allows you, for example, to recover density instead of density contrast.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg location of VP model.png" />
+        </p>
+        <p>VPmg is run through the command prompt as a standalone executable. A command-line utility (VPutility) is provided to aid in building and constraining VP models. VPmg underlying geological parameterization is capitalized upon when used in conjunction with geological modelling software, such as GOCAD® Mining Suite.</p>
+        <h2>Scope</h2>
+        <p>This guide will help you do the following:</p>
+        <ul>
+            <li>Become proficient with VPmg to implement it to address your geophysical modelling and inversion needs.</li>
+            <li>Gain an understanding of VPmg file formats and features that you can use when confronting everyday geophysical problems.</li>
+        </ul>
+        <h2 class="NoPageBreak">Philosophy</h2>
+        <p>Geophysical inversion is an iterative process: the result should be geologically reasonable and should include as much known information as possible. This drives our philosophy behind VP Suite by fully integrating geology at all phases of geophysical inversion. In general, VP Suite is designed to allow for hypothesis testing (e.g., exploratory modelling) and harmonizing geologic and geophysical data. We emphasize a hands-on iterative approach that validates the model and assumptions at each step. Yet, if nothing is known about the subsurface, an unconstrained inversion is completely reasonable. VPmg ultimately has the tools to hypothesis-test almost every kind of geologic scenario imaginable. The main advantage of using multiple styles of inversion is to enhance the flexibility and control of the process. Below are a few of the common problems VPmg addresses:</p>
+        <ul>
+            <li>Terrain correction modelling</li>
+            <li>System-based modelling and inversion of gravity gradiometry data</li>
+            <li>Incorporating self-demagnetization</li>
+            <li>Dealing with remanent magnetization direction (solving / removing)</li>
+            <li>Depth-to-basement modelling</li>
+            <li>Processing through apparent susceptibility and density models (equivalent sources)</li>
+            <li>Unconstrained inversion</li>
+            <li>Handling regional effects within the area of interest</li>
+            <li>Creating a 3D lithologic body through inversion</li>
+            <li>Surface and borehole modelling and inversion</li>
+        </ul>
+        <h2>Updates from previous version</h2>
+        <p>In version <MadCap:variable name="General.VersionNumber" />, we have further addressed bug fixes that were found. Upgrades and new features have also been introduced. A summary is of changes is:</p>
+        <ul>
+            <li>Introduction of a rotated VP model<ul><li>Model defined by an origin (<var>e0</var>, <var>n0</var>), side lengths, and rotation angle</li><li>Incision is allowed for models that are rotated at the same angle</li></ul></li>
+            <li>RMI checks for Koenigsberger ratio <em>or</em> effective susceptibility. The inversion is output in given units (units can not be mixed)</li>
+            <li>Geosoft XYZ files (<span class="fileext">.xyz</span>) can now be read as data files<ul><li>Line information (if given) is output to end of model</li><li>Lines can be alphanumeric</li><li>Parameter file allows the line column with LINE keyword</li></ul></li>
+            <li>No longer a maximum number of geologic units within a model file</li>
+            <li>Self-demagnetization now uses previous result for initialization of the optimization process</li>
+            <li>Number of RMS decimal places is increased depending on given uncertainty</li>
+            <li>Further robustness has been added to the half-space optimization for susceptibility</li>
+            <li>Updated initialization of susceptibility models for TMG and amplitude inversion. Added forward model after the first step, creating a more robust inversion result.</li>
+            <li>Fixed minor bugs in incision process:<ul><li>partial prism computation in the south-west corner</li><li>fixed check for different VP model floor (<var>elmin</var>) values</li></ul></li>
+            <li>Linear solver updated to a 1-step conjugate gradient</li>
+        </ul>
+        <h1 MadCap:autonum=" ">How to use this guide</h1>
+        <MadCap:snippetBlock src="../Resources/Snippets/StyleConventions.flsnp" />
+    </body>
+</html>

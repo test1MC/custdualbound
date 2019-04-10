@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultConditionTagSet>
+  <ConditionTag
+    Comment=""
+    Name="Online"
+    BackgroundColor="#90ee90" />
+  <ConditionTag
+    Comment=""
+    Name="PDF"
+    BackgroundColor="Red" />
+  <ConditionTag
+    BackgroundColor="#d2691e"
+    Name="NoTranslation"
+    Comment="Use this to skip parts when preparing package for translation" />
+  <ConditionTag
+    BackgroundColor="#0000ff"
+    Name="NoPicture"
+    Comment="Use this to skip pictures" />
+</CatapultConditionTagSet>

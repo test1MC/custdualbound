@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PageStyles xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <Page Name="Copy of First Right" Padding="20px" PageType="firstright" PaddingLeft="1.5in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" BleedLeft="0.25in" Orientation="portrait" BleedBottom="0.25in" BleedTop="0.25in" BleedRight="0.25in" PageSize="Letter" BackgroundType="Solid" BackgroundColor="#007183" BackgroundColorAlt="#c0c0c0" BackgroundImage="../Images/Chapter designcolours2.png">
+        <Frame X="-317px" Y="362px" Width="651px" Height="80px" FlowIndex="6" Flow="body" Right="242px" Bottom="422px" Rotate="-90" Anchors="Left,Top,Bottom" />
+        <Frame Flow="body" Y="75px" Bottom="122px" X="85px" Right="0px" ColumnCount="2" ColumnGap="30px" ColumnDivider="Solid 1px Red" Anchors="Left,Right,Bottom" Width="491px" Height="667px" FlowIndex="7">
+        </Frame>
+    </Page>
+    <Page Name="Copy of Copy of First Right" Padding="20px" PageType="left" PaddingLeft="1.5in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" BleedLeft="0.25in" Orientation="portrait" BleedBottom="0.25in" BleedTop="0.25in" BleedRight="0.25in" PageSize="Letter" BackgroundType="GradientNWSE" BackgroundColor="#007183" BackgroundColorAlt="#c0c0c0" BackgroundImage="../Images/Chapter designcolours2.png">
+        <Frame Flow="body" Y="7px" Bottom="113px" X="-5px" Right="5px" ColumnCount="2" ColumnGap="30px" ColumnDivider="Solid 1px Red" Anchors="Left,Right,Top,Bottom" Width="576px" Height="744px">
+        </Frame>
+    </Page>
+    <Page Name="Copy of Copy of Copy of First Right" Padding="20px" PageType="right" PaddingLeft="1.5in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" BleedLeft="0.25in" Orientation="portrait" BleedBottom="0.25in" BleedTop="0.25in" BleedRight="0.25in" PageSize="Letter" BackgroundType="GradientNWSE" BackgroundColor="#007183" BackgroundColorAlt="#c0c0c0" BackgroundImage="../Images/Chapter designcolours2.png">
+        <Frame Flow="body" Y="7px" Bottom="113px" X="-5px" Right="5px" ColumnCount="2" ColumnGap="30px" ColumnDivider="Solid 1px Red" Anchors="Left,Right,Top,Bottom" Width="576px" Height="744px">
+        </Frame>
+    </Page>
+    <Page Name="Empty Left" Width="7in" Height="9in" Padding="20px" PageSize="Letter" PageType="emptyleft" PaddingLeft="1.5in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" Orientation="portrait" BleedBottom="0.25in" BleedTop="0.25in" BleedRight="0.25in" BleedLeft="0.25in">
+        <Frame Flow="footer" Height="47px" Anchors="Left,Right,Bottom" Right="0px" Bottom="0px" X="0px" Y="817px" Width="576px" TextAlign="left" VerticalAlign="top">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:head>
+                    </xhtml:head>
+                    <xhtml:body>
+                        <xhtml:p xhtml:class="FrameFooterText"><MadCap:variable xhtml:name="System.PageNumber" />
+                        </xhtml:p>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+        <Frame X="137px" Y="406px" Width="303px" Height="52px" Flow="decoration0" Right="136px" Bottom="406px" Anchors="Left,Right,Top,Bottom">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:body>
+                        <xhtml:p xhtml:class="EmptyPageText" xhtml:style="text-align: center;">This page intentionally left blank.</xhtml:p>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+    </Page>
+</PageStyles>

@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Data file</h1>
+        <p>This file contains the observed data. Due to the integer flags in the parameter file, spatial data do not need to be in the first three columns. Comments are denoted with a forward slash (/), back slash (\), or exclamation point (!) as the first character on the line (after white space). These requirements must be followed:</p>
+        <ul>
+            <li>Time channels should be in order from earliest to latest after transmitter shut-off.</li>
+            <li>Denote dummy values for data  -99999, -999.25, or with an asterisk (*).</li>
+            <li>If a header is present, it should be indicated by a comment delimiter.</li>
+            <li>All data columns should be numeric (exception in any dummy data denoted with asterisk).<ul><li>CSV&#160;files may contain alphanumeric line numbers</li></ul></li>
+            <li>Geosoft XYZ files are allowed:<ul><li>Lines will be read from the rows that start with “Line” or “Tie”.</li><li>Line numbers do not necessarily need to be numeric (i.e. 1000E or E1500 will work).</li><li>Set the line column (<var>iline</var>) to 0 in the parameter file.</li></ul></li>
+            <li>White space or commas are acceptable delimiters. </li>
+        </ul>
+        <h1 MadCap:autonum=" ">Waveform file</h1>
+        <p>Arbitrary waveforms can be given through a waveform ASCII file with the maximum current normalized to 1. The file should contain two columns, which you  can separate with spaces or a comma. A minimum of three time values is required. The two columns should contain time (s) and normalized current (A). Comment lines may be given with: <kbd>!</kbd>, <kbd>/</kbd>, or <kbd>\</kbd>. For example:</p>
+        <p>
+            <img src="../Resources/Images/vp1d waveform file.png" />
+        </p>
+        <p>A configuration file from the plate-modelling program Maxwell (<span class="fileext">.mcg</span> file) can also be given for the waveform file. VPem1D will look for the Digital waveform section first. If not defined, it will then look for the Standard waveform. The waveform section (digital) should have this format:</p>
+        <p>
+            <img src="../Resources/Images/vp1d standard waveform.png" />
+        </p>
+        <h1 MadCap:autonum=" ">Control file</h1>
+        <p>The control file is the main file that is input on the command line when running VPem1D. It contains the inversion parameters, parameter file, and input conductivity VP model required for a single VPem1D run. The greyed “ignored” flag means that there must be a value placed there (i.e., 0), but VPem1D ignores it (for backwards compatibility). Anything surrounded by brackets [&#160;] is optional and the brackets should not be given when specified in the file.</p>
+        <p>
+            <img src="../Resources/Images/vpem control file2.png" />
+        </p>
+        <table style="width: 100%;">
+            <col style="width: 135px;" />
+            <col style="width: 568px;" />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"><var>dataType</var> </td>
+                    <td style="font-weight: bold;">Defines the data general type: set <var>dataType</var> = 3.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>iscon</var>
+                    </td>
+                    <td>Integer flag to define whether VPem1D will be allowed to move the top of the model. Must be present, but only used during geometry inversion:
+<br /><br /><var>iscon</var> = 0: The top of the VP model allowed vary during inversion
+<br /><var>iscon</var> = 1 or 2: Top of the VP model is fixed
+</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>sdsurf</var>
+                    </td>
+                    <td>Maximum change (in metres) that top of model can move (if <var>iscon</var>=0).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>inputModel</var>
+                    </td>
+                    <td>A VP model file of conductivity.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>itmax</var>
+                    </td>
+                    <td>Maximum number of iterations for inversion. Set to zero for forward modelling. If <var>itmax</var>=-1, VPem1D converts nominated homogeneous units to heterogeneous units.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>huber</var>
+                    </td>
+                    <td>Huber value. Data residuals above this number (i.e., <var>huber*error</var>) are down-weighted during inversion. For example, if <var>Huber</var>=5, the inversion will down-weight the effect to the data misfit if the difference of predicted and observed data are greater than five standard deviations (5*error). This value is only used during inversion.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>nhet</var>
+                    </td>
+                    <td>Number of homogeneous units to be converted to heterogeneous units when <var>itmax</var>=-1. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>uindex(j),dzsc(j)</var>
+                    </td>
+                    <td><var>uindex(j)</var> is the index of the j<sup>th</sup> homogeneous unit for conversion to a heterogeneous unit, and <var>dzsc(j)</var> is the desired thickness of sub-cells in the corresponding heterogeneous unit.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>delm</var>
+                    </td>
+                    <td>Maximum fractional change of the model per iteration (either conductivity or depth from top of prism.) Value of 0.05 permits a change of at most 5% of the depth of the interface or the conductivity value per iteration.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>parameterFile</var>
+                    </td>
+                    <td>Parameter file that gives the observations file, data type, and transmitter specifications. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>outputModel</var>
+                    </td>
+                    <td>VP model file containing final inverted model (or model used for forward modelling) plus observed, calculated, and background data.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>omp_threads</var>
+                    </td>
+                    <td> Optional number of CPU threads (not cores) to have VPem1D use. The minimum of the given number of threads and the computer maximum number of threads will be used and noted in the log file. </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 class="NoPageBreak" MadCap:autonum=" "><a name="Parameter"></a>Parameter file</h1>
+        <p>The parameter file that gives the observations file, data type, and transmitter specifications. The <a href="VPem1D Ch1 Data types.htm#Datatables">tables</a> given for the data type  will help you to give the right parameters to VPem1D for the data normalization. Anything surrounded by brackets [&#160;] is optional.</p>
+        <p>There are multiple ways to set the vertical data for the transmitter and receiver based on the information provided in the data file. The log file will output how vertical information has been processed. Altimeter data will assume the top of the VP model prism is ground unless reduced level (RL) data is specified. Here is a summary on how to provide vertical information to VPem1D:</p>
+        <ol>
+            <li>Provide transmitter elevation data (<var>itxrl</var>). All other vertical transmitter information is ignored.<ol><li>Receiver elevation is given by altimeter data (<var>iralt</var>) or computed by vertical offset (nominal <var>delz</var> or <var>ioffz</var> if specified per location).</li></ol></li>
+            <li>Provide transmitter altitude data (<var>ialt</var>).<ol><li>Receiver elevation is given by altimeter data (<var>iralt</var>) or computed by vertical offset (nominal <var>delz</var> or <var>ioffz</var> if specified per location).</li></ol></li>
+            <li>Provide only receiver vertical data (altitude or elevations).<ol><li>Transmitter data set by nominal vertical offset <var>delz</var> or per location (<var>ioffz</var>).</li></ol></li>
+            <li>No transmitter or receiver vertical information is provided.<ol><li>Transmitters are set to the nominal survey height (<var>alt0</var>). Receivers are set based on the nominal offset (<var>delz</var>) or per location (<var>ioffz</var>).</li></ol></li>
+        </ol>
+        <p>
+            <img src="../Resources/Images/vp1d param file2.png" />
+        </p>
+        <table style="width: 100%;">
+            <col style="width: 109px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"><var>fileHeader</var>
+                    </td>
+                    <td>Required identifier: either <code>#VPEM#</code> or <code>#VPEM_MULTI#</code> for dual transmitter moments. <code>#VPEM_MULTI#</code> must be given if using the <code>#TXMOMENT#</code> for the second transmitter moment. Otherwise, VPem1D will ignore the second moment.
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>title</var>
+                    </td>
+                    <td>Line to describe the data being modelled or inverted.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>dataFile</var>
+                    </td>
+                    <td>Column ASCII data file. All data columns should be numeric including the line numbers.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>ncolumns</var>
+                    </td>
+                    <td>Total number of columns in the data file (<var>dataFile</var>). </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>iline</var>
+                    </td>
+                    <td>Column number denoting lines (lines must be numeric). </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>ix</var>
+                    </td>
+                    <td>Column number denoting easting (m). The <var>poslag</var> flag controls if these coordinates refer to the transmitter, receiver, or their midpoint.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>iy</var>
+                    </td>
+                    <td>Column number denoting northing (m). The <var>poslag</var> flag controls if these coordinates refer to the transmitter, receiver, or their midpoint.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>ialt</var>
+                    </td>
+                    <td>Column number denoting transmitter altitude (metres above ground). Set to 0 if not provided. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>idati</var>
+                    </td>
+                    <td>Column number denoting initial TEM channel used (channels must be sorted in increasing time delay).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>idatf</var>
+                    </td>
+                    <td>Column number denoting final TEM channel used (channels must be sorted in increasing time delay).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>itxrl</var>
+                    </td>
+                    <td>Column number denoting reduced level (elevation in metres) of transmitter. Set to 0 if not provided. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>ioffx</var>
+                    </td>
+                    <td>Column number denoting the horizontal transmitter-receiver offset (m). Set to 0 if not provided. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>ioffz</var>
+                    </td>
+                    <td>Column number denoting the vertical transmitter-to-receiver offset (m). Data are use/ as: <var>Rx<sub>z</sub> = Tx<sub>z</sub> - ioff<sub>z</sub></var> or <var>Tx<sub>z</sub> = Rx<sub>z</sub> + ioff<sub>z</sub></var>. Set to 0 if not provided. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>iTxCrnt</var>
+                    </td>
+                    <td>Column number denoting transmitter current per location (amps). Only used for central-loop transmitters (<var>istep</var> &lt; 0) and dimensional dB\dt data (<var>idat</var>=-1). Set to 0 if not provided.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>idem</var>
+                    </td>
+                    <td>Column number denoting digital elevation model (m). Altitude data will be adjusted to elevations using this data. Otherwise, the top of the VP model will be considered the ground surface. Set to 0 if not provided. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>iralt</var>
+                    </td>
+                    <td>Column number denoting the receiver altitude (metres above ground). Set to 0 if not provided. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>lmin</var>
+                    </td>
+                    <td>Minimum line number to be used in VPem1D. If using all lines, use the keyword <kbd>ALL</kbd>or <kbd>all</kbd> on the line. If the line is not found, the first line found in the file will be used.<br /></td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>lmax</var>
+                    </td>
+                    <td>Maximum line number to be used in VPem1D. If the given line is not found, the last line in the file will be used. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>xmin</var>
+                    </td>
+                    <td>Minimum easting (m) of the area of interest. Data outside this area is ignored. Data outside of the model region will be ignored by default so this value does specifically not need to be within the model extents (if using all the data within the model region).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>xmax</var>
+                    </td>
+                    <td>Maximum easting (m) of the area of interest. Data outside this area is ignored. Data outside of the model region will be ignored by default so this value does specifically not need to be within the model extents (if using all the data within the model region).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>ymin</var>
+                    </td>
+                    <td>Minimum northing (m) of the area of interest. Data outside this area is ignored. Data outside of the model region will be ignored by default so this value does specifically not need to be within the model extents (if using all the data within the model region).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>ymax</var>
+                    </td>
+                    <td>Maximum northing (m) of the area of interest. Data outside this area is ignored. Data outside of the model region will be ignored by default so this value does specifically not need to be within the model extents (if using all the data within the model region).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>idat</var>
+                    </td>
+                    <td>Flag for style of TEM data (see the <a href="VPem1D Ch1 Data types.htm#DataTypes">Data types section</a> for normalization examples):
+<br /><br /><var>idat</var> =  1: normalized (ppm) dB/dt data
+<br /><var>idat</var> = -1: dimensional dB/dt data
+<br /><var>idat</var> =  2: normalized (ppm) B-field data
+<br /><var>idat</var> = -2: dimensional B-field data
+</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>factor</var>
+                    </td>
+                    <td>Multiplier for data the data.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>nskip</var>
+                    </td>
+                    <td>Number of stations skipped between each station processed (use 0 to process all stations along lines).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>poslag</var>
+                    </td>
+                    <td>Defines the type of horizontal locations in the data file. <br /><br /><var>poslag</var> =  0: Coordinates refer to the midpoint (they are not altered).
+<br /><var>poslag</var> = -1: Coordinates refer to receiver; they are altered to midpoint. <br /><var>poslag</var> =  1: Coordinates refer to transmitter; they are altered to midpoint. 
+</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>txFreq</var>
+                    </td>
+                    <td>Transmitter “fundamental” operating frequency (Hz).  </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>txmoment</var>
+                    </td>
+                    <td>Transmitter moment (<MadCap:equation>${ Am }^{ 2 }$</MadCap:equation>) for dimensional data. Arbitrary for other data so it is recommended to set to 1.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>rxarea</var>
+                    </td>
+                    <td>Effective receiver area (turns <span style="font-size: 16pt;">∙</span> <MadCap:equation>${ m }^{ 2 }$</MadCap:equation> ) for dimensional data. Arbitrary for other data so it is recommended to set to 1.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>pulse</var>
+                    </td>
+                    <td>Duration of maximum transmitter current (μs).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>istep</var>
+                    </td>
+                    <td>Flag for style of transmitter waveform (see <a href="VPem1D Ch1 Data types.htm#DataTypes">Data section</a> for system examples):
+<br /><br /><var>istep</var> =  1: 100% duty cycle waveform (defined by pulse, ron, and roff) for a slingram
+<var>istep</var> =  0: Arbitrary waveform for a slingram
+<br /><var>istep</var> = -1: Bipolar trapezoidal waveform (defined by pulse, ron, and roff) central loops
+<br /><var>istep</var> = -4: Arbitrary waveform for a central loop (SkyTEM)<br /><var>istep</var> = -5: Arbitrary waveform for a central loop (VTEM)
+</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>mode</var>
+                    </td>
+                    <td>Integer flag for receiver type (see <a href="VPem1D Ch1 Data types.htm#DataTypes">Data tables section</a> for system examples) shown in the chart below. This value is used for normalized data (ppm) yet must be given for dimensional data (although it is ignored).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>R</var>
+                    </td>
+                    <td> Central-loop system: Transmitter loop radius (m).<br />Slingram system: Nominal horizontal transmitter-receiver separation (m). A vertical magnetic dipole source is assumed.
+</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>delz</var>
+                    </td>
+                    <td>Vertical transmitter-receiver separation (m). Receiver is assumed to lie below the transmitter (i.e., z+ down for delz). We suggest that if the receiver lies above the transmitter, invoke reciprocity and treat the receiver as the transmitter and vice versa.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>alt0</var>
+                    </td>
+                    <td>Nominal transmitter altitude (m).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>T<sub>n</sub></var>
+                    </td>
+                    <td>Midpoint of off-time (μs after turn-off) for the n<sup>th</sup> TEM channel. There will be<br /> <var>n=idatf-idati + 1</var> records giving the midpoint time, channel widths, and errors. <br /></td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>chw<sub>n</sub></var>
+                    </td>
+                    <td>Window width (μs) for the n<sup>th</sup> TEM channel (must be greater than 0). There will be<br /> <var>n=idatf-idati + 1</var> records giving the midpoint time, channel widths, and errors.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>perc<sub>n</sub></var>
+                    </td>
+                    <td>Uncertainty (%) for n<sup>th</sup> TEM channel. Use -1 to set the percentage to the global percent error, <var>perc0</var>. The uncertainty will be the maximum value of the percentage or floor. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>floor<sub>n</sub></var>
+                    </td>
+                    <td>Minimum allowable uncertainty in data units. Use -1 to set the floor to the global floor, sdmin. The uncertainty will be the maximum value of the percentage or floor. </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>perc0</var>
+                    </td>
+                    <td>Global uncertainty (%) assumed over all decays unless specified by a non-default <var>perc</var>.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>sdmin0</var>
+                    </td>
+                    <td>Global minimum allowable uncertainty in data units assumed over all decays unless specified by a non-default <var>floor</var>.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>ron</var>
+                    </td>
+                    <td>Transmitter ramp turn-on time (μs) for bipolar trapezoidal waveform. Ignored if a waveform file is provided (still must be present). </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>roff</var>
+                    </td>
+                    <td>Transmitter ramp turn-off time (μs) for bipolar trapezoidal waveform. Ignored if a waveform file is provided (still must be present).</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>waveformFile</var>
+                    </td>
+                    <td>Optional file specifying the arbitrary waveform. Must be preceded by the flag <code>#WAVEFORM#</code>. Optionally, an integer value may precede the file name to further simplify the waveform (0.0005x10<sup>input</sup> for tolerance). If the file is not given, the waveform will be generated by <var>ron</var>, <var>roff</var>, and <var>pulse</var>. See the <a href="VPem1D Ch1 Data types.htm#Waveforms">Waveforms section</a> for more details.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>dec</var>
+                    </td>
+                    <td>Optional bearing (degrees) of flight lines clockwise from survey north.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>xref</var>
+                    </td>
+                    <td>Survey easting (m) of the origin of the local coordinate system.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>yref</var>
+                    </td>
+                    <td>Survey northing (m) of the origin of the local coordinate system.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>iadd</var>
+                    </td>
+                    <td>Flag whether to add the reference origin to the data:
+<br /><var>iadd</var> = 1: <var>xref</var> and <var>yref</var> is added to the local easting and northing data, respectively.
+<br /><var>iadd</var> = 0: Survey is assumed to be in the same coordinates as the rotation origin. 
+</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><code>#TXMOMENT#</code>
+                    </td>
+                    <td>Header to specify next set of parameters for the second transmitter moment. Must have the header <code>#VPEM_MULTI#</code> to have VPem1D recognize this header. The parameters that follow this header are in the example file in the <a href="#Parameter">beginning</a> of this section and are defined the same way, but only apply to the second transmitter moment. </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

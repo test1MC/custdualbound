@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/VPem1D Release notes.fltoc"
+  ConditionTagExpression="include[General.PDF or Product.VPem1DOnly] exclude[General.Online or Product.AnalystOnly or Product.IntegratorOnly or Product.MiningSuiteOnly or Product.VPmgOnly or Product.VPutilityOnly] "
+  OutputFile="[%=General.UserGuideTitle%]">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <PDF
+    InitialMagnification="100"
+    CollapsedBookmarks="true"
+    DownsampleImages="true"
+    ShowUsedBookmarks="false"
+    PageMode="UseNone"
+    TitleBar="DocumentTitle" />
+  <Variables>
+    <Variable
+      Name="General/VersionNumber">4.2</Variable>
+    <Variable
+      Name="General/ProductName">[%=General.ProductNameVPem1D%]</Variable>
+    <Variable
+      Name="General/DocumentTypeName">Release notes</Variable>
+    <Variable
+      Name="General/ProductExe">VPem1D</Variable>
+  </Variables>
+  <DocumentProperties
+    Title="[%=General.UserGuideTitle%]"
+    Author="[%=General.CompanyName%]" />
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/VPSuite-pdf.fldes"
+      Publish="true" />
+  </Destinations>
+</CatapultTarget>

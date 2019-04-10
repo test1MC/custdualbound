@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/Geoscience INTEGRATOR User guide Apatit (Russian).fltoc"
+  PatchHeadingLevels="true"
+  ConditionTagExpression="include[General.PDF or Product.IntegratorOnly]exclude[General.Online or Product.AnalystOnly or Product.MiningSuiteOnly or Product.VPem1DOnly or Product.VPmgOnly]"
+  CentralLinkIds=""
+  TargetLanguage="ru-ru"
+  OutputFile="[%=General.ProductName%] [%=General.VersionNumber%] User guide RUS">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="false" />
+  <PDF
+    InitialMagnification="100"
+    DownsampleImages="true"
+    ShowUsedBookmarks="false"
+    TitleBar="DocumentTitle"
+    CollapsedBookmarks="true" />
+  <Glossaries />
+  <Variables>
+    <Variable
+      Name="General/VersionNumber">3.0</Variable>
+    <Variable
+      Name="General/ProductName">[%=General.ProductNameGI%]</Variable>
+  </Variables>
+  <DocumentProperties
+    Title="[%=General.ProductName%] [%=General.VersionNumber%] Документация пользователя"
+    Author="[%=General.CompanyName%]" />
+</CatapultTarget>

@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/Simple.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Add-on Module:&#160;Geoscience ANALYST&#160;Pro <MadCap:keyword term="Geoscience ANALYST Pro" /></h1>
+        <p>To complement the free viewer, Geoscience ANALYST Pro is available as a paid add-on module and is a prerequisite to the other add-on modules, ioGAS Link, Drillhole designer, and Maxwell Link. It offers basic object and data editing and creation functionality among other useful data analysis tools and utilities.</p>
+        <p class="Task">To activate a Geoscience ANALYST&#160;Pro licence:</p>
+        <ol>
+            <li>In the menu bar, open the <b>Add-on Modules</b> menu and click <b>Try/Buy/Activate Module(s)</b>.<br /><br /><img src="../../Resources/Images/en/GA_try_buy_activate_addons.png" /><br /><br /></li>
+            <li>In the <i>Add-on Modules</i> dialogue box, select the <b>Buy</b> button in the Geoscience ANALYST&#160;Pro box. You will be directed to the Mira Geoscience website to complete the transaction. <br /><br /><img src="../../Resources/Images/en/GA new addon mod.png" style="width: 640px; height: 273px;" /><br /></li>
+            <li>Retrieve your licence key that we emailed to you and press <b>Manage</b> to launch the registration wizard. (Follow the same procedure as the free viewer licence activation steps <a href="../1. Welcome/Activating your licence.htm">described earlier</a> in this guide.)</li>
+            <li>Restart Geoscience ANALYST&#160;to access the upgraded functionality of Geoscience ANALYST Pro. </li>
+        </ol>
+        <h2>Transfer data <MadCap:keyword term="Geoscience ANALYST Pro:Transfer data" /><MadCap:keyword term="Transfer" /></h2>
+        <p>
+            <MadCap:keyword term="Object types:Points" />
+            <MadCap:keyword term="Object types:Curves" />
+            <MadCap:keyword term="Object types:Surfaces" />You can transfer BlockModel and 2D grid data to points, curves, and surfaces with Geoscience ANALYST Pro. </p>
+        <p class="Task">To transfer data:</p>
+        <ol>
+            <li>Go to the <b>Utilities</b> menu, then click <b>Transfer Data</b>. </li>
+            <li>Select a BlockModel or 2D grid object in the <b>From</b> drop-down menu that you want to transfer data from.</li>
+            <li>Select a BlockModel or 2D grid object in the <b>To</b> drop-down menu that you want to receive the transferred data from.</li>
+            <li>Click <b>Apply</b> to run the command, <b>Cancel</b> to close the dialogue, or <b>OK</b> to run the command and close the dialogue at once. </li>
+        </ol>
+        <img src="../../Resources/Images/en/transfer data2.png" style="width: 313px; height: 232px;" />
+        <p>You can either transfer all data or select one or several to transfer by clicking to highlight the desired data name in the list. </p>
+        <p>
+            <MadCap:keyword term="Object types:2D Grids" />The utility transfers data value of the closest BlockModel cell centre to the nodes of the destination object. For 2D Grids, both numerical and reference data are vertically transferred to the nodes of the destination object.  In the case of numerical data, a linear interpolation is applied, while in the case of reference data, the transfer is done to the closest node.</p>
+        <p>If data of the same name exists on the destination object, it will be overwritten with the new values.</p>
+        <h2>2D grid designer <MadCap:keyword term="Geoscience ANALYST Pro:2D grid designer" /><MadCap:keyword term="Utilities menu:2D grid designer" /></h2>
+        <p>The 2D grid designer allows you to quickly design and create new horizontal 2D grid objects. Some of its key features are as follows:</p>
+        <ul>
+            <li style="text-align: left;"> A suggestion component that recommends appropriate grid specifications including origin, dimensions, and cell sizes based on the X / Y geometry and data distribution of a selected object.</li>
+            <li style="text-align: left;">
+                <MadCap:keyword term="Viewport" />A rectangle digitizing tool allowing you to draw a non-rotated (with respect to the X and Y directions) outline directly in the Viewport.</li>
+            <li style="text-align: left;">User-control of all values including rotation angle.</li>
+            <li style="text-align: left;">Manual locking of the grid and cell sizes to ensure the U and V entries are identical.</li>
+            <li>A preview of the grid and origin axis will display along with the number of cells that the suggested grid contains. </li>
+        </ul>
+        <img src="../../Resources/Images/en/GA 2d grid designer.png" />
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 141px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Function</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">Object</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Optionally, select the point, curve, surface or 2D grid to base the 2D grid suggestion on.<br /><br /><table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/Simple.css');" class="TableStyle-SimpleWithPadding" cellspacing="0"><col style="width: 42px;" class="TableStyle-SimpleWithPadding-Column-Column1" /><col class="TableStyle-SimpleWithPadding-Column-Column1" /><tbody><tr class="TableStyle-SimpleWithPadding-Body-Row1"><td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1"><img src="../../Resources/Images/selection arrow2.png" /></td><td class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1">Use the <b>Pick origin</b> arrow to click directly on the object in the Viewport.</td></tr><tr class="TableStyle-SimpleWithPadding-Body-Row1"><td class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1"><img src="../../Resources/Images/lightbulb button.png" /></td><td class="TableStyle-SimpleWithPadding-BodyA-Column1-Row1">Press the <b>Suggest dimensions</b> button and the utility will auto-fill the origin, grid, and cell size entries with appropriate values based on the selected object for a grid oriented parallel to the X and Y axis orientations. <br /></td></tr></tbody></table></td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">Origin X / Y / Z</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows"> The Cartesian coordinates of the 2D grid origin. You can enter the values manually, digitize them in the Viewport using the arrow tool, or have them suggested. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">Grid size U / V</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">The length of each of the axes of the grid. <br /><br /><table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/Simple.css');" class="TableStyle-SimpleWithPadding" cellspacing="0"><col style="width: 44px;" class="TableStyle-SimpleWithPadding-Column-Column1" /><col class="TableStyle-SimpleWithPadding-Column-Column1" /><tbody><tr class="TableStyle-SimpleWithPadding-Body-Row1"><td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1"><img src="../../Resources/Images/locking button.png" /></td><td class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1">Click to activate the locking feature. This ensures that any modifications are proportional on both axes. </td></tr><tr class="TableStyle-SimpleWithPadding-Body-Row1"><td class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1"><img src="../../Resources/Images/grid outline button.png" /></td><td class="TableStyle-SimpleWithPadding-BodyA-Column1-Row1">Click to draw a grid manually in the Viewport. </td></tr></tbody></table></td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">Cell size U / V</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">The length of the sides of each cell of the grid. <br /><br /><table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/Simple.css');" class="TableStyle-SimpleWithPadding" cellspacing="0"><col style="width: 46px;" class="TableStyle-SimpleWithPadding-Column-Column1" /><col class="TableStyle-SimpleWithPadding-Column-Column1" /><tbody><tr class="TableStyle-SimpleWithPadding-Body-Row1"><td class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1"><img src="../../Resources/Images/locking button.png" /></td><td class="TableStyle-SimpleWithPadding-BodyA-Column1-Row1">Click to activate the locking feature. This ensures that any modifications are proportional on both axes.</td></tr></tbody></table><br /></td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;"># of cells U / V / Total</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Displays the number of U and V cells as well as the total number of cells. When modified, the totals update in real-time. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">Rotation angle </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Enter a rotation angle to apply to the 2D grid relative to 0 degrees to the north.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">Name</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Enter a name for the new 2D grid object. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">
+                        <img src="../../Resources/Images/en/create button.png" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Click to generate the new 2D grid object.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows" style="font-weight: bold;">
+                        <img src="../../Resources/Images/en/close button.png" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">Click to close the dialogue and hide the preview of the 2D grid.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Minimum curvature gridding <MadCap:keyword term="Geoscience ANALYST Pro:Minimum curvature gridding" /><MadCap:keyword term="Utilities menu:Minimum curvature gridding" /></h2>
+        <p>This utility allows you to interpolate data stored on points, curves, or surfaces in the X / Y plane onto 2D grid objects. The minimum curvature gridding algorithm generates a smooth interpolation while trying to honour the input data set as closely as possible. Several parameters are available to fine-tune the end results, including adjusting the extents of the smoothing, and the extrapolation distance. </p>
+        <img src="../../Resources/Images/en/min curvature gridding.png" />
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 141px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Function</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">2D grid</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Select the 2D grid object to store the results of the interpolation.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">Source object</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Select the points, curves or surface object that has the numerical data to interpolate. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">Property</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Select the data to interpolate. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">Max # of iterations</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Enter the maximum number of iterations to interpolate to reach the convergence limit.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">Convergence limit</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">The level of precision that the algorithm is trying to achieve. If the change in the cell's average value between iterations is less than the convergence limit
+ 
+ then convergence occurs. The algorithm then stops and the new 2D grid property is created.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">Maximum extrapolation distance</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">If the distance from the centre of a grid cell to the closest data point is greater than the distance entered, the cell's data value is assigned a no data value.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">Internal tension</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Move the slider bar to adjust the Internal tension from 0 to 1. The right / left / up / down keyboard arrow buttons will increase or decrease the value by .01. Left clicking on the slider bar will increase or decrease the value by 0.1.<br /><br />Gridding results may have large oscillations and extraneous inflection points, which you can minimize by relaxing the global minimum curvature constraint by adjusting the tension settings. The minimum curvature solution is perturbed locally near constraining data which is beneficial in situations where there are large variations over short distances in the property being interpolated.<br /></td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">Boundary tension</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Set to <b>Zero</b> to turn off, or to <b>One</b> to turn on, which allows you to control singularities in the minimum curvature equations (i.e., when boundary tension = π/4).<br /><br />The minimum curvature solution near grid edges are flattened which is beneficial in situations where the regional field decays as the distance from the source region increases. <br /></td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">Use overrelaxation</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Toggle on to apply an over relaxation value, which accelerates the convergence rate. Generally, as the number of grid cells increase, the over relaxation parameter should also be increased.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows" style="font-weight: bold;">Value</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">Allows you to enter the value when <i>Use overrelaxation</i> is on.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Connecting to Imago (Beta)</h2>
+        <p>Geoscience ANALYST&#160;Pro allows you to connect to the Imago platform for geoscientific imagery. To do so, type <b>I+Left-click</b> on a drillhole to open the Imago portal in your web browser and display data related to the selected drillhole and depth, as long as the data exists in Imago for the selected drillhole name and depth. If not, the Imago web page will report that the data was not found.</p>
+        <div class="note">You will need an Imago account to view the drillhole data. </div>
+        <h2>Creating and editing objects <MadCap:keyword term="Creating objects" /></h2>
+        <p>
+            <MadCap:keyword term="Controls panel" />Having a Geoscience&#160;ANALYST&#160;Pro licence allows you to create points, curves, and surface objects in your workspace through the following digitizing commands found at the bottom of the Controls panel:</p>
+        <img src="../../Resources/Images/en/GA create object commands.png" />
+        <p class="Task">To create objects in Geoscience ANALYST&#160;Pro:</p>
+        <ul>
+            <li><b>Points</b>: Hold down <b>P</b> and left-click in the Viewport to digitize a node. Subsequent clicks will generate more nodes.<br /><br /></li>
+            <li><b>Curves</b>: Hold down <b>O</b> and left-click twice in the Viewport to digitize a segment. Subsequent clicks will generate more segment nodes.<br /><br /></li>
+            <li><b>Surfaces</b>: Hold down <b>S</b> and left-click three times in the Viewport to digitize a triangle. Subsequent clicks will generate more triangle nodes.<br /><br /></li>
+            <li>  Press <b>Esc</b> to exit the edit mode. The <i>Object</i> dialogue box will display where you can name the newly-created object. </li>
+        </ul>
+        <p>The root <i>Workspace</i><MadCap:keyword term="Objects panel" /> folder in the Objects panel will contain the entries for all newly-created objects. You can drag and drop them under other folders if desired.<br /></p>
+        <img src="../../Resources/Images/en/new curve objects panel.png" alt="" title="" style="width: 389px;height: 171px;" />
+        <h3>Object creation: Use cases</h3>
+        <p>This section illustrates three practical applications for object creation as it relates to <a href="#Use_casePoints">points</a>, <a href="#Use_case:_Curves">curves</a>, and <a href="#Use_case:Surfaces">surfaces</a>. </p>
+        <img src="../../Resources/Images/en/object creation on map.png" />
+        <h4>Use case:&#160;Points <a name="Use_casePoints"></a><MadCap:keyword term="Creating objects:Points" /></h4>
+        <p><b>Application</b>: Plotting surface expression of mineral deposits on a GeoImage. </p>
+        <p><b>Method</b>: On the topographic GeoImage object pictured above, the three blue spheres are points objects digitized onto plots designed to indicate where certain mineral deposits were found. </p>
+        <p>Clicking on the GeoImage opens the Visual Parameters, where you can make the GeoImage semi-transparent with the slider to help create visual contrast between the digitized objects and the GeoImage. </p>
+        <p>Holding down <b>P</b> while left-clicking the location of the mineral deposits places a node on the location. The points tools available in the Visual Parameters panel help to customize the appearance of the nodes, allowing them to stand out. </p>
+        <h4>Use case: Curves <a name="Use_case:_Curves"></a><MadCap:keyword term="Creating objects:Curves" /></h4>
+        <p><b>Application</b>: Plotting a geological expression of a fault line.</p>
+        <p><b>Method</b>: On the topographic GeoImage object pictured above, the two red lines are curves built from connected nodes, designed to outline and make more prominent two fault lines that join each other. </p>
+        <p>Clicking on the GeoImage opens the Visual Parameters, where you can make the GeoImage semi-transparent with the slider to help create visual contrast between the digitized objects and the GeoImage. </p>
+        <p>Holding down <b>O</b> while creating nodes by clicking along the original fault line in the GeoImage creates a curve. The curves tools available in the Visual Parameters panel help to customize the appearance of the curves, allowing them to stand out. </p>
+        <h4>Use case:&#160;Surfaces <a name="Use_case:Surfaces"></a><MadCap:keyword term="Creating objects:Surfaces" /></h4>
+        <img src="../../Resources/Images/en/linked drillholes.png" />
+        <p><b>Application</b>
+            <MadCap:keyword term="Object types:Drillholes" />: Showing mineralization trends by Isolating and linking high-grade mineral samples in a set of three drillholes.</p>
+        <p><b>Method</b>: In the image of the Viewport above,  the triangular surface object links isolated high-grade mineral occurrences (purple discs) found in three drillholes within proximity of each other. </p>
+        <ol>
+            <li>Choose a set of drillholes. </li>
+            <li>In the <i><MadCap:keyword term="Data Table" />Data Table</i>, select the <i style="font-weight: bold; font-style: normal;">Interval log</i> tab.</li>
+            <li>Choose a mineral, i.e., <i>ZN_percent</i> and paint it by clicking the <b>paint can</b> button.</li>
+            <li>In the <i>Data Colours</i> panel, use the slider to isolate the Zn occurrence with a value greater than a given percentage. In this case, 10%. </li>
+            <li>Locate the isolated occurrences on the drillhole paths.</li>
+            <li>While holding down <b>S</b>, click on one of the occurrences to digitize a node and segment between the two closest occurrences.</li>
+            <li>Continue to hold <b>S</b> and click on a third occurrence to digitize the surface. </li>
+        </ol>
+        <h3>
+            <MadCap:keyword term="Snapping objects" />Snapping objects</h3>
+        <p>By default, a digitized node will snap to the object in the forefront of the Viewport, or onto the centre plane of the camera when clicking on the background. </p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/Simple.css');" class="TableStyle-SimpleWithPadding" cellspacing="0">
+            <col style="width: 51px;" class="TableStyle-SimpleWithPadding-Column-Column1" />
+            <col class="TableStyle-SimpleWithPadding-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                    <td class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1">
+                        <img src="../../Resources/Images/snap button.png" />
+                    </td>
+                    <td class="TableStyle-SimpleWithPadding-BodyA-Column1-Row1">Click the <b>Snap</b> button to enable object snapping, located at the bottom of the toolbar in the <i>Viewport. </i></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The following describes how snapping functions across commonly used objects in the Viewport:</p>
+        <p><b>Drillholes</b>:</p>
+        <ul>
+            <li> Snap enabled: Nodes snap to lithological contacts.</li>
+            <li>Snap disabled:&#160;Nodes digitize to location where clicked. </li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/en/GA snap objects not st nic.jpg" style="width: 621px;height: 496px;" />
+        </p>
+        <p><b>Surfaces</b>:</p>
+        <ul>
+            <li> Snap enabled: Nodes snap to nodes on mesh.</li>
+            <li>Snap disabled:&#160;Nodes digitize to point where clicked. </li>
+        </ul>
+        <img src="../../Resources/Images/en/surface snap1.png" />
+        <p><b><MadCap:keyword term="Object types:BlockModels" />BlockModels</b>:</p>
+        <ul>
+            <li> Snap enabled: Nodes snap to centre of cell.</li>
+            <li>Snap disabled:&#160;Nodes digitize to location where clicked. </li>
+        </ul>
+        <div class="note">If one of multiple Viewports has snap mode activated, it will be activated across all Viewports.</div>
+        <h3>Editing objects <MadCap:keyword term="Editing files" /></h3>
+        <p>Having a Geoscience&#160;ANALYST&#160;Pro licence allows you to edit points, curves, and surface objects in your workspace. There are four ways to enter edit mode:</p>
+        <ol>
+            <li>Press <b>E</b> and click an object in the <i>Viewport</i>.</li>
+            <li>Right-click an object in the Viewport and select <b>Edit</b> from the contextual menu.</li>
+            <li>Click object's name in the <i>Objects panel</i> and select <b>Edit</b> from the contextual menu.</li>
+            <li>Select an object in the <i>Objects panel</i> and press <b>Ctrl+E</b>. </li>
+        </ol>
+        <p>When in edit mode, the Geoscience ANALYST user interface functions as follows:</p>
+        <ul>
+            <li>The name of an object being edited displays at the top of the Controls panel, along with the editing tools directly underneath the object. (Curves edit menu shown in the image below.)</li>
+            <li>The cursor becomes a cross-hair.</li>
+            <li>The border of the Viewport becomes red.</li>
+            <li>The name of the object being edited and the fact that it is in edit mode displays at the top left of the Viewport.</li>
+        </ul>
+        <img src="../../Resources/Images/en/edit.png" />
+        <p>To exit edit mode, press <b>Esc</b>.</p>
+        <h3 class="NoPageBreak">Editing in the <i>Data Table</i> <MadCap:keyword term="Data Table:Editing" /></h3>
+        <p>In Geoscience ANALYST Pro, you can edit most <i>Data Table</i> entries, with the exception of some geometrical fields including <i>drillhole FROM</i> and <i>TO</i>, <i>BlockModel I/J/K</i>, and linked ioGAS Points x, y, z values (applicable with ioGAS Link). </p>
+        <p> To edit a value in a <i>Data Table</i>, double-click in a cell:</p>
+        <img src="../../Resources/Images/en/Edit data table.png" />
+        <p>In the case of reference data, double-click in the cell to activate the drop-down menu and select the desired class:</p>
+        <img src="../../Resources/Images/en/reference data drop down.png" />
+        <h2>Desurvey drillholes <a name="Desurvey"></a><MadCap:keyword term="Utilities menu:Desurvey drillholes" /><MadCap:keyword term="Geoscience ANALYST Pro:Desurvey drillholes" /></h2>
+        <p>In Geoscience ANALYST Pro, you can desurvey drillhole logs to create a points object. </p>
+        <p class="Task">To desurvey one or several drillholes: </p>
+        <ol>
+            <li>In the <b>Utilities</b> menu, select <b>Desurvey Drillholes</b>.</li>
+            <li>In the <i>Desurvey Drillhole Logs</i> dialogue box, select the drillholes you wish to desurvey. </li>
+            <li>From the <i>Master log</i> drop-down menu, select a value. </li>
+            <li>Select one of the location buttons, either <i>Middle</i>, <i>Top</i>, or <i>Bottom</i> to determine the x, y, z position of the desurveyed points. </li>
+            <li>Click <b>Apply</b> or <b>OK</b> to transfer. Apply will run the command and keep the dialogue open. <b>OK</b> will run the command and close the dialogue in one step.</li>
+        </ol>
+        <img src="../../Resources/Images/en/drillhole desurvey.png" />
+        <h2>Transfer data to drillholes <a name="Transfer"></a><MadCap:keyword term="Geoscience ANALYST Pro:Transfer data to drillholes" /></h2>
+        <p>To complement the Desurvey Drillholes and ioGAS Link add-on module functionality, the ability to transfer data residing on points to drillholes is available in Geoscience ANALYST&#160;Pro. This is particularly useful to re-sample geology logs based on assay data sampling, and allows you to paint by one theme and scale the log cylinders by another.</p>
+        <div class="note">A text or reference field named HOLE_ID must be present on the points that make up the drillhole as it is necessary to find matching drillholes in the workspace. There must also be FROM and TO float fields to transfer the data as interval logs, or a DEPTH float field to transfer the data as point logs, according to the table below:</div>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Source example</th>
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Log type</th>
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">FROM&#160;data</th>
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">TO&#160;data</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Hole_ID data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Drillhole Desurvey</td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Interval logs</td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">FROM (float)</td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">TO float</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Hole_ID (text)</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Drillhole Desurvey</td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Point logs</td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">DEPTH (float)</td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">n/a</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Hole_ID (text)</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">IoGAS live link</td>
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">Interval logs</td>
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">GAS_FROM (float)</td>
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">GAS_TO (float)</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">Hole_ID (reference)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Task">
+            <br />To transfer data to drillholes:</p>
+        <ol>
+            <li>Right-click on a points object that has the required fields, as illustrated in the table above. </li>
+            <li>In the contextual menu, select <i style="font-weight: bold; font-style: normal;">Transfer Data To Drillholes</i>.</li>
+        </ol>
+        <p>All of the data residing on the points will be transferred to drillholes that have the same name as the required HOLE_ID field.</p>
+    </body>
+</html>

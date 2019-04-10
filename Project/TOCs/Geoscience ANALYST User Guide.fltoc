@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1"
+  conditions="">
+  <TocEntry
+    Title="Title"
+    StartSection="false"
+    PageNumber="1"
+    PageNumberReset="reset"
+    PageLayout="/Content/Resources/PageLayouts/TestCoverLayout2.flpgl"
+    StartPageLayout="false"
+    BreakType="chapter"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same"
+    ChapterNumberReset="continue"
+    PageType="title"
+    Link="/Content/Print Only Topics/TitlePageGA.htm"
+    PageNumberFormat="decimal"
+    conditions="General.PDF"></TocEntry>
+  <TocEntry
+    Title="Copyright"
+    Link="/Content/Print Only Topics/Copyright and contact GA-VP.htm"
+    StartPageLayout="true"
+    StartSection="false"
+    BreakType="pageLayout"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/Copyright8_5X11.flpgl"
+    conditions="General.PDF"></TocEntry>
+  <TocEntry
+    Title="PrintTOC"
+    Link="/Content/Print Only Topics/TOC.htm"
+    StartSection="false"
+    PageNumber="1"
+    PageNumberReset="continue"
+    StartChapter="true"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/TOC8_5X11.flpgl"
+    PageType="firstright"
+    PageNumberFormat="lower-roman"
+    StartPageLayout="false"
+    AutoEndOnLeftPage="enabled"
+    conditions="General.PDF"></TocEntry>
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/ANALYST/1. Welcome/Ch1 Divider GA Introduction.htm"
+    BreakType="chapter"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="reset"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GA ChapterDividers8_5X11.flpgl"
+    ChapterNumberReset="reset"
+    ChapterNumber="1"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same"
+    PageNumberFormat="decimal"
+    PageNumber="1">
+    <TocEntry
+      Title="Welcome and Scope"
+      Link="/Content/ANALYST/1. Welcome/Welcome.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/1. Welcome/Activating your licence.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+  </TocEntry>
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/ANALYST/2. The Geoscience ANALYST user interface/Ch 2 Divider GA UserInterface.htm"
+    BreakType="chapter"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GA ChapterDividers8_5X11.flpgl">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/2. The Geoscience ANALYST user interface/The Geoscience ANALYST user interface.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/2. The Geoscience ANALYST user interface/Preferences.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/2. The Geoscience ANALYST user interface/Saving workspaces.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+  </TocEntry>
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/ANALYST/3. Object types/Ch 3 Divider GA Object types.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="chapter"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GA ChapterDividers8_5X11.flpgl">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/3. Object types/Object types.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/3. Object types/Special Objects.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+  </TocEntry>
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/ANALYST/4. Importing and Exporting/Ch 4 Divider GA Importing and exporting objects.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="chapter"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GA ChapterDividers8_5X11.flpgl">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/4. Importing and Exporting/Importing objects into Geoscience ANALYST.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/4. Importing and Exporting/Exporting objects from Geoscience ANALYST.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+  </TocEntry>
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/ANALYST/5. Connecting to Geoscience INTEGRATOR/CH5 Divider Connecting to Geoscience INTEGRATOR.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="chapter"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GA ChapterDividers8_5X11.flpgl">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/5. Connecting to Geoscience INTEGRATOR/Connecting to Geoscience INTEGRATOR.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+  </TocEntry>
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/ANALYST/6. Tools and tips/Ch 6 Divider GA Tools and tips.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="chapter"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GA ChapterDividers8_5X11.flpgl">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/6. Tools and tips/Objects panel - Sorting and filtering.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/6. Tools and tips/Group data.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/6. Tools and tips/Preserving and recalling views.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+  </TocEntry>
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/ANALYST/7. Geoscience ANALYST Pro/Ch 7 Divider GA Geoscience ANALYST Add-on modules.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="chapter"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GA ChapterDividers8_5X11.flpgl">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/7. Geoscience ANALYST Pro/Geoscience ANALYST Pro.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl"></TocEntry>
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/7. Geoscience ANALYST Pro/Geoscience ANALYST Premium add-on module ioGAS.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl"
+      conditions="General.NoTranslation" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/7. Geoscience ANALYST Pro/Geoscience ANALYST Premium add-on module Maxwell Link.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl"
+      conditions="General.NoTranslation" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/ANALYST/7. Geoscience ANALYST Pro/Geoscience ANALYST Premium add-on module drillhole designer.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl"
+      conditions="General.NoTranslation" />
+  </TocEntry>
+  <TocEntry
+    Title="Index"
+    Link="/Content/Print Only Topics/Index.htm"
+    BreakType="pageLayout"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GA Index8_5X11.flpgl"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="continue"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same"
+    ChapterNumberReset="continue"
+    conditions="General.PDF" />
+</CatapultToc>

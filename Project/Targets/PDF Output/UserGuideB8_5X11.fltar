@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="User Guide B—8.5X11"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/Geoscience ANALYST User Guide.fltoc"
+  ConditionTagExpression="include[General.PDF or Product.AnalystOnly]exclude[General.Online or Product.IntegratorOnly or Product.MiningSuiteOnly or Product.VPem1DOnly or Product.VPmgOnly]"
+  PatchHeadingLevels="true"
+  InjectEmptyPages="true"
+  MasterStylesheet="/Content/Resources/Stylesheets/MainStyles.css">
+  <PrintedOutput
+    CollapseMargins="true"
+    ExpandingTextConversion="expand"
+    PopupConversion="remove-body" />
+  <DocumentProperties
+    Title="Geoscience ANALYST User Guide v2"
+    Author="" />
+  <PDF
+    ShowUsedBookmarks="false"
+    InitialMagnification="100"
+    PageLayout="OneColumn"
+    TitleBar="DocumentTitle"
+    CollapsedBookmarks="true"
+    CropAndRegistrationMarks="false"
+    ConvertToCMYK="false" />
+  <Variables>
+    <Variable
+      Name="General/UserGuideTitle">User Guide B</Variable>
+    <Variable
+      Name="General/ProductName">[%=General.ProductNameGA%]</Variable>
+    <Variable
+      Name="General/VersionNumber">2.72</Variable>
+  </Variables>
+</CatapultTarget>

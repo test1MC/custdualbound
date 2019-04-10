@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Data and Layer</h1>
+        <p>The Cartesian coordinate system for VPutility is right-handed following an ENU system in metres. All vertical data is in elevation. The layer and data files follow the same format (and do not need to be evenly gridded). These files are more comprehensive than they are in  other VP Suite programs. Observe the following:</p>
+        <ul>
+            <li>Easting, Northing, Elevation must be the first three numbers.</li>
+            <li>No need for delimiter to signal comment lines.</li>
+            <li>At least three points must be given.</li>
+            <li>Data locations to create an areal region (mode=1) do not need an elevation.</li>
+            <li>Elevations are required for layer files and data used in distance weighting computations.</li>
+        </ul>
+        <p>The general format is:</p>
+        <p>
+            <img src="../Resources/Images/vpu easting northing.png" />
+        </p>
+        <h2 class="NoPageBreak NoTOC">Example files</h2>
+        <p>Below are two example files. Each one consists of four <MadCap:annotation MadCap:createDate="2018-05-17T11:21:41.1165351-04:00" MadCap:creator="jackg" MadCap:initials="JA" MadCap:comment="need to change dummy text in boxes" MadCap:editor="jackg" MadCap:editDate="2018-05-17T11:21:49.2800643-04:00">locations:</MadCap:annotation></p>
+        <p>
+            <img src="../Resources/Images/vpu two boxes.png" />
+        </p>
+        <h1 MadCap:autonum=" "><a name="VPModelFile"></a>VP model file</h1>
+        <MadCap:snippetBlock src="../Resources/Snippets/VP_ModelFileFormat.flsnp" />
+    </body>
+</html>

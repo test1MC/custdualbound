@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="MsWord"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/Geoscience INTEGRATOR User guide - MSWord.fltoc"
+  MasterStylesheet="/Content/Resources/Stylesheets/MainStyles.css"
+  EmbedImages="true"
+  PatchHeadingLevels="true"
+  ConditionTagExpression="include[General.PDF or Product.IntegratorOnly]exclude[General.Online or Product.AnalystOnly or Product.MiningSuiteOnly or Product.VPem1DOnly or Product.VPmgOnly]">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true" />
+  <Variables>
+    <Variable
+      Name="General/supportEmail">integrator@mirageoscience.com</Variable>
+    <Variable
+      Name="General/VersionNumber">3.0</Variable>
+  </Variables>
+</CatapultTarget>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<IgnoredWordsDictionary>
+    <Word Comment="">regions/volumes</Word>
+    <Word Comment="">magnetics</Word>
+    <Word Comment="">VPem1D</Word>
+    <Word Comment="">MULTIPOINT</Word>
+    <Word Comment="">ARCZ</Word>
+    <Word Comment="">POLYGONZ</Word>
+    <Word Comment="">i3</Word>
+    <Word Comment="">i5</Word>
+    <Word Comment="">i7</Word>
+    <Word>VPmg</Word>
+</IgnoredWordsDictionary>

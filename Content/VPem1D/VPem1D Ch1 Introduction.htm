@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Overview</h1>
+        <p>VPem1D is  1D modelling and inversion software for airborne time-domain electromagnetic (TEM) data that utilizes the VP model. The program excels as a platform for creating geologically-constrained 1D TEM inversions.</p>
+        <p>VPem1D is part of VP Suite—a collection of geophysical modelling and inversion products. The discretization of the earth (required for all programs in the genre) sets the VP Suite apart from other available programs.  The VP model directly links the rock properties and geologic units to the geophysics. The earth is laterally divided equally into vertical prisms (VP), which are then sub-divided in depth to conform with undulating topographic and geologic layers.</p>
+        <p>Each VP model classifies geology units based on average physical property, which we call <i>homogeneous units</i>. These units can be further divided into smaller cells to create heterogeneities within the unit. Heterogeneous cells may vary yet stay within the user-specified bounds of its geological unit.</p>
+        <p>This unique structure allows you to explore the geologic possibilities that reproduce the geophysical data, by performing actions such as:</p>
+        <ul>
+            <li>Adjusting homogeneous units</li>
+            <li>Moving geologic horizons (geometry inversion)</li>
+            <li>Solving for heterogeneities (heterogeneous inversion) within a unit or units</li>
+        </ul>
+        <MadCap:pageBreak />
+        <p>The illustration below depicts a simple schematic of VP model prisms as an example with two homogeneous geologic units:</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg homogeneous units.png" />
+        </p>
+        <p>Every VP model has a VP basement. It is important to note that this may be the interpreted  geologic "basement". This bottom unit is important because it will continue to the absolute bottom of the model (usually -25 km in elevation). The VP basement stems from the idea that the VP Suite modelling space is implicitly within the earth (see illustration below). This unit is also highly important because it is fixed in VPem1D.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg location of VP model.png" />
+            <br /><span style="font-size: 10pt;">Illustration of the location of a VP model.</span>
+        </p>
+        <h2>Scope</h2>
+        <p>This guide will help you do the following:</p>
+        <ul>
+            <li>Become proficient with VPem1D to implement it to address your geophysical modelling and inversion needs.</li>
+            <li>Gain an understanding of VPem1D's file formats and features that you can use when confronting everyday geophysical problems.</li>
+        </ul>
+        <p>VPem1D is run through the command prompt as a standalone executable. A command-line utility (VPutility) is also provided to aid in building and constraining VP models. VPem1D’s underlying geological parameterization is capitalized upon when used in conjunction with geological modelling software, such as GOCAD® Mining Suite.</p>
+        <h2 class="NoPageBreak">Philosophy</h2>
+        <p>Geophysical inversion is an iterative process: the result should be geologically reasonable and should include as much known information as possible. This drives our philosophy behind VP Suite by fully integrating geology at all phases of geophysical inversion. In general, VP Suite is designed to allow for hypothesis testing (e.g., exploratory modelling) and harmonizing geologic and geophysical data. We emphasis a hands-on iterative approach that validates the model and assumptions at each step. Yet, if nothing is known about the subsurface, an unconstrained inversion is completely reasonable. The main advantage of using multiple styles of inversion is to enhance the flexibility and control of the process. Vpem1D collectively inverts 1D conductivity models from all the vertical prisms to form a pseudo-3D conductivity block model. This allows VPem1D to perform fast, large-scale unconstrained TEM inversions that are represented in 3D or to perform layer-based inversion, for example in the case of permafrost modelling.</p>
+        <h2>Updates from previous version</h2>
+        <p>We have performed bug fixes (including two notable ones) and introduced new features  in VPem1D version <MadCap:variable name="General.VersionNumber" />. Below is a list of upgrades to VPem1D:</p>
+        <ul>
+            <li>Allows for alphanumeric line names (in both CSV and XYZ files).</li>
+            <li>Can find the best-fitting half-space as a stand-alone feature or before inversion called by:<ul><li>specific inversion type</li><li> half-space flag in model file, or</li><li>an all-zero conductivity model.</li></ul></li>
+            <li>Optional input of the amount of simplification of the waveform.</li>
+            <li>Unlimited number of geologic units.</li>
+            <li>Fixed bug in pT/s or pV/m<sup>2</sup> internal conversion factor.<ul><li>The data table is correct and has not changed.</li></ul></li>
+            <li>Fixed bug with data given in the very last time channel.</li>
+            <li>VPem1D will give an error if a conductivity is less then 1e-7 mS/m.</li>
+            <li>Fixed bug in z-column of output statistics files (<span class="fileext">.csv</span>).</li>
+        </ul>
+        <h1 MadCap:autonum=" ">How to use this guide</h1>
+        <MadCap:snippetBlock src="../Resources/Snippets/StyleConventions.flsnp" />
+    </body>
+</html>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/temp_themes.fltoc"
+  ConditionTagExpression="include[General.PDF] exclude[General.Online] ">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <Glossaries />
+  <PDF
+    ShowUsedBookmarks="false"
+    PageLayout="TwoPageLeft"
+    InitialMagnification="75" />
+</CatapultTarget>

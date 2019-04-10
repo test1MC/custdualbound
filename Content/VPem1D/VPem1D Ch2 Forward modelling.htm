@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Forward modelling</h1>
+        <p>Once you have a VP model and a set of data locations, you can begin to forward model data responses. A normalized data misfit (with the goal being equal to 1) of the given observed data compared to the predicted data is output to screen and the log file. This value can help in hypothesis testing on real data by giving you quantitative information on how well the computed data reproduce the observed data. We recommend you use the full data option (<var>dataOption = 1</var>) when performing forward modelling.</p>
+        <p>The format of the control file for VPem1D does not change from forward modelling to inversion. To forward model data, set up the control file and set the number of iterations to 0 (regardless of style of inversion).</p>
+        <p>The output file is written in the style of the VP model. The observed and predicted data is located in the <a href="VPem1D Ch4 Parameter file.htm#Response">Response section</a> at the end of the VP&#160;model file.  Background data columns are for backwards compatibility, so they are simply set to zero.</p>
+        <div class="tip">The location of the predicted data is based on the receiver, so the exact elevation may not be found in the observed data file for comparison. However, when using the full data option, VPem1D will output the data in the order it is found in the observed data file. This allows you to directly compare (with easting and northing)  the observed data and the predicted data.</div>
+    </body>
+</html>

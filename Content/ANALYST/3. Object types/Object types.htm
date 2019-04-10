@@ -1,0 +1,808 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Overview of object types <MadCap:keyword term="Object types" /></h1>
+        <p>This section presents each object type in detail, focusing on Visual Parameters, auto-generated, and user-defined metadata, and lists the type of import filters for each. </p>
+        <p>Geoscience ANALYST supports the following object types:</p>
+        <ul>
+            <li><a href="#Points">Points </a>
+                <img src="../../Resources/Images/points icon.bmp" style="width: 21px;height: 24px;margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" />
+            </li>
+            <li><a href="#Curves">Curves </a>
+                <img src="../../Resources/Images/curves icon.bmp" style="margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" />
+            </li>
+            <li><a href="#Surfaces">Surfaces </a>
+                <img src="../../Resources/Images/surfaces icon.bmp" style="margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" />
+            </li>
+            <li><a href="#Drillhol">Drillholes </a>
+                <img src="../../Resources/Images/drillholes icon.bmp" style="margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;width: 16px;height: 17px;" />
+            </li>
+            <li><a href="#2D">2D Grids </a>
+                <img src="../../Resources/Images/GA 2D grid icon 16x16.png" />
+            </li>
+            <li><a href="#BlockMod">BlockModels </a>
+                <img src="../../Resources/Images/blockmodel icon.bmp" style="margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" />
+            </li>
+            <li><a href="#GeoImage">GeoImages </a>
+                <img src="../../Resources/Images/geoimages icon.bmp" style="margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" />
+            </li>
+            <li><a href="#Maxwell_Plate_objects">Maxwell plates </a>
+                <img src="../../Resources/Images/maxwell plates icon.png" style="margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" />
+                <MadCap:keyword term="Object types:Maxwell plates" />
+                <MadCap:keyword term="Maxwell plates" />
+            </li>
+        </ul>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">Information from the <i><MadCap:keyword term="Data Table" />Data Table</i></h1>
+        <p>The <i>Data Table</i> contains tabs with information related to the selected object. The presented information is specific to each object type, as detailed further in this chapter. </p>
+        <p>The <i>Data Table</i> also presents a <b>Folder</b> tab, exposing information tied to a container folder, and a <b>Workspace</b> tab with information related to the current open workspace.</p>
+        <h2 class="NoPageBreak">Workspace tab</h2>
+        <p>The <b>Workspace</b> tab is always available in the <i>Data Table</i>, regardless of the object selected, and presents a variety of information relevant to the entire workspace.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 150px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Function</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">Project</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Name of current workspace.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">Contributors</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">List of users who have contributed in the workspace.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">Created</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Creation date of the workspace.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">Last modified</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Date of the last saved version. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;"># Objects</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Total number of objects (including tools) in the workspace. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">Distance unit</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Select between metres or feet.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">Project extents</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">x, y, and z limits of all objects.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows" style="font-weight: bold;">Range</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">Total x, y, and z distance range of all objects. </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="NoPageBreak">Folder tab</h2>
+        <p>The <b>Folder</b> tab presents metadata about the parent folder containing the selected object.  Geoscience ANALYST uses a special folder type for grouping drillholes. The table below demonstrates an example of the summary information available for a generic container folder. As with the <i>Data Table</i> tab for the active workspace, the folder tab for the selected object can be attributed with user-defined comments and files, which you can attach for additional information.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 115px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Function</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">Type</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Selected container.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;"># Objects</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Total number of objects contained in the folder.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">Limits</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">x, y, and z limits of all objects.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows" style="font-weight: bold;">Range</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">Total x, y, and z distance range of all objects contained in the folder.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=" ">Points <img src="../../Resources/Images/points icon.bmp" style="width: 21px;height: 24px;margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" /><a name="Points"></a><MadCap:keyword term="Object types:Points" /><MadCap:keyword term="Points" /></h1>
+        <p>Points are the simplest object type among all the data structures, representing a collection of nodes defined by their x, y, z coordinates. </p>
+        <p>
+            <img src="../../Resources/Images/en/new points image3_GA250.png" />
+        </p>
+        <p>
+            <MadCap:keyword term="Viewport" />Points can store information and data of all types at the object and node levels. The Visual Parameters panel contains the graphical settings designed to allow you to specify how points look in the Viewport as presented in the table below.</p>
+        <p>
+            <img src="../../Resources/Images/points visual params new.bmp" />
+        </p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 172px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Visual Parameter</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Colour</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Corresponds to the colour of unpainted nodes.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Transparency</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Allows you to modify the transparency setting (0 to 1) of the object: 0 is opaque and 1 is fully transparent. The transparency level also applies to painted points.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Node size</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                       For 2D symbols:&#160;Size in pixels of the entire node.
+                        <br /><br />For 3D symbols:&#160;True distance in pixels between the centre and edge of the symbol.
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Node symbol</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">A collection of 2D and 3D shapes you can select to modify the appearance of the nodes.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Scale nodes by data</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Allows you to make the node size proportional to the selected data value. Check the box to scale the nodes by data. Once checked, the data selector box will activate, where you can choose which data you want to scale by.<br />The amplitude is proportional to the index of the colours table. See the <a href="../2. The Geoscience ANALYST user interface/The Geoscience ANALYST user interface.htm#Data_colours_panel">Data Colours</a> panel section for more details. <br /><br /><img src="../../Resources/Images/data colours nodes min max.png" /><br /></td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Data</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows"> The float or integer data used for scaling the size of the nodes.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Scale</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> The scaling factor used to re-size the nodes.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">
+ioGAS graphics</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                        <p> This is an extra option available only for ioGAS Points objects. When toggled on, the ioGAS visual parameter and data colour settings supersede those of Geoscience ANALYST.<br />The nodes inherit the colour, size, shape, and filter attribute settings saved from ioGAS.<br /><MadCap:keyword term="ioGAS panel" />You cannot edit these settings without the ioGAS link module but you can turn them on and off through the ioGAS panel described <a href="../2. The Geoscience ANALYST user interface/The Geoscience ANALYST user interface.htm#ioGAS">here</a>. Toggle off to revert back to Geoscience ANALYST graphic settings.
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows" style="font-weight: bold;"><span style="font-weight: normal; font-style: italic;">Orientation</span>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                        <ul>
+                            <li><i>Data group</i>: Selects an orientation data group (3D vector, Dip direction, and Dip or Strike and dip). You can create, modify, and delete data groups through the <i style="font-weight: bold; font-style: normal;">Utilities / Group Data</i> tool explained <a href="../6. Tools and tips/Group data.htm">here</a>.
+</li>
+                            <li><i>Symbol</i>: Selects the orientation node symbol (2D arrow, 3D arrow or plate).
+</li>
+                            <li><i>Size</i>: Modifies the size of the orientation symbols.
+</li>
+                            <li><i>Scale by length</i>: Available on 3D vector data groups only; click to scale the orientation symbols by length. 
+</li>
+                            <li><i>Max size</i>: Sets the maximum size of the orientation symbols.</li>
+                            <li class="nocap"><i>lin/log</i>: <img src="../../Resources/Images/GA_linlog_icon.png" class="button" /> Toggle between linear and logarithmic scaling of the orientation symbols.
+</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>You can view metadata that corresponds to a selected points object via its associated tab in the <i>Data Table</i>. For example, if the selected points were named <i>geochem</i>, the tab with that title would contain the associated metadata, as demonstrated in the metadata summary in the <i>Data Table</i>.</p>
+        <p>You can create points with the following importers:</p>
+        <ul>
+            <li>AutoCAD (<span class="fileext">.dxf</span>, .dwg)</li>
+            <li><MadCap:variable name="General.Gocad" /> PointsSet (<span class="fileext">.vs</span>)</li>
+            <li>ASCII Column CSV (<span class="fileext">.csv</span>)</li>
+            <li>UBC-GIF Observation (<span class="fileext">.obs</span>)</li>
+            <li>ESRI Shapefile (<span class="fileext">.shp</span>)</li>
+            <li>Datamine binary points (<span class="fileext">.dm</span>)</li>
+            <li>ioGAS (<span class="fileext">.gas</span>): creates a special ioGAS points object with an extra ioGAS graphics option.</li>
+        </ul>
+        <h1 MadCap:autonum=" ">Curves <img src="../../Resources/Images/curves icon.bmp" style="margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" /><a name="Curves"></a><MadCap:keyword term="Object types:Curves" /><MadCap:keyword term="Curves" /></h1>
+        <p>Curves are an object type defined by nodes and the segments linking them. You can associate data of any type to nodes and segments. When you select a curve, the <i>Data Table</i> displays tabs for the object, segment, and nodes of the curve. <br /></p>
+        <p>
+            <img src="../../Resources/Images/en/curve.png" alt="" title="" />
+        </p>
+        <p>
+            <img src="../../Resources/Images/en/Curves visual params new2.png" style="width: 407px;height: 609px;" />
+        </p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 172px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Visual Parameter</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Colour</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Corresponds to the colour of unpainted curves.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Transparency</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Allows you to modify the transparency setting (0 to 1) of the object: 0 is opaque and 1 is fully transparent. The transparency level also applies to painted curves.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Show nodes</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Toggles on and off the display of nodes. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Node size</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Modifies the size of the nodes.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Show segments</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Toggles on and off the display of segments.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Segment thickness</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Modifies the thickness of the segments.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Orientation</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                        <ul>
+                            <li><i>Data group</i>: Selects an orientation data group (3D vector, Dip direction, and Dip or Strike and dip). You can create, modify, and delete data groups through the <b>Utilities / Group Data</b> tool explained in a later section of this document.
+</li>
+                            <li><i>Symbol</i>: Selects the orientation node symbol (2D arrow, 3D arrow or plate).
+</li>
+                            <li><i>Size</i>: Modifies the size of the orientation symbols.
+</li>
+                            <li><i>Scale by length</i>: Available on 3D vector data groups only, click to scale the orientation symbols by length. 
+</li>
+                            <li><i>Max size</i>: Sets the maximum size of the orientation symbols.</li>
+                            <li class="nocap"><i>lin/log</i>: <img src="../../Resources/Images/GA_linlog_icon.png" class="button" /> Toggle between linear and logarithmic scaling of the orientation symbols.
+</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows" style="font-weight: bold;"><span style="font-weight: normal; font-style: italic;">Profiles</span>
+                        <MadCap:keyword term="Profiles" />
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                        <ul>
+                            <li><i>Line selector</i>: This parameter is only available on single curve selections. Selects which lines to display profiles on in the Viewport. If there is no Line ID property set on the curve, the selection is based on the part number referred to as the line ID. 
+Toggle the <b>Unselect/Select all</b> button <img src="../../Resources/Images/GA_checked_on_icon.png" class="button" />/<img src="../../Resources/Images/GA_checked_off_icon.png" class="button" /> to quickly include all or none of the lines in the selection. </li>
+                            <li><i>Arrow</i>: Clicking the arrow icon and a line in the Viewport switches between displaying and hiding the profiles on that line.</li>
+                            <li><i>Add data</i>: Creates a new data selection row. Select grouped or non-grouped data to display
+them as profiles on the curves in the Viewport. The drop-down menu lists grouped data first under the Multi heading, then float and integer data lists
+alphabetically.
+</li>
+                            <li><i>Scale in camera</i>: Enters mode allowing you to adjust profile scales interactively in the Viewport.  Left-click on a profile will rescale all data in a group, while right clicking will rescale only the selected data profile. The selected data will be unselected from the group and a new data row will be added.<br /><div class="tip">To revert back to the group settings, delete the new row or hide the profile and reselect it in the data group selector. Press <b>Esc</b> to exit out of edit mode.</div></li>
+                            <li><b>Show/hide profile</b>:
+Clicking this check box allows you to visualize the profile in the Viewport. To the right, select the profile colour (single data only), and width, using the spin box.<ul><li><b>Toggle pseudo log scale</b>: <img src="../../Resources/Images/GA_linlog_icon.png" class="button" /> Toggle between linear and pseudo log scaling of the profiles (pseudo log uses a arcsinh function and accepts negative values).</li><li><b>Show nodes</b>: <img src="../../Resources/Images/GA_poins_icon.png" class="button" /> Displays nodes on the profiles where the data samples are.</li><li><b>Remove data</b>: <img src="../../Resources/Images/GA_row_delete_icon.png" class="button" />  Removes the profile row.</li></ul></li>
+                            <li><i>Scale</i> (spin box): Maximum distance the profiles will extend from the curve. The scaling depends on the absolute minimum and maximum values in the data type as well as the crossover value.</li>
+                            <li><i>Crossover</i> (spin box): The data value plotted at the curve line (axis datum).</li>
+                            <li><b>Use data type's minimum value as crossover</b>: <img src="../../Resources/Images/GA_lightbulb_icon.png" class="button" /> Automatically readjusts the crossover to be the absolute minimum value of the selected data type. Note that this will include all data in the workspace that is assigned the same data type as the selected data.</li>
+                            <li><i>Angle</i>: The orientation of the profiles with respect to the curve's general direction.</li>
+                        </ul>
+                        <p><i>Multi-element</i> data group specific settings are as follows:</p>
+                        <ul>
+                            <li>Name of multi-element data group: Lists all of the data contained in the data group. Select which ones to display in the Viewport by adding a check-mark in the box beside the data name.</li>
+                            <li><b>Unselect/Select all</b>: <img src="../../Resources/Images/GA_checked_on_icon.png" class="button" />/<img src="../../Resources/Images/GA_checked_off_icon.png" class="button" /> Allows you to quickly select or unselect all data in the group. You can create, modify, and delete data groups through the <b>Utilities / Group Data</b> command.</li>
+                            <li><i><MadCap:keyword term="Colour table" />Colour table</i>: Selects a colour table to colour the profiles. The colours will be linearly interpolated across each data in the order they are listed in the group.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>You can create curves with the following importers:</p>
+        <ul>
+            <li>
+                <MadCap:keyword term="Importing files:AutoCAD files" />AutoCAD (<span class="fileext">.dxf</span>, <span class="fileext">.dwg</span>)</li>
+            <li>
+                <MadCap:keyword term="Importing files:Geosoft databases files" />Geosoft databases and x, y, z files (<span class="fileext">.gdb</span>, <span class="fileext">.xyz</span>)</li>
+            <li><MadCap:variable name="General.Gocad" /> Curve (<span class="fileext">.pl</span>)</li>
+            <li>
+                <MadCap:keyword term="Importing files:ESRI shapefile" />ESRI shapefile (<span class="fileext">.shp</span>)</li>
+            <li>Datamine binary string (<span class="fileext">.dm</span>)</li>
+            <li>
+                <MadCap:keyword term="Importing files:AMIRA TEM files" />AMIRA&#160;TEM (<span class="fileext">.tem</span>)</li>
+        </ul>
+        <h1 MadCap:autonum=" ">Surfaces <img src="../../Resources/Images/surfaces icon.bmp" style="margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" /><MadCap:keyword term="Object types:Surfaces" /><MadCap:keyword term="Surfaces" /><a name="Surfaces"></a></h1>
+        <p>Surfaces are an object type defined by triangles and nodes. You can associate data of any type to the nodes and triangles of a surface. When you select a surface, the <i>Data Table</i> displays tabs for the object, triangles, and nodes.</p>
+        <img src="../../Resources/Images/en/surfaces object GA250.png" />
+        <br />
+        <img src="../../Resources/Images/surface visual params new.bmp" />
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 172px;">
+            </col>
+            <col class="TableStyle-PatternedRows-Column-Regular">
+            </col>
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Visual Parameter</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Colour</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Corresponds to the colour of the unpainted surface.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Transparency</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Allows you to modify the transparency setting (0 to 1) of the object: 0 is opaque and 1 is fully transparent. The transparency level also applies to painted surfaces and draped GeoImages.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Shading</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                       There are two options to modify the appearance of the surface: 
+                        <ul><li>Smooth shading: Interpolates colour changes across triangles to minimize the appearance of the triangle's edges. </li><li>Flat shading uses one colour for each triangle to make edges appear more pronounced.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Show mesh</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">When shown, the mesh represents how the nodes are connected to create triangles.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Mesh colour</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" style="font-weight: normal;">The mesh colour is independent of the surface colour.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Drape GeoImage /<br />2D grid</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows" style="font-weight: normal;">Selecting a GeoImage or 2D grid from the drop-down menu will drape the image or painted 2D&#160;grid data vertically onto the surface. The draped image takes precedence over the painted status of the surface.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows" style="font-weight: bold;"><span style="font-weight: normal; font-style: italic;">Orientation</span>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows" style="font-weight: normal;">
+                        <ul>
+                            <li><i>Data group</i>: Selects an orientation data group (3D vector, Dip direction and dip, or Strike and dip). You can create, modify, and delete data groups through the Utilities-Group Data tool explained in a later section of this document.
+</li>
+                            <li><i>Symbol</i>: Selects the orientation node symbol (2D arrow, 3D arrow or plate).
+</li>
+                            <li><i>Size</i>: Modifies the size of the orientation symbols.
+</li>
+                            <li><i>Scale by length</i>: Available on 3D vector data groups only, click to scale the orientation symbols by length. 
+</li>
+                            <li><i>Max size</i>: Sets the maximum size of the orientation symbols.</li>
+                            <li class="nocap"><i>lin/log</i>: <img src="../../Resources/Images/GA_linlog_icon.png" class="button" /> Toggle between linear and  logarithmic scaling of the orientation symbols.
+</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>You can view metadata that corresponds to selected surfaces via the tab associated with that surface in the <i>Data Table</i>. For example, if the selected surface was <i>5_Orebody</i>, the tab with that title would contain the metadata associated with that surface.</p>
+        <p>You can create surfaces using the following importers:</p>
+        <ul>
+            <li>AutoCAD (<span class="fileext">.dxf</span>, <span class="fileext">.dwg</span>)</li>
+            <li><MadCap:variable name="General.Gocad" /> Surface (<span class="fileext">.ts</span>)</li>
+            <li>UBC-GIF Topography (<span class="fileext">.topo</span>)</li>
+            <li>Datamine binary wire-frame(<span class="fileext">.dm</span>)</li>
+        </ul>
+        <p>&#160;</p>
+        <h1 MadCap:autonum=" ">Drillholes <img src="../../Resources/Images/drillholes icon.bmp" style="margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" /><MadCap:keyword term="Object types:Drillholes" /><MadCap:keyword term="Drillholes" /><a name="Drillhol"></a></h1>
+        <p>Drillholes are an object type that hosts a variety of information expressed as logs of data collected along their 3D paths. In Geoscience ANALYST, drillhole objects can store three types of logs:</p>
+        <ul>
+            <li>Discrete interval logs used to store reference type data (such as rock type) over a depth interval.</li>
+            <li>Numerical interval logs used to store numerical data measured over a depth interval (such as assay data).</li>
+            <li>Point logs hosting numeric values at specific measured depths (such as wireline data).</li>
+        </ul>
+        <img src="../../Resources/Images/en/drillhole viewport GA250.png" style="width: 513px; height: 613px;" />
+        <p>The Visual Parameters panel contains the options to allow you to set the graphical settings to determine the way drillholes look in the Viewport, as presented in the table below.</p>
+        <img src="../../Resources/Images/drillholes visual params new.bmp" />
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 172px;">
+            </col>
+            <col class="TableStyle-PatternedRows-Column-Regular">
+            </col>
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Visual Parameter</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Colour</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Corresponds to the colour of the drillhole trace, name, and collar.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Show collar</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Displays the location of the top of the drillhole with a symbol. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Collar size</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Displays the collar symbol size expressed in pixels.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Collar symbol</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows" style="font-weight: normal;">A collection of shapes you can select to modify the appearance of a drillhole collar.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Show path</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" style="font-weight: normal;">Shows the 3D trajectory of the drillhole.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Path thickness</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows" style="font-weight: normal;">Path thickness expressed in pixels.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Show name</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" style="font-weight: normal;">Displays individual drillhole names in the Viewport.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Font</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows" style="font-weight: normal;">Allows you to modify the font and font size of the drillhole names.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Name location</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" style="font-weight: normal;">Allows you to display the drillhole name either at the top or bottom of the path. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Log symbol</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows" style="font-weight: normal;">Allows you to select whether you want to display the log as a line or a cylinder. Only lines are available for 2D Viewports. When there are several drillholes, displaying as lines improves the performance of 3D rendering. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Painted log radius</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" style="font-weight: normal;">Allows you to modify the drillhole cylinder radius. (Drillhole logs only display as cylinders around the drillhole path.) </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Transparency</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows" style="font-weight: normal;">Allows you to modify the transparency setting (0 to 1) of the painted property: 0 is opaque and 1 is fully transparent. The transparency level does not affect the drillhole path, name, and collar.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Scale painted log</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" style="font-weight: normal;">As with points objects, the painted log cylinder radius can be proportional to float or integer data.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Scale by</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows" style="font-weight: normal;">Float or integer data to scale the painted log by.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Scale</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" style="font-weight: normal;">The scaling factor used to re-size the painted drillhole log.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Orientation</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows" style="font-weight: normal;">
+                        <ul>
+                            <li><u style="font-style: italic; text-decoration: none;">Data group</u>: Selects an orientation data group (3D vector, Dip direction and dip, or Strike and dip). You can create, modify, and delete data groups through the Utilities-Group Data tool explained in a later section of this document.
+</li>
+                            <li><i>Symbol</i>: Selects the orientation node symbol (2D arrow, 3D arrow or plate).
+</li>
+                            <li><i>Size</i>: Modifies the size of the orientation symbols.
+</li>
+                            <li><i>Scale by length</i>: Available on 3D vector data groups only, click to scale the orientation symbols by length. 
+</li>
+                            <li><i>Max size</i>: Sets the maximum size of the orientation symbols.</li>
+                            <li class="nocap"><i>lin/log</i>: <img src="../../Resources/Images/GA_linlog_icon.png" class="button" /> Toggle between linear and logarithmic scaling of the orientation symbols.
+</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows" style="font-weight: bold;"><span style="font-weight: normal; font-style: italic;">Profiles</span>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows" style="font-weight: normal;">
+                        <ul>
+                            <li><i>Add data</i>: Creates a new data selection row. Select grouped or non-grouped data to display
+them as profiles curves in the Viewport. The drop-down menu lists grouped data first under the Multi heading, then float and integer data lists
+alphabetically.
+</li>
+                            <li>Scale in camera: Enters mode allowing you to adjust profile scales interactively in the Viewport. Then:<ul><li>  Left click on a profile along the drillhole path and drag to rescale all data in a group.</li><li>Right click instead to rescale only the selected data profile. The selected data will be unselected from the group and a new data row will be added.<br /><div class="tip">To revert back to the group settings, delete the new row or hide the profile and reselect it in the data group selector. Press the escape button to exit out of edit mode.</div></li></ul></li>
+                            <li><i style="font-weight: bold; font-style: normal;">Show/hide profile</i>:
+Clicking this check box allows you to visualize the profile in the Viewport. To the right, select the profile colour (single data only), and width, using the spin box.<ul><li><b>Toggle pseudo log scale</b>: <img src="../../Resources/Images/GA_linlog_icon.png" class="button" /> Toggle between linear and pseudo log scaling of the profiles (pseudo log uses a arcsinh function and accepts negative values).</li><li><b>Show nodes</b>: <img src="../../Resources/Images/GA_poins_icon.png" class="button" /> Displays nodes on the profiles where the data samples are.</li><li><b>Remove data</b>: <img src="../../Resources/Images/GA_row_delete_icon.png" class="button" /> Removes the profile row.</li></ul></li>
+                            <li><i>Scale</i> (spin box): Maximum distance the profiles will extend from the drillhole. The scaling depends on the absolute minimum and maximum values in the data type as well as the crossover value.</li>
+                            <li><i>Crossover</i> (spin box): The data value plotted along the path (axis datum). </li>
+                            <li><i>Light-bulb</i>: Automatically readjusts the crossover to be the absolute minimum value of the selected data type. Note that this will include all data in the workspace that is assigned the same data type as the selected data.</li>
+                            <li><i>Angle</i>: The orientation of the profiles with respect to the drillhole's general trajectory.</li>
+                        </ul>
+                        <p>For interval data, the profile line connects back to the path when it meets a location with no data value.</p>
+                        <p><i>Multi-element</i> data group specific settings are as follows:</p>
+                        <ul>
+                            <li>Name of multi-element data group. Lists all of the data contained in the data group. Select which ones to display in the Viewport by adding a check-mark in the box beside the data name.</li>
+                            <li><b>Unselect/Select all</b>: <img src="../../Resources/Images/GA_checked_on_icon.png" class="button" />/<img src="../../Resources/Images/GA_checked_off_icon.png" class="button" /> Allows you to quickly select or unselect all data in the group. You can create, modify, and delete data groups through the <b>Utilities / Group Data</b> command.</li>
+                            <li>Colour table: Selects a colour table to colour the profiles. The colours will be linearly interpolated across each data in the order they are listed in the group.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>You can view metadata that corresponds to a selected drillhole via the tab associated with that drillhole in the <i>Data Table</i>. For example, if the selected drillhole was <i>FFS008</i>, the tab with that title would contain the metadata associated with that drillhole, as demonstrated in the metadata summary in the <i>Data Table</i>.</p>
+        <div class="indent">
+            <p>
+                <img src="../../Resources/Images/surveys dialog.png" />
+            </p>
+        </div>
+        <p>You can create drillholes using the following importers:</p>
+        <ul>
+            <li><MadCap:variable name="General.Gocad" /> Well (<span class="fileext">.wl</span>)</li>
+            <li>ASCII&#160;drillholes (<span class="fileext">.csv</span>)</li>
+            <li>Datamine binary drillhole (<span class="fileext">.dm</span>)</li>
+        </ul>
+        <h1 MadCap:autonum=" ">2D Grids <img src="../../Resources/Images/GA 2D grid icon 22x22.png" /><a name="2D"></a><MadCap:keyword term="Object types:2D Grids" /><MadCap:keyword term="2D Grids" /></h1>
+        <p>2D grid objects support regularly gridded data such as geophysical data sets. Cell centres store the data and can hold data of any type. You can deform the grids by data and adjust the elevation of the origin through the Visual Parameters panel options.</p>
+        <img src="../../Resources/Images/en/GA 2d grids viewport GA250.bmp" />
+        <br />
+        <img src="../../Resources/Images/en/GA 2D grids vis params GA250.png" />
+        <br />
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 172px;">
+            </col>
+            <col class="TableStyle-PatternedRows-Column-Regular">
+            </col>
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Visual Parameter</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Colour</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Corresponds to the colour of the cage, grid, and unpainted section.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Transparency</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Transparency setting (0 to 1) of the sections and grid lines: 0 is opaque and 1 is fully transparent. The transparency level does not affect the cage and labels.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Show cage</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Outline of the 2D grid.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Show grid</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Outline of every cell displayed.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Show axis</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" style="font-weight: normal;">Coordinates of the U (red) / V (green) axis are labelled.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Smooth</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows" style="font-weight: normal;">When painted, option to smooth the colours along the cell edges.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Origin elevation</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" style="font-weight: normal;">z location of the 2D grid origin.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;"><span style="font-weight: normal; font-style: italic;">Deform by data &amp; Distance from plane</span>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows" style="font-weight: normal;">Check the box to deform the 2D grid by data. Once checked, the data selector box will activate.<br /><i>Distance from plane</i> controls the extent of deformation measured orthogonal to the axis plane. The amplitude scaling (distance the cell plots away from the plane) is proportional to the index of the colours table. See the <a href="../2. The Geoscience ANALYST user interface/The Geoscience ANALYST user interface.htm#Data_colours_panel">Data Colours</a> panel section for more details. <br /><br /><img src="../../Resources/Images/en/2017-05-05_12-08-38.png" alt="" title="" /></td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows" style="font-weight: bold;"><span style="font-weight: normal; font-style: italic;">Orientation</span>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows" style="font-weight: normal;">
+                        <ul>
+                            <li><i>Data group</i>: Selects an orientation data group (3D vector, Dip direction and dip, or Strike and dip). You can create, modify, and delete data groups through the Utilities-Group Data tool explained in a later section of this document.
+</li>
+                            <li><i>Symbol</i>: Selects the orientation node symbol (2D arrow, 3D arrow or plate).
+</li>
+                            <li><i>Size</i>: Modifies the size of the orientation symbols.
+</li>
+                            <li><i>Scale by length</i>: Available on 3D vector data groups only, click to scale the orientation symbols by length. 
+</li>
+                            <li><i>Max size</i>: Sets the maximum size of the orientation symbols.</li>
+                            <li class="nocap"><i>lin/log</i>: <img src="../../Resources/Images/GA_linlog_icon.png" class="button" /> Toggle between linear and logarithmic scaling of the orientation symbols.
+</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The corresponding <i>Data Table</i> tab provides the following information when a 2D grid is selected:</p>
+        <ul>
+            <li>Object type </li>
+            <li>U&#160;and V cell sizes</li>
+            <li>Number of cells (U x V)</li>
+            <li>Total number of cells, currently painted data if any</li>
+            <li>Object limits </li>
+            <li class="nocap">x, y, z ranges</li>
+        </ul>
+        <p> 2D grid objects are created when importing the following files:</p>
+        <ul>
+            <li>Geosoft Grid files (<span class="fileext">.grd</span>)</li>
+            <li>non-image 2D <MadCap:variable name="General.Gocad" /> Voxet files (<span class="fileext">.vo</span>)</li>
+        </ul>
+        <h1 MadCap:autonum=" ">BlockModels <img src="../../Resources/Images/blockmodel icon.bmp" style="margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" /><a name="BlockMod"></a><MadCap:keyword term="Object types:BlockModels" /><MadCap:keyword term="BlockModels" /></h1>
+        <p>BlockModels represent an important data structure as they are the 3D rectilinear grids used to host resource models, geologic models, and inversion / imaging results. BlockModel cells can hold data of any type. </p>
+        <p>
+            <img src="../../Resources/Images/en/newestblockmodelGA250.png" />
+        </p>
+        <p>
+            <img src="../../Resources/Images/en/block model vis params with orientation.png" />
+        </p>
+        <p>When you select a BlockModel, the following parameters become available in the Visual Parameters panel:</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 172px;">
+            </col>
+            <col class="TableStyle-PatternedRows-Column-Regular">
+            </col>
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Visual Parameter</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;"><span style="font-weight: normal; font-style: italic;">Colour</span>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Corresponds to the colour of the cage, grid, unpainted sections, volumes, and iso-values.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Transparency</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Allows you to modify the transparency setting (0 to 1) of the object: 0 is opaque and 1 is fully transparent. The transparency level does not affect the cage and labels.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Show cage</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Displays the outline of the BlockModel.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Show grid</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Displays a grid on the entire BlockModel, outlining each cell on sections and volumes. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Show axis</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" style="font-weight: normal;">Displays the coordinates of the BlockModel. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Smooth</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows" style="font-weight: normal;">Allows you to smooth edges on painted sections and volumes of a BlockModel by interpolating coloured contours.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Sections</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" style="font-weight: normal;">
+                        Controls the U, V, and Z sections that makeup the BlockModel, providing the following options:
+                        <ul><li><b style="font-style: italic; font-weight: normal;">Check box</b>: Toggle on and off to display and hide section of the BlockModel.  </li><li><i>Number box</i>: Enter precise values to arrange BlockModel sections' linear positioning on its axis.</li><li>Sliders: Slide left and right to adjust BlockModel sections' linear positioning on its axis.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Volume</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows" style="font-weight: normal;">Toggles on and off a cuboidal 3D sub-volume of the BlockModel. You can modify the dimensions and position of the sub-volume by adjusting the U, V, and Z axis sliders, as well as by entering values in the number boxes. <br /></td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;"> Isovalues</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" style="font-weight: normal;">Toggles on and off a 3D sub-volume of a BlockModel that represents the cells corresponding to the shell of a numeric data range for floats and integers and a selected list of classes for reference data. 
+                    <ul><li><b style="font-style: italic; font-weight: normal;">Step</b>: Increment to increase or decrease the iso-values range. </li><li><i>Clip by volume</i>: You can clip the shape of the iso-values by the BlockModel volume.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows" style="font-weight: bold;"><span style="font-weight: normal; font-style: italic;">Orientation</span>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows" style="font-weight: normal;">
+                        <ul>
+                            <li><i>Data group</i>: Selects an orientation data group (3D vector, Dip direction, and Dip or Strike and dip). You can create, modify, and delete data groups through the Utilities-Group Data tool explained in a later section of this document.
+</li>
+                            <li><i>Symbol</i>: Selects the orientation node symbol (2D arrow, 3D arrow or plate).
+</li>
+                            <li><i>Size</i>: Modifies the size of the orientation symbols.
+</li>
+                            <li><i>Scale by length</i>: Available on 3D vector data groups only, click to scale the orientation symbols by length. 
+</li>
+                            <li><i>Max size</i>: Sets the maximum size of the orientation symbols.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>You can view metadata that corresponds to a selected BlockModel via the tab associated with that BlockModel in the <i>Data Table</i>, as demonstrated in the metadata summary in the <i>Data Table</i>.</p>
+        <p>You can create BlockModels by importing the following file types:</p>
+        <ul>
+            <li>3D <MadCap:variable name="General.Gocad" /> Voxet (<span class="fileext">.vo</span>)</li>
+            <li>UBC-GIF Mesh (<span class="fileext">.msh</span>)</li>
+            <li>Datamine binary BlockModel (<span class="fileext">.dm</span>)</li>
+        </ul>
+        <h1 MadCap:autonum=" ">GeoImages <a name="GeoImage"></a><MadCap:keyword term="Object types:GeoImages" /><MadCap:keyword term="GeoImages" /></h1>
+        <p>GeoImages are a simple object type used to house georeferenced images. It is possible to import images that are either horizontal or arbitrarily oriented, such as geological maps and air photos. </p>
+        <p> GeoImages can be rendered transparent through the Visual Parameters panel using the transparency modification slider, where 0 is opaque and 1 is fully transparent and texture draped on surfaces via the surface's visual parameter options.</p>
+        <p>
+            <img src="../../Resources/Images/en/GA new geoimage.png" style="width: 509px;height: 588px;" />
+        </p>
+        <p>
+            <img src="../../Resources/Images/Visual parameters panel_GeoImages.bmp" />
+        </p>
+        <p>You can view metadata that corresponds to a selected GeoImage via the tab associated with that GeoImage in the <i>Data Table</i>, as demonstrated in the metadata summary in the <i>Data Table</i>.</p>
+        <p>You can create GeoImages by importing the following file types:</p>
+        <ul>
+            <li>Image files (<span class="fileext">.jpg</span>, <span class="fileext">.png</span>, etc.)</li>
+            <li><MadCap:variable name="General.Gocad" /> 2D image Voxets (.vo)</li>
+        </ul>
+        <h1 MadCap:autonum=" ">Maxwell plates <a name="Maxwell_Plate_objects"></a><MadCap:keyword term="Maxwell plates" /></h1>
+        <p>Maxwell plates are a simple object type that represent conductors as modelled in EMIT's Maxwell electromagnetic modelling software. The plate objects can contain conductivity, conductivity thickness, cole-cole parameters, and be rendered as thick plates.</p>
+        <img src="../../Resources/Images/en/plate2.PNG" />
+        <p>Maxwell plate objects are created when importing Maxwell plate (<span class="fileext">.pte</span>) files as well as from Maxwell broadcasts with the Maxwell link module.</p>
+        <img src="../../Resources/Images/en/Maxwell plates image2.png" />
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 172px;">
+            </col>
+            <col class="TableStyle-PatternedRows-Column-Regular">
+            </col>
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Visual Parameter</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;"><span style="font-weight: normal;"><i>Colour</i> (plate)</span>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Colour of the plate.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;"><span style="font-weight: normal; font-style: italic;">Transparency</span>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Allows you to modify the transparency setting (0 to 1) of the object: 0 is opaque and 1 is fully transparent. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;"><span style="font-weight: normal;"><i>Colour</i> (Ribbons)</span>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Colour of the internal lines drawn on the plates representing the eddy current flow in the plates. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;"><span style="font-weight: normal; font-style: italic;">Number</span>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Number of ribbons.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;"><span style="font-weight: normal; font-style: italic;">X/Y/Z</span>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" style="font-weight: normal;">Location of the top centre of the plate.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">x, y, z increment</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows" style="font-weight: normal;">Increases / decreases step value of the x, y, z changes when using the up / down arrows.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Dip</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" style="font-weight: normal;">Dip of the plate (0-90 degrees where 0 = horizontal).</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Dip direction</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows" style="font-weight: normal;">Azimuth at which the plate is dipping (0-360 degrees).
+</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Strike length</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" style="font-weight: normal;">Length of the top and bottom edge of the plate.
+</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Depth extent</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows" style="font-weight: normal;">Dip extent or width of the plate edges.
+</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: normal;font-style: italic;">Thickness</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" style="font-weight: normal;">Toggle this option to display the plate with thickness.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: normal;font-style: italic;">Rotation</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows" style="font-weight: normal;">Plunge of the plate (-180 to 180 degrees).
+</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows" style="font-weight: normal;font-style: italic;">Orientation</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows" style="font-weight: normal;">
+                        <ul>
+                            <li><i>Data group</i>: Selects an orientation data group (3D vector, Dip direction, and Dip or Strike and dip). You can create, modify, and delete data groups through the Utilities-Group Data tool explained in a later section of this document.
+</li>
+                            <li><i>Symbol</i>: Selects the orientation node symbol (2D arrow, 3D arrow or plate).
+</li>
+                            <li><i>Size</i>: Modifies the size of the orientation symbols.
+</li>
+                            <li><i>Scale by length</i>: Available on 3D vector data groups only, click to scale the orientation symbols by length. 
+</li>
+                            <li><i>Max size</i>: Sets the maximum size of the orientation symbols.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note">To modify plate geometry and data, you must have the Maxwell link module and Geoscience ANALYST&#160;Pro.</div>
+        <p>You can view metadata corresponding to a Maxwell plate via the <i>Data Table</i> tab associated with that object. </p>
+    </body>
+</html>

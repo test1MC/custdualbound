@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Inversion: Technical background</h1>
+        <p>The aim of inversion is to achieve an acceptable degree of reproducing the observed data, subject to geological and petrophysical constraints on the model. Inversion proceeds iteratively by successive approximation, seeking at each stage parameter changes, <var><MadCap:equation>$\triangle$</MadCap:equation>m</var> (either property or elevation change), which can reduce the data misfits, <var><MadCap:equation>$\triangle$</MadCap:equation>d</var>. The misfit quantifies how well the predicted data reproduce the observed data. The objective at each iteration is to find the smallest parameter perturbation needed to halve the data misfit. A maximum perturbation size is defined in terms of absolute property change, for property inversion, or in terms of fractional change in depth, for geometry inversion. This value is defined in the control file.</p>
+        <p>The solution to the perturbation methods utilizes the Method of Steepest Descent so that no matrix inversions are performed. This makes the inversion process fast because only two matrix-vector multiplications are required at each step. The inversion will continue until the maximum iterations are performed or the data misfit is achieved. Ultimately, since the misfit depends upon the uncertainty given by the user, the model realizing the misfit is data- and user-dependent. The degree of fit is judged per the magnitude of the chi-squared data norm, <i>L2</i>, defined by:</p>
+        <p>
+            <img src="../Resources/Images/VPmg L2 calc.png" />
+        </p>
+        <p>Where:</p>
+        <ul>
+            <li><var>N</var> is the number of data.</li>
+            <li><var>O<sub>i</sub></var> denotes a measured datum.</li>
+            <li><var>P<sub>i</sub></var> denotes the calculated model response.</li>
+            <li><var><MadCap:equation>$\varepsilon$</MadCap:equation><sub>i</sub></var> is the assigned uncertainty (standard deviation) for that datum.</li>
+        </ul>
+        <MadCap:pageBreak />
+        <p>Further, you can specify an optional value (<var>c</var>), that represents the point at which the residual is far enough away (<MadCap:equation>c * $\varepsilon$</MadCap:equation>) that the program will down-weight the contribution using an <i>L1</i> norm rather than an <i>L2</i>. This hybrid data misfit is defined by:</p>
+        <p>
+            <img src="../Resources/Images/VPmg L1norm calc.png" />
+        </p>
+        <p>Where:</p>
+        <ul>
+            <li>
+                <MadCap:equation>${ r }_{ i }$</MadCap:equation> is the i<sup>th</sup> datum residual normalized by its uncertainty (summation in L2 equation, previous).</li>
+            <li><var>c</var> is the Huber constant, given in the control file.</li>
+        </ul>
+        <p>If the predicted data reproduce the observed within the given uncertainty controlled by a normal random distribution with zero mean, the data misfit will equal its expected value of 1. The measure of fit is dimensionless due to the normalization with respect to the uncertainty.</p>
+        <p>The inversion will terminate when the acceptable level of misfit is achieved (convergence), the maximum number of iterations is completed, or the misfit does not decrease on successive iterations (stalled inversion). A stalled inversion is a common condition; it occurs when the imposed constraints preclude convergence.</p>
+        <h1 MadCap:autonum=" ">Inversion styles</h1>
+        <p>There are three inversion styles that VPem1D performs, based on the components of the prism that are being optimized:</p>
+        <ul>
+            <li><a href="#HomogeneousInv">Homogeneous (i.e., bulk) property</a>
+            </li>
+            <li><a href="#GeometryInv">Geometry</a>
+            </li>
+            <li><a href="#HeterogeneousInv">Heterogeneous property</a>
+            </li>
+            <li class="dropdownlist">Half-space inversion</li>
+        </ul>
+        <p>The difference in input between the inversions is the <var>ILD</var> flag that denotes which kind of inversion is taking place.</p>
+        <p>For all property-based inversions, VPem1D permits geologic units to be active (their properties will be perturbed by the inversion) or inactive. Units are recognized as active if their lower and upper bounds differ. The inactive units (lower equals upper bounds) do <i>not</i> have to be within their bounds. However, if an active unit is out of its bounds, the program will stop and an error message will appear.</p>
+        <p>Below is an illustration of a model to help you understand inversion styles. The model has two layers (Units A and B) above the VP basement (Unit C).</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg inversion 1.png" />
+        </p>
+        <h2 class="NoPageBreak"><a name="HomogeneousInv"></a>Homogeneous property </h2>
+        <p>The inversion of homogeneous unit properties is the fastest method because the maximum number of “active” parameters is the number of geological units in the model, even if the model is large and complex. You will invert for conductivity (milliS/m) in the VP model file). Units that are not heterogeneous and are active are candidates for homogeneous inversion.</p>
+        <p>In short:</p>
+        <ul>
+            <li>Homogeneous unit properties may vary among units, but are constant within each unit.</li>
+            <li>Contact elevations and heterogeneous cells are fixed.</li>
+            <li>The maximum change of property (in percent) given in the control file is implemented.</li>
+            <li>VP basement is always fixed and must be given a positive conductivity.</li>
+            <li>Inversion flag (<var>ILD</var>) = 1.</li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPem1D hetero inv.png" />
+            <br /><span class="SmallerCaption">The top two units are active for the homogeneous inversion. The VP basement is always fixed.</span>
+        </p>
+        <h2 class="NoPageBreak"><a name="GeometryInv"></a>Geometry </h2>
+        <p>Geometry inversion moves the contacts between homogenous units. VPem1D contacts are all bounded by the ground surface at the top. Geologic contacts may be:</p>
+        <ul>
+            <li>Free to move during inversion</li>
+            <li>Fixed where pierced by a drillhole or artificially specified</li>
+            <li>Bounded by any fixed surface above or below</li>
+        </ul>
+        <p>Topography (i.e., the top of the prism) is considered fixed. A brief description of geometry inversion:</p>
+        <ul>
+            <li>Only contacts between homogeneous units are active.</li>
+            <li>All physical properties are fixed in the model.</li>
+            <li>Inversion flag (ILD) = 2.</li>
+        </ul>
+        <p>For this inversion, a maximum percentage (i.e., 0.05 for 5%) with respect to depth from top of the model is given in the control file. In some cases, small thicknesses at shallow depths will not allow a change due to the nature of taking a percentage of an already small number. An integer value can be added to the fractional percentage to add the shift of the weighting in these cases. For example, using 20.05 would add 20m to weights where 5% of depth were less than 20m. This option gives the layer a chance to move rather than be weighted to practically zero. </p>
+        <p style="page-break-after: avoid;">Deeper units may push other units up to the topography. The units between the top and the once deeper unit are zero-thickness units. This allows outcropping to happen if necessary.</p>
+        <p style="text-align: center;page-break-before: avoid;">
+            <img src="../Resources/Images/VPmg Geometry inversion.png" />
+            <br /><span class="SmallerCaption">In geometry inversion, the contacts between A and B, and B and C move freely (thick, white lines for emphasis).<br />The physical properties of A, B, and C remain constant.</span>
+        </p>
+        <h2 class="NoPageBreak"><a name="HeterogeneousInv"></a>Heterogeneous property </h2>
+        <p>When homogeneous units are sub-celled, they are then considered heterogeneous units. The property values of all the cells within the heterogeneous unit adheres to the unit’s bounds found in the model file. The only inverted units are the active heterogeneous units. A brief description is:</p>
+        <ul>
+            <li>Active heterogeneous units are variable</li>
+            <li>Geometric contacts and homogeneous units are fixed</li>
+            <li>VP basement is fixed</li>
+            <li>Inversion flag (<var>ILD</var>) = -1</li>
+        </ul>
+        <p>You may use VPem1D or VPutility to sub-cell homogenous units. The sub-cells are usually assigned a single thickness for each unit, although it can be advantageous to expand the cell size in depth. When performing the sub-celling a weighting is automatically defined. Weighting is important to help off-set differences in the sensitivities for each cell and give each cell an equal chance of changing its physical property. Two types of weighting are offered: depth and distance. Depth uses the decay of the field vertically. Distance weighting is more robust as it considers all data geometry to the individual cell. For this reason, it also is longer to compute than depth. Both styles are available via VPutility.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg homo prop inv.png" />
+            <br /><span class="SmallerCaption"> Unit B (randomized to show sub-celling) is heterogeneous in the illustration. <br />Units A will not be affected by the heterogeneous inversion. Unit C (VP basement) is always fixed.</span>
+        </p>
+        <p>This style of inversion will output a CSV file so you can view the data misfit and RMS with respect to the iteration number. The locations are set to the top centre of each prism. One indication that the maximum change in the model is too large is if there is a large jump in misfit after forward modelling. Ideally, you would want to see a linear trend as the data misfit is reduced.</p>
+        <div class="tip">Heterogeneous inversion will be the most computationally intensive of all the VPem1D inversion styles. VPem1D is parallelized so use the last line of the control file to set the maximum number of OpenMP threads. A rule of thumb is to subtract two from your computing resources for each. For duo-quad cores (8 threads), use 6 OpenMP threads to be able to continue working while VPem1D runs in the background.</div>
+        <h2 class="NoPageBreak"><a name="HeterogeneousInv"></a>Half-space inversion</h2>
+        <p>To find the best-fitting half-space, use the <code>ILD</code> flag of 0. All units will be considered active and be over-written to the final half-space value. A brief description is:</p>
+        <ul>
+            <li>All units and cells are considered active</li>
+            <li>Inversion flag (<var>ILD</var>) = 0</li>
+            <li>The resultant model will set all values to the final half-space value</li>
+            <li>Can also be invoked prior to inversion with the enclosing half-space flag in the model file.</li>
+        </ul>
+        <div class="tip">Use the best-fitting half-space prior to heterogeneous inversion. Use the half-space flag in the model file (rather than running another inversion) and VPem1D will find the half-space value and then start the inversion.</div>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../TableStyles/PatternedRowsIndent.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table style="width: 100%;mc-table-style: url('../TableStyles/PatternedRowsIndent.css');" class="TableStyle-PatternedRowsIndent" cellspacing="0">
+            <col class="TableStyle-PatternedRowsIndent-Column-Regular" />
+            <col class="TableStyle-PatternedRowsIndent-Column-Regular" />
+            <tbody>
+                <tr class="TableStyle-PatternedRowsIndent-Body-LightRows">
+                    <td class="TableStyle-PatternedRowsIndent-BodyE-Regular-LightRows">&#160;</td>
+                    <td class="TableStyle-PatternedRowsIndent-BodyD-Regular-LightRows">&#160;</td>
+                </tr>
+                <tr class="TableStyle-PatternedRowsIndent-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRowsIndent-BodyE-Regular-DarkerRows">&#160;</td>
+                    <td class="TableStyle-PatternedRowsIndent-BodyD-Regular-DarkerRows">&#160;</td>
+                </tr>
+                <tr class="TableStyle-PatternedRowsIndent-Body-LightRows">
+                    <td class="TableStyle-PatternedRowsIndent-BodyE-Regular-LightRows">&#160;</td>
+                    <td class="TableStyle-PatternedRowsIndent-BodyD-Regular-LightRows">&#160;</td>
+                </tr>
+                <tr class="TableStyle-PatternedRowsIndent-Body-DarkerRows">
+                    <td class="TableStyle-PatternedRowsIndent-BodyB-Regular-DarkerRows">&#160;</td>
+                    <td class="TableStyle-PatternedRowsIndent-BodyA-Regular-DarkerRows">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

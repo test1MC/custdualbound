@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p class="Task">To use the VPutility program to create the VP model:</p>
+        <ol>
+            <li>In the <kbd><samp>Start</samp></kbd> menu, open the command prompt found under <kbd><samp>Mira Geoscience VP Suite</samp></kbd>.</li>
+            <li>Run <kbd><samp><MadCap:variable name="General.ProductName" /> <MadCap:variable name="General.VersionNumber" /> Command Prompt</samp></kbd></li>
+            <li>Change to your working directory, then type <kbd>VPutility</kbd> followed by the input control file.</li>
+        </ol>
+        <div class="tip">For an example input control file to create a model, type <kbd>VPutility --help 1</kbd> in the command prompt.</div>
+        <div class="tip">You can use this same utility to check your work by exporting the newly created model to a <span class="fileext">.geoh5</span> file, which is a project file for <a href="http://www.mirageoscience.com/our-products/software-product/geoscience-analyst">Geoscience ANALYST</a>, a free visualization and communication software by Mira Geoscience.</div>
+        <div class="note"><span class="fileext">.geoh5</span> files are only compatible with Geoscience ANALYST version 2.60 and later.</div>
+    </body>
+</html>

@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/MiraStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum=" "><a name="DataTypes"></a>Data types</h1>
+        <p>Data can come from all types of TEM systems. VPem1D can handle two general data types: <b>B-field</b> and <b>dB/dt</b>. VPem1D expects TEM data to be supplied in specific physical units, generally the native data units for the airborne system. VPem1D's  install directory includes parameter files for different systems. Observe the following rules of the data:</p>
+        <ul>
+            <li>All decays are assumed positive and monotonically decreasing.</li>
+            <li>If the system encounters a negative reading or an increase value, the result will be a truncated curve. </li>
+            <li>Null data are set to a value of -999.25. </li>
+            <li>Inversion and forward modelling only occurs on prisms that contain data. </li>
+            <li>Data on the edges and outside of the model are ignored. </li>
+            <li>Data must be above ground (top of the VP model) to be used in VPem1D.</li>
+            <li>Times are denoted as the midpoint of off-time (μs after turn-off) for the nth TEM channel.<br /><img src="../Resources/Images/vp1d transmitter current.png" style="width: 221px;height: 129px;" /></li>
+        </ul>
+        <p>Refer to the charts below for assistance with the normalizations required for VPem1D. The chart criteria details are found in the <a href="VPem1D Ch4 File formats.htm#Parameter">Parameter file section</a> and are also briefly described below. These criteria will be inputs in the parameter file:</p>
+        <table style="width: 100%;">
+            <col style="width: 105px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"><var>idat</var>
+                    </td>
+                    <td style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">Flag for style of TEM data</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>istep</var>
+                    </td>
+                    <td colspan="2">Flag for style of transmitter waveform</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>mode</var>
+                    </td>
+                    <td>
+                        <p>Flag for receiver type</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>factor</var>
+                    </td>
+                    <td>Multiplier for data</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>txmoment</var>
+                    </td>
+                    <td>Transmitter moment (Am<sup>2</sup>) for dimensional data </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>rxarea</var>
+                    </td>
+                    <td>Effective receiver area (turns ∙ m<sup>2</sup>) for dimensional data</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="page-break-after: avoid;">Flags for receiver type (mode) are listed here:</p>
+        <div class="indent" style="page-break-inside: avoid;page-break-before: avoid;">
+            <table style="border: solid 1px;mc-table-style: url('../Resources/TableStyles/MiraStandard.css');width: 431px;" class="TableStyle-MiraStandard" cellspacing="0">
+                <col class="TableStyle-MiraStandard-Column-Regular" />
+                <col class="TableStyle-MiraStandard-Column-Regular" />
+                <col class="TableStyle-MiraStandard-Column-Regular" />
+                <tbody>
+                    <tr class="TableStyle-MiraStandard-Body-Row1">
+                        <th style="background-color: #007183;text-align: center;" class="TableStyle-MiraStandard-BodyE-Regular-Row1">Mode</th>
+                        <th style="background-color: #007183;text-align: center;" class="TableStyle-MiraStandard-BodyE-Regular-Row1">Receiver axis</th>
+                        <th style="background-color: #007183;text-align: center;" class="TableStyle-MiraStandard-BodyD-Regular-Row1">Normalization with respect to:</th>
+                    </tr>
+                    <tr class="TableStyle-MiraStandard-Body-Row1">
+                        <td class="TableStyle-MiraStandard-BodyE-Regular-Row1" style="text-align: center;">1</td>
+                        <td class="TableStyle-MiraStandard-BodyE-Regular-Row1" style="text-align: center;">horizontal</td>
+                        <td class="TableStyle-MiraStandard-BodyD-Regular-Row1" style="text-align: left;">Primary horizontal component</td>
+                    </tr>
+                    <tr class="TableStyle-MiraStandard-Body-Row1">
+                        <td class="TableStyle-MiraStandard-BodyE-Regular-Row1" style="text-align: center;">12</td>
+                        <td class="TableStyle-MiraStandard-BodyE-Regular-Row1" style="text-align: center;">horizontal</td>
+                        <td class="TableStyle-MiraStandard-BodyD-Regular-Row1" style="text-align: left;">Primary vertical component</td>
+                    </tr>
+                    <tr class="TableStyle-MiraStandard-Body-Row1">
+                        <td class="TableStyle-MiraStandard-BodyE-Regular-Row1" style="text-align: center;">10</td>
+                        <td class="TableStyle-MiraStandard-BodyE-Regular-Row1" style="text-align: center;">horizontal</td>
+                        <td class="TableStyle-MiraStandard-BodyD-Regular-Row1" style="text-align: left;">Total primary field</td>
+                    </tr>
+                    <tr class="TableStyle-MiraStandard-Body-Row1">
+                        <td class="TableStyle-MiraStandard-BodyE-Regular-Row1" style="text-align: center;">2</td>
+                        <td class="TableStyle-MiraStandard-BodyE-Regular-Row1" style="text-align: center;">vertical</td>
+                        <td class="TableStyle-MiraStandard-BodyD-Regular-Row1" style="text-align: left;">Primary horizontal component</td>
+                    </tr>
+                    <tr class="TableStyle-MiraStandard-Body-Row1">
+                        <td class="TableStyle-MiraStandard-BodyE-Regular-Row1" style="text-align: center;">22</td>
+                        <td class="TableStyle-MiraStandard-BodyE-Regular-Row1" style="text-align: center;">vertical</td>
+                        <td class="TableStyle-MiraStandard-BodyD-Regular-Row1" style="text-align: left;">Primary vertical component</td>
+                    </tr>
+                    <tr class="TableStyle-MiraStandard-Body-Row1">
+                        <td class="TableStyle-MiraStandard-BodyB-Regular-Row1" style="text-align: center;">20</td>
+                        <td class="TableStyle-MiraStandard-BodyB-Regular-Row1" style="text-align: center;">vertical</td>
+                        <td class="TableStyle-MiraStandard-BodyA-Regular-Row1" style="text-align: left;">Total primary field</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="NoPageBreak"><a name="Datatables"></a>Common B-field system criteria:</h3>
+        <p>
+            <img src="../Resources/Images/VPem1D B-Field chart.png" />
+        </p>
+        <h3>Common dB/dt system criteria:</h3>
+        <p>
+            <img src="../Resources/Images/vp1d common bt criteria chart2.png" />
+        </p>
+        <div class="tip">For AeroTEM, set the on and off ramp to half the pulse duration. The pulse duration of maximum current should be set to zero.</div>
+        <ul>
+            <li>There are multiple ways to set the vertical data for the transmitter and receiver based on the information provided in the data file. </li>
+            <li>The log file will output how vertical information has been processed. </li>
+            <li>Altimeter data will assume the top of the VP model prism is ground unless reduced level (RL) data is specified. </li>
+        </ul>
+        <p class="Task">To provide vertical information to VPem1D:</p>
+        <ol>
+            <li>Provide transmitter elevation data. All other vertical transmitter information is ignored.<ol><li>	Receiver elevation is given by altimeter data or computed by vertical offset (nominal or specified per location).</li></ol></li>
+            <li>Provide transmitter altitude data.<ol><li>Receiver elevation is given by altimeter data or computed by vertical offset (nominal or specified per location).</li></ol></li>
+            <li>Provide only receiver vertical data (altitude or elevations).<ol><li>Transmitter data set by nominal vertical offset or per location.</li></ol></li>
+            <li>No transmitter or receiver vertical information is provided.<ol><li>Transmitters are set to the nominal survey height. Receivers are set based on the nominal offset or offset per location.</li></ol></li>
+        </ol>
+        <h3 class="NoPageBreak">Data options</h3>
+        <p>VPem1D offers three different methods for dealing with data: data averaging, prism centre, and all data. In the control file, set the flag to choose the desired option. The first two use a maximum of one decay curve per prism. Below are details about all three methods.</p>
+        <h4>Data averaging</h4>
+        <p>In this scenario, data are averaged over the model prisms prior to inversion. Only one “representative decay” is submitted for forward modelling and inversion for each model prism. The receiver location and current (if applicable) is also averaged (i.e., for HoistEM and REPTEM). You should set the <var>dataOption</var> flag in the control file to 0.</p>
+        <h4>All data</h4>
+        <ul>
+            <li>VPem1D will use all the data decay curves at all the receiver locations within the prism. </li>
+            <li>All decay curves are separately scrutinized for monotonically decreasing values and will play a factor in the forward modelling and inversion.</li>
+            <li> The transmitter current, if applicable, is considered for each sounding. </li>
+            <li>The <var>dataOption</var> flag in the control file should be set to 1.</li>
+        </ul>
+        <p>This is the preferred method for forward modelling as you will have a data block in the VP model file that is in order of the observed data. </p>
+        <div class="note">The receiver location is given so it may differ slightly depending on the offset of the GPS to the receiver and what is given in the observed data file. </div>
+        <p>This method is also best used in inversion when large topographic relief is present. The inversion will attempt to find the best 1D structure in the prism that reproduces all soundings at the different elevations.</p>
+        <h4>Prism centre</h4>
+        <ul>
+            <li>This selects the receiver location closest to the centre of the prism and uses only its (raw) decay. </li>
+            <li>The decay is still scrutinized for monotonically decreasing values. </li>
+            <li>The receiver location is kept intact including the transmitter current, if applicable. </li>
+            <li>The <var>dataOption</var> flag in the control file should be set to 2.</li>
+        </ul>
+        <h1 MadCap:autonum=" "><a name="Waveforms"></a>Waveforms</h1>
+        <ul>
+            <li>Transmitter waveforms are either defined in the parameter file or given with a waveform file, as specified in the parameter file. </li>
+            <li>Waveform files can either be two-column ASCII files or Maxwell configuration files (<span class="fileext">.mcg</span>) and are discussed in depth in the <a href="VPem1D Ch4 - Divider.htm#FileFormats">File formats section</a>. </li>
+            <li> VPem1D can process moving-loop TEM data for both central loop and slingram configurations.</li>
+            <li>VPem1D will attempt to reduce the time samples since modelling speeds are adversely affected if the waveform is defined by many points. </li>
+            <li>The log file will contain the simplified waveform if it is adjusted. </li>
+            <li>You can define trapezoidal waveforms  within the parameter file using times that it ramps on and off, and the duration of the pulse.</li>
+            <li>You can model multi-mode (two transmitters) systems  using two waveform files or two separate sets of waveform parameters. </li>
+            <li>The parameter file will have a header of <code>#VPEM_MULTI#</code>. </li>
+            <li>All data for the survey must be in the observed data file. See the <a href="VPem1D Ch4 File formats.htm#Parameter">Parameter file section</a> for details.</li>
+        </ul>
+    </body>
+</html>

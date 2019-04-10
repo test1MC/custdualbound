@@ -1,0 +1,2372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">
+            <MadCap:keyword term="Importing data" />Overview</h1>
+        <p>This chapter describes how to import data to be stored as records into the database. See <MadCap:xref href="../G_File and document management/Ch 7 Divider GI File and doc management.htm">"File and document management" on page&#160;1,</MadCap:xref> for information on importing files, maps, and documents.</p>
+        <p>The standard way to import data in <MadCap:variable name="General.ProductName" /><MadCap:keyword term="Import templates" /> is by providing the data in CSV files and then running them through customized import templates to properly organize the data in the database. You can do this through the user interface or by using a customized monitoring folder system.</p>
+        <p>
+            <MadCap:keyword term="Themes" />Additionally, certain themes provide a direct import option from specific types of  files (GOCAD files) or manual data entry. Customized connectors can also allow you to pull data from other site databases.</p>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">Importing data using a CSV file</h1>
+        <p>The import tool uses files in CSV format with the first row only containing the property names.</p>
+        <p>You must create <span class="ui">Import templates</span>  for the application to know what data to import from the CSV files, and where and how to import it in the <MadCap:variable name="General.ProductName" /> database. Each theme has its own relevant template options.</p>
+        <p>Using the import template system is a useful way to allow you to import any type of data, as data does not need to correspond to any fixed or predefined type. </p>
+        <h2>Preparing import templates</h2>
+        <ol>
+            <li>In the <span class="uiClick">Theme</span> list at the top the user interface, select the theme that best fits the data you want to import. <br /></li>
+            <li>In the <MadCap:variable name="General.ProductName" /> menu, click <span class="uiClick">Import</span>/<span class="uiClick">Data import</span>/<span class="uiClick">CSV file</span>. </li>
+        </ol>
+        <div class="note">Depending on the theme, the template options differ slightly to accommodate their specificity (or data structure). You must select and create your template(s) based on the characteristics of your data. For that reason, depending on the theme, between one to five template categories are available.</div>
+        <ol MadCap:continue="true">
+            <li>Choose the template category (<span class="ui">Drillhole</span>, <span class="ui">Drillhole path</span>, etc., as seen in the example below) to which your data belongs. From there you can create a new template or select an existing one to use. Click <span class="uiClick">Create new</span> if making a new one. <br /><img src="../../../Resources/Images/Import drillholes data.bmp" style="margin-left: 0px;margin-top: 20px;margin-bottom: 20px;" /></li>
+            <li>To create a new template, name your template and click <span class="uiClick">Create</span>.<br /><img src="../../../Resources/Images/NewRes_CreateDhole.png" /></li>
+        </ol>
+        <h3>Mandatory and user-created properties</h3>
+        <p>In a newly created template, you must define the properties of the data (columns of the CSV file) you plan to import as either <a href="#Mandator" class="ui">mandatory</a> or <a href="#User-cre" class="ui">user-created</a>.</p>
+        <h4><a name="Mandator"></a>Mandatory properties</h4>
+        <p>The <span class="ui">mandatory properties</span><MadCap:keyword term="Object types:Points" /> are the minimum expected properties to make a valid record for the given theme. For example, a theme for importing points (e.g. <span class="ui">Observation points</span>) must have all three spatial coordinates for the point to be properly located in space. A theme for documenting events (e.g. <span class="ui">Incidents</span>) requires 3D coordinates and a datetime. For this reason, the system will not permit importing records (rows of the CSV file) to a theme with missing mandatory properties.</p>
+        <p><span class="ui">Mandatory property</span> names are fixed in the system. If these columns are named differently in your CSV file, you can either rename them in your file or you can indicate in the template the name of the column in your CSV file where the data resides. This is referred to as 'mapping' your properties. </p>
+        <div style="page-break-inside: avoid;">
+            <p class="Task">To map mandatory properties from your CSV file:</p>
+            <ol>
+                <li>Click the property in the <span class="ui">Name</span> column that you want to map to a different name in your CSV.</li>
+                <li>In the <span class="ui">Property: name</span> dialogue, replace the text in the <span class="ui">Mapped to</span> field to match the name of the column in your CSV file.</li>
+                <li>Click <span class="uiClick">Update</span>.</li>
+            </ol>
+            <img src="../../../Resources/Images/NewRes_add Dhole.png" style="width: 700px;height: auto;" />
+            <div class="note">
+                <MadCap:keyword term="Units" />Data types and units of <i>mandatory properties</i> are fixed.</div>
+        </div>
+        <h4><a name="User-cre"></a>User-created properties</h4>
+        <p>The <span class="ui">user-created properties</span> are for the other, non-mandatory data you want to import. For example, in a <span class="ui">Drillhole path</span> template, in addition to the mandatory <span class="uiClick">drillhole ID</span>, <span class="uiClick">distance</span>, <span class="uiClick">azimuth </span>and <span class="uiClick">dip</span>, you might want to document the instrument type, or extra information the instrument might have recorded (roll, temperature, etc.).</p>
+        <p class="Task">To define a <span class="ui">user-created property</span>:</p>
+        <p>
+            <img src="../../../Resources/Images/NewRes_Add new prop.png" style="width: 605px;height: 608px;" />
+        </p>
+        <ol>
+            <li>Click <span class="uiClick">Add new property</span> in the <span class="ui">Properties</span> table.</li>
+            <li>In the <span class="ui">Add new property</span> dialogue box, add the name of the property from your CSV file you plan to add to the template (it is case-insensitive). Criteria for a valid property name:<ol><li>Can combine letters, numbers and symbols, except for the apostrophe (').</li><li>Maximum of 50 characters.</li><li>Cannot be a name that is defined as mandatory on any theme, such as <span class="ui">x</span>, <span class="ui">y</span>, <span class="ui">z</span>, <span class="ui">sample ID</span>, <span class="ui">azimuth</span>,etc. See the full list under the <span class="ui">Mandatory CSV properties</span> column in <MadCap:xref href="#Theme">"Theme template guide" on page&#160;1</MadCap:xref>.</li><li>Needs to be unique <u>per theme</u>. <MadCap:annotation MadCap:createDate="2019-01-21T22:58:34.6727415-05:00" MadCap:creator="sebastienh" MadCap:initials="SH" MadCap:comment="from John: I read this three times and don't understand it. It needs to be made more clear. I don't have an alternative text suggestion because I don't understand the behaviour." MadCap:editor="sebastienh" MadCap:editDate="2019-01-21T22:58:52.7704194-05:00">For themes that offer more than one template category</MadCap:annotation> (except for <i>Samples</i>), you cannot use the same name in more than one category, but you can use it in any template of that category, provided that you set the same data type and same unit. (There is no limitation to using the same name for properties in different themes, regardless of type and unit.)<ul><li><u>Exception</u>: For all three template categories of the <i>Samples</i> theme, you can use the same property names (as long as they have the same types and units). Also, if you use the same name in more than one samples-related template category (that is all three <i>Samples</i> template categories plus <i>Geochemistry and Mineralogy</i>, <i>Rock properties</i> and <i>Drillhole interval</i>), it needs to have the same type and unit.</li></ul></li></ol></li>
+        </ol>
+        <div class="tip"> The system records the names you enter here  in the database and uses them for identifying the data everywhere in the user interface and in reports. We recommend that you choose property names carefully because once data is imported under a property name, it cannot be renamed unless you remove all data of that property, modify the name in the template AND in your CSV file(s) and re-import your data.<br /></div>
+        <ol MadCap:continue="true" style="page-break-after: avoid;">
+            <li>Define its property type from the six  available types:</li>
+        </ol>
+        <p style="page-break-inside: avoid;page-break-before: avoid;">
+            <table style="mc-table-style: url('../../../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle-PatternedRows" cellspacing="0">
+                <col style="width: 218px;" class="TableStyle-PatternedRows-Column-Regular" />
+                <col class="TableStyle-PatternedRows-Column-Regular" />
+                <thead>
+                    <tr class="TableStyle-PatternedRows-Head-Header1">
+                        <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Property type</th>
+                        <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Definition</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-PatternedRows-Body-LightRows">
+                        <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">Alphanumeric</td>
+                        <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">For free-form strings of text and / or numbers.<br /><br />Note that if there are commas in these strings, you must put double-quotes (“ and “) at the beginning and the end for the importer not to confuse these commas with the ones separating the values in the CSV files. 
+</td>
+                    </tr>
+                    <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                        <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">Binary</td>
+                        <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows"> For binary data, such as  on / off, ore / host, true / false.<br /><br />Note that when selecting this option, you will be asked to enter both expected values.
+</td>
+                    </tr>
+                    <tr class="TableStyle-PatternedRows-Body-LightRows">
+                        <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">
+                            <MadCap:keyword term="Classifications" />Classifications</td>
+                        <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                            <ul>
+                                <li>Classifications can be preset at the project level or defined as you are preparing the import template. </li>
+                                <li>Selecting a project classification will display the list of classes.</li>
+                                <li>It is possible to add new ones to this list, but these additions will only apply to the data you are preparing to import. The project classification will not be updated with the new classes.</li>
+                                <li>If you do not select a project classification, simply enter the classes separated by a comma. </li>
+                                <li>You will also be asked to identify whether or not the classes are case sensitive; if so, the values of your CSV must match exactly the capital and lowercase letters of the list of classes.
+
+</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                        <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;">Datetime</td>
+                        <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                            <ul>
+                                <li>You must indicate the date format the CSV file uses. 
+</li>
+                                <li>Your data can include time in either hh:mm:ss or just hh:mm format. This does not need to be set anywhere.</li>
+                                <li> Note that if your data does not include time values, the system assumes 00:00:00 by default. </li>
+                                <li>Indicate whether or not to allow the import of data where the date is in the future (greater than the current system date). 
+</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-PatternedRows-Body-LightRows">
+                        <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">Float</td>
+                        <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">For numeric values with decimals.</td>
+                    </tr>
+                    <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                        <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows" style="font-weight: bold;">Integer</td>
+                        <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">For numeric values without decimals.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <ol MadCap:continue="true">
+            <li>Determine if the property is required. If <var>yes</var>, the  data to import using this template is required to hold values for that property for all the importing records (rows of the CSV file), or else the import will fail and report an error. This setting is useful to identify missing data.  If you set the required field to <var>no</var> and there are  empty entries for that property in the CSV file, the system will not halt the import process. Blanks or empty records are identified as no-data value (NDV) in the database.</li>
+            <li>Select the unit from the drop-down menu. The list of <span class="ui">Units</span> is defined in the <span class="uiClick"><MadCap:keyword term="Project settings" />Project settings</span> (see <MadCap:xref href="../K_Project settings/Project settings.htm#Units">"Units" on page&#160;1</MadCap:xref>). You must have the required user permissions access to modify this list. </li>
+            <li>Provide a <span class="ui">Property no-data value</span>. Some software or device output files hold a predefined string of characters for fields with no data instead of leaving them blank. If this is the case, enter the appropriate no-data value for the system to recognize it as such (e.g.,<var> -99999</var> per GOCAD standard).</li>
+            <li>Click <span class="uiClick">Save</span> and repeat to add as many properties as needed.</li>
+        </ol>
+        <div class="note">There is no limit to the amount of user-created properties you can add.</div>
+        <p>The system provides the following settings under certain themes or data types:</p>
+        <ul>
+            <li><span class="ui">Property under detection limit</span>: Only offered on the <span class="ui">Geochemistry &amp; mineralogy</span> templates. It can accommodate an "under detection limit" (UDL) per property. You should find these values on your lab certificates. Use the <span class="ui">Format</span> field to enter the exact string used in your CSV file and the <span class="ui">Value</span> field to enter that value. Example: Format: &lt;0.01, Value: 0.01.</li>
+            <li><span class="ui">QA/QC rules</span>: For quality control of float, integer or datetime type properties, you can set a minimum and a maximum value for validation of the data. If any value fails validation, the import process will fail and report an error.</li>
+        </ul>
+        <p>Alternatively, you can click <span class="uiClick">Read headers</span>, which allows you to select a CSV file you plan on importing with this template. <MadCap:variable name="General.ProductName" /> will scan the file and create the user-created property names based on the headers in your CSV file. You will still need to access  the properties settings one by one to set their proper data type, unit, and other settings. Remember to click the Save button before switching to another property.</p>
+        <p>
+            <img src="../../../Resources/Images/NewRes_properties table.png" style="width: 714px;height: 204px;" />
+        </p>
+        <p>It is possible to clone a template, which you may want to do as a way to save time when importing data that use the same or similar property configurations. Follow these steps to do so:</p>
+        <ol>
+            <li>In the <span class="ui">Clone import template</span> dialogue box, give your new template a name.</li>
+            <li>Define the <span class="ui">Optional fields</span>, which will display according to the theme you are in.</li>
+            <li>Click <span class="uiClick">Clone import template</span>. You will now be automatically inside the newly cloned template, where you can edit settings as per your needs. <br /><img src="../../../Resources/Images/NewRes_Clonedata.png" style="mc-float: center;" /></li>
+        </ol>
+        <MadCap:pageBreak />
+        <h3><a name="Theme"></a>
+            <MadCap:keyword term="Theme template guide" />Theme template guide</h3>
+        <p style="text-align: left;">The tables below summarizes all the available themes with their template categories, and lists of mandatory properties, grouped by theme type to  highlight their similarities and differences:</p>
+        <table style="margin-left: 0;margin-right: auto;mc-caption-repeat: true;">
+            <col style="width: 87px;" />
+            <col style="width: 139px;" />
+            <col style="width: 218px;" />
+            <col style="width: 325px;" />
+            <thead>
+                <tr>
+                    <td style="font-style: normal;font-weight: bold;font-size: 11pt;text-align: center;background-color: #304671;color: #ffffff;">Theme type</td>
+                    <td style="text-align: center;font-weight: bold;font-size: 11pt;background-color: #304671;color: #ffffff;">Theme</td>
+                    <td style="text-align: center;font-weight: bold;font-size: 11pt;background-color: #304671;color: #ffffff;">Template category</td>
+                    <td style="text-align: center;font-weight: bold;font-size: 11pt;background-color: #304671;color: #ffffff;">Mandatory CSV properties </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="font-weight: normal;background-color: #ffffff;color: #404040;font-style: normal;" rowspan="4">Points</td>
+                    <td>Observation points
+</td>
+                    <td>Observation points
+</td>
+                    <td>x, y, z
+</td>
+                </tr>
+                <tr>
+                    <td>3D point sets
+</td>
+                    <td>3D point sets
+</td>
+                    <td>x, y, z
+</td>
+                </tr>
+                <tr>
+                    <td>3D regular grids
+</td>
+                    <td>3D regular grids
+</td>
+                    <td>x, y, z
+</td>
+                </tr>
+                <tr style="height: 29px;">
+                    <td>Microseismic
+</td>
+                    <td>Microseismic
+sensors</td>
+                    <td>x, y, z; sensor ID</td>
+                </tr>
+                <tr>
+                    <td rowspan="3" style="background-color: #dcdcdc;">Events
+
+
+</td>
+                    <td style="background-color: #dcdcdc;">Microseismic
+</td>
+                    <td style="background-color: #dcdcdc;">Microseismic
+ events</td>
+                    <td style="background-color: #dcdcdc;">x, y, z, event datetime
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #dcdcdc;">Incidents
+</td>
+                    <td style="background-color: #dcdcdc;">Incidents
+</td>
+                    <td style="background-color: #dcdcdc;">x, y, z, incident datetime
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #dcdcdc;">Blasting
+</td>
+                    <td style="background-color: #dcdcdc;">Blasting
+</td>
+                    <td style="background-color: #dcdcdc;">x, y, z, blast datetime
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #ffffff;" rowspan="6">Sample-related
+
+
+
+
+
+</td>
+                    <td style="background-color: #ffffff;">Geochemistry &amp; mineralogy
+</td>
+                    <td style="background-color: #ffffff;">Geochemistry &amp; mineralogy
+</td>
+                    <td style="background-color: #ffffff;">sample ID
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #ffffff;">Rock properties
+</td>
+                    <td style="background-color: #ffffff;">Rock properties
+</td>
+                    <td style="background-color: #ffffff;">sample ID
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #ffffff;" rowspan="3">Samples
+
+
+</td>
+                    <td style="background-color: #ffffff;">Samples without location
+</td>
+                    <td style="background-color: #ffffff;">sample ID
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #ffffff;">Samples with location as x, y, z coordinates
+</td>
+                    <td style="background-color: #ffffff;">sample ID, x, y, z
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #ffffff;">Samples with location as drillhole interval
+</td>
+                    <td style="background-color: #ffffff;">sample ID, drillhole ID, sample from, sample to
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #ffffff;font-style: italic;">
+                        <MadCap:keyword term="Object types:Drillholes" />Drillholes
+</td>
+                    <td style="background-color: #ffffff;font-style: italic;">Drillholes interval data
+</td>
+                    <td style="background-color: #ffffff;font-style: italic;">drillhole ID, interval from, interval to, (user-created property identified as being a sample ID)
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #dcdcdc;" rowspan="5">Drillhole-related
+
+
+
+
+</td>
+                    <td style="background-color: #dcdcdc;" rowspan="5">Drillholes
+
+
+
+
+</td>
+                    <td style="background-color: #dcdcdc;">Drillholes
+
+
+
+
+</td>
+                    <td style="background-color: #dcdcdc;">drillhole ID, x, y, z, length
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #dcdcdc;">Drillholes path data
+</td>
+                    <td style="background-color: #dcdcdc;">drillhole ID, distance, azimuth, dip</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #dcdcdc;">Drillholes interval data
+</td>
+                    <td style="background-color: #dcdcdc;">drillhole ID, interval from, interval to</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #dcdcdc;">Drillholes point log data
+</td>
+                    <td style="background-color: #dcdcdc;">drillhole ID, depth</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #dcdcdc;">Drillholes static data
+</td>
+                    <td style="background-color: #dcdcdc;">drillhole ID</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: normal;background-color: #ffffff;color: #404040;font-style: normal;" rowspan="21">Instrument-readings for monitoring
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</td>
+                    <td rowspan="4">Ground deformation
+
+
+
+</td>
+                    <td>Ground deformation stations
+</td>
+                    <td>station ID, x, y, z
+</td>
+                </tr>
+                <tr>
+                    <td>Ground deformation instant data
+</td>
+                    <td>station ID, datetime </td>
+                </tr>
+                <tr>
+                    <td>Ground deformation interval data
+</td>
+                    <td>station ID, interval from, interval to </td>
+                </tr>
+                <tr style="height: 29px;">
+                    <td>Ground deformation static data
+</td>
+                    <td>station ID </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #dcdcdc;" rowspan="4">Stress
+
+
+
+</td>
+                    <td style="background-color: #dcdcdc;">Stress cells
+</td>
+                    <td style="background-color: #dcdcdc;">stress cell ID, x, y, z
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #dcdcdc;">Stress instant data
+</td>
+                    <td style="background-color: #dcdcdc;">stress cell ID,  datetime
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #dcdcdc;">Stress interval data
+</td>
+                    <td style="background-color: #dcdcdc;">stress cell ID, interval from, interval to
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #dcdcdc;">Stress static data
+</td>
+                    <td style="background-color: #dcdcdc;">stress cell ID</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #ffffff;" rowspan="4">Fixed plant activity
+
+
+</td>
+                    <td style="background-color: #ffffff;">Fixed plant activity stations
+</td>
+                    <td style="background-color: #ffffff;">station ID, x, y, z
+</td>
+                </tr>
+                <tr>
+                    <td>Fixed plant activity instant data
+</td>
+                    <td>station ID, datetime
+</td>
+                </tr>
+                <tr>
+                    <td>Fixed plant activity interval data
+</td>
+                    <td>station ID, interval from, interval to
+</td>
+                </tr>
+                <tr>
+                    <td>Fixed plant activity static data
+</td>
+                    <td>station ID
+</td>
+                </tr>
+                <tr>
+                    <td rowspan="5" style="background-color: #dcdcdc;">Mobile equipment
+
+
+
+
+</td>
+                    <td style="background-color: #dcdcdc;">Mobile equipment units
+</td>
+                    <td style="background-color: #dcdcdc;">unit ID
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #dcdcdc;">Mobile equipment with location instant data
+</td>
+                    <td style="background-color: #dcdcdc;">unit ID, datetime, x, y, z
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #dcdcdc;">Mobile equipment without location instant data
+</td>
+                    <td style="background-color: #dcdcdc;">unit ID, datetime
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #dcdcdc;">Mobile equipment interval data
+</td>
+                    <td style="background-color: #dcdcdc;">unit ID, interval from, interval to
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #dcdcdc;">Mobile equipment static data
+</td>
+                    <td style="background-color: #dcdcdc;">unit ID
+<br /></td>
+                </tr>
+                <tr>
+                    <td rowspan="4">Ventilation</td>
+                    <td style="background-color: #ffffff;">Ventilation stations
+</td>
+                    <td style="background-color: #ffffff;">station ID, x, y, z
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #ffffff;">Ventilation instant data
+</td>
+                    <td style="background-color: #ffffff;">station ID, datetime </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #ffffff;">Ventilation interval data
+</td>
+                    <td style="background-color: #ffffff;">station ID, interval from, interval to </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #ffffff;">Ventilation static data
+</td>
+                    <td style="background-color: #ffffff;">station ID </td>
+                </tr>
+                <tr>
+                    <td rowspan="4">&#160;</td>
+                    <td rowspan="4" style="background-color: #dcdcdc;">Gas monitoring</td>
+                    <td style="background-color: #dcdcdc;">Gas monitoring stations
+</td>
+                    <td style="background-color: #dcdcdc;">station ID, x, y, z
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #dcdcdc;">Gas monitoring instant data
+</td>
+                    <td style="background-color: #dcdcdc;">station ID, datetime </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #dcdcdc;">Gas monitoring interval data
+</td>
+                    <td style="background-color: #dcdcdc;">station ID, interval from, interval to </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #dcdcdc;">Gas monitoring static data
+</td>
+                    <td style="background-color: #dcdcdc;">station ID </td>
+                </tr>
+                <tr>
+                    <td rowspan="4">Mine models-related
+
+
+
+</td>
+                    <td rowspan="4">Underground
+
+
+
+</td>
+                    <td style="background-color: #ffffff;">Underground points
+
+</td>
+                    <td style="background-color: #ffffff;">x, y, z
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #ffffff;">Underground instant data
+</td>
+                    <td style="background-color: #ffffff;">x, y, z, datetime
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #ffffff;">Underground interval data
+</td>
+                    <td style="background-color: #ffffff;">x, y, z, interval from, interval to
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #ffffff;">Underground static data
+
+</td>
+                    <td style="background-color: #ffffff;">x, y, z
+</td>
+                </tr>
+                <tr>
+                    <td rowspan="8">
+                        <MadCap:keyword term="Object types:Surfaces" />3D triangulated surfaces
+
+
+
+
+
+
+
+</td>
+                    <td rowspan="2">3D structural surfaces
+
+</td>
+                    <td>3D structural surfaces points
+</td>
+                    <td>point ID, x, y, z
+</td>
+                </tr>
+                <tr>
+                    <td>3D structural surfaces triangles
+</td>
+                    <td>point ID1, point ID2, point ID3
+</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" style="background-color: #dcdcdc;">3D geological contact surfaces
+
+</td>
+                    <td style="background-color: #dcdcdc;">3D geological contact surfaces points
+</td>
+                    <td style="background-color: #dcdcdc;">point ID, x, y, z
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #dcdcdc;">3D geological contact surfaces triangles
+</td>
+                    <td style="background-color: #dcdcdc;">point ID1, point ID2, point ID3
+</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">3D domains
+
+</td>
+                    <td>3D domains points
+</td>
+                    <td>point ID, x, y, z
+</td>
+                </tr>
+                <tr>
+                    <td>3D domains triangles
+</td>
+                    <td>point ID1, point ID2, point ID3
+</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" style="background-color: #dcdcdc;">Surfaces
+
+</td>
+                    <td style="background-color: #dcdcdc;">Surfaces points
+</td>
+                    <td style="background-color: #dcdcdc;">point ID, x, y, z
+</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #dcdcdc;">Surfaces triangles
+</td>
+                    <td style="background-color: #dcdcdc;">point ID1, point ID2, point ID3
+</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Importing data</h2>
+        <p style="text-align: left;">From any newly created or existing template, you can import the data from your CSV file by assigning it to a data set. Themes that need group names such as <span class="ui">3D point sets</span>, <span class="ui">3D regular grids</span>, and <span class="ui">Observation points</span> will require that you provide one. <br /><br /><img src="../../../Resources/Images/NewRes_Uploaddata2.png" /></p>
+        <div class="note">User permissions settings determine the ability to import data.</div>
+        <p>It is possible at this step to associate tags and files to the records you are about to import by selecting them in <span class="uiClick">Tags</span> and <span class="uiClick">Files / Maps</span>.</p>
+        <p>At the bottom, click <span class="uiClick">Select file</span> to select your CSV file, then <span class="uiClick">Upload</span> to trigger the import. Scroll to the top to see the confirmation message with a direct link to the <span class="ui">Import history</span> page to follow import status.</p>
+        <p>
+            <img src="../../../Resources/Images/file sent to queue.png" style="width: 703px;height: 50px;" />
+            <br />
+            <img src="../../../Resources/Images/NewRes_Files_maps.png" />
+        </p>
+        <div class="note">A template does not need user-created properties. As long as you have the mandatory properties, you can import your file.</div>
+        <div class="note">You can re-use templates to import new records with the same properties as often as needed.</div>
+        <h3>Specificity per theme type</h3>
+        <p>Depending on the theme and template, you will have several actions available when importing data. The following tables list the available actions per template. Refer to the <span class="ui">Uniqueness requirements</span> to see the combination of properties that must be unique in order to import properly, as the system does not accept multiple values for a property  (per record). </p>
+        <h4>Points-type themes</h4>
+        <p>These themes are designed to support properties at specific locations.</p>
+        <table style="width: 100%;">
+            <col style="width: 189px;" />
+            <col />
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Theme type</td>
+                    <td style="text-align: center;background-color: #4c4c4c;" colspan="4"><span style="color: #ffffff; font-style: italic; font-weight: normal;">Points</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Theme</td>
+                    <td style="text-align: center;font-size: 10pt;font-weight: bold;">Observation points
+</td>
+                    <td style="text-align: center;font-size: 10pt;font-weight: bold;">3D point sets
+</td>
+                    <td style="text-align: center;font-size: 10pt;font-weight: bold;">3D regular grids
+</td>
+                    <td style="text-align: center;font-size: 10pt;font-weight: bold;">Microseismic
+</td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Template category</td>
+                    <td style="text-align: center;font-size: 10pt;">Observation points
+</td>
+                    <td style="text-align: center;font-size: 10pt;">3D point sets
+</td>
+                    <td style="text-align: center;font-size: 10pt;">3D regular grids
+</td>
+                    <td style="text-align: center;font-size: 10pt;">Microseismic
+ sensors</td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can assign 
+data set?</td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can create data set?
+</td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can assign group?
+</td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can create group?
+</td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can link tags &amp; files?</td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Uniqueness rule*</td>
+                    <td style="text-align: center;font-size: 10pt;">group, x, y, z, property
+</td>
+                    <td style="text-align: center;font-size: 10pt;">group, x, y, z, property
+</td>
+                    <td style="text-align: center;font-size: 10pt;">group, x, y, z, property
+</td>
+                    <td style="text-align: center;font-size: 10pt;">sensor ID, x, y, z
+</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><i style="font-size: 10pt;">*Uniqueness rule is per project, per theme but across data sets unless data set is specified in the uniqueness rule</i>
+        </p>
+        <p>As summarized in the table above, when you are ready to import new data through a template of a <span class="uiClick">points-type theme</span>, you need to assign it to a data set. It can be either an existing one or you can create a new one from here (if you have the proper permission level).</p>
+        <p>Except for the <span class="ui">Microseismic sensors</span> template, the other themes also require at the time of import that you assign the new data a <span class="ui">group name</span>. It can be either an existing one or you can create a new one from here (provided you have the required user permissions access).</p>
+        <p>The <span class="ui">Uniqueness rules</span>  validate the data at import. You cannot have the same combination of values for these properties more than once in the same data set. This also applies to other data sets within the same theme and project.</p>
+        <p>In the case of all points-type themes (except <span class="ui">Microseismic sensors</span>), the <span class="ui">Group</span> property exists to differentiate between data measured at the <MadCap:annotation MadCap:createDate="2019-01-21T23:00:24.2158722-05:00" MadCap:creator="sebastienh" MadCap:initials="SH" MadCap:comment="from John: Is &quot;at different times&quot; really the key point? Generally, I find the discussion of Groups (their purpose and how they work) to be insufficiently clear." MadCap:editor="sebastienh" MadCap:editDate="2019-01-21T23:00:39.0761444-05:00">same location, but at different times.</MadCap:annotation> For example: Data collected on points that can be re-assessed sporadically can be imported by using a new group name that represents each assessment. </p>
+        <p>It also allows the import of the same combination of coordinates (the same point) as long as it is assigned to a different group name. For example: If you use <span class="ui">Observation points</span> for structural measurements that are collected at the same location, such as fold axis and axial plane, or multiple phases of deformation, you could  import them separately and assign them each to a pertinent group name.</p>
+        <p>For the <span class="ui">Microseismic sensors</span>, the combination of sensor ID and x, y, z needs to be unique per theme, per project, regardless of data set.</p>
+        <div class="note">Group names must be unique per data set, but can be reused in another data set.</div>
+        <h4>Events-type themes</h4>
+        <p>These themes are designed to support fixed properties that occurred at a specific moment and location.</p>
+        <table style="width: 100%;">
+            <col style="width: 193px;" />
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Theme type</td>
+                    <td style="text-align: center;background-color: #4c4c4c;" colspan="3"><span style="color: #ffffff; font-style: italic; font-weight: normal;">Events</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Theme</td>
+                    <td style="text-align: center;font-size: 10pt;font-weight: bold;">Microseismic</td>
+                    <td style="text-align: center;font-size: 10pt;font-weight: bold;">Incidents</td>
+                    <td style="text-align: center;font-size: 10pt;font-weight: bold;">Blasting</td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Template category</td>
+                    <td style="text-align: center;font-size: 10pt;">Microseismic events</td>
+                    <td style="text-align: center;font-size: 10pt;">Incidents</td>
+                    <td style="text-align: center;font-size: 10pt;">Blasting</td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can assign 
+data set?</td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can create data set?
+</td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can link tags &amp; files?</td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Uniqueness rule*</td>
+                    <td style="text-align: center;font-size: 10pt;">event datetime, x, y, z
+</td>
+                    <td style="text-align: center;font-size: 10pt;">incident datetime, x, y, z
+</td>
+                    <td style="text-align: center;font-size: 10pt;">blast datetime, x, y, z
+
+</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><i style="font-size: 10pt;">*Uniqueness rule is per project, per theme but across data sets unless data set is specified in the uniqueness rule</i>
+        </p>
+        <p>As summarized in the table above, when you are ready to import new data through a template of an events-type theme, you will need to assign it a data set. It can be either an existing one or you can create a new one from here provided you have the required user permissions access.</p>
+        <p>The <span class="ui">Uniqueness rules</span> validate the data at import. You cannot have the same combination of datetime, x, y, z more than once per theme and per project, regardless of data sets.</p>
+        <h4>Sample-related themes</h4>
+        <p>These themes are designed to support sample properties of varying nature that can be compiled using the <a href="../E_Data Fusion/Data fusion.htm#Samples_compilation"><MadCap:keyword term="Samples compilation" />Samples compilation</a> component.</p>
+        <p style="page-break-before: avoid;page-break-inside: avoid;">
+            <table style="width: 100%;">
+                <col style="width: 162px;" />
+                <col style="width: 129px;" />
+                <col style="width: 111px;" />
+                <col style="width: 195px;" />
+                <col />
+                <tbody>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Theme type</td>
+                        <td style="text-align: center;background-color: #4c4c4c;" colspan="4"><span style="color: #ffffff; font-style: italic; font-weight: normal;">Sample-related</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Theme</td>
+                        <td style="text-align: center;font-size: 10pt;font-weight: bold;">Geochemistry &amp; mineralogy
+</td>
+                        <td style="text-align: center;font-size: 10pt;font-weight: bold;">Rock properties
+</td>
+                        <td style="text-align: center;font-size: 10pt;font-weight: bold;">Samples
+
+
+</td>
+                        <td style="font-weight: bold;font-size: 10pt;text-align: center;">Drillholes</td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Template category</td>
+                        <td style="text-align: center;font-size: 10pt;">Geochemistry &amp; mineralogy
+</td>
+                        <td style="text-align: center;font-size: 10pt;">Rock properties
+</td>
+                        <td style="text-align: center;padding: 0px;font-size: 9pt;">
+                            <table style="border-spacing: 2px 0px;border-collapse: collapse;margin-left: 0;margin-right: auto;">
+                                <col style="width: 64px;" />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 10pt;">No location</td>
+                                        <td style="font-size: 10pt;">Location as x, y, z </td>
+                                        <td style="font-size: 10pt;">Location as drillhole interval</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="font-size: 10pt;text-align: center;">Drillholes interval data</td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can assign 
+data set?</td>
+                        <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                        </td>
+                        <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                        </td>
+                        <td style="text-align: center;padding: 0px;font-size: 9pt;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="font-size: 10pt;text-align: center;"><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can create data set?
+</td>
+                        <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                        </td>
+                        <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                        </td>
+                        <td style="text-align: center;padding: 0px;font-size: 9pt;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="font-size: 10pt;text-align: center;"><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can link tags &amp; files?</td>
+                        <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                        </td>
+                        <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                        </td>
+                        <td style="text-align: center;padding: 0px;font-size: 9pt;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="font-size: 10pt;text-align: center;"><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Uniqueness rule*</td>
+                        <td style="text-align: center;font-size: 8pt;">sample ID, property
+</td>
+                        <td style="text-align: center;font-size: 8pt;">sample ID, property
+</td>
+                        <td style="text-align: center;padding: 0px;font-size: 8pt;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 8pt;">sample ID, property
+</td>
+                                        <td style="font-size: 8pt;">sample ID, property
+</td>
+                                        <td style="font-size: 8pt;">sample ID, property
+</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;font-size: 8pt;">drillhole ID, interval from, interval to, property=sample ID</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <p><i style="font-size: 10pt;">*Uniqueness rule is per project, per theme but across data sets unless data set is specified in the uniqueness rule</i>
+        </p>
+        <p>As summarized in the table above, when you are ready to import new data through a template of a sample-related theme, you need to assign it a data set. It can be either an existing one or you can create a new one from here provided you have the required user permissions access.</p>
+        <p>The <span class="ui">Uniqueness rules</span> validate the data at import. The particularity of the <a href="../E_Data Fusion/Data fusion.htm">sample-related</a> themes is that the Uniqueness rules are not restricted to the theme but instead apply across all sample-related themes. This means that, even though you can reference a sample ID in multiple data sets across the sample-related themes,  a  sample ID can only have one value for a property name  across those themes and data sets. For example: If a sample called "Samp1" already has a value for a property called "Density" under <span class="ui">Rock properties</span>, the system will not accept a value called "Density" under <span class="ui">Samples</span> for that "Samp1". This is to ensure that the <span class="uiClick">Sample compilation</span> module does not bring up conflicting or duplicated data.</p>
+        <p>The particular data structure of the sample-related themes is meant to allow you to import data from various specialities separately while still being linked together by their sample ID.</p>
+        <p>For example, a geologist could import the sample ID with its coordinates, date of sampling, and name of the person who took the sample in the <span class="ui">Samples</span> theme. Then the results for resistivity, magnetic susceptibility, and specific gravity could be imported subsequently in the <span class="ui">Rock properties</span> theme. Finally, when the assay results are back from the lab, they can be imported in the <span class="ui">Geochemistry &amp; mineralogy</span> theme. The <span class="uiClick">Samples compilation</span> page allows you to see together on one line all the properties related to each sample ID, all samples-related themes included.</p>
+        <div class="note">Samples with a location measured within a drillhole can be added to the <span class="uiClick">Samples Compilation</span> through the drillhole interval  template. On the property settings, check <span class="ui">Yes This property is a sample ID</span> at the bottom of the box. All properties imported at the same time as this property will be sample-related.<br /><img src="../../../Resources/Images/this property is a sample id.png" /></div>
+        <h4>Drillhole-related themes</h4>
+        <p>These themes are designed to support drillhole logs.<br /></p>
+        <table style="width: 100%;">
+            <col style="width: 166px;" />
+            <col style="width: 107px;" />
+            <col style="width: 112px;" />
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Theme type</td>
+                    <td style="text-align: center;background-color: #4c4c4c;" colspan="5"><span style="color: #ffffff; font-style: italic; font-weight: normal;">Drillhole-related</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Theme</td>
+                    <td style="text-align: center;font-size: 10pt;font-weight: normal;" colspan="5"><b>Drillholes</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Template category</td>
+                    <td style="text-align: center;font-size: 10pt;">Drillholes
+</td>
+                    <td style="text-align: center;font-size: 10pt;">Drillholes
+path data</td>
+                    <td style="text-align: center;font-size: 10pt;">Drillholes
+interval data</td>
+                    <td style="text-align: center;font-size: 10pt;">Drillholes
+point log data</td>
+                    <td style="text-align: center;font-size: 10pt;">Drillholes
+static data</td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can assign 
+data set?</td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                    </td>
+                    <td style="text-align: center;"><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                    </td>
+                    <td style="text-align: center;"><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                    </td>
+                    <td style="text-align: center;"><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can create data set?
+</td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                    </td>
+                    <td style="text-align: center;"><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                    </td>
+                    <td style="text-align: center;"><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                    </td>
+                    <td style="text-align: center;"><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can link tags &amp; files?</td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                    </td>
+                    <td style="text-align: center;"><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                    </td>
+                    <td style="text-align: center;"><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                    </td>
+                    <td style="text-align: center;"><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Uniqueness rule*</td>
+                    <td style="text-align: center;font-size: 8pt;">drillhole ID</td>
+                    <td style="text-align: center;font-size: 8pt;">drillhole ID, distance, dip, azimuth, property
+</td>
+                    <td style="text-align: center;font-size: 8pt;">drillhole ID, interval from, interval to, property
+
+</td>
+                    <td style="text-align: center;font-size: 8pt;">drillhole ID, depth, property
+</td>
+                    <td style="text-align: center;font-size: 8pt;">drillhole ID, property</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><i style="font-size: 10pt;">*Uniqueness rule is per project, per theme but across data sets unless data set is specified in the uniqueness rule</i>
+        </p>
+        <p>As summarized in the table above, there are five templates to import drillhole-related data.</p>
+        <p>Use the <span class="ui">Drillholes</span> template to import the collar data (drillhole ID, coordinates, and length). First, you will need to assign a data set for the drillholes you want to import, which can either be  an existing one or a new one that you can create from this template, provided you have the required user permissions access. You can associate tags and files to the drillholes, as needed. As per the <span class="ui">Uniqueness rule</span>, at the time of import, only the drillhole ID needs to be unique,  regardless of data sets.</p>
+        <p style="page-break-after: avoid;">After importing at least one drillhole ID record, you have the option to use:</p>
+        <ul>
+            <li>The <span class="ui">Drillholes path data</span> for documenting the deviation measurements taken down the hole at specific distances. These will be used for viewing the hole in <MadCap:variable name="General.ProductNameGA" />. If they are absent, the holes will appear vertical pointing down.</li>
+            <li>	The <span class="ui">Drillholes interval data</span> for properties pertaining to a subsection of the hole that you have identified by a distance from and to along the path of the hole.</li>
+            <li>	The <span class="ui">Drillholes point log data</span> for properties documented at a specific distance down the hole (other than deviation measurements that belong in the <span class="ui">path data</span>).</li>
+            <li>The <span class="ui">Drillholes static data</span> for any extra properties related to the entire hole, like the start and end date of drilling, the contractor, the name of the person who logged this, etc.</li>
+        </ul>
+        <img src="../../../Resources/Images/NewRes_importDholes.png" class="indent" style="width: 500px; height: auto;" />
+        <p>You cannot assign a data set, tags, or files to the data imported through these four templates. They all refer to a drillhole ID, which, as an object, is already organized into data sets, and can already have tags and files linked. Refer to the <span class="ui">Uniqueness rules</span> in the table above for the combinations of properties that need to be unique for data to import successfully.</p>
+        <h4>Instrument readings for monitoring</h4>
+        <p style="page-break-after: avoid;">These themes are designed to support instrument / equipment components and monitoring readings for which data is measured at different times. </p>
+        <p style="page-break-inside: avoid;">
+            <table style="width: 100%;">
+                <col style="width: 133px;" />
+                <col style="width: 281px;" />
+                <col style="width: 285px;" />
+                <tbody>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;font-size: 10pt;">Theme type</td>
+                        <td style="text-align: center;background-color: #4c4c4c;" colspan="2"><span style="color: #ffffff; font-style: italic; font-weight: normal;">Instrument readings for monitoring <span style="font-size: 10pt;">(Table 1)</span></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;font-size: 10pt;">Theme</td>
+                        <td style="text-align: center;font-size: 10pt;font-weight: bold;">Ground deformation
+
+
+
+
+</td>
+                        <td style="text-align: center;font-size: 10pt;font-weight: bold;">Stress</td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;font-size: 10pt;">Template category</td>
+                        <td style="text-align: center;font-size: 10pt;padding: 0px;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col style="width: 70px;" />
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 8pt;">Gr. def. stations
+</td>
+                                        <td style="font-size: 8pt;">Gr. def. instant data</td>
+                                        <td style="font-size: 8pt;">Gr. def. interval data</td>
+                                        <td style="font-size: 8pt;">Gr. def. static data</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;font-size: 9pt;padding: 0px;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col style="width: 68px;" />
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 8pt;">Stress</td>
+                                        <td style="font-size: 8pt;">Stress instant data</td>
+                                        <td style="font-size: 8pt;">Stress interval data</td>
+                                        <td style="font-size: 8pt;">Stress static data</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;font-size: 10pt;">Can assign 
+data set?</td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col style="width: 65px;" />
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;font-size: 9pt;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;font-size: 10pt;">Can create data set?
+</td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col style="width: 65px;" />
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;font-size: 9pt;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;font-size: 10pt;">Can link tags &amp; files?</td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col style="width: 67px;" />
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;font-size: 9pt;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col style="width: 78px;" />
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;font-size: 10pt;">Uniqueness rule*</td>
+                        <td style="text-align: center;font-size: 8pt;padding: 0px;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col style="width: 63px;" />
+                                <col style="width: 74px;" />
+                                <col style="width: 53px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 8pt;">station ID
+</td>
+                                        <td style="font-size: 8pt;">station ID,<br /> datetime, 
+<br /> property</td>
+                                        <td style="font-size: 8pt;">station ID,<br /> interval to<br />/from,<br />property
+</td>
+                                        <td style="font-size: 8pt;">station ID, <br />property
+</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;font-size: 8pt;padding: 0px;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col style="width: 69px;" />
+                                <col style="width: 67px;" />
+                                <col style="width: 72px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 8pt;">stress cell ID</td>
+                                        <td style="font-size: 8pt;">stress cell ID, datetime, <br />property</td>
+                                        <td style="font-size: 8pt;">stress cell ID,<br /> interval to/from, <br />property</td>
+                                        <td style="font-size: 8pt;">stress cell ID<br />property</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <p style="page-break-inside: avoid;">
+            <table style="width: 100%;">
+                <col style="width: 133px;" />
+                <col style="width: 281px;" />
+                <col style="width: 287px;" />
+                <tbody>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;font-size: 10pt;">Theme type</td>
+                        <td style="text-align: center;background-color: #4c4c4c;" colspan="2"><span style="color: #ffffff; font-style: italic; font-weight: normal;">Instrument readings for monitoring <span style="font-size: 10pt;">(Table 2)</span></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;font-size: 10pt;">Theme</td>
+                        <td style="text-align: center;font-size: 10pt;font-weight: bold;">Fixed plant activity
+
+
+
+</td>
+                        <td style="text-align: center;font-size: 10pt;font-weight: bold;">Mobile equipment</td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;font-size: 10pt;">Template category</td>
+                        <td style="text-align: center;font-size: 10pt;padding: 0px;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col style="width: 70px;" />
+                                <col style="width: 65px;" />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 8pt;">Activity stations
+</td>
+                                        <td style="font-size: 8pt;"> Activity instant data</td>
+                                        <td style="font-size: 8pt;">Activity interval data</td>
+                                        <td style="font-size: 8pt;">Activity static data</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;font-size: 9pt;padding: 0px;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col style="width: 45px;" />
+                                <col style="width: 62px;" />
+                                <col style="width: 47px;" />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 8pt;">Units</td>
+                                        <td style="font-size: 8pt;">Units with<br /> location <br />instant data </td>
+                                        <td style="font-size: 8pt;">Units without location instant data</td>
+                                        <td style="font-size: 8pt;">Units interval data</td>
+                                        <td style="font-size: 8pt;">Units <br />static data										
+                                    </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;font-size: 10pt;">Can assign 
+data set?</td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col style="width: 65px;" />
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;font-size: 9pt;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col style="width: 52px;" />
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;font-size: 10pt;">Can create data set?
+</td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col style="width: 65px;" />
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;font-size: 9pt;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col style="width: 49px;" />
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;font-size: 10pt;">Can link tags &amp; files?</td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col style="width: 67px;" />
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;font-size: 9pt;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col style="width: 50px;" />
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;font-size: 10pt;">Uniqueness rule*</td>
+                        <td style="text-align: center;font-size: 8pt;padding: 0px;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col style="width: 63px;" />
+                                <col style="width: 75px;" />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 8pt;">station ID
+</td>
+                                        <td style="font-size: 8pt;">station ID, datetime, <br />property
+</td>
+                                        <td style="font-size: 8pt;">station ID,<br />interval to/from,  <br />property
+</td>
+                                        <td style="font-size: 8pt;">station ID
+,<br /> property</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;font-size: 8pt;padding: 0px;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col style="width: 47px;" />
+                                <col style="width: 60px;" />
+                                <col style="width: 62px;" />
+                                <col style="width: 57px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 8pt;">Unit ID</td>
+                                        <td style="font-size: 8pt;">Unit ID, datetime, x, y, z,<br /> property</td>
+                                        <td style="font-size: 8pt;">Unit ID, <br />datetime,  <br />property</td>
+                                        <td style="font-size: 8pt;">Unit ID,<br /> interval to/from, <br />property</td>
+                                        <td style="font-size: 8pt;">Unit ID, <br />property</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <p style="page-break-inside: avoid;">
+            <table style="width: 100%;">
+                <col style="width: 133px;" />
+                <col style="width: 281px;" />
+                <col style="width: 287px;" />
+                <tbody>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;font-size: 10pt;">Theme type</td>
+                        <td style="text-align: center;background-color: #4c4c4c;" colspan="2"><span style="color: #ffffff; font-style: italic; font-weight: normal;">Instrument readings for monitoring <span style="font-size: 10pt;">(Table 3)</span></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;font-size: 10pt;">Theme</td>
+                        <td style="text-align: center;font-size: 10pt;font-weight: bold;">Ventilation
+
+
+
+</td>
+                        <td style="text-align: center;font-size: 10pt;font-weight: bold;">Gas monitoring</td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;font-size: 10pt;">Template category</td>
+                        <td style="text-align: center;font-size: 10pt;padding: 0px;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col style="width: 70px;" />
+                                <col style="width: 63px;" />
+                                <col style="width: 69px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 8pt;">Ventilation stations
+</td>
+                                        <td style="font-size: 8pt;">Ventilation instant data</td>
+                                        <td style="font-size: 8pt;">Ventilation interval data</td>
+                                        <td style="font-size: 8pt;">Ventilation static data</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;font-size: 9pt;padding: 0px;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col style="width: 71px;" />
+                                <col style="width: 69px;" />
+                                <col style="width: 72px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 8pt;">Gas mon. <br />stations</td>
+                                        <td style="font-size: 8pt;">Gas mon. instant data</td>
+                                        <td style="font-size: 8pt;">Gas mon. interval data</td>
+                                        <td style="font-size: 8pt;">Gas mon. static data</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;font-size: 10pt;">Can assign 
+data set?</td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col style="width: 65px;" />
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;font-size: 9pt;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;font-size: 10pt;">Can create data set?
+</td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col style="width: 65px;" />
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;font-size: 9pt;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;font-size: 10pt;">Can link tags &amp; files?</td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col style="width: 67px;" />
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;font-size: 9pt;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col style="width: 78px;" />
+                                <col />
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;font-size: 10pt;">Uniqueness rule*</td>
+                        <td style="text-align: center;font-size: 8pt;padding: 0px;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col style="width: 63px;" />
+                                <col style="width: 74px;" />
+                                <col style="width: 53px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 8pt;">station ID
+</td>
+                                        <td style="font-size: 8pt;">station ID,<br /> datetime, 
+<br /> property</td>
+                                        <td style="font-size: 8pt;">station ID,<br /> interval to<br />/from,<br />property
+</td>
+                                        <td style="font-size: 8pt;">station ID, <br />property
+</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;font-size: 8pt;padding: 0px;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col style="width: 78px;" />
+                                <col style="width: 72px;" />
+                                <col style="width: 72px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 8pt;">station ID
+</td>
+                                        <td style="font-size: 8pt;">station ID,<br /> datetime, 
+<br /> property</td>
+                                        <td style="font-size: 8pt;">station ID,<br /> interval to<br />/from,<br />property
+</td>
+                                        <td style="font-size: 8pt;">station ID, <br />property
+</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <p><i style="font-size: 10pt;">*Uniqueness rule is per project, per theme but across data sets unless data set is specified in the uniqueness rule</i>
+        </p>
+        <p>As summarized in the table above, time-related themes generally have four templates to import data of varying structure. Each has a first template to import the basic mandatory data for each object type, which represents the instrument or piece of equipment: <span class="ui">stress cells</span> for the Stress theme, <span class="ui">units</span> for the Mobile equipment theme, <span class="ui">stations</span> for the remaining themes. </p>
+        <p> You must assign a data set for the objects you  import, which can either be  an existing one or a new one that you can create from this template, provided you have the required user permissions access. You can also associate tags and files to each record, as needed. As per the <span class="ui">Uniqueness rule</span>, only the specific object ID needs to be unique (per project and per theme, but across data sets). For example, a station ID "STA-01" cannot be found in two different data sets of the same theme, but "STA-01" and "STA-02" can have the same location.</p>
+        <p>After importing at least one batch of objects (station / unit / stress cell depending on the theme) with the theme's first template category, you have the option to use:</p>
+        <ul>
+            <li>The theme’s <span class="ui">Instant data</span> template for properties that are measured at a specific datetime (e.g., instrument readings). A regular time-series is an example of what we refer to as instant data: data are recorded at a set of specific instants in time. Instant data is a generalization of a regular time-series, in which the measurement times do not have to be at a regular interval and the properties may be non-numeric.</li>
+            <li>The theme’s <span class="ui">Interval data</span> template for properties pertaining to an interval of time delimited by datetimes from and to (status, average of readings, etc.). Interval data is an extension of instant data, in which each measurement has an associated time interval (a start and stop time), as opposed to being associated with a single instant in time.</li>
+            <li>The theme’s <span class="ui">Static data</span> template for any non-time dependent properties related to the object in general (manufacturer, type, installation date, etc.).</li>
+        </ul>
+        <img src="../../../Resources/Images/ground def inport.png" style="width: 468px;height: 223px;" />
+        <p>You cannot assign a data set, tags, or files to the data imported through these three templates. They each refer to an object ID, which as an  object is already organized into data sets and can already have tags and files linked. Refer to the <span class="ui">Uniqueness rules</span> for the combinations of properties that need to be unique for data to import successfully.</p>
+        <p>As highlighted in the <MadCap:xref href="#Theme">"Theme template guide" on page&#160;1</MadCap:xref>,  the <span class="ui">Mobile equipment unit</span> template does not include x, y, z properties, unlike the other themes of similar type (objects with time-related data). This is because the position of the mobile units can also vary in time, like other instant data properties. Therefore, this theme has two instant data templates: one with location and the other without. You can use the latter if you only want to record fluid levels, for example, and not the position of the units.</p>
+        <h4>Mine models-related data</h4>
+        <p>This theme is designed to compile relevant data on a specific set of points   for which data is re-compiled at different times. For more information, see <MadCap:xref href="../E_Data Fusion/Data fusion.htm#Mine_model_compilation">"Mine model compilation" on page&#160;1</MadCap:xref> and <MadCap:xref href="../I_Geohazard assessment/Ch 9 Divider GI Geohazard assessment.htm"><MadCap:keyword term="Geohazard assessment" />"Geohazard assessment" on page&#160;1</MadCap:xref>.</p>
+        <table style="width: 100%;">
+            <col style="width: 166px;" />
+            <col style="width: 119px;" />
+            <col style="width: 122px;" />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Theme type</td>
+                    <td style="text-align: center;background-color: #4c4c4c;" colspan="4"><span style="color: #ffffff; font-style: italic; font-weight: normal;">Mine models-related</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Theme</td>
+                    <td style="text-align: center;font-size: 10pt;font-weight: normal;" colspan="4"><b>Underground</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Template category</td>
+                    <td style="text-align: center;font-size: 10pt;">Underground points</td>
+                    <td style="text-align: center;font-size: 10pt;">Underground instant data</td>
+                    <td style="text-align: center;font-size: 10pt;">Underground
+interval data</td>
+                    <td style="text-align: center;font-size: 10pt;">Underground static data</td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can assign 
+data set?</td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can create data set?
+</td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can link tags &amp; files?</td>
+                    <td style="text-align: center;"><span style="color: #007688;">✔</span>
+                    </td>
+                    <td style="text-align: center;"><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                    </td>
+                    <td style="text-align: center;"><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                    </td>
+                    <td style="text-align: center;"><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;"><a name="MineModels_UniquenessRule">Uniqueness rule</a>*</td>
+                    <td style="text-align: center;font-size: 8pt;">data set, x, y, z (±0.01)*
+</td>
+                    <td style="text-align: center;font-size: 8pt;">data set, x, y, z, datetime, property
+</td>
+                    <td style="text-align: center;font-size: 8pt;">data set, x, y, z, interval from, interval to, property
+
+</td>
+                    <td style="text-align: center;font-size: 8pt;">data set, x, y, z, property
+</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><i style="font-size: 10pt;">*Uniqueness rule is per project, per theme but across data sets unless data set is specified in the uniqueness rule</i>
+        </p>
+        <p>As summarized in the table above, there are four templates available to import data of varying structure in the Underground theme. Although its structure is similar to the other themes for objects with time-related data, its validation rules are different.</p>
+        <p>For the Underground theme, the object is <span class="ui">points</span>. Use the <span class="ui">Underground points</span> template to import the Underground points coordinates. You must assign a data set for the points you want to import,  which can either be  an existing one or a new one that you can create from this template, provided you have the required user permissions access. You can also associate tags and files to the data set, as needed.</p>
+        <p>As per the <span class="ui">Uniqueness rules</span>, the combination of data set and x, y, z needs to be unique, which means that you can import a point (single combination of x, y, z) in different data sets of the same theme (unlike the other objects with time-related data themes that only allow an object to exist in one data set).</p>
+        <p> In addition, for this theme, a <span class="uiClick">collocation</span> limit applies. A data set cannot contain points closer than 1/100<sup>th</sup> of the distance unit from another point. Such collocated points get their properties merged into one point. If the import of a collocated point attempts to import a previously populated value for a property, the system only keeps the first one, and ignores the other ones.</p>
+        <p>After importing at least one batch of points, you have the option to use:</p>
+        <ul>
+            <li>The <span class="ui">Underground instant data</span> template for properties documented at a specific datetime (e.g., stress values).</li>
+            <li>The <span class="ui">Underground interval data</span> template for properties pertaining to an interval of time delimited by a datetime from and to (e.g., Type of ground support).</li>
+            <li>The <span class="ui">Underground static data</span> template for any non-time dependent properties related to the points in general (e.g., Excavation date, Rock code, etc.).</li>
+        </ul>
+        <img src="../../../Resources/Images/NewResMMData import.png" class="indent" style="width: 500px;height: auto;" />
+        <p>The same <span class="ui">Underground points</span> can be found in more than one data set. Therefore, in order for  the system to reference the proper points, it is necessary to assign a data set when importing <span class="ui">instant</span>, <span class="ui">interval</span> or <span class="ui">static data</span> in this theme. Assigning tags and files is not an option when importing through these three templates because it is a feature for the object level only (<span class="ui">Underground points</span>). </p>
+        <p>Refer to the <MadCap:xref href="#MineModels_UniquenessRule">"Uniqueness rule", in table on page&#160;1</MadCap:xref>, for the combination of properties that need to be unique for data to import successfully through any of these templates. </p>
+        <p> Unlike other themes for objects with time-related data,  the Mine models / Underground theme automatically creates   points  when importing <span class="ui">instant</span>, <span class="ui">interval</span> or <span class="ui">static data</span>, if they were not existing yet for the related x,y,z locations. To make it possible, you must assign a data set when using an <span class="ui">instant</span>, <span class="ui">interval</span> or <span class="ui">static</span> template. The points created this way must still abide by the collocation limitation.</p>
+        <h4>3D triangulated surfaces</h4>
+        <p style="page-break-after: avoid;">These themes are designed to support data related to points and triangles for wireframes.</p>
+        <p style="page-break-inside: avoid;page-break-before: avoid;">
+            <table style="width: 100%;">
+                <col style="width: 144px;" />
+                <col />
+                <col />
+                <col />
+                <col />
+                <tbody>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Theme type</td>
+                        <td style="text-align: center;background-color: #4c4c4c;" colspan="4"><span style="color: #ffffff; font-style: italic; font-weight: normal;">3D triangulated surfaces</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Theme</td>
+                        <td style="text-align: center;font-size: 10pt;font-weight: bold;">3D structural surfaces
+
+</td>
+                        <td style="text-align: center;font-size: 10pt;font-weight: bold;">3D geological contact surfaces
+
+</td>
+                        <td style="text-align: center;font-size: 10pt;font-weight: bold;">3D domains
+
+</td>
+                        <td style="text-align: center;font-size: 10pt;font-weight: bold;">Surfaces
+
+</td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Template category</td>
+                        <td style="text-align: center;padding: 0px;font-size: 8pt;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 8pt;"> 3D Surfaces points
+</td>
+                                        <td style="font-size: 8pt;"> 3D Surfaces triangles</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;padding: 0px;font-size: 8pt;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 8pt;"> 3D Contact points
+</td>
+                                        <td style="font-size: 8pt;"> 3D Contact triangles</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;padding: 0px;font-size: 8pt;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 8pt;"> 3D Domains points
+</td>
+                                        <td style="font-size: 8pt;"> 3D Domains triangles</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;padding: 0px;font-size: 8pt;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col style="width: 66px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 8pt;">Surfaces points</td>
+                                        <td style="font-size: 8pt;">Surfaces triangles</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can assign 
+data set?</td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can create data set?
+</td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can assign group?
+</td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can create group?
+</td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="font-weight: bold; font-size: 12pt; color: #ce1443;">X</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Can link tags &amp; files?</td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;padding: 0px;">
+                            <table style="width: 100%;">
+                                <col />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                        <td><span style="color: #007688;">✔</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ffffff;font-style: italic;background-color: #183d6a;font-weight: normal;">Uniqueness rule*</td>
+                        <td style="text-align: center;padding: 0px;font-size: 8pt;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col style="width: 55px;" />
+                                <col style="width: 62px;" />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 8pt;">group, point ID, x, y, z
+</td>
+                                        <td style="font-size: 8pt;">group, point ID1, point ID2, point ID3,<br />property
+</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;padding: 0px;font-size: 8pt;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col style="width: 75px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 8pt;">group, point ID x, y, z,<br /></td>
+                                        <td style="font-size: 8pt;">group, point ID1 point ID2, point ID3, <br />property
+</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;padding: 0px;font-size: 8pt;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col style="width: 47px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 8pt;">group, point ID, x, y, z</td>
+                                        <td style="font-size: 8pt;">group, point ID1, point ID2, point ID3,
+<br />property</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align: center;padding: 0px;font-size: 8pt;">
+                            <table style="margin-left: 0;margin-right: auto;">
+                                <col style="width: 61px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 8pt;">group, point ID, x, y, z</td>
+                                        <td style="font-size: 8pt;">group, point ID1, point ID2, point ID3,<br />property
+</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <p><i style="font-size: 10pt;">*Uniqueness rule is per project, per theme but across data sets unless data set is specified in the uniqueness rule</i>
+        </p>
+        <p>As summarized in the table above, these themes are for documenting triangulated surfaces composed of points (vertices) and triangles. You must import these objects' data separately through their respective templates.</p>
+        <div class="note">You can import triangulated surface data to build charts and tables for data analysis purposes, or you can simply upload the files to the <span class="uiClick">File manager</span> or <span class="uiClick">Maps / plans / sections</span> to store and reference them to the project or to one or many data sets.</div>
+        <p> All the templates for 3D triangulated surfaces require that you assign a data set and a group, and allow the association of tags and files. The triangles templates, however, do not allow the creation of new data sets and groups: the triangle data has to reference already existing points. You must specify the group for the triangles to reference the correct set of points, since a same point location may exist in different groups.</p>
+        <div class="note">Group names must be unique per data set, but can be reused in another data set.</div>
+        <h1 MadCap:autonum=" ">Importing  GOCAD files</h1>
+        <p>The themes that  hold 3D surfaces data (typically made up of points and triangles) have an option to import directly from the 3D GOCAD file. Only  GOCAD ASCII files for triangulated surface (<span class="fileext">.ts</span>) are currently supported.</p>
+        <ol>
+            <li>Under <span class="ui">Data import</span>, click <span class="uiClick">GOCAD&#160;file</span>. </li>
+            <li>Click <span class="uiClick">Select file,</span> and locate in the explorer your <span class="fileext">.ts</span> file. </li>
+            <li>Assign a <span class="ui">data set</span>, a <span class="ui">group</span> and <span class="ui">tags</span>, as well as the all the properties found in the file. For the mandatory properties, you can select units and a display names. For the other user-created properties, you can select data types, units and NDV just like for the templates.</li>
+            <li>Click <span class="uiClick">Upload file</span>.</li>
+        </ol>
+        <p class="indent">
+            <img src="../../../Resources/Images/en/GOCAD file menu.png" style="margin-right: 10px; vertical-align: top;width: 175px;height: auto;" />
+            <img src="../../../Resources/Images/upload gocad.png" style="width: 312px;height: auto;" />
+        </p>
+        <h1 MadCap:autonum=" ">Manual data entry</h1>
+        <p>Manual data entry allows you to import a single record at a time, with no need for a CSV file. It is handy when you want to import only a small number of records. The system only supports the manual data entry for the <span class="ui">Incidents</span> theme at this time.</p>
+        <p class="Task">To enter data manually:</p>
+        <ol>
+            <li>Under <span class="ui">Data import</span>, click <span class="uiClick">Manual data entry</span>.<br /></li>
+            <li>Select a theme and then an existing template of that theme in the same project.  You will see the fields where you can provide values in order to process the data per the selected template. </li>
+            <li>Click <span class="uiClick">Save</span>.</li>
+        </ol>
+        <img src="../../../Resources/Images/manual data entry.png" class="indent" />
+        <h1 MadCap:autonum=" ">	Import history</h1>
+        <p>The <span class="uiClick">Import history</span> page contains a table that lists all the processed batches (import tasks) in a project.</p>
+        <p>Each row item is a batch. By default, the <span class="ui">Created on</span> column defines the ordering of the items in the table, displaying  the latest batches first. You can sort by any other column by clicking on its name. Clicking on it again will reverse the order, as indicated by the direction of the small arrow to the right of the a column title.  You can filter the batches by data set, file name, date of import, or by your batches, or others’ batches.</p>
+        <p>The table provides the process status for all import batches and displays those that are waiting in queue. You need to refresh the page manually to see most status changes. When a batch status is <span class="ui">Error</span> or <span class="ui">Done with warnings</span>, you can view the details by clicking the number in the <span class="ui">Error / Warnings</span> column. </p>
+        <p>Deleting data is only possible by deleting the complete batch. Therefore, modifying certain values will require that you delete the whole batch, make modifications to the CSV file, and then re-import the updated file.</p>
+        <p>It is  possible to download the imported CSV file from any batch by clicking on its link in the <span class="ui">File</span> column.</p>
+        <p>
+            <img src="../../../Resources/Images/import history table with ID column.png" style="width: 712px;height: 342px;" />
+        </p>
+        <h1 MadCap:autonum=" ">	Monitoring folders</h1>
+        <p><MadCap:variable name="General.ProductName" /> can monitor folders on the network file system for CSV files matching an assigned combination of project, theme, import template, and data set. This is configured on a per-project basis in the <span class="uiClick">Import</span> menu section, and is accessible only to the system administrator. This functionality is meant for automatically importing CSV files that are generally exported from other devices or systems. You can configure devices  to generate CSV files, on schedule, and copy them to the designated folder.</p>
+        <p>This feature is particularly useful for themes that constantly generate new data and need to be rapidly available in the system for monitoring, such as input for scheduled reports or geohazard assessment calculations. A typical example would be microseismic event data.</p>
+        <p>Once the you have configured the system, no user interaction is necessary for the data to be verified for QA/QC, imported in the database, and integrated to the data set.  If an error occurs during the process, the system administrator, or another designated user, will be notified by email.</p>
+        <p class="Task">To add or update a monitoring file:</p>
+        <ol>
+            <li>In the <MadCap:variable name="General.ProductName" /> menu, under the <span class="uiClick">Import</span> menu, click <span class="uiClick">Monitoring folders</span>. </li>
+            <li>Click <span class="uiClick">Add new</span>.</li>
+            <li>In the <span class="ui">Update monitoring file</span> dialogue box, select the <span class="ui">data set</span>, <span class="ui">template</span>, and <span class="ui">group name</span> to use, then add any relevant <span class="ui">tags</span> you would like to link to all the auto-imported data. You can also provide an <span class="ui">email address</span> to receive warning and error messages in case of problems during import.</li>
+            <li>Click <span class="uiClick">Update</span>.</li>
+        </ol>
+        <h1 MadCap:autonum=" ">Importing from other databases</h1>
+        <p>It is possible to create customized connections to directly pull data from other site data sources. This is an  implementation  customized on a per-project basis, and similar to the functionality of monitoring folders, has the advantage of not requiring user interaction, thus limiting potential human errors.</p>
+        <p>You can contact us at <a href="mailto:integrator@mirageoscience.com">integrator@mirageoscience.com</a> to enquire about this option.</p>
+    </body>
+</html>

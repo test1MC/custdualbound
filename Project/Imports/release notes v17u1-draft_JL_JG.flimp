@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MsWordImport
+  PreserveSourceStyles="true"
+  KeepSourceLinks="true"
+  ConvertInlineFormatting="true"
+  AddContinuedLinks="false"
+  AddContinuedFromLinks="false"
+  ContinuedLinkFormat="(continued in {title})"
+  ContinuedFromLinkFormat="(continued from {title})"
+  UseMaxCharLimit="false"
+  UseMinCharLimit="true"
+  MaxCharLimit="10000"
+  MinCharLimit="50"
+  FilenameLength="24"
+  GeneratePageLayouts="false"
+  UseFirstHeadingAsTopicTitle="true"
+  ConvertEquations="true"
+  LastCollectTime="2018-04-18T13:58:06.7937719-04:00"
+  ProjectName="Mira Geoscience User guides"
+  ProjectFolder="C:\Users\jackg\Documents\My Projects\Mira Geoscience User guides\"
+  AutoSync="false"
+  AutoFitTables="false"
+  UseHeaderRows="false"
+  LastImport="2018-04-18T13:59:06.9302232-04:00">
+  <Files>
+    <Url
+      Source="../../../../release notes v17u1-draft_JL_JG.docx"
+      AbsoluteSource="file:///C:/Users/jackg/Documents/release notes v17u1-draft_JL_JG.docx" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles />
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/Resources/Images/release notes v17u1-draft_JL_JG/GOCAD Mining Suite version.png"
+      TimeStamp="4/18/2018 1:58:29 PM" />
+    <Url
+      Source="../../Content/release notes v17u1-draft_JL_JG/GOCAD Mining Suite version.htm"
+      TimeStamp="4/18/2018 1:58:30 PM" />
+    <Url
+      Source="../../Content/release notes v17u1-draft_JL_JG/2018 Paradigm B V and Mira.htm"
+      TimeStamp="4/18/2018 1:58:30 PM" />
+    <Url
+      Source="../../Content/release notes v17u1-draft_JL_JG/Contents.htm"
+      TimeStamp="4/18/2018 1:58:30 PM" />
+    <Url
+      Source="../../Content/Resources/Images/release notes v17u1-draft_JL_JG/New updated functionality.png"
+      TimeStamp="4/18/2018 1:58:29 PM" />
+    <Url
+      Source="../../Content/Resources/Images/release notes v17u1-draft_JL_JG/New updated functionality_1.png"
+      TimeStamp="4/18/2018 1:58:29 PM" />
+    <Url
+      Source="../../Content/Resources/Images/release notes v17u1-draft_JL_JG/New updated functionality_2.png"
+      TimeStamp="4/18/2018 1:58:29 PM" />
+    <Url
+      Source="../../Content/release notes v17u1-draft_JL_JG/New updated functionality.htm"
+      TimeStamp="4/18/2018 1:58:30 PM" />
+    <Url
+      Source="../../Content/Resources/Images/release notes v17u1-draft_JL_JG/Compute Distance to Nearest.png"
+      TimeStamp="4/18/2018 1:58:29 PM" />
+    <Url
+      Source="../../Content/Resources/Images/release notes v17u1-draft_JL_JG/Compute Distance to Nearest_1.png"
+      TimeStamp="4/18/2018 1:58:29 PM" />
+    <Url
+      Source="../../Content/release notes v17u1-draft_JL_JG/Compute Distance to Nearest.htm"
+      TimeStamp="4/18/2018 1:58:30 PM" />
+    <Url
+      Source="../../Content/Resources/Images/release notes v17u1-draft_JL_JG/Targeting Workflow.png"
+      TimeStamp="4/18/2018 1:58:29 PM" />
+    <Url
+      Source="../../Content/release notes v17u1-draft_JL_JG/Targeting Workflow.htm"
+      TimeStamp="4/18/2018 1:58:30 PM" />
+    <Url
+      Source="../../Content/Resources/Images/release notes v17u1-draft_JL_JG/Potential Fields.png"
+      TimeStamp="4/18/2018 1:58:29 PM" />
+    <Url
+      Source="../../Content/Resources/Images/release notes v17u1-draft_JL_JG/Potential Fields_1.png"
+      TimeStamp="4/18/2018 1:58:29 PM" />
+    <Url
+      Source="../../Content/Resources/Images/release notes v17u1-draft_JL_JG/Potential Fields_2.png"
+      TimeStamp="4/18/2018 1:58:29 PM" />
+    <Url
+      Source="../../Content/release notes v17u1-draft_JL_JG/Potential Fields.htm"
+      TimeStamp="4/18/2018 1:58:30 PM" />
+    <Url
+      Source="../../Content/Resources/Images/release notes v17u1-draft_JL_JG/Electromagnetics.png"
+      TimeStamp="4/18/2018 1:58:29 PM" />
+    <Url
+      Source="../../Content/release notes v17u1-draft_JL_JG/Electromagnetics.htm"
+      TimeStamp="4/18/2018 1:58:30 PM" />
+    <Url
+      Source="../../Content/release notes v17u1-draft_JL_JG/Fixed Problems.htm"
+      TimeStamp="4/18/2018 1:58:30 PM" />
+    <Url
+      Source="../../Content/release notes v17u1-draft_JL_JG/ioGAS Link.htm"
+      TimeStamp="4/18/2018 1:58:30 PM" />
+    <Url
+      Source="../../Content/release notes v17u1-draft_JL_JG/SKUA GOCAD.htm"
+      TimeStamp="4/18/2018 1:58:30 PM" />
+    <Url
+      Source="../../Content/release notes v17u1-draft_JL_JG/Supported Third Party Programs.htm"
+      TimeStamp="4/18/2018 1:58:30 PM" />
+    <Url
+      Source="../../Content/release notes v17u1-draft_JL_JG/Supported Operating Systems.htm"
+      TimeStamp="4/18/2018 1:58:30 PM" />
+    <Url
+      Source="../../Content/release notes v17u1-draft_JL_JG/Contact information.htm"
+      TimeStamp="4/18/2018 1:58:30 PM" />
+    <Url
+      Source="../TOCs/release notes v17u1-draft_JL_JG.fltoc"
+      TimeStamp="4/18/2018 1:58:30 PM" />
+    <Url
+      Source="../../Content/Resources/MasterPages/release notes v17u1-draft_JL_JG.flmsp"
+      TimeStamp="4/18/2018 1:58:30 PM" />
+    <Url
+      Source="../../Content/Resources/Stylesheets/release notes v17u1-draft_JL_JG.css"
+      TimeStamp="4/18/2018 1:58:30 PM" />
+  </GeneratedFiles>
+  <ParagraphStyles>
+    <Map
+      From="Heading 1"
+      To="h1.Heading 1" />
+    <Map
+      From="Heading 2"
+      To="h2.Heading 2" />
+    <Map
+      From="Heading 3"
+      To="h3.Heading 3" />
+  </ParagraphStyles>
+  <CharacterStyles>
+    <Map
+      From="Hyperlink"
+      To="a.(MS Word Style)" />
+  </CharacterStyles>
+  <NewTopicStyles>
+    <StyleName
+      Name="Heading 1" />
+    <StyleName
+      Name="Heading 2" />
+  </NewTopicStyles>
+  <UsedParagraphStyles>
+    <StyleName
+      Name="Comment Text" />
+    <StyleName
+      Name="Heading 1" />
+    <StyleName
+      Name="Heading 2" />
+    <StyleName
+      Name="List Paragraph" />
+    <StyleName
+      Name="mt text" />
+    <StyleName
+      Name="Normal (Web)" />
+    <StyleName
+      Name="TOC 1" />
+    <StyleName
+      Name="TOC 2" />
+    <StyleName
+      Name="TOC Heading" />
+  </UsedParagraphStyles>
+  <UsedCharacterStyles>
+    <StyleName
+      Name="Hyperlink" />
+    <StyleName
+      Name="Comment Reference" />
+  </UsedCharacterStyles>
+</MsWordImport>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/Simple.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">
+            <MadCap:keyword term="Add-on module" />Add-on module: Drillhole Designer <MadCap:keyword term="Geoscience ANALYST Pro:Drillhole designer" /><MadCap:keyword term="Utilities menu:Drillhole designer" /></h1>
+        <p>The Drillhole Designer is a paid add-on module to Geoscience ANALYST Pro that offers a dynamic, user friendly environment allowing you to quickly design new drillholes, whether they are simple straight holes from a collar location with specific lengths, to complex drillholes that lift and swing along the path.</p>
+        <p class="Task">To activate your Drillhole Designer licence:</p>
+        <ol>
+            <li>
+                <MadCap:keyword term="Menu bar" />In the Menu bar, open the <b>Add-on Modules</b> menu and click <b>Try/Buy/Activate Module(s)</b>.<br /><img src="../../Resources/Images/trybuy.png" /><br /><br /></li>
+            <li>In the <b style="font-style: italic; font-weight: normal;">Add-on Modules</b> dialogue box, select the <b>Buy</b> button in the Drillhole Designer box. You will be directed to the Mira Geoscience website to complete the transaction. <br /><br /><img src="../../Resources/Images/GA drillhole try buynew.png" style="width: 660px;height: 335px;" /><br /></li>
+            <li>Retrieve your licence key that we emailed to you and press <b>Manage</b> to launch the registration wizard. (Follow the same procedure as the free viewer licence activation steps <a href="../1. Welcome/Activating your licence.htm">described earlier</a> in this guide.)</li>
+            <li>Restart Geoscience ANALYST&#160;to access Drillhole Designer.</li>
+        </ol>
+        <p>To open Drillhole Designer, go to the Utilities menu in Geoscience ANALYST&#160;Pro, and click <b>Drillhole Designer</b>. </p>
+        <p>In the Drillhole Designer application, you will see that there are three drillhole design options:</p>
+        <ol>
+            <li><a href="#To_create_a_drillhole_using_Target_to_surface:">Target to surface</a>
+            </li>
+            <li><a href="#From_collar_down">From collar down</a>
+            </li>
+            <li><a href="#Copy">Copy existing</a>
+            </li>
+        </ol>
+        <p>Once created, the <a href="#Manual">Manual Drillhole Designer</a> launches to make further edits and refinements. </p>
+        <h2 class="NoPageBreak">Target to surface <MadCap:keyword term="Geoscience ANALYST Pro:Drillhole designer:Target to surface" /><br /></h2>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/Simple.css');" class="TableStyle-SimpleWithPadding" cellspacing="0">
+            <col style="width: 360px;" class="TableStyle-SimpleWithPadding-Column-Column1" />
+            <col class="TableStyle-SimpleWithPadding-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                    <td class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1">
+                        <img src="../../Resources/Images/target to surface.bmp" style="margin-left: 0px;margin-right: 0px;margin-top: 20px;margin-bottom: 0px;" />
+                    </td>
+                    <td class="TableStyle-SimpleWithPadding-BodyA-Column1-Row1">
+                        <img src="../../Resources/Images/create target.bmp" style="margin-left: 0px;margin-right: 0px;margin-top: 20px;margin-bottom: 0px;" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Task">To create a target object (end of hole) using Target to surface:<a name="To_create_a_drillhole_using_Target_to_surface:"></a></p>
+        <ol>
+            <li>Select the <b>Target to surface</b> button in the Drillhole Designer application.</li>
+            <li>Click on the <b>New target</b> button to launch the accompanying <i>Create Target</i> dialogue box.</li>
+            <li>In the <i>Create Target</i><MadCap:keyword term="Viewport" /> dialogue box click the digitizing arrow. The Viewport will then be in edit mode. </li>
+            <li>Click the location in the Viewport where you want to place the drillhole target (or enter the x, y, z coordinates manually).</li>
+            <li>Set a <i>Buffer size</i>. (Optional)</li>
+            <li>Enter an Azimuth and Dip value of the target horizon, or click the <b>Surface</b> option and select an existing surface object either through the drop-down menu, or by using the digitizing arrow to click on the location in the Viewport.</li>
+            <li>Click <b>Create</b>.</li>
+        </ol>
+        <p> In the Viewport you will see a new target object comprised of a node at the defined location, surrounded by a sphere indicating the set buffer size. </p>
+        <p>
+            <MadCap:keyword term="Objects panel" />The Objects panel will contain an entry for the object, defined by the target icon <img src="../../Resources/Images/create new target icon.png" />.</p>
+        <img src="../../Resources/Images/target object.png" />
+        <p>You can manually modify the target location, geometry, and buffer size values through the <i><MadCap:keyword term="Data Table" />Data Table</i>, which will automatically update the target geometry in the Viewport to allow you to visualize the modifications in real time. You can attach comments and files here as well. </p>
+        <p class="Task">To create a drillhole from target to surface:</p>
+        <ol>
+            <li>In the <i>Collar</i> section of the <i>Target to surface</i> module of the Drillhole Designer, select a surface at which the collar will be projected onto, typically topography, using the drop-down menu, or by clicking on the surface in the Viewport with the digitizing arrow.</li>
+            <li>Select a casing length to generate a survey station at the selected depth. (Optional)</li>
+            <li>Using <i>Station interval</i> In the <i>Path</i> section, create more deviation stations along the drillhole path by decreasing the value, while increasing the <i>Swing</i> and <i>Lift</i> angles to create a more deviated path.</li>
+            <li>Click <b>Generate</b>.</li>
+        </ol>
+        <div class="note">Having valid input parameters launches the Manual Drillhole Designer. If the drillhole path from the defined orientation at target, swing, and lift parameters would not intersect the collar surface, an error message will display in red in the console and the Manual Drillhole Designer will not launch.</div>
+        <img src="../../Resources/Images/manual drillhole designer.png" />
+        <h2>From collar down <a name="From_collar_down"></a><MadCap:keyword term="Geoscience ANALYST Pro:Drillhole designer:From collar down" /></h2>
+        <img src="../../Resources/Images/from collaar down.png" />
+        <p class="Task">To create a drillhole from a collar down:</p>
+        <ol>
+            <li>In the Drillhole Designer application, click <b>From collar down</b> in the <i>Design type</i> section.</li>
+            <li>Choose your desired drillhole location by either manually entering the <i>Location</i> values or by clicking on the arrow to digitize the location in the Viewport.</li>
+            <li>Set a starting orientation using the Azimuth and Dip. </li>
+            <li>Click <b>Generate</b>.</li>
+        </ol>
+        <p>Optional features include:</p>
+        <ul>
+            <li> Modifying the station interval distance (decrease to generate more deviation stations).</li>
+            <li>Entering a casing length. </li>
+            <li>Specifying swing and lift angles per 100 units of drilling (metres or feet depending on the project units as defined on the workspace tab of the <i>Data Table</i>).</li>
+        </ul>
+        <h2>Copy existing <a name="Copy"></a><MadCap:keyword term="Geoscience ANALYST Pro:Drillhole designer:Copy existing" /></h2>
+        <img src="../../Resources/Images/copy existing.png" />
+        <p class="Task">To copy an existing drillhole:</p>
+        <p><b>Method 1</b>:</p>
+        <ol>
+            <li>In the Drillhole Designer application, click <b>Copy existing</b> in the <i>Design type</i> section.</li>
+            <li>Select a drillhole from the drop-down menu, or click on an exiting drillhole in the Viewport using the digitizer arrow.</li>
+            <li>Click <b>Generate</b> to launch the Manual Drillhole Designer to refine the path and location, if desired.</li>
+        </ol>
+        <p><b>Method 2</b>: </p>
+        <ol>
+            <li>In the Objects panel or the Viewport, right-click an existing drillhole, then click <b>Manual Drillhole Designer</b> in the contextual menu. </li>
+            <li>From here, you can use either:<ol><li>The digitizer arrow, by clicking on a drillhole you would like to copy, or</li><li>Type a name for your new drillhole in the <i>Name</i> text box, then click <b>Create</b>.</li></ol></li>
+        </ol>
+        <div class="note">When you copy using these methods, the copied drillhole will display in the exact location of the source of the copy until you use the Manual Drillhole Designer to define a new path and location.</div>
+        <h2>Manual Drillhole Designer <a name="Manual"></a><MadCap:keyword term="Geoscience ANALYST Pro:Drillhole designer:Manual drillhole designer" /></h2>
+        <img src="../../Resources/Images/manual drillhole designer.png" />
+        <p>The purpose of the Manual Drillhole Designer is to refine an existing drillhole's attributes. </p>
+        <p>The Manual Drillhole Designer allows you to:</p>
+        <ul>
+            <li>Edit a drillhole's location</li>
+            <li>Manually insert new deviation stations at specific locations</li>
+            <li>Delete stations</li>
+            <li>Add stations at defined surface intersections</li>
+            <li>Modify the strike and dip and / or lift and swing across certain lithological domains or structures</li>
+            <li>Automatically propagate angle changes down a drillhole in real time when dip and azimuth changes are made</li>
+            <li>Preview a newly-created drillhole</li>
+        </ul>
+        <p>When you create a drillhole with the Manual Drillhole Designer, it will be located under the root Workspace folder named according to the name defined in the dialogue box.</p>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="852" MadCap:lastWidth="725">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Drillhole data format</h1>
+        <p>This information is designed to provide you with the necessary formatting needed for drillhole data input in Geoscience INTEGRATOR.</p>
+        <p>The Drillhole theme in Geoscience INTEGRATOR can accommodate collar, deviation, interval, and distance-specific data. The accepted format is comma-separated values (.csv).</p>
+        <h2 class="NoPageBreak">Drillhole collar data</h2>
+        <p>This applies to  general hole info like <i>Hole ID, coordinates, length, dates, contractor, geologist, </i>etc<i>.</i></p>
+        <p><b>Format example:</b>
+        </p>
+        <p class="indent"><span style="color: #b22222; font-weight: bold;">Hole</span> <span style="color: #b22222; font-weight: bold;">ID</span>,<span style="color: #b22222; font-weight: bold;">XYZ</span>,<span style="color: #b22222; font-weight: bold;">length</span>,<b>Drilling date</b>,<b>Drilling contractor</b>,<b>Logged by</b></p>
+        <p class="indent">DH001,10300,30200,300,123,2010-10-28,ABC Drilling inc.,J. Smith</p>
+        <p class="indent">DH002,10350,30175,290,234,2010-10-30,ABC Drilling inc.,B. Goode</p>
+        <p class="indent">HH321,13000,30200,299,321,2011-03-15,DEF Drillers ltd.,J. Smith</p>
+        <p>The red columns (<i>Hole ID, 3D coordinates</i> and <i>hole length</i>) are the minimal mandatory data needed.</p>
+        <p>Geoscience INTEGRATOR does not allow two holes to have the same name, so <i>Hole ID</i> values needs to be unique (per project).</p>
+        <p>&#160;</p>
+        <h2 class="NoPageBreak">Drillhole deviation data</h2>
+        <p>This applies to tracing the hole in 3D, typically deviation survey data like <i>depth, azimuth, dip, instrument type</i> or <i>name</i>.</p>
+        <p><b>Format example:</b>
+        </p>
+        <p class="indent"><span style="color: #b22222; font-weight: bold;">Hole ID</span>,<span style="color: #b22222; font-weight: bold;">distance</span>,<span style="color: #b22222; font-weight: bold;">azimuth</span>,<span style="color: #b22222; font-weight: bold;">dip</span>,<b>Instrument</b></p>
+        <p class="indent">DH001,0,180,-45,Instrument #1</p>
+        <p class="indent">DH001,25,178,-44,Instrument #1</p>
+        <p class="indent">DH001,50,176,-40,Instrument #1</p>
+        <p class="indent">DH002,0,180,-50,Instrument #2</p>
+        <p class="indent">DH002,30,177,-49,Instrument #2</p>
+        <p>The red columns (<i>Hole ID, distance, azimuth, dip</i>) are the minimal mandatory data needed. 
+			</p>
+        <p>The combination of <i>Hole ID</i> and <i>distance</i> needs to be unique, because Geoscience INTEGRATOR only accepts one set of measurement per distance down the hole per hole.
+			</p>
+        <p>For proper 3D rendering, azimuth values should be between 0 and 360 and dips between -minus 90 and 90: negative dips creating downward trending drillholes, while positive dips create upward trending drillholes, such as in underground drilling.
+</p>
+        <p>&#160;</p>
+        <h2 class="NoPageBreak">Drillhole interval data	</h2>
+        <p>This applies to information related to various intervals of holes like <i>rock types, alterations, structures, mineralizations, RQD, sample #, assay results</i>, etc.</p>
+        <p><b>Format example:</b>
+        </p>
+        <p class="indent"><span style="color: #b22222; font-weight: bold;">Hole ID</span>,<span style="color: #b22222; font-weight: bold;">From</span>,<span style="color: #b22222; font-weight: bold;">To</span>,<b>Rock type</b>,<b>Alteration</b>,<b>RQD</b></p>
+        <p class="indent">DH001,0,6,Overburden,</p>
+        <p class="indent">DH001,6,63,Sandstone,CL1,90</p>
+        <p class="indent">DH001,63,102,Mudstone,CL2,75</p>
+        <p class="indent">DH001,102,123,Gabbro,CL1,95</p>
+        <p class="indent">DH002,0,9,Overburden,</p>
+        <p class="indent">DH002,9,57,Sandstone,CL2,85</p>
+        <p class="indent">DH002,57,252,Wacke,SR,90</p>
+        <p>&#160;</p>
+        <p class="indent"><b style="color: #b22222;">Hole ID</b>,<b style="color: #b22222;">From</b>,<b style="color: #b22222;">To</b>,<b>Sample</b>,<b>Au</b>,<b>Ag</b></p>
+        <p class="indent">DH001,36,39,SP1111,45,12</p>
+        <p class="indent">DH001,39,42,SP1112,30,1</p>
+        <p class="indent">DH002,70,80,SP1234,100,12</p>
+        <p>The red columns (<i>Hole ID, From, To</i>) are the minimal mandatory data needed.</p>
+        <p>The combination of <i>Hole ID, From</i> and <i>To</i> needs to be unique, because Geoscience INTEGRATOR only accepts one set of values per interval per hole.</p>
+        <p>&#160;</p>
+        <h2 class="NoPageBreak">Drillhole distance-specific data</h2>
+        <p>This applies to information related to a specific distance down the hole like spot test readings of <i>magnetic susceptibility</i> or <i>handheld XRF analyzers</i>)</p>
+        <p><b>Format example:</b>
+        </p>
+        <p class="indent"><b style="color: #b22222;">Hole ID</b>,<b style="color: #b22222;">Distance</b>,<b>Mag sus</b>.,Fe content (pXRF)</p>
+        <p class="indent">DH001,56.5,45678,10.7</p>
+        <p class="indent">DH001,100.2,60053,23.4</p>
+        <p class="indent">DH002,35,30002,6.4</p>
+        <p class="indent">DH002,92.3,40021,12.1</p>
+        <p>The red columns (<i>Hole ID, Distance</i>) are the minimal mandatory data needed.</p>
+        <p>The combination of <i>Hole ID, Distance</i> needs to be unique, because Geoscience INTEGRATOR only accepts one set of values per distance per hole.</p>
+    </body>
+</html>

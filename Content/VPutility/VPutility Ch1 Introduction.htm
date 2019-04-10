@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Overview</h1>
+        <p>VPutility is software to help you to create and modify VP models. The VP model directly links the rock properties and geologic units to the geophysics. The earth is laterally divided equally into vertical prisms (VP), which are then sub-divided further to conform with undulating topographic and geologic layers.</p>
+        <p>VPutility is part of VP Suite—a collection of geophysical modelling and inversion products. The discretization of the earth (required for all programs in the genre) sets the VP Suite apart from other available programs.  The VP model directly links the rock properties and geologic units to the geophysics. The earth is laterally divided equally into vertical prisms (VP), which are then sub-divided in depth to conform with undulating topographic and geologic layers.</p>
+        <p>Each VP model classifies geology units based on its average physical property, which we call <i>homogeneous units</i>. These units can be further divided into smaller cells to create heterogeneities within the unit. Heterogeneous cells may vary yet stay within the user-specified bounds of its geological unit.</p>
+        <p>This unique structure allows you to explore the geologic possibilities that reproduce the geophysical data, by performing actions such as:</p>
+        <ul>
+            <li>Adjusting homogeneous units</li>
+            <li>Moving geologic horizons (geometry inversion)</li>
+            <li>Solving for heterogeneities (heterogeneous inversion) within a unit or units</li>
+            <li>Finding a variable basement under the units of interest</li>
+        </ul>
+        <MadCap:pageBreak />
+        <p>The illustration below depicts a simple schematic of VP model prisms as an example with two homogeneous geologic units:</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg homogeneous units.png" />
+        </p>
+        <p>Every VP model has a VP basement. It is important to note that this may be the interpreted  geologic "basement". This bottom unit is important because it will continue to the absolute bottom of the model (usually -25 km in elevation). The VP basement stems from the idea that the VP Suite modelling space is implicitly within the earth (see illustration below). This methodology allows you, for example, to recover density instead of density contrast.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPmg location of VP model.png" />
+            <br /><span style="font-size: 10pt;">Illustration of the location of a VP model.</span>
+        </p>
+        <p>&#160;</p>
+        <p>VPutility is run through the command prompt as a standalone executable. Using VPutility requires a control file.</p>
+        <h2>Scope</h2>
+        <p>This guide will help you to become proficient in implementing VPutility to maximize the use of the VP Suite products that model and invert geophysical data.</p>
+        <h2 class="NoPageBreak">Updates from previous version</h2>
+        <p>We have added more features to help create and work with VP models in VPutility <MadCap:variable name="General.VersionNumber" />. Below is a list of new features:</p>
+        <ul>
+            <li>Removal of constraints from a VP model file</li>
+            <li>Transfer geometries of a VP model to another physical property</li>
+            <li>Ability to handle alphanumeric line data<ul><li>output to Geoscience ANALYST will result in a curve object</li></ul></li>
+            <li>Input lateral heterogeneities when creating models</li>
+            <li>Create and output rotated models to Geoscience ANALYST</li>
+            <ul>
+                <li>supports the latest version of VPmg</li>
+                <li>rotate existing models</li>
+            </ul>
+            <li>New information mode shows:<ul><li> types of units and constraints</li><li>number of cells </li><li>size of derivative matrices for inversion (in GB)</li></ul></li>
+        </ul>
+        <h1 MadCap:autonum=" ">How to use this guide</h1>
+        <MadCap:snippetBlock src="../Resources/Snippets/StyleConventions.flsnp" />
+    </body>
+</html>

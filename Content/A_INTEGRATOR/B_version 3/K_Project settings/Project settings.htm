@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">
+            <MadCap:keyword term="Project settings" />Overview</h1>
+        <p>The project settings consist of a series of components that determine the attributes and building blocks that make up a <MadCap:variable name="General.ProductName" /> project.</p>
+        <p>System administrators and project managers are responsible for defining  project settings, and by default, only they can make changes to the them. Other users can view those settings for reference.</p>
+        <p>You will find the project settings towards the bottom of the list of items in the <MadCap:variable name="General.ProductName" /> menu.</p>
+        <p>
+            <img class="indent" src="../../../Resources/Images/GI project settings list.png" />
+        </p>
+        <h1 MadCap:autonum=" "><a name="Units"></a>
+            <MadCap:keyword term="Units" />Units</h1>
+        <p>This is the list of  units of measurement  used throughout the project, as defined by the project manager.</p>
+        <p>When creating an import template, users are asked to indicate the unit of measurement of each property. To do so, they must select one unit in a list generated from this table. It is  important that you add all necessary units  to the table prior to data import.</p>
+        <p>Deciding on the data units to use in a project is crucial to ensure consistency and to avoid having values of a single property with different units. For example, avoid having stress values in kPa and others in MPa. Such a situation would limit data integration as the analysis tools would perceive ‘stress in kPa’ and ‘stress in MPa’ as different properties.</p>
+        <p>Units listed here do not restrict the units that you can use in any files, maps, or other documents  imported in the data management system; they are only used for data imported in the <MadCap:variable name="General.ProductName" /> database.</p>
+        <p>Creating units using the button at the top right of the <span class="ui">Current units</span> table, as well as editing and deleting them is only available to users with proper permission level.</p>
+        <div class="note">It is not possible to delete a unit if data recorded as having this unit exists in the database.</div>
+        <p>
+            <img src="../../../Resources/Images/NewRes_Unit.png" style="width: 713px;height: 278px;" />
+        </p>
+        <h1 MadCap:autonum=" ">
+            <MadCap:keyword term="Classifications" />Classifications</h1>
+        <p>This component is for  importing categorical data in any theme.</p>
+        <p>An example of a rock code classification and its categories or classes could be something like this:</p>
+        <ul style="list-style-type: square;">
+            <li>Rock Code:<ul style="list-style-type: square;"><li>Dolomite</li><li>Limestone</li><li>Chert</li></ul></li>
+        </ul>
+        <p>Having set classifications in a project provides a data consistency check in the sense that entries must correspond exactly to the existing classes. In the example above, if a user would try to import a data file containing typos, or where someone might spell limestone  in two words (lime stone) instead of one, the import process would  halt and an error message would prompt you to correct the data entries that do not correspond exactly to the specified classes.</p>
+        <p>Having set classifications for a project ensures that all data entered in the database respects the same classes, making data consistent for analysis throughout the project.</p>
+        <p>This is also useful in that it prevents you from having to type each class name into your template.</p>
+        <p>
+            <img class="indent" src="../../../Resources/Images/NewRes_Classifications.png" />
+        </p>
+        <p class="Task">To define a  classification:</p>
+        <ol>
+            <li>In the <MadCap:variable name="General.ProductName" /> menu, click <span class="uiClick">project settings</span>, then click <span class="uiClick">Classifications</span>.</li>
+            <li>In the <span class="ui">System classifications</span> table, give a name and description to your classification. You can also enter a description.</li>
+            <li>Click <span class="uiClick">Add classification</span>. </li>
+            <li>&#160;Define its classes, by:<ol style="list-style-type: lower-alpha;"><li>Clicking the Classification’s edit button (insert button)</li><li>In the Class name field of the <span class="ui">Classes for classification</span> window, name the class.</li><li>Click <span class="uiClick">Add Class</span>. It is also possible to set a colour for each class by clicking add colour, then setting the colour of your choice using the colour charts or by entering the RGB# value.</li></ol></li>
+        </ol>
+        <img src="../../../Resources/Images/NewRes_classescolours.png" style="width: 222px;height: 370px;float: left;" />
+        <p> If you plan to add numerous classes and wish to avoid typing them out by hand you can use the option to import the list of classes from a CSV file. To do so, click <span class="uiClick">Import from file</span> in the <span class="ui">Classes for classification</span> window and follow the given instructions. The CSV file should contain no header, just the list of class names.</p>
+        <div class="note">It is  possible to generate supplementary classes directly from the import template. These extra classes will only apply to the data imported via their specific import template and will not be added to the list of classes of the selected project classifications.</div>
+        <h1 MadCap:autonum=" "><a name="Neighbou"></a>
+            <MadCap:keyword term="Neighbourhoods" />Neighbourhoods</h1>
+        <p><span class="ui">Neighbourhoods</span> are user-defined volumes of space within the project. Each is composed of one or more 3D polygons, has a meaningful name, and represents a volume that users generally refer to by its name rather than by coordinates. For example, a <span class="ui">Neighbourhood</span> in a mine could represent a level, a stope, a drive, or a shaft area.</p>
+        <p><span class="ui">Neighbourhoods</span> greatly facilitate spatial queries as users do not require knowing or entering the x, y, z coordinates of the regions they are interested in; they have the possibility to simply select neighbourhood names instead. This is particularly useful when a neighbourhood includes many polygons.</p>
+        <p>The system automatically and continuously tracks what data resides in each neighbourhood.</p>
+        <div style="page-break-inside: avoid;">
+            <p class="Task">To create a Neighbourhood:</p>
+            <ol>
+                <li>
+                    In the <MadCap:variable name="General.ProductName" /> menu, click <span class="uiClick">Project settings</span>, then click <span class="uiClick">Neighbourhoods</span>.</li>
+                <li>In the <span class="ui">Current neighbourhoods</span> table, click <span class="uiClick">Create neighbourhood</span>.</li>
+                <li>In the <span class="ui">Create neighbourhood</span> dialogue, give your neighbourhood a name. You can also provide an optional description.</li>
+                <li>Click <span class="uiClick">Add</span>, then click <span class="uiClick">Close</span>.</li>
+            </ol>
+            <img src="../../../Resources/Images/GI Nhoods july18.png" style="width: 700px;height: 176px;" />
+        </div>
+        <div style="page-break-inside: avoid;">
+            <p>You must add at least one volume to a neighbourhood for it to identify already-existing data. In the <span class="ui">Current neighbourhoods</span> table, click the number in the <span class="ui"># Volumes</span> column. The neighbourhood can contain many volumes. Here, you can click <span class="uiClick">Add new volume</span>, which will give you the option to either define a bounding box or a polygon with a thickness.</p>
+            <img class="indent" src="../../../Resources/Images/GI add new volume july18.png" style="width: 436px;height: 523px;" />
+        </div>
+        <p>Alternatively, you can import a polygon from a CSV file to create a new neighbourhood. This is done by clicking <span class="uiClick">Import neighbourhood</span> in the current neighbourhoods table. Your CSV file must contain a list of x,y coordinates with a header. You will provide the min-max z extents in the form.</p>
+        <div class="note">When a new volume is created or edited, the system scans the entire database to identify which 3D data resides in it. It may take a a few moments to complete this operation. Similarly, the data import process scans all new data to track in which neighbourhoods, if any, each point resides.</div>
+        <p><span class="ui">Neighbourhoods</span> are composed of one or more 3D volumes with each volume being delimited by either an x, y, z <span class="uiClick">bounding box</span> or a <span class="uiClick">polygon</span> with a defined Z-axis range.</p>
+        <ul style="list-style-type: square;">
+            <li><span class="uiClick">Bounding box</span>: A cuboid defined by its south-western and north-eastern coordinates.</li>
+            <li><span class="uiClick">Polygon</span>: Comprised of an unlimited number of XY points that join to create a closed 2D polygon, where the last point joins with the first to complete the polygon. To turn the 2D polygon into a 3D volume, you must define maximum and minimum Z-axis values.</li>
+        </ul>
+        <div class="note"><i>Neighbourhoods</i> are independent from one another; they can overlap. Therefore, any point can belong to many neighbourhoods.</div>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">
+            <MadCap:keyword term="Mine levels" />Mine levels</h1>
+        <p>This component is for defining the minimum and maximum elevation for each mine level of the project. You can add and delete mine levels from this setting depending on user permissions. The Mine levels are only used in the <span class="uiClick">Mine model compilation</span> and Geohazard reports section of <MadCap:variable name="General.ProductName" />.</p>
+        <p>
+            <img src="../../../Resources/Images/NewRes_Minlevels.png" style="width: 711px;height: 303px;" />
+        </p>
+        <h1 MadCap:autonum=" ">
+            <MadCap:keyword term="Shifts" />Shifts</h1>
+        <p><span class="ui">Shifts</span> are set portions of time within a 24-hour period, allowing you to set active time slots for a project. Shifts facilitate time-based queries as users do not need to enter specific start and end time values. Instead, they can simply select specific shift names.</p>
+        <p>A typical example is to set a morning, an afternoon, and a night shift corresponding to the underground operations schedule.<img src="../../../Resources/Images/NewRes_Shifts.png" style="width: 713px;height: 176px;" /></p>
+        <p>We recommend that shifts do not overlap, however, <MadCap:variable name="General.ProductName" /> does not limit or control this. You can edit shift names, descriptions, and start time and end time values. Ability to create, edit and delete shifts is permission-based.</p>
+        <p class="Task">To set shifts in a project:</p>
+        <ol>
+            <li>In the <MadCap:variable name="General.ProductName" /> menu, click <span class="uiClick">Project settings</span>, then click <span class="uiClick">Shifts</span>.</li>
+            <li>In the <span class="ui">Current shifts</span> table, click <span class="uiClick">Add new shift</span>.</li>
+            <li>In the <span class="ui">Add new shift</span> dialogue box:<ol style="list-style-type: lower-alpha;"><li> Give the shift a name and description.</li><li>Define the start and end times.</li></ol></li>
+            <li>Click <span class="uiClick">Add</span>, then click <span class="uiClick">Close</span>.</li>
+        </ol>
+        <h1 MadCap:autonum=" ">
+            <MadCap:keyword term="Data set metadata" /><a name="Datasetmetadata"></a>Data set metadata</h1>
+        <p>This component allows you to create, edit, and delete metadata related to data sets in projects.</p>
+        <p>
+            <img class="indent" src="../../../Resources/Images/GI data set metadata.png" style="width: 630px;height: auto;" />
+        </p>
+        <p class="Task">To add new metadata:</p>
+        <ol>
+            <li>Within the <span class="uiClick">Project settings</span>, click <span class="uiClick">Data set metadata</span>.</li>
+            <li>Click <span class="uiClick">Add new metadata field</span>.</li>
+            <li>In the <span class="ui">Add new metadata</span> dialogue box, give the metadata a name, a unit, and a type. </li>
+            <li>Click <span class="uiClick">Save</span>.</li>
+        </ol>
+        <p>Along with a list of  your metadata, you will be able to edit all parameters as well as delete entries within the Data set metadata table. </p>
+        <p>If a data set has populated a metadata field, you cannot modify its unit and type.</p>
+        <p style="page-break-after: avoid;">If you do not have permission to edit <span class="ui">Data set metadata</span>, this page will only contain a table displaying the items and their settings.</p>
+        <p style="page-break-before: avoid;">
+            <img class="indent" src="../../../Resources/Images/en/GI data set metadata no permission.png" style="width: 550px;height: aurto;" />
+        </p>
+        <h1 class="NoPageBreak" MadCap:autonum=" "><a name="FileTypes"></a>
+            <MadCap:keyword term="File types" />File types</h1>
+        <p>This component is a list of <span class="ui">file types</span> available for use as a parameter in the <span class="uiClick">File manager</span> and <span class="uiClick">Maps / plans / sections</span> pages. From here  you can add, edit, and delete file types if you have proper permission level.</p>
+        <p>
+            <img src="../../../Resources/Images/NewRes_Filetypes.png" style="width: 716px;height: 320px;" />
+        </p>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">
+            <MadCap:keyword term="Sample media" />Sample media</h1>
+        <p style="page-break-after: avoid;">This component contains a table listing all of the <i>sample media</i> available for samples in the project. Project managers and system administrators can  add new sample media (button at top right), as well as edit and delete existing ones. </p>
+        <p style="page-break-before: avoid;">
+            <img src="../../../Resources/Images/NewRes_Sample media.png" style="width: 711px;height: 315px;" />
+        </p>
+        <h1 class="NoPageBreak" MadCap:autonum=" "><a name="Data"></a>
+            <MadCap:keyword term="Data sets" />Data sets</h1>
+        <p>This component allows administrators and project managers to create, edit, and delete data sets in projects.</p>
+        <p class="Task">To add a new data set:</p>
+        <ol>
+            <li>Within the <span class="uiClick">Project settings</span>, click <span class="uiClick">Data sets</span>.</li>
+            <li>In the <span class="ui">Data sets</span> table. click the <span class="uiClick">Create</span> button.</li>
+            <li>In the <span class="ui">Add data set</span> dialogue box, give the data set a name and a description (optional). </li>
+            <li>Click <span class="uiClick">Save</span>.</li>
+        </ol>
+        <p>You can edit and delete entries within the <span class="ui">Data set</span> table. </p>
+        <h1 MadCap:autonum=" ">
+            <MadCap:keyword term="Import templates" />Import templates</h1>
+        <p>This component allows you to edit <img src="../../../Resources/Images/edit icon.png" style="width: 13px;height: 13px;margin-left: 0px;margin-top: 0px;margin-bottom: 0px;" /> a template's name or NDV, as well as delete <img src="../../../Resources/Images/delete red x.png" style="margin-left: 0px;margin-top: 0px;margin-bottom: 0px;" /> or deactivate them if you have the proper permission level.</p>
+        <p>
+            <img class="indent" src="../../../Resources/Images/en/EditImportTemplates.png" style="width: 550px;height: auto;" />
+        </p>
+        <p>It is not possible to delete a template that has been used to import currently-existing data. See the column <span class="ui">Is data?</span> to know if it is the case. You can either remove all the batches that used this template (<span class="ui">Is data?</span> will become <span class="ui">"no"</span>) and then you can delete it. Or you click the <span class="ui">Status</span> <span class="uiClick">Active</span>to toggle it to <span class="uiClick">Inactive</span>, which will hide that template from the list of templates available for import.</p>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">
+            <MadCap:keyword term="Groups" />Groups</h1>
+        <p>This component allows you to edit <img src="../../../Resources/Images/edit icon.png" style="width: 13px;height: 13px;margin-left: 0px;margin-top: 0px;margin-bottom: 0px;" /> the <span class="ui">Group name</span> and <span class="ui">Description</span>  if you have the proper permission level.</p>
+        <p style="page-break-before: avoid;">
+            <img class="indent" src="../../../Resources/Images/en/EditGroups.png" style="width: 580px;height: auto;" />
+        </p>
+        <p>To do so, make sure you are in a theme that allows group names. Because group names belong to data sets, you have to select a data set from the second drop-down menu in order to see a table with its group names.</p>
+        <p>The only way to delete group names is to delete the whole data set from the <span class="uiClick">Data sets</span> &#160;page of the <span class="uiClick">Project settings</span> (see <MadCap:xref href="#Data">"Data sets" on page&#160;1</MadCap:xref>).</p>
+        <h1 class="NoPageBreak" MadCap:autonum=" ">
+            <MadCap:keyword term="Assigned users" />Assigned users</h1>
+        <p>Project managers or system administrators can manage the user roles within a specific project. This page  contains a list of user accounts for the current project, including  user name, email address, organization, and assigned role. System administrators and project managers can remove users by clicking the red <span class="uiClick">X</span> at the end of their row, or add users to the project by selecting their user name from the drop down list at the bottom of the table and selecting a role for them, then clicking <span class="uiClick">Save</span>.</p>
+        <p>Permissions are given according to the role assigned. Roles are set per project, so a user can have a different role (access level) per project.</p>
+        <div class="note">To modify a user's role, you need to remove their current role and assign them a new one.</div>
+        <div class="note">Users must already exist in the system before you can assign them a user role in a project. Adding users  to the system is limited to system administrators. </div>
+    </body>
+</html>

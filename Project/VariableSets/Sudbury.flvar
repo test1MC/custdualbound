@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultVariableSet>
+  <Variable
+    Comment=""
+    Name="PhoneNumber"
+    EvaluatedDefinition="+1 705 479-0114">+1 705 479-0114</Variable>
+  <Variable
+    Name="CityStateZip"
+    Comment=""
+    Definition="Some text"
+    EvaluatedDefinition="Sudbury, Ontario">Sudbury, Ontario</Variable>
+  <Variable
+    Name="StreetAddress"
+    Comment=""
+    Definition="Some text"
+    OriginalName="StreetAddress"
+    EvaluatedDefinition="1039 Regional Rd 24">1039 Regional Rd 24</Variable>
+  <Variable
+    Comment=""
+    Name="CompanyName"
+    EvaluatedDefinition="Mira Geoscience Limited">Mira Geoscience Limited</Variable>
+</CatapultVariableSet>

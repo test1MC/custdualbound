@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="Table of Contents"
+    Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Содержание.htm#_Toc491778698" />
+  <TocEntry
+    Title="The Geoscience ANALYST user interface"
+    Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Содержание.htm#_Toc491778699">
+    <TocEntry
+      Title="Histogram view: Float and integer data"
+      Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Содержание.htm#_Toc491778700">
+      <TocEntry
+        Title="Reference data view."
+        Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Содержание.htm#_Toc491778701" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Object types"
+    Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778702">
+    <TocEntry
+      Title="Points"
+      Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778703" />
+    <TocEntry
+      Title="Curves"
+      Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778704" />
+    <TocEntry
+      Title="Surfaces"
+      Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778705" />
+    <TocEntry
+      Title="Drillholes"
+      Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778706" />
+    <TocEntry
+      Title="2D Grids"
+      Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778707" />
+    <TocEntry
+      Title="BlockModels"
+      Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778708" />
+    <TocEntry
+      Title="GeoImages"
+      Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778709" />
+  </TocEntry>
+  <TocEntry
+    Title="Importing files into Geoscience ANALYST"
+    Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778710" />
+  <TocEntry
+    Title="How to use slicers"
+    Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778711" />
+  <TocEntry
+    Title="Objects panel: Sorting, filtering, and slicing"
+    Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778712">
+    <TocEntry
+      Title="Contextual menus"
+      Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778713" />
+    <TocEntry
+      Title="Slicers"
+      Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778714" />
+    <TocEntry
+      Title="Tape measure"
+      Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778715" />
+    <TocEntry
+      Title="Snapshots"
+      Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778716" />
+    <TocEntry
+      Title="Comments and files"
+      Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778717" />
+  </TocEntry>
+  <TocEntry
+    Title="Add-on module: Geoscience ANALYST Pro"
+    Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778718">
+    <TocEntry
+      Title="Transfer data"
+      Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778719" />
+    <TocEntry
+      Title="2D grid designer"
+      Link="../../../../Geoscience ANALYST Russian/Copy of Geoscience ANALYST User guide excerpt for Russian translation_August29_2017_rus.docx#_Toc491778720"
+      AbsoluteLink="file:///C:/Users/sebastienh/Geoscience ANALYST Russian/Copy of Geoscience ANALYST User guide excerpt for Russian translation_August29_2017_rus.docx#_Toc491778720" />
+    <TocEntry
+      Title="Minimum curvature gridding"
+      Link="../../../../Geoscience ANALYST Russian/Copy of Geoscience ANALYST User guide excerpt for Russian translation_August29_2017_rus.docx#_Toc491778721"
+      AbsoluteLink="file:///C:/Users/sebastienh/Geoscience ANALYST Russian/Copy of Geoscience ANALYST User guide excerpt for Russian translation_August29_2017_rus.docx#_Toc491778721" />
+  </TocEntry>
+  <TocEntry
+    Title="Creating objects"
+    Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778722">
+    <TocEntry
+      Title="Object creation: Use cases"
+      Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778723">
+      <TocEntry
+        Title="Use case: Points"
+        Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778724" />
+      <TocEntry
+        Title="Use case: Curves"
+        Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778725" />
+      <TocEntry
+        Title="Use case: Surfaces"
+        Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778726" />
+    </TocEntry>
+    <TocEntry
+      Title="Snapping objects"
+      Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778727" />
+    <TocEntry
+      Title="Editing objects"
+      Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778728" />
+    <TocEntry
+      Title="Editing in the Data table"
+      Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778729" />
+    <TocEntry
+      Title="Desurvey drillholes"
+      Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778730" />
+    <TocEntry
+      Title="Transfer data to drillholes"
+      Link="/Content/ANALYST User guide excerpt for Russian translation_August29_2017_rus/Типы объектов.htm#_Toc491778731" />
+  </TocEntry>
+</CatapultToc>

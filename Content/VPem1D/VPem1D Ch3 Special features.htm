@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Fast heterogeneous inversion</h1>
+        <p>The speed at which VPem1D can handle a heterogeneous inversion is dependent upon the number of parameters and data decay curves. During normal heterogeneous inversion, the derivatives update as VPem1D solves for the cell conductivity beginning at the top of the prism and working its way down. The fast heterogeneous option (<var>ILD = -10</var>) solves the cell conductivities all at once. The global misfit will still attempt to reach 1.0, but the main difference is that the cell conductivities are solved for to represent the whole of the decay curve.</p>
+        <p>Using the  heterogeneous example, the same single representative decay curve and the main model features are reproduced in approximately 15% of the time (65 seconds versus 438 seconds), although the global misfit was 4.3 (reduced from 397). The results below only show the conductivity values above 0.125 S/m, consistent with the heterogeneous inversion example.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/vp1d hetero inv.png" style="width: 413px; height: 252px;" />
+            <br /><span class="SmallerCaption"> A volume-rendered image of the recovered model from fast heterogeneous inversion. <br />Cells that are above 0.125 S/m display in yellow. Data misfits for each prism display as coloured dots. <br />Blue misfits mean the prism reproduced the data to the desired misfit.</span>
+        </p>
+        <p>This option is ideal if using VPem1D to recover a starting model for a full 3D inversion. It is useful for large data sets in which areas of interest need to quickly be targeted from conductivity. You could target those areas for further scrutiny using the general heterogeneous inversion without waiting for the entire survey to invert.</p>
+        <h1 MadCap:autonum=" ">Using multi-moment transmitters</h1>
+        <p>Current EM systems sometimes elect to have more than one transmitter moment in flight, such as heliTEM or SkyTEM. VPem1D can forward model and invert two different transmitters. However, a few caveats come with this use:</p>
+        <ul>
+            <li>The observed data must all be in the same file.</li>
+            <li>The observed data must all be of the same type (e.g., dBz/dt).</li>
+            <li>The given global percentages and floors are used throughout.</li>
+            <li>The data channel centres and widths are given for each transmitter.</li>
+            <li>The transmitter moments, waveforms, frequency, and pulse may differ.</li>
+        </ul>
+        <p>To use this option, make sure that the parameter file begins with the header <br /><code>#VPEM_MULTI#</code>. At the end of the parameter file, the second transmitter information will begin using the <code>#TXMOMENT#</code> header. What follows will be the same as the last few entries of the single transmitter parameter file: </p>
+        <ul>
+            <li>The data centre and widths section (as with the first transmitter). </li>
+            <li>The line with transmitter frequency, moment, and pulse. </li>
+            <li>The ramp-on and ramp-off parameters.</li>
+            <li>The optional waveform line.</li>
+        </ul>
+        <p> Below is an example of a parameter file for SkyTEM using three times for the low moment data (for brevity) and two times for the high moment data. Bold lettering represents what is different from a normal parameter file.</p>
+        <p>
+            <img src="../Resources/Images/vp1d param file.png" />
+        </p>
+    </body>
+</html>

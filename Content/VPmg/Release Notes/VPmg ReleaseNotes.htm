@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Overview</h1>
+        <p>The release of VPmg <MadCap:variable name="General.VersionNumber" /> is highlighted by the introduction of a rotated VP model mesh. The inclusion of VPutility 1.1 in the installer will aid in creating rotated models and viewing the results in Geoscience ANALYST. Beyond this enhancement, we have also fixed bugs and incorporated feedback that was given to enhance the user experience.</p>
+        <h2 class="NoPageBreak">New and updated functionality</h2>
+        <p>Below is a summary of updates performed on VPmg:<br /><br /></p>
+        <ul>
+            <li><b>Introduction of a rotated VP model</b>. This feature allows you to keep your model in real-world coordinates and your data where it was observed. Incision using a regional model can still be performed provided the regional model is also rotated at the same angle. The rotation is performed from the lower-left corner of the model (see below). The VP model file format slightly differs.</li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/vp_rotation.tif" style="width: 196px;height: 196px;" />
+        </p>
+        <ul>
+            <li><b>Updated documentation for RMI inversion</b>.VPmg now checks for Koenigsberger ratio (positive value) or effective susceptibility (negative value). Maximum model steps and output models are given in input unit. The documentation should now reflect this.</li>
+            <li>
+                <p><b>Geosoft XYZ files (<span class="fileext" style="font-weight: bold;">.xyz</span>) can now be given as data files</b>. The columns in the file must still be given in the correct order (x, y, z, data), yet there is no need to remove the “Line” specifications from the file. The line information will be added to the data section of the model after forward modelling or inversion. These data can be read from VPutility 1.1 to create a curve object in Geoscience ANALYST and allow to view profiles. The parameter file can also allow the LINE keyword to denote the line column.</p>
+            </li>
+            <li>
+                <p><b>Removed limit of number of geologic units</b>. You are now allowed to have more than 99 geologic units.</p>
+            </li>
+            <li>
+                <p><b>Self-demagnetization inversion is more efficient</b>. The internal fields that were solved for in the previous iteration are now used as a starting model for the next iteration.</p>
+            </li>
+            <li>
+                <p><b>Further robustness added to the half-space optimization for susceptibility</b>. The optimization of the enclosing half-space now runs through 100 different values over one (inversion) or three (forward modelling) orders of magnitude to find the most appropriate value. This straightforward approach has garnered a better misfit than the previous solver, which could get bogged down when a large discrepancy in values would result in minimal data misfit change.</p>
+            </li>
+            <li>
+                <p><b>Updated TMG and magnetic amplitude inversion</b>. VPmg will now add a single forward model after the first iteration to better get a handle on the derivatives if the model is all one value. This can speed up the inversion process in the long run because the first few iterations are the most important for these two styles of inversion.</p>
+            </li>
+            <li>
+                <p><b>Updated the inversion solver</b>. The speed of the steepest descent has been retained, but in its place is now a single conjugate gradient step.</p>
+            </li>
+        </ul>
+    </body>
+</html>

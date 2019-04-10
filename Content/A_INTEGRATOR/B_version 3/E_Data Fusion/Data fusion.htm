@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">
+            Overview</h1>
+        <p>
+            <MadCap:keyword term="Data fusion" /><b>Data fusion</b> is the integration of data from multiple sources to obtain  information that is more useful than what individual data sets can provide. In <MadCap:variable name="General.ProductName" />, data fusion is available in 3D, for sample data, and in 4D for mine model data.</p>
+        <p>Through this process, <MadCap:variable name="General.ProductName" /> offers powerful tools to support the analysis of complex or difficult-to-view relationships within the data. The data fusion tool compiles the data from various sources, thus saving time and limiting the risk of error caused by performing the tasks required to bring this data together manually.</p>
+        <p>Fused data can become the input for machine learning algorithms, which requires that data is brought onto the same support, with the values collocated in space and time.</p>
+        <p>
+            <img src="../../../Resources/Images/en/Data fusion menu.png" style="margin-left: 0px;margin-right: 0px;margin-top: 20px;margin-bottom: 20px;" />
+        </p>
+        <p> In Geoscience INTEGRATOR, data fusion contains two components:</p>
+        <ul>
+            <li><span class="uiClick">Samples compilation</span>: Compiles sample-related data from different data sets in different themes that are referencing the same sample ID. (See <MadCap:xref href="#Samples_compilation">"Samples compilation" on page&#160;1</MadCap:xref>.)</li>
+            <li><span class="uiClick">Mine model compilation</span>: Compiles numerous geohazard-related properties, on points of a mine model as of a single datetime reference. (See <MadCap:xref href="#Mine_model_compilation">"Mine model compilation" on page&#160;1</MadCap:xref>.)</li>
+        </ul>
+        <h1 MadCap:autonum=" "><a name="Samples_compilation"></a>
+            <MadCap:keyword term="Samples compilation" />Samples compilation</h1>
+        <p>Samples vary in nature and come in many forms. They are often analyzed using different tools and techniques, and for numerous goals. <MadCap:variable name="General.ProductName" /> makes it possible to import and associate data related to  samples in multiple data sets and themes, depending both on the nature of the sample's properties, and how these properties relate to a theme. The samples compilation provides a tool to view all data associated with a sample across multiple data sets and themes.</p>
+        <p>There are four themes  for sample-related data:</p>
+        <ul>
+            <li><span class="ui">Samples</span>
+            </li>
+            <li><span class="ui">Geochemistry &amp; mineralogy</span>
+            </li>
+            <li><span class="ui">Rock properties</span>
+            </li>
+            <li><span class="ui"><MadCap:keyword term="Object types:Drillholes" />Drillholes</span> (optional for interval data)</li>
+        </ul>
+        <p>For example, a drill core sample  could have:</p>
+        <ul>
+            <li>The rock type imported in the <span class="ui">Drillholes interval data</span> along with relative location data (<span class="ui">from</span> and <span class="ui">to</span> position in a drillhole that has a known collar location and path data).</li>
+            <li>Density, porosity, resistivity, and magnetic susceptibility imported under the <span class="ui">Rock properties</span> theme.</li>
+            <li>Assay results for all the elements and minerals under the <span class="ui">Geochemistry &amp; mineralogy</span> theme.</li>
+        </ul>
+        <p>In the case of sample data, fusion is possible because each sample-related theme requires a sample ID. The samples compilation component allows you to query all the data referring to a sample ID regardless of theme or data set.</p>
+        <p>The samples compilation user interface consists of two sections:</p>
+        <ul>
+            <li>
+                <MadCap:xref href="#Details">"Details tab" on page&#160;1.</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="#Chart">"Chart | Table tab" on page&#160;1</MadCap:xref>.</li>
+        </ul>
+        <h2><a name="Details"></a>Details tab</h2>
+        <p>The <span class="uiClick">Details</span> tab compiles  a summary per sample ID of all the properties (organized by data sets and themes) and all the tags and files associated to the sample ID, along with the sample medium and the available location data.</p>
+        <p>
+            <img src="../../../Resources/Images/NewRes_samplescollection.png" style="width: 710px;height: 416px;" />
+        </p>
+        <p>The <span class="uiClick">Details</span> tab allows you to perform the following actions:</p>
+        <ul>
+            <li>Filter the samples displayed by typing a search term in the <span class="ui">Sample name</span> field (queries sample IDs only, not properties, tags, etc.). Or select the <span class="ui">sample ID</span> check box and click <span class="uiClick">Filter</span>.</li>
+            <li>View all the properties (organized by data sets and themes) for a sample ID. You can click on a data set to go directly to the <span class="uiClick">Data set explorer</span> where that specific data set will display. (See <MadCap:xref href="../C_GI Data Set explorer/Data set explorer.htm">"Data set explorer" on page&#160;1</MadCap:xref>.)</li>
+            <li>View the <span class="uiClick">Tags</span> associated to the sample IDs. You can click a tag name to go directly  to the tags page with that specific tag selected to view all the data sets associated with that tag. (See <MadCap:xref href="../H_Tags/Ch 8 GI Divider Tags.htm">"Tags" on page&#160;1</MadCap:xref>.)</li>
+            <li>View the <span class="uiClick">Files and maps</span> associated to the sample ID regardless of the theme. You can click a file or map to download it.</li>
+            <li>View, and possibly input or update location information on the sample by clicking <span class="uiClick">Sample ID</span>. If no location data has been entered yet, you can provide x, y, z coordinates or, select a Drillhole and provide <span class="ui">Interval from</span> and <span class="ui">Interval to</span> values.</li>
+        </ul>
+        <div class="note">If a sample has a red <span class="uiClick">X</span> in the last column, it means that there are no data records associated with that sample in the database. The links to tags and files remain. The sample ID then acts as a placeholder. Clicking the <span class="uiClick">X</span> is a permanent delete of the sample record.</div>
+        <h2><a name="Chart"></a>Chart | Table tab</h2>
+        <p>The <span class="uiClick">Chart | Table</span> tab allows you to view the data from different data sets and theme together in a chart and a data table.</p>
+        <p>
+            <img src="../../../Resources/Images/en/NewRes_SamplColl2chart.png" style="width: 710px;height: 449px;" />
+        </p>
+        <p>Here, you will find the same filtering options and chart and table settings options that are available in the <span class="uiClick">Data set explorer</span> (see <MadCap:xref href="../C_GI Data Set explorer/Data set explorer.htm">"Data set explorer" on page&#160;1</MadCap:xref>). However, the properties from all the data sets and sample-related themes are available, allowing you to analyze them together and explore cross-data set or cross-theme relationships. For example, you can view a <span class="ui">Scatter plot</span> of "iron content (Fe)" from the <span class="ui">Geochemistry &amp; mineralogy</span> theme versus "rock density" from the <span class="ui">Rock properties</span> theme and observe a direct correlation between the two. Since it is a scatter plot, you can use a property to modulate the radius and another one to modulate the colour and allow further correlation. You can also view the data, compiled per sample ID, in a table.</p>
+        <h1 MadCap:autonum=" "><a name="Mine_model_compilation"></a>
+            <MadCap:keyword term="Mine model compilation" />Mine model compilation</h1>
+        <p>The <span class="uiClick">Mine model compilation</span><MadCap:keyword term="Geohazard assessment" /> component brings all the mine model data onto the same support, with the values collocated in space and time. This data fusion capability is fundamental to  geohazard assessment. </p>
+        <p> It consists of the following three tabs:</p>
+        <ul>
+            <li><span class="uiClick">Overview</span>
+            </li>
+            <li><span class="uiClick">Mine level plans</span>
+            </li>
+            <li><span class="uiClick">Compiled table</span>
+            </li>
+        </ul>
+        <p>
+            <img src="../../../Resources/Images/NewRes_Mine model comp.png" />
+        </p>
+        <div class="note">The <span class="ui">Underground</span> theme (within <span class="ui">Mine models</span>) merges collocated data together. The default collocation distance is 1/100<sup>th</sup> of the distance unit, meaning that points closer together than 0.01 in distance unit will be merged onto a single point. </div>
+        <h2>Overview tab</h2>
+        <p>This tab displays a box for each <span class="ui">Mine model Underground</span> data set of the project with a summary of quantity of points, imported properties, and system-computed properties.<img src="../../../Resources/Images/NewRes_MModel box.png" style="width: 297px;height: 196px;" /></p>
+        <p>Clicking a box  will expand it and reveal the detailed list of properties, which can be either of the following:
+        <ul><li><span class="uiClick">Imported properties</span>: User-imported properties  that the system does not update. These are typically fixed properties that are not expected to vary in time, such as a date of excavation.</li><li><span class="uiClick">System-computed properties</span>: The result of various computations using other data or files from the project.
+You can schedule or manually trigger these. For further information, see <MadCap:xref href="../I_Geohazard assessment/Ch 9 Divider GI Geohazard assessment.htm">"Geohazard assessment" on page&#160;1</MadCap:xref>.</li></ul><img src="../../../Resources/Images/NewRes MModel box expand.png" style="width: 550px;height: auto;" /><div class="note">The various geohazard indices are not listed here as <i>Mine model</i> properties.</div></p>
+        <h2>Mine level plans tab</h2>
+        <p>This tab provides plan views of the Mine model points, per Mine level.</p>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="../../../Resources/Images/mine level plan.png" style="vertical-align: top;width: 421px;height: 351px;" />
+                    </td>
+                    <td>
+                        <img src="../../../Resources/Images/NewRes_MLevelPlans.png" style="vertical-align: top;width: 292px;height: 570px;" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note">
+            <MadCap:keyword term="Mine levels" />You will find the list of Mine levels and their minimum and maximum elevations  in the project settings. Only users with specific permission settings can edit this list.</div>
+        <p class="Task">To display a mine level plan:</p>
+        <ol>
+            <li>Expand the <span class="uiClick">Filters</span> panel on the right and select one data set.</li>
+            <li> Select the specific <span class="uiClick">Mine levels</span> you want to view (one or many).</li>
+            <li>Click <span class="uiClick">Apply changes</span> to view the data.</li>
+        </ol>
+        <p>Click the <span class="uiClick">Limits</span> section to customize level plan extents. This will apply the x, y limits to all the selected mine levels.</p>
+        <p>You can select a property from the <span class="uiClick">Radius</span> drop-down menu to adjust the size of the points according to the property values. If you provide a value in the <span class="uiClick">Threshold</span> number box, the size of the point will be based on whether the value is below or above the threshold value. The point above the threshold will be bigger. </p>
+        <p>Use the <span class="uiClick">Radius value</span> buttons to set how you want the values to correlate to the radius size of the points. </p>
+        <p>You can select a property from the <span class="uiClick">Colour</span> drop-down menu to adjust the colour of the points according to the property values. There is  an option to apply a log scale to the colour mapping. </p>
+        <p>The field <span class="ui">As of this date</span> is to identify the specific datetime you want to query and is set by default to the moment you access the feature.</p>
+        <div class="note">If you do not provide a value for <span class="ui">As of this date</span> for an instant or time interval type property, the most recent will be used. If you do provide a value, the most recent values before that datetime will be used.</div>
+        <p>Use the <span class="uiClick">Colour spectrum</span> buttons to  set the colour scale to increase from blue to red or vice versa.<br /></p>
+        <h2>Compiled table tab</h2>
+        <p>This tab is a snapshot of all the points in a data set at a specific moment. It displays all the properties you select from the list for all the points of the data set. </p>
+        <p>
+            <img src="../../../Resources/Images/compiled table table.png" style="margin-left: 0px;margin-right: 0px;margin-top: 20px;margin-bottom: 20px;" />
+        </p>
+        <p class="Task">To display a <span class="ui">Compiled table</span>:</p>
+        <ol>
+            <li>Expand the <span class="uiClick">Filters</span> panel on the right and select one data set.</li>
+            <li> Select the specific columns you want to display. </li>
+            <li>Define which date and time you want to compile the data for. (Additionally, you can restrict the query to certain Neighbourhoods and Mine levels.)</li>
+            <li>Click <span class="uiClick">Apply changes</span> to view the data.</li>
+        </ol>
+        <p>For each <span class="ui">Instant data</span> property, the <span class="ui">Compiled table</span> will return the value that either corresponds either exactly to the specified datetime, or the most recent one before it. </p>
+        <p>For each time <span class="ui">Interval data</span> property, the <span class="ui">Compiled table</span> will return the value if the specified datetime&#160;falls into an interval for which data exists.</p>
+        <p>Since properties from the <span class="ui">Static data</span> do not vary in time, the <span class="ui">Compiled table</span> always returns the same value for each point of the mine model, regardless of the specified datetime. <img src="../../../Resources/Images/NewResGI_compiled table.png" style="width: 335px;height: 507px;" /></p>
+        <p>The field <span class="ui">As of this date</span> is to identify the specific moment you want to query and is set by default to the moment you access the feature.</p>
+        <p>When you apply <span class="ui">Neighbourhoods</span> or <span class="ui">Mine levels</span> to filter a query, these filters are applied first, then the system computes the most recent dates on the resulting points, and finally compiles data for these dates and points. These results may differ from the most recent data related to all the <span class="ui">Mine model</span> points of the data set. </p>
+    </body>
+</html>

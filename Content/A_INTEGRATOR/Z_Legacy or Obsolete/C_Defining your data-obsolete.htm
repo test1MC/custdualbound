@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="718" MadCap:lastWidth="725">
+    <head>&#160;</head>
+    <body>
+        <h1 MadCap:autonum=" "> Defining your data</h1>
+        <p>Once you have created your project, you must configure Geoscience INTEGRATOR so that it can accurately interpret the data that you will be importing.</p>
+        <p>A project contains several elements to define and categorize. Therefore, it is helpful to understand the hierarchy of the elements of a project:</p>
+        <p>&#160;</p>
+        <p><a href="../../../../../../Downloads/Project pyramid"><img src="../../Resources/Images/Project pyramid.png" style="width: 290px;height: 290px;" /></a>
+        </p>
+        <p>&#160;</p>
+        <p>Navigate through the drop-down topics below to develop an understanding of the building blocks that make up <MadCap:variable name="General.ProductName" />.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="Themes" MadCap:conditions="General.Online"></a>
+                </MadCap:dropDownHotspot>
+                <MadCap:conditionalText MadCap:conditions="General.Online">
+                    <MadCap:dropDownHotspot>themes</MadCap:dropDownHotspot>
+                </MadCap:conditionalText>
+            </MadCap:dropDownHead>
+            <h3 MadCap:conditions="General.PDF">themes</h3>
+            <MadCap:dropDownBody>
+                <p>themes define and categorize the nature of the data contained within a project.   For example: data related to events associated with small movements beneath the Earth’s surface would fall under the Microseismic theme. A project must have one or more themes.</p>
+                <p> See <MadCap:conditionalText MadCap:conditions="General.Online">the </MadCap:conditionalText><MadCap:xref href="Theme Definitions-obsolete.htm">themes</MadCap:xref> <MadCap:conditionalText MadCap:conditions="General.Online">section </MadCap:conditionalText>for a breakdown of the themes available in Geoscience INTEGRATOR.  </p>
+                <p class="Task">To select a theme for your data:</p>
+                <ol>
+                    <li>In the Geoscience INTEGRATOR menu, click <b>data set explorer </b>(1)<b>.<br /><img src="../../Resources/Images/Data set explorer.bmp" style="width: 250px;height: 306px;" /></b></li>
+                    <li>Click <b>Current theme</b> to access the drop-down list of themes.</li>
+                    <li>Select the appropriate theme for your data.</li>
+                </ol>
+                <div class="note1"><b><i>Note</i>:</b> Geoscience INTEGRATOR defaults to the most recently selected theme of the most recently opened project. </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online"><a name="Data"></a>data sets</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <h3 MadCap:conditions="General.PDF">data sets</h3>
+            <MadCap:dropDownBody>
+                <p><b>data sets</b> are groups of related information contained in a <b>theme</b>. When you import data into Geoscience INTEGRATOR you are creating a data set by assigning to the data various <b>Project settings</b> that help to organize and categorize the information.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="Definito"></a>
+                </MadCap:dropDownHotspot>
+                <MadCap:conditionalText MadCap:conditions="General.Online">
+                    <MadCap:dropDownHotspot>Project settings</MadCap:dropDownHotspot>
+                </MadCap:conditionalText>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h3 MadCap:conditions="General.PDF">Project settings</h3>
+                <p><b>Project settings</b> consist of several categories designed to organize and arrange data within a <b>data set</b>. In Geoscience INTEGRATOR, the Project settings are:</p>
+                <ul>
+                    <li>Units	</li>
+                    <li>File types</li>
+                    <li>Classifications	</li>
+                    <li>Assigned users</li>
+                    <li>Neighourhoods	</li>
+                    <li>Sample media</li>
+                    <li>Shifts</li>
+                </ul>
+                <div class="note1"><b style="font-style: italic;">Note:</b> Under default permissions, only system administrators and project managers can make changes to Project settings.</div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead class="level2">
+                <MadCap:dropDownHotspot><a name="Units"></a>
+                </MadCap:dropDownHotspot>
+                <MadCap:conditionalText MadCap:conditions="General.Online">
+                    <MadCap:dropDownHotspot>Units</MadCap:dropDownHotspot>
+                </MadCap:conditionalText>
+            </MadCap:dropDownHead>
+            <h3 MadCap:conditions="General.PDF">Units</h3>
+            <MadCap:dropDownBody>
+                <p>Geoscience INTEGRATOR requires that you define within it the units of measurement of your data before you import.</p>
+                <p>Geoscience INTEGRATOR contains a default list of common units when initially installed.</p>
+                <p class="Task">To define a data set’s units:</p>
+                <ol>
+                    <li>In the Geoscience INTEGRATOR menu, click <b>Project settings</b>(i), then click <b>Units</b>(ii).<br></br><img src="../../Resources/Images/Units menu.bmp" style="width: 213px;height: 431px;"></img><br></br></li>
+                    <li>In the <i>Units</i> table, click <b>Add new unit</b>.</li>
+                    <li>In the <i>Add new unit</i> dialog box, add the unit name abbreviation and its description.</li>
+                    <li>Click <b>Add</b>. Once you see the Unit successfully uploaded message click <b>Done</b>.</li>
+                </ol>
+                <div class="note1"><b style="font-style: italic;">Note:</b> We recommend creating a unit named “unitless” (or something similar) for properties that do not have a unit, such as seismic indexes.</div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead class="level2">
+                <MadCap:dropDownHotspot><a name="Classifi"></a>
+                </MadCap:dropDownHotspot>
+                <MadCap:conditionalText MadCap:conditions="General.Online">
+                    <MadCap:dropDownHotspot>Classifications</MadCap:dropDownHotspot>
+                </MadCap:conditionalText>
+            </MadCap:dropDownHead>
+            <h3 MadCap:conditions="General.PDF">Classifications</h3>
+            <MadCap:dropDownBody>
+                <p>Classifications act as a container for subsets of data (known as classes) in a parent-child style of relationship. An example of a Classification and its classes for drillhole interval data, where Rock code is the classification, could be something like this:</p>
+                <ul style="list-style-type: square;">
+                    <li><b>Rock Code:</b>
+                        <ul style="list-style-type: square;">
+                            <li>Granite</li>
+                            <li>Norite</li>
+                            <li>Ore</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>This is useful in that it prevents you from having to type each rock name into your template at import. </p>
+                <p class="Task">To define a data set’s classifications:</p>
+                <ol>
+                    <li>In the Geoscience INTEGRATOR menu, click <b>Project settings</b>, then click <b>Classifications</b>.</li>
+                    <li>In the <i>System classifications</i> table, give a name and description to your classification.</li>
+                    <li>Click <b>Add classification</b>, and if necessary, define its classes, by:<ol style="list-style-type: lower-roman;"><li>Clicking the Classification’s edit button (insert button)</li><li>In the Class name field of the <i>Classes for classification</i> window, name the class.</li><li>Click <b>Add Class</b>.</li></ol></li>
+                </ol>
+                <div class="note1"><b style="font-style: italic;">Note:</b> If you plan to add numerous classes and wish to avoid typing them out by hand you can use the option to import the list of classes from a CSVfile. To do so, click <b>Import from file</b> in the <i>Classes for classification</i> window and follow the given instructions.</div>
+                <div class="note1"><b style="font-style: italic;">Note:</b> It is  possible to generate supplementary classifications while importing data (see Data Import section of this user guide). Classifications created at import will only apply to the data imported via their specific import template and will not be added to the list of general project classifications.</div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead class="level2">
+                <MadCap:dropDownHotspot><a name="Neighbou"></a>
+                </MadCap:dropDownHotspot>
+                <MadCap:conditionalText MadCap:conditions="General.Online">
+                    <MadCap:dropDownHotspot>Neighbourhoods</MadCap:dropDownHotspot>
+                </MadCap:conditionalText>
+            </MadCap:dropDownHead>
+            <h3 MadCap:conditions="General.PDF">Neighbourhoods</h3>
+            <MadCap:dropDownBody>
+                <p>Neighbourhoods are 3D search spaces within a project, allowing you to give names to spatial regions/volumes within a project. For example, a Neighbourhood in a mine could represent a level, a stope, a drive, or a shaft area, while in mineral exploration, a Neighbourhood could represent, a mining claim outline.</p>
+                <p class="Task">To create a Neighbourhood:</p>
+                <ol>
+                    <li>
+                        <MadCap:snippetText src="../../Resources/Snippets/task_gi_menu-obsolete.flsnp" /><b>Project settings</b>, then click <b>Neighbourhoods</b>.</li>
+                    <li>In the Current neighbourhoods table, click the <b>Create neighbourhood</b> button.</li>
+                    <li>In the <i>Create neighbourhood</i> dialog, give your neighbourhood a name and a description.</li>
+                    <li>Click <b>Add</b>, then click <b>Close</b>.</li>
+                </ol>
+                <div class="note1"><b style="font-style: italic;">Note</b>: Make note about Importing a neighbourhood.</div>
+                <p>Neighbourhoods are composed of one or more 3D volumes with each volume being delimited by either an XYZ <b>bounding box</b> or a <b>polygon</b> with a defined Z-axis range.</p>
+                <ul style="list-style-type: square;">
+                    <li><b>Bounding box</b>: A cuboid defined by its south-western and north-eastern coordinates.</li>
+                    <li><b>Polygon</b>: Comprised of an unlimited number of XY points that join to create a closed 2D polygon, where the last point joins with the first to complete the polygon. To turn the 2D polygon into a 3D volume, you must define maximum and minimum Z-axis values.</li>
+                </ul>
+                <div class="note1"><b style="font-style: italic;">Note:</b> Neighbourhoods are independent from one another; they can overlap. Therefore, a particular XYZ point can belong to many neighbourhoods.</div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead class="level2">
+                <MadCap:dropDownHotspot><a name="Shifts"></a>
+                </MadCap:dropDownHotspot>
+                <MadCap:conditionalText MadCap:conditions="General.Online">
+                    <MadCap:dropDownHotspot>Shifts</MadCap:dropDownHotspot>
+                </MadCap:conditionalText>
+            </MadCap:dropDownHead>
+            <h3 MadCap:conditions="General.PDF">Shifts</h3>
+            <MadCap:dropDownBody>
+                <p>Shifts are set portions of time within a 24-hour period, allowing project managers to set active time slots for a project. Shifts facilitate time queries as project users will not need to enter specific start and end time values. Instead, they can simply select specific shift names. </p>
+                <p>We recommend that shifts do not overlap, however, Geoscience INTEGRATOR does not limit or control this. It is up to the project manager to decide how to set and use shifts.  Project managers can edit shift names, descriptions, and Start time and End Time values. They can also delete shifts.</p>
+                <p class="Task">To set shifts in a project:</p>
+                <ol>
+                    <li>
+                        <MadCap:snippetText src="../../Resources/Snippets/task_gi_menu-obsolete.flsnp" /><b>Project settings</b>, then click <b>Shifts</b>.</li>
+                    <li>In the <i>Current shifts</i> table, click <b>Add new shift</b>.</li>
+                    <li>In the <i>Add new shift</i> dialog:<ol style="list-style-type: lower-roman;"><li> Give the shift a name and description.</li><li>Define the start and end times.</li></ol></li>
+                    <li>Click <b>Add</b>, then click <b>Close</b>.</li>
+                </ol>
+                <div class="note1"><b style="font-style: italic;"><MadCap:snippetText src="../../Resources/Snippets/Note.flsnp" /></b> To prevent event data from repeating, (finish phrase)</div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead class="level2">
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online"><a name="File"></a>File types</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h3 MadCap:conditions="General.PDF">File types</h3>
+                <p>Clarify purpose/use of this. </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead class="level2">
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online"><a name="Assigned"></a>Assigned users</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <h3 MadCap:conditions="General.PDF">Assigned users</h3>
+            <MadCap:dropDownBody>
+                <p> Project managers or system administrators can manage the user roles within a specific project. It contains a list of user accounts for the project, including  username, email address, organization, and assigned role. System administrators and project managers can remove user accounts from the selected project, change user roles within a project, or remove users from projects.</p>
+                <p>To add a new user to a project, select the user from the <i>Assign user</i> drop down menu, and select the appropriate role for the user from the second drop down menu. When finished, click <b>Save</b>. </p>
+                <div class="note1"><b style="font-style: italic;">Note:</b> Users must already be in the system before you can assign a user role. To add a user to the system, go to <b>System administration</b> &gt; <b>Users</b>, and complete the <i>Add  new user</i> procedure.</div>
+                <p>What's the difference between Power and Limited user?</p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead class="level2">
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online"><a name="Sample"></a>Sample media</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <p>&#160;</p>
+            <h3 MadCap:conditions="General.PDF">Sample Media</h3>
+            <MadCap:dropDownBody>
+                <p>Define sample media</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

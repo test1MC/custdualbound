@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/GA_UserGuide_n_RL.fltoc"
+  PatchHeadingLevels="true"
+  ConditionTagExpression="include[General.PDF or Product.AnalystOnly] exclude[General.NoTranslation or General.Online or Product.IntegratorOnly or Product.MiningSuiteOnly or Product.VPem1DOnly or Product.VPmgOnly] "
+  OutputFile="[%=General.ProductName%] [%=General.VersionNumber%] User guide">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <PDF
+    InitialMagnification="100"
+    CollapsedBookmarks="true"
+    ShowUsedBookmarks="false"
+    DownsampleImages="true"
+    TitleBar="DocumentTitle" />
+  <DocumentProperties
+    Title="[%=General.ProductName%] [%=General.VersionNumber%] for translation"
+    Author="[%=General.CompanyName%]" />
+  <Variables>
+    <Variable
+      Name="General/VersionNumber">2.72</Variable>
+    <Variable
+      Name="General/ProductName">[%=General.ProductNameGA%]</Variable>
+  </Variables>
+  <Destinations></Destinations>
+</CatapultTarget>

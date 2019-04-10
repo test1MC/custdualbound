@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="846" MadCap:lastWidth="725">
+    <head>&#160;</head>
+    <body>
+        <h1 MadCap:autonum=" ">Importing data</h1>
+        <p>Geoscience INTEGRATOR requires that you import your data to a <b>template</b> so it can organize the data in the most efficient and useful way possible. To do so, you must define the <b>properties</b> of a data set within a template of a theme. </p>
+        <p>Within each theme, the templates differ slightly to accommodate varying properties associated with the theme. You must select and create your template(s) based on the characteristics of your data.</p>
+        <p>Templates consist of:</p>
+        <ul style="list-style-type: square;">
+            <li><b>Mandatory properties</b>: At minimum, this includes date, time, and the XYZ co-ordinates.</li>
+            <li><b>User created properties</b>: Includes anything contained within the theme associated with your data set.</li>
+        </ul>
+        <div class="note1"><b><i>Note</i>:</b> The properties you create in the Geoscience INTEGRATOR template must correspond with the properties that define your data set.</div>
+        <p>The section demonstrates  the following importing tasks:</p>
+        <ul>
+            <li><a href="#To">How to create a data import template</a>
+            </li>
+            <li><a href="#To2">How to define mandatory properties</a>
+            </li>
+            <li><a href="#To3">How to  define user created properties</a>
+            </li>
+            <li><a href="#To4">How to  import your CSV file into a template </a>
+            </li>
+            <li><a href="#To5">How to clone an import template</a>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p class="Task"><a name="To"></a>To create a data import template:</p>
+        <ol>
+            <li>In the Geoscience INTEGRATOR menu, click <b>Import</b> &gt; <b>Data import</b>.<br /> <img src="../../../../Resources/Images/import menu.bmp" style="margin-left: 0px;margin-top: 20px;margin-bottom: 20px;" /></li>
+            <li>Select the type of file you wish to import (CSV, ASCII, or Manual entry)</li>
+        </ol>
+        <div class="note1"><b><i>Note</i>:</b> Only certain themes allow ASCII import. For this tutorial, we will use CSV.</div>
+        <ol MadCap:continue="true">
+            <li>When the template box(es) appear, choose the template in which your data belongs.</li>
+        </ol>
+        <div class="note1"><b><i>Note</i>:</b> Certain themes have a sub-category or several sub-categories. Choose the one that best fits your data.</div>
+        <ol MadCap:continue="true">
+            <li>In the appropriate template box, click <b>Create new</b>.<br /><img src="../../../../Resources/Images/Import drillholes data.bmp" style="margin-left: 0px;margin-top: 20px;margin-bottom: 20px;" /></li>
+            <li>In the <i>Create new (theme)</i> template table, name your template and click <b>Create</b>.<br /><img src="../../../../Resources/Images/create new template box.bmp" style="width: 628px;height: 137px;margin-left: 0px;margin-top: 20px;margin-bottom: 20px;" /></li>
+        </ol>
+        <p>&#160;</p>
+        <p>In a newly-created template, you must define the properties of your data.</p>
+        <p class="Task"><a name="To2"></a>To define mandatory properties:</p>
+        <ol>
+            <li>In the <i>Properties</i> table, under <i>Mandatory properties</i>, determine if the naming convention of the selected template corresponds exactly with the naming convention of the same properties in your data set. If so, move to step 2. If not:<ol style="list-style-type: lower-alpha;"><li>Click the property in the <i>Name</i> column that you wish to edit.</li><li>In the <i>Property:</i> dialog, type the property name so it matches the naming convention of your data set in the <i>Mapped to</i> column.<br /></li></ol></li>
+        </ol>
+        <div class="note1"><b><i>Note</i>:</b> Depending on the theme, some of the options fields in the Property: dialog will differ between themes.</div>
+        <ol MadCap:continue="true">
+            <li>Click <b>Update</b>.<br /><img src="../../../../Resources/Images/defining properties.bmp" style="width: 597px;height: 354px;" /></li>
+        </ol>
+        <p>&#160;</p>
+        <p class="Task"><a name="To3"></a>To define user created properties:</p>
+        <ol>
+            <li>In the <i>Properties</i> table, click the <b>Add new property</b> button.</li>
+            <li>In the <i>Add new property</i> dialog box, add the name of the property in your data set you wish to add to the template.</li>
+            <li>Define the property types.</li>
+            <li>
+                <MadCap:annotation MadCap:createDate="2017-03-17T11:51:10.5606792-04:00" MadCap:creator="jackg" MadCap:initials="JA" MadCap:comment="what constitutes if it is req'd or not?" MadCap:editor="jackg" MadCap:editDate="2017-03-17T12:02:07.9107754-04:00">Determine if the property is required for.....</MadCap:annotation>
+            </li>
+            <li>Define the unit in the drop-down menu (see the Units section if you have not yet set the units for the project).</li>
+            <li>Determine if the property should have a no data value. If so, enter the value into Property no data value text box. If not, leave it blank.</li>
+            <li>Click <b>Save</b> and repeat with any remaining properties.<br /><img src="../../../../Resources/Images/new properties box.bmp" style="width: 682px;height: 581px;" /></li>
+        </ol>
+        <div class="note1"><b><i>Note</i>:</b> Alternatively, you can click the Read Headers button, which opens the windows explorer and allows you to select a CSV file. Once you select a file, Geoscience INTEGRATOR will scan the file and populate the user created properties table based on the headings in your data set CSV file.</div>
+        <p>&#160;</p>
+        <p>With the properties of your data set defined in your template, you can import the CSV file that contains the data set into Geoscience INTEGRATOR.</p>
+        <p class="Task"><a name="To4"></a>
+            <MadCap:annotation MadCap:createDate="2017-03-17T14:47:11.2547580-04:00" MadCap:creator="jackg" MadCap:initials="JA" MadCap:comment="This is theme specific and will be difficult to generalize. " MadCap:editor="jackg" MadCap:editDate="2017-03-17T14:47:37.6945988-04:00">To import your CSV</MadCap:annotation> file into a template in Geoscience INTEGRATOR:</p>
+        <ol>
+            <li>In the Geoscience INTEGRATOR menu, click <b>Import</b> &gt; <b>Data import</b> &gt; <b>CSV file</b>.<img src="../../../../Resources/Images/import menu.bmp" style="margin-left: 0px;margin-top: 20px;margin-bottom: 20px;" /></li>
+            <li>Within the <i>Import (theme) data</i> interface, navigate to and click the template you created containing the properties you defined from your data set.<img src="../../../../Resources/Images/Import drillholes data.bmp" style="margin-left: 0px;margin-top: 20px;margin-bottom: 20px;" /></li>
+            <li>
+                <MadCap:annotation MadCap:createDate="2017-03-17T14:48:54.6783932-04:00" MadCap:creator="jackg" MadCap:initials="JA" MadCap:comment="This is not present for all themes. " MadCap:editor="jackg" MadCap:editDate="2017-03-17T14:49:02.4869121-04:00">In the <i>Upload data</i> table, click <b>Upload data</b>.</MadCap:annotation>
+            </li>
+            <li>Click <b>data set</b> and give your data set a name and description, then click <b>Add data set</b>. (You may wish to add a tag in the section just below this section by following the procedure.)</li>
+            <li> Click <b>Upload data file</b>.</li>
+            <li>Select the CSV file from your Windows browser and click <b>Open</b>.</li>
+        </ol>
+        <p> You can check the import status by clicking on <b>Import</b> &gt; <b>Data import</b> &gt; <b>Batches</b>. This page displays information associated with data imports.</p>
+        <p>&#160;</p>
+        <div class="note1"><b><i>Note</i>:</b> If you get an error message before the import finishes, it relates to a discrepancy between the naming convention of the data set properties between what you defined in the template versus how it’s written in your CSV file. However, if you get an error in the data, it will display in the <i>Errors</i> column in the <i>Batches</i> module. Here, you can click on the number in the cell to see a description of the error, as seen in the image below.</div>
+        <p>
+            <img src="../../../../Resources/Images/batches.bmp" />
+        </p>
+        <p>&#160;</p>
+        <p>In a scenario where you have multiple templates to create, you can speed up the process by cloning a template you have already made.</p>
+        <p class="Task"><a name="To5"></a> To clone an import template:</p>
+        <ol>
+            <li>In the <i>Clone import template</i> module, give your template a name.</li>
+            <li>Define the <i>Optional fields</i>, which will display according to the theme you are working in.</li>
+            <li>
+                <MadCap:annotation MadCap:createDate="2017-03-20T10:50:41.0665987-04:00" MadCap:creator="jackg" MadCap:initials="JA" MadCap:comment="Is there more to this?" MadCap:editor="jackg" MadCap:editDate="2017-03-20T10:50:44.5386188-04:00">Click </MadCap:annotation><b>Clone import template</b>. </li>
+        </ol>
+        <p>
+            <img src="../../../../Resources/Images/clone import.bmp" />
+        </p>
+        <p>&#160;</p>
+        <p><span style="color: #007688; font-style: italic;">Need to add section on Monitoring folders</span>
+        </p>
+    </body>
+</html>

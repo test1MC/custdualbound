@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Saving workspaces</h1>
+        <p>When you save a <MadCap:keyword term="Workspace" />workspace in&#160;Geoscience ANALYST, it creates, or updates, a <span class="fileext">.geoh5</span> file on disk. All configurations and files in the workspace are saved, except for the Preferences. Any settings made in the Preferences are saved on the local machine for the current user, and will apply globally to all workspaces you open. (See also the <a href="Preferences.htm">Preferences</a> section.)</p>
+        <p>When you close Geoscience ANALYST, the panel configuration will be saved on the local machine for the current user, and restored the next time you open the software. However, multiple Viewports arranged to view simultaneously will not appear side-by-side after saving, closing and re-opening; they will be presented in tab form where you can rearrange them to view simultaneously if needed. </p>
+        <h2 class="NoPageBreak">Workspace file lock</h2>
+        <p>When an instance of the application opens a workspace file (<span class="fileext">.geoh5</span>), a lock file is created on disk that prevents another instance from opening the same file for editing. The file will open in other instances of the application as read-only. You can see that a workspace is in read-only mode when indicated in the title bar of Geoscience ANALYST. When a workspace is open in read-only mode, you can still use editing tools and modify the workspace, but you will have to perform a <i>Save Workspace As...</i><MadCap:keyword term="Console panel" /> to a new location. When opening a workspace file that is already locked, the Console panel will display a message telling you that the file is read-only.</p>
+        <p>This lock mechanism works for both local drive and shared drives. </p>
+        <p>It is possible that a remote instance of Geoscience ANALYST terminates unexpectedly and leaves a lock file in a shared drive. In this event, you can manually delete the lock file, listed next to the <span class="fileext">.geoh5</span> file, and suffixed with <span class="fileext">.geoh5.lock</span>, as long as you have administrative rights on the server or folder. </p>
+        <p>  Before doing so, it is recommended to find the user of the machine that created the lock and confirm that it is safe to remove the lock.</p>
+        <div class="note">A file also appears locked if you only have read permissions on the folder it is stored in. There is no <span class="fileext">.geoh5.lock</span> file in this case, since it could not be created.</div>
+        <h2 class="NoPageBreak">About GEOH5 format <MadCap:keyword term="HDF5 format" /><MadCap:keyword term="GEOH5 format" /><a name="GEOH5_format"></a></h2>
+        <p>A Geoscience ANALYST project (<span class="fileext">.geoh5</span> file) is referred to as a <b>workspace</b>, which is saved on disk using the HDF5 file format.  The widely used HDF5 technology provides high-performance, dynamic read / write access to data, while offering the following advantages:</p>
+        <ul>
+            <li>Open-specification, cross-platform format guarantees that the data within remains accessible in the future.</li>
+            <li>Easily extensible for future needs.</li>
+            <li>Single file output is ideal for sharing data.</li>
+            <li>Benefits from many existing tools and libraries in several languages (including Python and MATLAB for data analysis).</li>
+            <li>Flexible hierarchical structure is ideal for Geoscience ANALYST’s object-oriented data structures, allowing for fast development.</li>
+        </ul>
+        <div class="note">Workspaces saved in GEOH5 format with the current version cannot be opened with versions earlier than 2.30.</div>
+    </body>
+</html>

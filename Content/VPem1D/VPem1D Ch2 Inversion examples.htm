@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Inversion examples</h1>
+        <p>The examples in this section relate to a GeoTEM dBz/dt survey from the Mt Dore region in Queensland, Australia. The data were flown at a line spacing of 300 m with the flight lines orientated east-west. The data are shown by their lines with the box outlines of the VP model below.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPem1D data locations img.png" />
+            <br /><span class="SmallerCaption">Data locations (black lines) and model extents for example data set. <br />The topography is relatively flat with only 60 m of relief and coloured by elevation. The image is five times vertically exaggerated.</span>
+        </p>
+        <p>All example files are included with the installer and are covered in each section. Models and their log files created in this document are in <span class="filename">output.zip</span> in within each folder. This allows you to run the control files to reproduce the results and to experiment with other parameters to get a feel for each style of inversion. </p>
+        <p>As a reminder, the control and parameter files used for the VPem1D run are copied to the log file along with the waveform for reproducibility.</p>
+        <h2 class="NoPageBreak">Homogenous property</h2>
+        <p>The folder containing the files of this example is <span class="filename">homog_inv</span>. The starting model is comprised of two layers: a 50-m thick cover on a more resistive basement. Here, the aim is to derive a local estimate for the conductivity of the cover. The basement conductivity is set to 0.002 S/m.</p>
+        <p class="Task">Creating the model</p>
+        <p>You can use VPutility to create the initial model. The main requirements are:</p>
+        <ol>
+            <li>Topography data</li>
+            <li>Locations of the surface</li>
+            <li>A classification header,  used to set up the magnetic physical properties and description of the sediments and basement</li>
+        </ol>
+        <p>This header is used directly in the VP model file and contains (in order):</p>
+        <ul>
+            <li>The conductivity (milliS/m) </li>
+            <li>Upper and lower bounds </li>
+            <li>The unit name:<br /><img src="../Resources/Images/VP1d cover badsement.png" /><br /></li>
+        </ul>
+        <p>In this case, the basement is within the bounds, but since the VP basement is always fixed in VPem1D, it will not come into play during the inversion. The overburden will be active in this inversion because the lower and upper bounds differ (otherwise no units would be active).</p>
+        <p>The control file to run VPutility is <span class="filename">create_model.ctl</span>. The utility is run, and it creates the model <span class="filename">homog_sm.con</span> with 300 m by 65 m prisms in the region of the data. </p>
+        <p>Below is the output starting model (in layers) for VPem1D:</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/vp1d 2 layer model img.png" />
+            <br /><span class="SmallerCaption">Initial two-layer model created from VPutility. The transparent green is the top of the model surface (topography). <br />The coloured surface is the contact between Sediments and Basement units.</span>
+        </p>
+        <p class="Task">Inversion</p>
+        <p>In this instance, we want to know the conductivity of the conductive cover, and thus the homogeneous property inversion is performed. VPem1D is run with the control file <br /><span class="filename">homog_inv.ctl</span>. Details of the inversion run are:</p>
+        <ul>
+            <li>Only the first 4 time channels are used spanning 665 - 1602 μs.</li>
+            <li>The waveform is defined in <span class="filename">geoTEM.wvf</span>.</li>
+            <li>The control parameter file is <span class="filename">geoTEM.par</span>.</li>
+            <li>All the observed decay curves are used (<var>dataOption = 1</var>).</li>
+            <li>Maximum number of iterations is set to 20.</li>
+            <li>Uncertainty is set to the maximum of either 1% of the data value or 50 ppm.</li>
+        </ul>
+        <div class="example">
+            <p><b>Results:</b> </p>
+            <ul>
+                <li>The inversion runs for four iterations and stalls. </li>
+                <li>The misfit is reduced to 136 from 29338. The log file also states the L1 misfit (Huber norm of c = 1) and the Huber norm misfit of c = 5 for reference. </li>
+                <li>The conductivity of the cover is set to approximately 40 milliS/m.</li>
+            </ul>
+        </div>
+        <h2 class="NoPageBreak">Geometry </h2>
+        <p>For geometry inversion, we assume that the physical properties are known or at least reasonable. It is the contact between units that is of interest. In this section, we will expand upon the previous homogeneous inversion. The starting model is the result of the homogeneous inversion and is copied into the <span class="filename">geom_inv</span> folder. The header in the starting VP model is:</p>
+        <p>
+            <img src="../Resources/Images/vp1d cover basement2 img.png" />
+        </p>
+        <p>Details of this inversion include:</p>
+        <ul>
+            <li>12 time channels are used.</li>
+            <li>The waveform is defined in <span class="filename">geoTEM.wvf</span>.</li>
+            <li>The control parameter file is <span class="filename">geoTEM_12ch.par</span>.</li>
+            <li>All the observed decay curves are used (<var>dataOption = 1</var>).</li>
+            <li>The maximum change of the model will be set to 25% of its depth from the top of the prism.</li>
+            <li>Maximum number of iterations is set to 20.</li>
+            <li>Uncertainty is set to the maximum of either 3% of the data value or 50 ppm.</li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/vp1d geo inv.png" />
+            <br /><span class="SmallerCaption">Result of geometry inversion. VPem1D shows an area where the top of cover extends well below (blue) the given 50 m below topography and other areas where it is thinned out (red).</span>
+        </p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/vo1d predcited and oberved.png" />
+            <br /><span class="SmallerCaption">(Top) The predicted (red) and observed (black) data along a line in the middle of the survey (bottom). <br />The cross-section through the model. The grey is air, light green is the cover, and dark green is the basement.</span>
+        </p>
+        <div class="example" style="page-break-inside: avoid;page-break-after: avoid;">
+            <p><b>Results:</b> </p>
+            <ul>
+                <li>The misfit is reduced to 5.65 from 160. </li>
+                <li>The L1 misfit equivalent is 8.4. A NW-SE trend of thicker cover becomes apparent from the results of the inversion. </li>
+                <li>The individual prisms results are output to <span class="filename">geom_inv_misfits.csv</span> (because the output of the result is <span class="filename">geom_inv.con</span>). This allows you to view spatially the results of each prism misfit. </li>
+                <li>The file contains the location of each prism centre top, the initial and final misfits, the number of iterations, and the misfits at each iteration step. (Below is an areal view of the individual prism misfits.)</li>
+            </ul>
+        </div>
+        <p style="text-align: center;page-break-before: avoid;">
+            <img src="../Resources/Images/vp1d prism misfits.png" />
+            <br /><span class="SmallerCaption">Plan-view map of the prism misfits. Ideally the misfit should be 1 (blue) everywhere.</span>
+        </p>
+        <h2>Heterogeneous property</h2>
+        <p>This section describes the creation of a more detailed model by incorporating heterogeneities within the model.  The example’s folder is <span class="filename">heterog_inv</span>. We assume that little is known about the geology. For this example, we begin by creating a homogeneous model, then sub-celling it to heterogeneous cells.</p>
+        <p class="Task">Creating the model</p>
+        <p>First, we use VPutility to create a homogeneous model with a top unit down to -500m  elevation. Observe the following:</p>
+        <ul>
+            <li>The topography is given as the top surface. </li>
+            <li>The VP basement and layer of interest are set to 20 mS/m. </li>
+            <li>The control file for VPutility is <span class="filename">create_model.ctl</span>.</li>
+        </ul>
+        <p>Then, heterogeneous cells with a thickness of 20m, expanding in depth by 20%, are placed inside of the top layer (the VP basement is set). This is also done via VPutility and the control file <span class="filename">subcell.ctl</span>. The data file given in the sub-celling is “Dummy” since VPem1D does not need it to compute weights (which are not used). Now the model with heterogeneous cells is ready to go for inversion.</p>
+        <p class="Task">Inversion</p>
+        <p>The inversion is called using <var>ILD = -1</var> in the control file (<span class="filename">het_inv.ctl</span>). The starting model is <span class="filename">het_sm.con</span>. The last four time channels are discarded due to noise. The details of this inversion are as follows:</p>
+        <ul>
+            <li>Eight time channels are used.</li>
+            <li>The waveform is defined in <span class="filename">geoTEM.wvf</span>.</li>
+            <li>The control parameter file is <span class="filename">geoTEM_8ch.par</span>.</li>
+            <li>A representative decay through averaging is used (<var>dataOption = 0</var>).</li>
+            <li>Maximum number of iterations is set to 25.</li>
+            <li>Uncertainty is set to the maximum of either 3% of the data value or 25 ppm.</li>
+        </ul>
+        <div class="example">
+            <p><b>Results</b>: </p>
+            <ul>
+                <li>A total of 110,040 heterogeneous cells were inverted and achieved a misfit of 0.86. </li>
+                <li> The NW-SE trending conductor is apparent from the volume-rendered image. The prism misfits are exported to <span class="filename">het_inv_misfits.csv</span> and shown in transparency for reference. </li>
+                <li>For reference, a cross-section through line 24 in the middle of the survey is shown to view the observed and predicted data.</li>
+            </ul>
+        </div>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/vp1d hetero inv.png" style="width: 413px; height: 252px;" />
+            <br /><span class="SmallerCaption">A volume-rendered image of the recovered heterogeneous inversion. Cells that are above 0.125 S/m are shown in yellow. Data misfits for each prism display as coloured dots. Blue misfits mean the prism reproduced the data to the desired misfit.</span>
+        </p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/vpem1d hetero inv2.png" />
+            <br /><span class="SmallerCaption">The observed (black) and predicted (red) data from the fast heterogeneous inversion though the middle of the survey.</span>
+        </p>
+        <h2 class="NoPageBreak">Half-space</h2>
+        <p>This section will re-evaluate the starting model in the homogeneous inversion section. The starting model is the two-layer model that was created with the 100 milliS/m overburden. The inversion is done to find the best fitting half-space value. VPem1D is run with the control file <span class="filename">halfpace.ctl</span>. Details of the inversion run are:</p>
+        <ul>
+            <li>12 time channels are used.</li>
+            <li>The waveform is defined in <span class="filename">geoTEM.wvf</span>.</li>
+            <li>The control parameter file is <span class="filename">geoTEM_12ch.par</span>.</li>
+            <li>All the observed decay curves are used (<var>dataOption = 1</var>).</li>
+            <li>Maximum number of iterations is set to 20.</li>
+            <li>Uncertainty is set to the maximum of either 1% of the data value or 50 ppm.</li>
+        </ul>
+        <div class="example">
+            <p><b>Results:</b>
+            </p>
+            <ul>
+                <li>The resulting half-space conductivity is set to 11.9 milliS/m everywhere in the model.</li>
+                <li>The achieved misfit is 114 from 336.</li>
+            </ul>
+        </div>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/VPem1D_half_space_result.png" style="width: 581px; height: 360px;" />
+            <br /><span class="SmallerCaption">The observed (black) and predicted (red) data from the half-space inversion though the middle of the survey.</span>
+        </p>
+    </body>
+</html>

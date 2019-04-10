@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Control file</h1>
+        <p>The control file is the main file that is input on the command line when running VPmg. It contains the inversion parameters and file names required for a single VPmg run. This table summarizes the output model type from VPutility given the input data type. Therefore, changing data types that share a common output model type will not change the output.</p>
+        <table style="width: 705px;border-left-style: solid;border-left-width: 1px;border-right-style: solid;border-right-width: 1px;border-top-style: solid;border-top-width: 1px;border-bottom-style: solid;border-bottom-width: 1px;">
+            <col />
+            <col />
+            <col />
+            <col style="width: 119px;" />
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>dataType</td>
+                    <td>dec</td>
+                    <td>inc</td>
+                    <td>amb</td>
+                    <td>idh</td>
+                    <td>idc[.nFwd]</td>
+                    <td>iedge</td>
+                </tr>
+                <tr>
+                    <td>iregnl</td>
+                    <td>ilocal</td>
+                    <td>ild</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>regional.model</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>local.model</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>itmax</td>
+                    <td>error</td>
+                    <td>[huber <b>OR</b></td>
+                    <td colspan="4">{nhet, {uindex(j), dzsc(j), j=1,nhet}}]</td>
+                </tr>
+                <tr>
+                    <td>Δdepth</td>
+                    <td>Δdensity</td>
+                    <td colspan="2">[User_min_ROI]</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>observed.dat</td>
+                    <td colspan="2"><b>OR</b> observed.par</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>[ram_to_use]</td>
+                    <td>[omp_threads]</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 100%;">
+            <col style="width: 105px;" />
+            <col style="width: 105px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"><var>dataType</var>
+                    </td>
+                    <td style="font-weight: bold;" colspan="2"><![CDATA[	]]><span style="font-weight: normal;">Defines the data type:</span></td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><i>dataType =  2</i>
+                    </td>
+                    <td>vector magnetics (<var>B<sub>x</sub></var>, <var>B<sub>y</sub></var>, <var>B<sub>z</sub></var> only): par file required</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><i>dataType =  1</i>
+                    </td>
+                    <td>gravity (free-air)</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><i>dataType =  0</i>
+                    </td>
+                    <td>magnetics (true TMI)</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><i>dataType = -1</i>
+                    </td>
+                    <td>gravity gradient: par file required</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><i>dataType = -2</i>
+                    </td>
+                    <td>	magnetic gradient: par file required</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><i>dataType = -3</i>
+                    </td>
+                    <td>combination of magnetic data (i.e., <var>B<sub>x</sub></var> and TMI): par file required</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><i>dataType = -4</i>
+                    </td>
+                    <td>magnetic amplitude data</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><i>dataType = -6</i>
+                    </td>
+                    <td>	remanent magnetization inversion (RMI) [ild=1]</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><i>dec, inc, amb</i>
+                    </td>
+                    <td style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">Define the ambient magnetic field for TMI or magnetic gradient modelling [<i>dataType=0 or -2</i>] or define survey line orientation for VK1 gravity gradiometer modelling [<i>dataType=-1</i>].</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td colspan="2">In the <b>magnetic modelling</b> case the definitions are as follows:</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><var>dec</var> </td>
+                    <td>magnetic declination [dataType=0 or -2]</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><var>inc</var> </td>
+                    <td>magnetic inclination (degrees, negative in southern hemisphere)</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><var>amb</var>
+                    </td>
+                    <td>geomagnetic intensity (nT)</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td colspan="2">For <b>VK1 system gravity gradient modelling</b>:</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><var>dec</var>
+                    </td>
+                    <td>survey line orientation (clockwise degrees from north)</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><var>inc</var>
+                    </td>
+                    <td>arbitrary, but must be present (set to zero by VPmg)</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td colspan="2">For <b>Falcon system gravity gradient modelling</b>:</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><var>dec</var>
+                    </td>
+                    <td>true north orientation (clockwise degrees from north)</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><var>inc</var>
+                    </td>
+                    <td>arbitrary, but must be present (set to zero by VPmg)</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td colspan="2">For <b>full tensor gradiometry (FTG) data</b>:</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><var>dec</var>
+                    </td>
+                    <td>
+                        <p>acquisition coordinate system north orientation (clockwise degrees from north)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><var>inc</var>
+                    </td>
+                    <td>arbitrary, but must be present (set to zero by VPmg)</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><var>amb</var>
+                    </td>
+                    <td>arbitrary, but must be present (not used for gravity gradient)</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>idh</var>
+                    </td>
+                    <td style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">Distinguishes underground from above ground surveys; also controls self-demagnetization. If <var>idh</var> is not 1, the top of the VP model will move to adjust to given data locations if necessary. </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><i>idh=-3 </i>
+                    </td>
+                    <td>surface or airborne survey, with self-demagnetization taken fully into account</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">idh=-2</td>
+                    <td>surface or airborne survey, with self-demagnetization approximation</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">idh=0 </td>
+                    <td>surface or airborne survey</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">idh=1</td>
+                    <td>downhole or underground survey</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><i>idc[.nFwd]</i>
+                    </td>
+                    <td style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">Controls the DC level and treatment of parameters which attain their bounds.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">idc=100 </td>
+                    <td>DC level free to change (adjusted to achieve least squares fit to data);
+cells which attain bounds during heterogeneous property inversion are            
+fixed at the bound and play no further part.    
+</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">idc=-100 </td>
+                    <td>DC level free to change (adjusted to achieve least squares fit to data);
+cells which attain bounds during heterogeneous property inversion are 
+retained, and may continue to change.
+</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">idc=101</td>
+                    <td>DC level read from end of regional model file; free to change if no DC 
+   shift recorded at end of regional model. Cells which attain bounds during    
+   heterogeneous property inversion are fixed at the bound and play no  
+   further part.
+</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">idc=-101 </td>
+                    <td>DC level read from end of regional model file; free to change if no DC 
+    shift recorded at end of regional model. Cells which attain bounds during       
+    heterogeneous property inversion are retained, and may continue to   
+    change.
+</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">idc=102</td>
+                    <td>DC level read from end of local model file; free to change if no DC shift 
+    recorded at end of local model.
+</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">idc=-102</td>
+                    <td>DC level read from end of local model file; free to change if no DC shift 
+    recorded at end of local model. Cells which attain bounds during    heterogeneous property inversion are retained and may continue to change.
+</td>
+                </tr>
+                <tr>
+                    <td colspan="3">The <var>idc</var> parameter is not obligatory. If it is missing, the DC level is free to change, and cells remain active after achieving property bounds, i.e., the default value for idc is -100.</td>
+                </tr>
+                <tr>
+                    <td colspan="3">nFwd: Optional control of the frequency of full forward calculations using the decimal part of <var>idc</var>. Normally a full forward calc is triggered after 10 iterations. If <var>idc</var>=m.n, then a full forward computation is triggered after every <var>n</var> iterations. The maximum number of iterations between forward modelling is 10.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>iedge</var>
+                    </td>
+                    <td style="font-weight: normal;" colspan="2">Optional control defines if VPmg will keep data near the edge of the model.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">
+idge = 0 </td>
+                    <td>default case (if not given) where data near the edge of the model (4 prisms) is discarded </td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">
+idge = 1</td>
+                    <td>data everywhere within the model edges are used</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><a name="ilocal"></a><i>iregnl &amp; ilocal</i>
+                    </td>
+                    <td style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">Define the model style:</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">iregnl=0, ilocal=1 </td>
+                    <td>active VP model is the second model file given </td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">iregnl=3, ilocal=0 </td>
+                    <td>active VP model is the first model file given</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">iregnl=3, ilocal=1 </td>
+                    <td>local VP model is incised into regional model. The incision is done by taking the volume-averaged property of the regional model and averaging it into the local model basement unit <br />(<a href="VPmg Ch2 Inversion - Technical background.htm#RegionalModels">see Regional and local models</a>)</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">iregnl=3, ilocal=2 </td>
+                    <td>local model incised into regional model. The incision is done
+                                  via the scooping method (<a href="VPmg Ch2 Inversion - Technical background.htm#RegionalModels">see Regional and local models</a>)
+
+</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">iregnl=3, ilocal=3 </td>
+                    <td>local model incised into regional model. The incision is done
+                                  by disregarding the local VP basement and using the regional model in the basement unit. (<a href="VPmg Ch2 Inversion - Technical background.htm#RegionalModels">see Regional and local models</a>)
+</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>ild</var>
+                    </td>
+                    <td style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">Defines the inversion style.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">ild = 0 </td>
+                    <td>Basement inversion </td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">ild = 1</td>
+                    <td>Homogeneous property inversion</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">ild = -1</td>
+                    <td>Heterogeneous inversion</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">ild = 2 </td>
+                    <td>Geometry inversion	</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">ild = 199</td>
+                    <td>inversion, but only increases in property values are permitted </td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td style="font-style: italic;">ild = 200</td>
+                    <td>Basement inversion, but only increases in property are permitted</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><i>regional.model</i>
+                    </td>
+                    <td style="font-weight: bold;" colspan="2"><span style="font-weight: normal;"> VP model file (see above <a href="#ilocal"><var>ilocal</var> and <var>iregnl</var> flags)</a>.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><i>local.model</i>
+                    </td>
+                    <td style="font-weight: bold;" colspan="2"><span style="font-weight: normal;"> VP model file (see above <a href="#ilocal"><var>ilocal</var> and <var>iregnl</var> flags</a>).</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>itmax</var>
+                    </td>
+                    <td style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">Maximum number of iterations for inversion. Set to zero for forward modelling. If <var>itmax</var>=-1, VPmg converts nominated homogeneous units to heterogeneous units. If <var>itmax</var>=-2, VPmg assigns depth weights to nominated heterogeneous units. Depth weights are only applied to the first given unit, representing a “host” unit on basement, in preparation for “unconstrained” property inversion: <var>nhet</var>=1 and <var>uindex</var>=1.</span><![CDATA[  ]]></td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>error</var>
+                    </td>
+                    <td style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">Absolute data uncertainty, in data units, when <var>itmax</var> ≥ 0. Must be greater than 0.0.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>huber</var>
+                    </td>
+                    <td style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">Optional Huber value. Data residuals above this number (i.e., huber*error) are down-weighted during inversion. For example, if <var>Huber</var>=5, the inversion will down-weight the effect to the data misfit if the difference of predicted and observed data are greater than five standard deviations (5*error). This value is only used during inversion.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var>nhet</var>
+                    </td>
+                    <td style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">Number of homogeneous units to be converted to heterogeneous units when <var>itmax</var>=-1. Number of heterogeneous units for which depth weights are to be computed when <var>itmax</var>=-2. Depth weights are only applied to the first given unit, representing a “host” unit on basement.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><i>uindex(j),dzsc(j)</i>
+                    </td>
+                    <td style="font-weight: bold;" colspan="2">
+                        <ul>
+                            <li style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">If <var>itmax</var>=-1, <i>uindex(j)</i> is the index of the j<sup>th</sup> homogeneous unit for conversion to a heterogeneous unit, and <i>dzsc(j)</i> is the desired thickness of sub-cells in the corresponding heterogeneous unit. </span>
+                            </li>
+                            <li style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">If <var>itmax</var>=-2, <i>uindex(j)</i> is the index of the j<sup>th</sup> homogeneous unit for computation of depth weights. </span>
+                            </li>
+                            <li style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">Depth weights are only applied to the first given unit, representing a “host” unit on basement, in preparation for “unconstrained” property inversion. </span>
+                            </li>
+                            <li style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">The maximum weight, <var>wmax</var>, in the shallowest cell is 0.9 by default; this translates into a factor of 1-<var>wmax</var>=0.1 applied to the corresponding derivatives. </span>
+                            </li>
+                            <li style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">The sub-cell thickness <i>dzsc(j)</i> is adopted as the reference thickness (used in the calculation of the depth weights). </span>
+                            </li>
+                            <li style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">When itmax=-2, the <var>dzsc</var> value is interpreted as the reference thickness in whole metres + the decimal part defining wmax (the maximum depth weight). </span>
+                            </li>
+                            <li style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">So <var>dzsc</var> = 50.85 means 50m reference thickness, with <var>wmax</var>=0.85.</span><![CDATA[  ]]></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var><MadCap:equation>$\triangle$</MadCap:equation>depth</var>
+                    </td>
+                    <td style="font-weight: bold;" colspan="2">
+                        <ul>
+                            <li style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">Maximum relative change in interface depth per iteration during geometry inversion (<i>ild=2</i>). </span>
+                            </li>
+                            <li style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">Value 0.05 permits a change of at most 5% of the depth of the interface during each iteration. </span>
+                            </li>
+                            <li style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">Typically <var><MadCap:equation>$\triangle$</MadCap:equation>depth</var> lies between 0.02 and 0.05. [If <var><MadCap:equation>$\triangle$</MadCap:equation>depth</var> &gt; 1, the whole number modifies the depth weighting applied to derivatives during geometry inversion. The depth weighting reduces sensitivity to shallow interfaces. For example, if <var><MadCap:equation>$\triangle$</MadCap:equation>depth</var>=20.02, derivatives corresponding to interfaces at the ground surface are weighted as though they correspond to depth 20m. This is desirable if seeking shallow model changes.]</span><![CDATA[    ]]></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><var><MadCap:equation>$\triangle$</MadCap:equation>property</var>
+                    </td>
+                    <td style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">Maximum absolute change in density (g/cm<sup>3</sup>) or susceptibility (10<sup>-3</sup>SI) per iteration (<var>ild</var>=0,1 inversion).</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><i>User_min_ROI </i>
+                    </td>
+                    <td style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">Defines the optional radius (in metres) of the "neighbourhood of influence" around 
+		underground data points or around drillhole constraints (property or geometry). 
+If this parameter is  missing, the default “neighbourhood of influence" is used (2.5*diagonal cell size for property, no minimum for geometry). If <i>User_min_ROI = 0</i>, no proximity weights are applied around underground data points or around drillhole constraints.
+</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><i>observed.dat</i>
+                    </td>
+                    <td style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">Observed data file; formatted as an observed data file, or:</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;"><i>observed.par</i>
+                    </td>
+                    <td style="font-weight: bold;" colspan="2"><span style="font-weight: normal;">File to define the name and format of the data file, and the data components to be inverted. A par file is essential for inversion of multiple gravity gradient or magnetic gradient components. For inversion of a single data set, e.g. TMI or a single gravity gradient component, use either a dat file or a par file. The par file format is defined in below.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;font-style: italic;">output.model    </td>
+                    <td style="font-weight: normal;" colspan="2">VP model File containing final inverted model (or model used for forward modelling) plus observed, calculated, and background data.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;font-style: italic;">ram_to_use    </td>
+                    <td style="font-weight: normal;" colspan="2">Optional amount of RAM (in GB) to have VPmg use during inversion. If left blank, VPmg will try to use as much as it requires.</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;font-style: italic;">omp_threads   </td>
+                    <td style="font-weight: normal;" colspan="2">Optional number of CPU threads (not cores) to have VPmg use. The minimum of the given number of threads and the computer maximum number of threads will be used and noted in the log file. The amount of RAM to use must be given along with this number.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/Simple.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">
+            <MadCap:keyword term="Add-on module" />Add-on module:&#160;ioGAS&#160;Link <MadCap:keyword term="Geoscience ANALYST Pro:ioGAS Link" /></h1>
+        <p>
+            <MadCap:keyword term="Object types:Points" />ioGAS Link is a paid add-on module dependent on Geoscience ANALYST Pro that dynamically links ioGAS and Geoscience ANALYST, allowing you to share features from both. Once linked, you can open any points object residing in Geoscience ANALYST Pro in ioGAS, and vice versa. </p>
+        <p>You can view ioGAS's powerful attribute settings in Geoscience ANALYST, and changes will be broadcast and updated in real time to dynamically display the data in 3D using Geoscience ANALYST’s versatile viewing capabilities.</p>
+        <div class="note">The add-on module <b>does not include</b> the ioGAS application developed by the REFLEX GEOCHEMISTRY team. To buy or download a free trial version of ioGAS, or for information on ioGAS features, licence and compatibility with Geoscience ANALYST Pro, see <a href="http://reflexnow.com/iogas">the website of REFLEX</a>. If you already own an ioGAS licence, contact your REFLEX representative to activate the licensing feature required to enable the ioGAS - Geoscience ANALYST live link.</div>
+        <p class="Task">To activate your ioGAS&#160;Link licence:</p>
+        <ol>
+            <li>
+                <MadCap:keyword term="Menu bar" />In the Menu bar, open the <b>Add-on Modules</b> menu and click <b>Try/Buy/Activate Module(s)</b>.<br /><img src="../../Resources/Images/en/GA_try_buy_activate_addons.png" /></li>
+            <li>In the <b style="font-style: italic; font-weight: normal;">Add-on Modules</b> dialogue box, select the <b>Buy</b> button in the ioGAS&#160;Link box. You will be directed to the Mira Geoscience website to complete the transaction. <br /><img src="../../Resources/Images/en/GA new addon mod.png" style="width: 673px;height: 284px;" /><br /><br /></li>
+            <li>Retrieve your licence key that we emailed to you and press <b>Manage</b> to launch the registration wizard. (Follow the same procedure as the free viewer licence activation steps <a href="../1. Welcome/Activating your licence.htm">described earlier</a> in this guide.)</li>
+            <li>Restart Geoscience ANALYST&#160;to access ioGAS&#160;Link.</li>
+        </ol>
+        <p>&#160;</p>
+        <p class="Task">To connect to ioGAS&#160;Link:</p>
+        <ol>
+            <li>Launch ioGAS. </li>
+            <li>In Geoscience ANALYST, go to the <b>File</b> menu and click <b>Connect to ioGAS</b> to establish the live link connection.</li>
+        </ol>
+        <p>You will see the message <i>Connected to ioGAS</i><MadCap:keyword term="Viewport" />, as well as the name of the ioGAS project in parentheses centred at the top of the Geoscience ANALYST Viewport. </p>
+        <p>When connected, an open file in ioGAS will automatically be broadcast to Geoscience ANALYST as a new ioGAS Points object, which you will see under a folder called <i style="font-weight: bold; font-style: normal;">ioGAS link</i><MadCap:keyword term="Objects panel" /> in the Objects panel. </p>
+        <img src="../../Resources/Images/iogas in objects panel.png" />
+        <p class="Task">To view points objects in ioGAS: </p>
+        <ol>
+            <li>In ioGAS, go to the <b>File</b> menu and click <b>Open Link Data</b>.</li>
+            <li>In the <i>Choose view from...</i> dialogue box, select an object from the drop-down menu.</li>
+            <li>Click <b>OK</b>.</li>
+        </ol>
+        <p>By doing this, you will be able to view the linked points using ioGAS’s powerful visualization and versatile attribute capabilities in the 3D Viewport, along with any other model components residing in the workspace.</p>
+        <div class="note">If you edit points attributes in ioGAS, Geoscience ANALYST will reflect the changes. However, if you create, delete, or edit ioGAS points objects in Geoscience ANALYST, the green <b>Synched with ioGAS</b><MadCap:keyword term="ioGAS panel" /> icon on the ioGAS panel will change to a red <b>Synchronize</b> button indicating that the two data sets are no longer matching. Press this button to re-sync the data between the two applications.</div>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/Simple.css');" class="TableStyle-SimpleWithPadding" cellspacing="0">
+            <col style="width: 296px;" class="TableStyle-SimpleWithPadding-Column-Column1" />
+            <col class="TableStyle-SimpleWithPadding-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                    <td class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1">
+                        <img src="../../Resources/Images/synchronize button2.png" style="margin-left: 0px;margin-right: 20px;margin-top: 0px;margin-bottom: 0px;" />
+                    </td>
+                    <td class="TableStyle-SimpleWithPadding-BodyA-Column1-Row1">
+                        <img src="../../Resources/Images/synchronize button.png" style="margin-left: 20px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>You can disconnect from ioGAS by closing either of the programs, or by clicking <b>Disconnect from ioGAS</b> in the Geoscience ANALYST <b>File</b> menu. </p>
+        <p class="Task">Renaming and reassigning data</p>
+        <p>To avoid possible conflicts with reserved names for geometrical fields, Geoscience ANALYST&#160;will automatically rename certain ioGAS points data names by adding a <b>GAS_</b> prefix. This includes <i>x, y, z, i, j, k, from, to</i> and <i>depth</i>.</p>
+        <p>Geoscience ANALYST assigns the following as floats:</p>
+        <ul>
+            <li> Numeric data (e.g.,  float and integer).</li>
+            <li>Data tagged as special such as reserved names and aliases for 3D coordinates (e.g.,  north, east, lat, long, elevation).</li>
+        </ul>
+        <p>All other data such as text becomes reference data. </p>
+    </body>
+</html>

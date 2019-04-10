@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PageStyles>
+    <Page Name="Title" Width="800" Height="800" Padding="20px" PageSize="Letter" PaddingLeft="1in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" PageType="title">
+        <Frame Flow="body" ColumnCount="1" Anchors="Left,Right,Top,Bottom" X="-91px" Y="-89px" Width="807px" Height="909px" Right="-92px" Bottom="44px">
+        </Frame>
+        <Frame X="-91px" Y="828px" Width="807px" Height="121px" Flow="footer" Right="-92px" Bottom="-85px">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:body>
+                        <xhtml:p>
+                            <xhtml:img xhtml:src="../Images/MG_logo_20years.png" xhtml:style="float: right;margin-left: 20px;margin-right: 40px;margin-top: 20px;margin-bottom: 20px;" />
+                        </xhtml:p>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+    </Page>
+</PageStyles>

@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MadCapLog Protocol="2" Date="2017-09-15T16:10:47.5012591-04:00" Description="Import MS Word Documents, Geoscience ANALYST User guide excerpt for Russian translation_August29_2017_rus">
+    <Messages>Converting Word document: Geoscience ANALYST User guide excerpt for Russian translation_August29_2017_rus.docx...
+Generating Page Layouts...
+Failed to resolve image: Resources/Images/GA%20UI%20update2.png
+Failed to resolve image: Resources/Images/bubble1.png
+Failed to resolve image: Resources/Images/bubble2.png
+Failed to resolve image: Resources/Images/bubble3.png
+Failed to resolve image: Resources/Images/un-painted%20object1.png
+Failed to resolve image: Resources/Images/painted%20object3.png
+Failed to resolve image: Resources/Images/workspace%20tab2.png
+Failed to resolve image: Resources/Images/folder%20tab2.png
+Failed to resolve image: Resources/Images/Folder%20tab.png
+Failed to resolve image: Resources/Images/disk%20icon_29x24.png
+Failed to resolve image: Resources/Images/copy%20paste.png
+Failed to resolve image: Resources/Images/4test.png
+Failed to resolve image: Resources/Images/visual%20parameters%20panela.png
+Failed to resolve image: Resources/Images/bubble56.png
+Failed to resolve image: Resources/Images/object%20panel%20callout%202.png
+Failed to resolve image: Resources/Images/add%20group.png
+Failed to resolve image: Resources/Images/bubble7.png
+Failed to resolve image: Resources/Images/viewport2.png
+Failed to resolve image: Resources/Images/mouse%20left_25x25.png
+Failed to resolve image: Resources/Images/mouse%20middle_25x25.png
+Failed to resolve image: Resources/Images/mouse%20right_25x25.png
+Failed to resolve image: Resources/Images/global%20view%20button_30x25.png
+Failed to resolve image: Resources/Images/Look%20west_30x25.png
+Failed to resolve image: Resources/Images/Look%20north_31x27.png
+Failed to resolve image: ../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/view%20from%20top_31x25.png
+Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/look%20east.png
+Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/look%20south.png
+Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/look%20orthagonal.png
+Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/perspective%20view.png
+Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/parallel%20view.png
+Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/scale%20bar.png
+Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/xyz%20axis.png
+Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/background%20color.png
+Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/color%20bar.png
+Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/Vertical%20exaggeration.png
+Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/snapshot.png
+Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/bounding%20box.png
+Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/snap%20to%20nearest.png
+Failed to resolve image: Resources/Images/bubble8.png
+Failed to resolve image: Resources/Images/controls%20panel2.png
+Failed to resolve image: Resources/Images/bubble9.png
+Failed to resolve image: Resources/Images/console%20panel.png
+Failed to resolve image: Resources/Images/bubble11.png
+Failed to resolve image: Resources/Images/histogram%20view2.png
+Failed to resolve image: Resources/Images/data%20colors3a.png
+Failed to resolve image: Resources/Images/histogram%20dynamic%20numbers2.png
+Failed to resolve image: Resources/Images/data%20colors%20drop-down.png
+Failed to resolve image: Resources/Images/reset%20clip%20values.bmp
+Failed to resolve image: Resources/Images/yin%20yang.png
+Failed to resolve image: Resources/Images/switch%20button_24x20.png
+Failed to resolve image: Resources/Images/color%20bar.bmp
+Failed to resolve image: Resources/Images/Linear%20transform.bmp
+Failed to resolve image: Resources/Images/Logarithmic%20transform.bmp
+Failed to resolve image: Resources/Images/Equal%20area%20transform.bmp
+Failed to resolve image: Resources/Images/CDF%20transform.bmp
+Failed to resolve image: Resources/Images/Load%20color%20settings.bmp
+Failed to resolve image: Resources/Images/color%20bar.png
+Failed to resolve image: Resources/Images/Save%20color%20settings.bmp
+Failed to resolve image: Resources/Images/Hide%20nodata%20filtered%20values.bmp
+Failed to resolve image: Resources/Images/Revert%20color%20settings.bmp
+Failed to resolve image: Resources/Images/Toggle%20scale%20type.bmp
+Failed to resolve image: Resources/Images/linear%20transformation%20popup.bmp
+Failed to resolve image: Resources/Images/reference%20data%20icon.bmp
+Failed to resolve image: Resources/Images/Data%20colors%20with%20buttons.png
+Failed to resolve image: Resources/Images/Load%20color%20settings.bmp
+Failed to resolve image: Resources/Images/Save%20color%20settings.bmp
+Failed to resolve image: Resources/Images/Show%20selected.bmp
+Failed to resolve image: Resources/Images/View%20all.bmp
+Failed to resolve image: Resources/Images/Hide%20nodata%20filtered%20values.bmp
+Failed to resolve image: Resources/Images/Revert%20color%20settings.bmp
+Failed to resolve image: Resources/Images/bubble12.png
+Failed to resolve image: Resources/Images/2d%20profile%20viewer%20main2.png
+Failed to resolve image: Resources/Images/2d%20profile%20slider.png
+Failed to resolve image: Resources/Images/2d%20profile%20drop%20down.png
+Failed to resolve image: Resources/Images/add%20data%20button.png
+Failed to resolve image: Resources/Images/add%20graph.png
+Failed to resolve image: Resources/Images/delete%20graph2.png
+Failed to resolve image: Resources/Images/remove%20graph2.png
+Created topic: Содержание.htm...
+Failed to resolve image: Resources/Images/points%20icon_21x24.bmp
+Failed to resolve image: Resources/Images/curves%20icon.bmp
+Failed to resolve image: Resources/Images/surfaces%20icon.bmp
+Failed to resolve image: Resources/Images/drillholes%20icon.bmp
+Failed to resolve image: Resources/Images/2dgrid2_t.png
+Failed to resolve image: Resources/Images/blockmodel%20icon.bmp
+Failed to resolve image: Resources/Images/geoimages%20icon.bmp
+Failed to resolve image: Resources/Images/points%20icon_21x24.bmp
+Failed to resolve image: Resources/Images/new%20points%20image3.png
+Failed to resolve image: Resources/Images/visual%20parameters%20panel2.png
+Failed to resolve image: Resources/Images/curves%20icon.bmp
+Failed to resolve image: Resources/Images/new%20curves%20image.bmp
+Failed to resolve image: Resources/Images/curve%20visual%20paramters.png
+Failed to resolve image: Resources/Images/surfaces%20icon.bmp
+Failed to resolve image: Resources/Images/surface%20image.png
+Failed to resolve image: Resources/Images/new%20surface%20visual%20parameters.png
+Failed to resolve image: Resources/Images/drillholes%20icon.bmp
+Failed to resolve image: Resources/Images/new%20drillholes%20image.png
+Failed to resolve image: Resources/Images/visual%20parameters%20panel%20drillholes.png
+Failed to resolve image: Resources/Images/surveys%20dialog.png
+Failed to resolve image: Resources/Images/2dgrid2_t1.png
+Failed to resolve image: Resources/Images/new%202d%20grids%20object.png
+Failed to resolve image: Resources/Images/2d%20grid%20visual%20parameters.png
+Failed to resolve image: Resources/Images/2017-05-05_12-08-38.png
+Failed to resolve image: Resources/Images/2017-05-05_12-13-30.png
+Failed to resolve image: Resources/Images/blockmodel%20icon.bmp
+Failed to resolve image: Resources/Images/newestblockmodel.png
+Failed to resolve image: Resources/Images/image3.png
+Failed to resolve image: Resources/Images/new%20show%20isovalues.png
+Failed to resolve image: Resources/Images/GeoImages%20new%20image.png
+Failed to resolve image: Resources/Images/Visual%20parameters%20panel_GeoImages.bmp
+Failed to resolve image: Resources/Images/file%20menu%20GA.bmp
+Failed to resolve image: Resources/Images/import%20points.bmp
+Failed to resolve image: Resources/Images/import%20drillhole%20files.bmp
+Failed to resolve image: Resources/Images/Select%20required%20columns_collars.bmp
+Failed to resolve image: Resources/Images/Select%20required%20columns_interval%20log.bmp
+Failed to resolve image: Resources/Images/select%20required%20columns_survey.bmp
+Failed to resolve image: Resources/Images/Select%20required%20columns_point%20logs.bmp
+Failed to resolve image: Resources/Images/sliced%20object.bmp
+Failed to resolve image: Resources/Images/slicer%20navigation%20tool.bmp
+Failed to resolve image: Resources/Images/filtering%20image.png
+Failed to resolve image: Resources/Images/filter%20eye%20icon.bmp
+Failed to resolve image: Resources/Images/contextual%20menu.png
+Failed to resolve image: Resources/Images/data%20contextual%20menu.png
+Failed to resolve image: Resources/Images/sliced%20object.bmp
+Failed to resolve image: Resources/Images/slicer%20navigation%20tool.bmp
+Failed to resolve image: Resources/Images/tape%20measure.png
+Failed to resolve image: Resources/Images/snapshot.png
+Failed to resolve image: Resources/Images/snapshot%20image.png
+Failed to resolve image: Resources/Images/comments%20button.bmp
+Failed to resolve image: Resources/Images/add%20file%20button.bmp
+Failed to resolve image: Resources/Images/files%20comments.bmp
+Failed to resolve image: Resources/Images/Screenshot%20(20).png
+Failed to resolve image: Resources/Images/Add%20on%20modules.bmp
+Failed to resolve image: Resources/Images/transfer%20data2.png
+Failed to resolve image: Resources/Images/image1.png
+Failed to resolve image: Resources/Images/new%20curve%20objects%20panel.png
+Failed to resolve image: Resources/Images/object%20creation%20on%20map.png
+Failed to resolve image: Resources/Images/linked%20drillholes.png
+Failed to resolve image: Resources/Images/snap%20button.png
+Failed to resolve image: Resources/Images/drillholes%20snap.png
+Failed to resolve image: Resources/Images/surface%20snap1.png
+Failed to resolve image: Resources/Images/Edit%20curve%20menu.png
+Failed to resolve image: Resources/Images/Edit%20data%20table.png
+Failed to resolve image: Resources/Images/reference%20data%20drop%20down.png
+Failed to resolve image: Resources/Images/drillhole%20desurvey.png
+Created topic: Типы объектов.htm...
+Saving TOC file: Geoscience ANALYST User guide excerpt for Russian translation_August29_2017_rus.fltoc...
+Saving Header/Footer MasterPage: Geoscience ANALYST User guide excerpt for Russian translation_August29_2017_rus.flmsp...
+Created topic: Geoscience ANALYST User guide excerpt for Russian translation_August29_2017_rus.flmsp...
+Saving Header/Footer page layout: section2.flpgl...
+MS Word Importer (Internal Error): Object reference not set to an instance of an object.
+Cancelled
+</Messages>
+    <Warnings />
+    <Errors>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/GA%20UI%20update2.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/bubble1.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/bubble2.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/bubble3.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/un-painted%20object1.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/painted%20object3.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/workspace%20tab2.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/folder%20tab2.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Folder%20tab.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/disk%20icon_29x24.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/copy%20paste.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/4test.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/visual%20parameters%20panela.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/bubble56.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/object%20panel%20callout%202.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/add%20group.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/bubble7.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/viewport2.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/mouse%20left_25x25.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/mouse%20middle_25x25.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/mouse%20right_25x25.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/global%20view%20button_30x25.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Look%20west_30x25.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Look%20north_31x27.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: ../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/view%20from%20top_31x25.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/look%20east.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/look%20south.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/look%20orthagonal.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/perspective%20view.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/parallel%20view.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/scale%20bar.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/xyz%20axis.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/background%20color.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/Colour%20bar.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/Vertical%20exaggeration.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/snapshot.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/bounding%20box.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: ../../../../Geoscience%20ANALYST%20Quick%20Start%20Guide/Content/Resources/Images/snap%20to%20nearest.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/bubble8.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/controls%20panel2.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/bubble9.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/console%20panel.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/bubble11.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/histogram%20view2.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/data%20colours3a.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/histogram%20dynamic%20numbers2.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/data%20colours%20drop-down.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/reset%20clip%20values.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/yin%20yang.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/switch%20button_24x20.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/colour%20bar.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Linear%20transform.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Logarithmic%20transform.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Equal%20area%20transform.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/CDF%20transform.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Load%20colour%20settings.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/colour%20bar.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Save%20colour%20settings.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Hide%20nodata%20filtered%20values.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Revert%20colour%20settings.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Toggle%20scale%20type.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/linear%20transformation%20popup.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/reference%20data%20icon.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Data%20colours%20with%20buttons.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Load%20colour%20settings.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Save%20colour%20settings.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Show%20selected.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/View%20all.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Hide%20nodata%20filtered%20values.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Revert%20colour%20settings.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/bubble12.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/2d%20profile%20viewer%20main2.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/2d%20profile%20slider.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/2d%20profile%20drop%20down.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/add%20data%20button.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/add%20graph.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/delete%20graph2.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/remove%20graph2.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/points%20icon_21x24.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/curves%20icon.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/surfaces%20icon.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/drillholes%20icon.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/2dgrid2_t.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/blockmodel%20icon.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/geoimages%20icon.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/points%20icon_21x24.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/new%20points%20image3.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/visual%20parameters%20panel2.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/curves%20icon.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/new%20curves%20image.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/curve%20visual%20paramters.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/surfaces%20icon.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/surface%20image.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/new%20surface%20visual%20parameters.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/drillholes%20icon.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/new%20drillholes%20image.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/visual%20parameters%20panel%20drillholes.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/surveys%20dialog.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/2dgrid2_t1.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/new%202d%20grids%20object.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/2d%20grid%20visual%20parameters.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/2017-05-05_12-08-38.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/2017-05-05_12-13-30.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/blockmodel%20icon.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/newestblockmodel.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/image3.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/new%20show%20isovalues.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/GeoImages%20new%20image.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Visual%20parameters%20panel_GeoImages.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/file%20menu%20GA.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/import%20points.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/import%20drillhole%20files.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Select%20required%20columns_collars.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Select%20required%20columns_interval%20log.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/select%20required%20columns_survey.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Select%20required%20columns_point%20logs.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/sliced%20object.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/slicer%20navigation%20tool.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/filtering%20image.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/filter%20eye%20icon.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/contextual%20menu.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/data%20contextual%20menu.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/sliced%20object.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/slicer%20navigation%20tool.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/tape%20measure.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/snapshot.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/snapshot%20image.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/comments%20button.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/add%20file%20button.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/files%20comments.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Screenshot%20(20).png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Add%20on%20modules.bmp " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/transfer%20data2.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/image1.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/new%20curve%20objects%20panel.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/object%20creation%20on%20map.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/linked%20drillholes.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/snap%20button.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/drillholes%20snap.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/surface%20snap1.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Edit%20curve%20menu.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/Edit%20data%20table.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/reference%20data%20drop%20down.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Failed to resolve image: Resources/Images/drillhole%20desurvey.png " LineIndex="-1" CharIndex="-1" ErrorID="-1">
+        </LogEntry>
+        <LogEntry File="" Message="Object reference not set to an instance of an object.&#xA;" LineIndex="-1" CharIndex="-1" Subsystem="MS Word Importer (Internal Error)" ErrorID="-1">
+        </LogEntry>
+    </Errors>
+</MadCapLog>

@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Print Only Topics/TitlePageGI-UserGuide.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="pageLayout"
+    PageType="title"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/TestCoverLayout2.flpgl" />
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Print Only Topics/Copyright and contact GI.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/Copyright8_5X11.flpgl" />
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Print Only Topics/TOC.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="reset"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/TOC8_5X11.flpgl"
+    PageNumberFormat="lower-roman"
+    PageType="firstright"
+    ReplaceMergeNode="false"
+    PageNumber="1" />
+  <TocEntry
+    Title="Ch1 About"
+    Link="/Content/A_INTEGRATOR/B_version 3/About/Ch 1 Divider GI_Introduction.htm"
+    BreakType="chapter"
+    PageType="firstright"
+    PageNumberReset="reset"
+    StartSection="false"
+    PageNumber="1"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GI ChapterDividers 8_5X11.flpgl"
+    PageNumberFormat="decimal"
+    ChapterNumberReset="reset"
+    ChapterNumber="1"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/A_INTEGRATOR/B_version 3/About/About GI.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+    <TocEntry
+      Title="Creating your GI account"
+      Link="/Content/A_INTEGRATOR/B_version 3/About/Creating your GI account.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+  </TocEntry>
+  <TocEntry
+    Title="B_Geoscience INTEGRATOR key components and terms"
+    Link="/Content/A_INTEGRATOR/B_version 3/B_GI key components and terms/Ch 2 Divider GI Data structure and organization.htm"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GI ChapterDividers 8_5X11.flpgl"
+    PageType="firstright"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same"
+    ChapterNumberReset="continue">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/A_INTEGRATOR/B_version 3/B_GI key components and terms/Data structure and organization.htm"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+  </TocEntry>
+  <TocEntry
+    Title="C_Data set explorer"
+    Link="/Content/A_INTEGRATOR/B_version 3/C_GI Data Set explorer/Ch 3 Divider GI Data set explorer.htm"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GI ChapterDividers 8_5X11.flpgl"
+    PageType="firstright">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/A_INTEGRATOR/B_version 3/C_GI Data Set explorer/Data set explorer.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/A_INTEGRATOR/B_version 3/C_GI Data Set explorer/Filtering and querying data.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+  </TocEntry>
+  <TocEntry
+    Title="Importing data"
+    Link="/Content/A_INTEGRATOR/B_version 3/D_Importing data/Ch 4 Divider GI Importing data.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="chapter"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GI ChapterDividers 8_5X11.flpgl">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/A_INTEGRATOR/B_version 3/D_Importing data/Importing data.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+  </TocEntry>
+  <TocEntry
+    Title="Data fusion"
+    Link="/Content/A_INTEGRATOR/B_version 3/E_Data Fusion/Ch 5 Divider GI Data fusion.htm"
+    BreakType="chapter"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GI ChapterDividers 8_5X11.flpgl">
+    <TocEntry
+      Title="Data fusion"
+      Link="/Content/A_INTEGRATOR/B_version 3/E_Data Fusion/Data fusion.htm"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+  </TocEntry>
+  <TocEntry
+    Title="Reporting"
+    Link="/Content/A_INTEGRATOR/B_version 3/F_Reporting/Ch 6 Divider GI Reporting.htm"
+    BreakType="chapter"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GI ChapterDividers 8_5X11.flpgl">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/A_INTEGRATOR/B_version 3/F_Reporting/Reporting.htm"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+  </TocEntry>
+  <TocEntry
+    Title="File and document management"
+    BreakType="chapter"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GI ChapterDividers 8_5X11.flpgl"
+    Link="/Content/A_INTEGRATOR/B_version 3/G_File and document management/Ch 7 Divider GI File and doc management.htm">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/A_INTEGRATOR/B_version 3/G_File and document management/Document Library.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/A_INTEGRATOR/B_version 3/G_File and document management/File manager.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl"></TocEntry>
+    <TocEntry
+      Title="Maps and level plans"
+      Link="/Content/A_INTEGRATOR/B_version 3/G_File and document management/Maps_plans_sections.htm"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+  </TocEntry>
+  <TocEntry
+    Title="Tags"
+    BreakType="chapter"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GI ChapterDividers 8_5X11.flpgl"
+    Link="/Content/A_INTEGRATOR/B_version 3/H_Tags/Ch 8 GI Divider Tags.htm">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/A_INTEGRATOR/B_version 3/H_Tags/Tags.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+  </TocEntry>
+  <TocEntry
+    Title="Geohazard assessment"
+    Link="/Content/A_INTEGRATOR/B_version 3/I_Geohazard assessment/Ch 9 Divider GI Geohazard assessment.htm"
+    BreakType="chapter"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GI ChapterDividers 8_5X11.flpgl"
+    ReplaceMergeNode="false">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/A_INTEGRATOR/B_version 3/I_Geohazard assessment/Geohazard analytics.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+  </TocEntry>
+  <TocEntry
+    Title="Viewing your data in 3D"
+    Link="/Content/A_INTEGRATOR/B_version 3/J_3D visualization/Ch 10 Divider GI Connecting to Geoscience ANALYST.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="chapter"
+    PageType="right"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GI ChapterDividers 8_5X11.flpgl">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/A_INTEGRATOR/B_version 3/J_3D visualization/3D visualization and analysis.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+  </TocEntry>
+  <TocEntry
+    Title="Project settings"
+    Link="/Content/A_INTEGRATOR/B_version 3/K_Project settings/Ch 11 Divider GI Project settings.htm"
+    BreakType="chapter"
+    PageType="right"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GI ChapterDividers 8_5X11.flpgl">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/A_INTEGRATOR/B_version 3/K_Project settings/Project settings v3.htm"
+      BreakType="pageLayout"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/Product Chapters.flpgl" />
+  </TocEntry>
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Print Only Topics/Index.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    BreakType="chapter"
+    PageType="firstright"
+    StartSection="false"
+    PageNumberReset="continue"
+    PageLayout="/Content/Resources/PageLayouts/INTEGRATOR 8_5X11/GI Index8_5X11.flpgl" />
+</CatapultToc>

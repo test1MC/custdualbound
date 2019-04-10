@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="Table of Contents" />
+  <TocEntry
+    Title="The Geoscience ANALYST user interface">
+    <TocEntry
+      Title="Histogram view: Float and integer data">
+      <TocEntry
+        Title="Reference data view." />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Object types">
+    <TocEntry
+      Title="Points" />
+    <TocEntry
+      Title="Curves" />
+    <TocEntry
+      Title="Surfaces" />
+    <TocEntry
+      Title="Drillholes" />
+    <TocEntry
+      Title="2D Grids" />
+    <TocEntry
+      Title="BlockModels" />
+    <TocEntry
+      Title="GeoImages" />
+  </TocEntry>
+  <TocEntry
+    Title="Importing files into Geoscience ANALYST" />
+  <TocEntry
+    Title="How to use slicers" />
+  <TocEntry
+    Title="Objects panel: Sorting, filtering, and slicing">
+    <TocEntry
+      Title="Contextual menus" />
+    <TocEntry
+      Title="Slicers" />
+    <TocEntry
+      Title="Tape measure" />
+    <TocEntry
+      Title="Snapshots" />
+    <TocEntry
+      Title="Comments and files" />
+  </TocEntry>
+  <TocEntry
+    Title="Add-on module: Geoscience ANALYST Pro">
+    <TocEntry
+      Title="Transfer data" />
+    <TocEntry
+      Title="2D grid designer"
+      Link="../../../../Geoscience ANALYST Russian/Geoscience ANALYST User guide excerpt for Russian translation_August29_2017_rus.docx#_Toc491778720"
+      AbsoluteLink="file:///C:/Users/jackg/Documents/Geoscience ANALYST Russian/Geoscience ANALYST User guide excerpt for Russian translation_August29_2017_rus.docx#_Toc491778720" />
+    <TocEntry
+      Title="Minimum curvature gridding"
+      Link="../../../../Geoscience ANALYST Russian/Geoscience ANALYST User guide excerpt for Russian translation_August29_2017_rus.docx#_Toc491778721"
+      AbsoluteLink="file:///C:/Users/jackg/Documents/Geoscience ANALYST Russian/Geoscience ANALYST User guide excerpt for Russian translation_August29_2017_rus.docx#_Toc491778721" />
+  </TocEntry>
+  <TocEntry
+    Title="Creating objects">
+    <TocEntry
+      Title="Object creation: Use cases">
+      <TocEntry
+        Title="Use case: Points" />
+      <TocEntry
+        Title="Use case: Curves" />
+      <TocEntry
+        Title="Use case: Surfaces" />
+    </TocEntry>
+    <TocEntry
+      Title="Snapping objects" />
+    <TocEntry
+      Title="Editing objects" />
+    <TocEntry
+      Title="Editing in the Data table" />
+    <TocEntry
+      Title="Desurvey drillholes" />
+    <TocEntry
+      Title="Transfer data to drillholes" />
+  </TocEntry>
+</CatapultToc>

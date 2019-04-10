@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum=" ">Exporting objects from Geoscience ANALYST <MadCap:keyword term="Exporting objects" /><a name="exporting_viewport"></a></h1>
+        <p>Geoscience ANALYST allows you to export certain objects, depending on their type:</p>
+        <ul>
+            <li>
+                <MadCap:keyword term="Exporting:Points" />
+                <MadCap:keyword term="Exporting:Curves" />
+                <MadCap:keyword term="Exporting:Surfaces" />
+                <MadCap:keyword term="Points" />
+                <MadCap:keyword term="Curves" />
+                <MadCap:keyword term="Surfaces" />Points, curves, and surfaces to <MadCap:variable name="General.Gocad" /><MadCap:keyword term="Exporting:[%=General.Gocad%] ASCII files" /><MadCap:keyword term="[%=General.ProductNameGMS%]" /> ASCII files (<span class="fileext">.mx</span>).</li>
+            <li>
+                <MadCap:keyword term="Drillholes" />
+                <MadCap:keyword term="Exporting:Drillholes" />Drillholes to CSV: collar, survey, interval and point log <span class="fileext">.csv</span> files.</li>
+            <li>Any objects to a Geoscience ANALYST workspace file (<span class="fileext">.geoh5</span>).</li>
+        </ul>
+        <h2 class="NoPageBreak">Exporting to points, curves, and surfaces <MadCap:variable name="General.Gocad" /> ASCII</h2>
+        <p>To export a selection of one or several objects to a <span class="fileext">.mx</span>) file:</p>
+        <ol>
+            <li>
+                <MadCap:keyword term="Objects panel" />In the Objects panel, right-click the object or folder you wish to export (hold <b>Ctrl</b> key for multi-selection).</li>
+            <li>In the contextual menu, click <b>Export</b>.<br /><br /><img src="../../Resources/Images/en/Screenshot (81).png" style="width: 187px;height: 192px;" /><br /></li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>In the <i>Export</i> dialogue box, name the file and click <b>Save</b>.</li>
+        </ol>
+        <p><MadCap:variable name="General.Gocad" /> <span class="fileext">.mx</span> files support generic data types (float, integer, and reference) stored on nodes and basic object attributes (colour, node size, etc.).</p>
+        <div class="note">Data on surface triangles and curve segments is NOT supported by <MadCap:variable name="General.Gocad" /> <span class="fileext">.mx</span> file format.</div>
+        <h2 class="NoPageBreak">Exporting drillholes to CSV</h2>
+        <p>When exporting a selection of one or several drillholes to CSV, several <span class="fileext">.csv</span> files get created:</p>
+        <ul>
+            <li>one for collars (suffixed with <span class="filename">collar</span>)</li>
+            <li>one for surveys (suffixed with <span class="filename">survey</span>)</li>
+            <li>one for interval logs (suffixed with <span class="filename">interval logs</span>)</li>
+            <li>one for point logs (suffixed with <span class="filename">point logs</span>)</li>
+        </ul>
+        <p>To export drillholes to CSV:</p>
+        <ol>
+            <li>In the Objects panel, right-click the object or folder you wish to export (hold <b>Ctrl</b> key for multi-selection).</li>
+            <li>In the contextual menu, click <b>Export</b>.</li>
+            <li>In the <i>Export</i> dialogue box, navigate to the desired output folder, type a file name and click <b>Save</b>.<br /></li>
+        </ol>
+        <p>If typing <span class="filename">long_holes</span> as a file name, you should then find four files on disk:</p>
+        <div class="indent">
+            <p>
+                <img src="../../Resources/Images/GA_exported_drillhole_files.png" />
+            </p>
+        </div>
+        <div class="note">If you select any other object type with the drillhole(s), you will receive an error message, and be forced to deselect the unsupported objects before exporting the drillholes again.</div>
+        <h2>Exporting as a <span class="fileext">.geoh5</span> workspace file<a name="export_to_geoh5"></a></h2>
+        <p style="font-weight: normal;">
+            <MadCap:keyword term="Viewport" />Any configuration you create in the Viewport, you can save as a workspace:</p>
+        <ol>
+            <li style="font-weight: normal;">
+                <MadCap:keyword term="Menu bar" />In the Menu bar, click <b>File / Save Viewport as.</b></li>
+            <li style="font-weight: normal;">In the <i>Export</i> dialogue box, navigate to the desired output folder, enter a file name and click <b>Save</b>.</li>
+        </ol>
+        <div class="indent">
+            <p style="font-weight: normal;">
+                <img src="../../Resources/Images/en/GA_export_viewport_as_geoh5.png" style="width: 219px; height: 204px;" />
+            </p>
+        </div>
+        <p>The new workspace file contains:</p>
+        <ul>
+            <li style="font-weight: normal;">all the objects visible in the current viewport, and their visual parameters</li>
+            <li style="font-weight: normal;">the settings of the current viewport</li>
+            <li style="font-weight: normal;">the saved views of the current viewport</li>
+        </ul>
+        <div class="note">A folder is not saved if its check box in the Object panel is not checked, or if no other items within the folder are checked. <MadCap:keyword term="Geoscience INTEGRATOR query" />Geoscience INTEGRATOR query folders are always exported, whether they are checked or not so that query results are available in the exported workspace.</div>
+        <h2 class="NoPageBreak">Saving files from within a workspace to disk</h2>
+        <p>If you have files such as maps, PDFs, and images, you can save them directly to disk by clicking the <b>Save As</b> button at the right of the window that contains the file. This allows you to avoid having to open and save the file in the file's native software.</p>
+        <p>
+            <img src="../../Resources/Images/en/GA save as button.png" />
+        </p>
+    </body>
+</html>

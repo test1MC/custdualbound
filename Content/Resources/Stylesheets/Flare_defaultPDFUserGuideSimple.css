@@ -1,0 +1,157 @@
+/*<meta />*/
+
+body
+{
+	color: #404040;
+	font-family: Arial, Avenir, Myriad;
+	font-size: 8pt;
+	line-height: 13px;
+	margin: 8px;
+}
+
+div.GlossaryPageDefinition
+{
+	font-size: 9pt;
+}
+
+div.GlossaryPageHeading
+{
+	border-bottom-color: #bed230;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	color: #bed230;
+	font-size: 11pt;
+}
+
+div.GlossaryPageTerm
+{
+	color: #bed230;
+	font-size: 10pt;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+h1
+{
+	color: #bed230;
+	font-family: 'Century Gothic';
+	font-size: 22pt;
+	font-weight: normal;
+	line-height: 24pt;
+	margin-bottom: 20px;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+h2
+{
+	font-size: 12pt;
+	font-weight: normal;
+	margin-bottom: 4px;
+	margin-top: 20px;
+	page-break-before: always;
+}
+
+h3
+{
+	font-size: 10pt;
+	font-weight: normal;
+	margin-bottom: 4px;
+	margin-top: 16px;
+	mc-heading-level: 0;
+}
+
+h4
+{
+	font-size: 9pt;
+	font-weight: normal;
+	mc-heading-level: 0;
+}
+
+MadCap|glossaryProxy
+{
+	border-top: none;
+}
+
+MadCap|indexProxy
+{
+	border-top: none;
+}
+
+MadCap|tocProxy
+{
+	border-top: none;
+	margin-right: 0.25in;
+}
+	
+p
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+p.EmptyPageText
+{
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+p.FrameFooterText
+{
+	font-family: 'Century Gothic';
+	font-size: 24pt;
+}
+
+p.IndexHeading
+{
+	font-size: 11pt;
+	padding-top: 16px;
+	text-align: left;
+}
+
+p.ManualTitle1
+{
+	font-family: 'Century Gothic';
+	font-size: 9pt;
+	margin-bottom: 0;
+	margin-top: 2.00in;
+	text-align: center;
+}
+
+p.ManualTitle2
+{
+	color: #bed230;
+	font-family: 'Century Gothic';
+	font-size: 22pt;
+	line-height: 0;
+	margin-bottom: 0;
+	margin-top: 0;
+	text-align: center;
+}
+
+p.ManualVersionNumber
+{
+	color: #b3b3b3;
+	font-family: 'Century Gothic';
+	font-size: 12pt;
+	margin-top: 12pt;
+	text-align: center;
+}
+
+p.TOC1
+{
+	font-size: 12pt;
+	font-weight: normal;
+	margin-bottom: 6px;
+	margin-top: 12px;
+}
+
+p.TOC2
+{
+	font-weight: normal;
+	margin-bottom: 2px;
+	margin-left: 0.10in;
+	margin-top: 2px;
+}
